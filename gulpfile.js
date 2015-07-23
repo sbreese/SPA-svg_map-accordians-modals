@@ -9,21 +9,23 @@ var gulp = require('gulp'), // Gulp
     del = require('del'); // Delete files
 
 // Root Paths for file manipulation
-const rootPaths = {
+var rootPaths = {
     source: 'src',
     dest: 'public',
-    bower: 'bower_components'
+    bower: 'bower_components',
+    server: 'server'
 };
 
 // Locations of source files
-const sources = {
+var sources = {
     js: rootPaths.source + '/js/**/*.js',
     css: rootPaths.source + '/css/**/*.css',
-    views: rootPaths.source + '/views/**/*.html'
+    views: rootPaths.source + '/views/**/*.html',
+    server: rootPaths.server + '/**/*.js'
 };
 
 // Locations of destination (built) files
-const dest = {
+var dest = {
     js: rootPaths.dest + '/js',
     css: rootPaths.dest + '/css',
     views: rootPaths.dest + '/views',
@@ -53,8 +55,15 @@ gulp.task('compileCss', function(){
 });
 
 // Lint JS
-gulp.task('lint', function(){
+gulp.task('lintJs', function(){
     return gulp.src(sources.js)
+        .pipe(jshint())
+        .pipe(jshint.reporter(jshint_stylish));
+});
+
+// Lint Server
+gulp.task('lintServer', function(){
+    return gulp.src(sources.server)
         .pipe(jshint())
         .pipe(jshint.reporter(jshint_stylish));
 });
@@ -107,14 +116,18 @@ gulp.task('clean', function(){
 gulp.task('watch', function(){
     liveReload.listen();
 
-    gulp.watch(sources.js, ['lint', 'compileJs']);
+    gulp.watch(sources.js, ['lintJs', 'compileJs']);
+    gulp.watch(sources.server, ['lintServer']);
     gulp.watch(sources.views, ['compileViews']);
     gulp.watch(sources.css, ['compileCss']);
     gulp.watch(rootPaths.bower, ['compileBower']);
 });
 
+// Lint Server and Source JS
+gulp.task('lintAll', ['lintJs', 'lintServer']);
+
 // Clean, Lint, and Compile everything
-gulp.task('compile', ['clean', 'lint', 'compileJs', 'compileCss', 'compileViews', 'compileBower']);
+gulp.task('compile', ['clean', 'lintAll', 'compileJs', 'compileCss', 'compileViews', 'compileBower']);
 
 // Compile and Watch
 gulp.task('compile:watch', ['compile', 'watch']);

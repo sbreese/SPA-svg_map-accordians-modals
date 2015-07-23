@@ -6,7 +6,7 @@ angular.module('MarriottBreaks').factory('breaksService', [
     function($http, $q){
 
         // List of properties that are searchable/filterable on the home page. Add items here to make them searchable
-        const filterProperties = [
+        var filterProperties = [
             'MARKET_CITY',
             'MARKET_STATE',
             'PROPERTY_CITY',

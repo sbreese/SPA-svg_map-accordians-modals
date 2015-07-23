@@ -1,3 +1,7 @@
+/* jshint node: true */
+
+'use strict';
+
 var express = require('express'), // Node Express Module
     path = require('path'), // Path Helper
     logger = require('morgan'), // HTTP Logger
@@ -5,7 +9,7 @@ var express = require('express'), // Node Express Module
     Converter = require('csvtojson').Converter, // Used for converting csv to json
     fs = require('fs'); // File Stream
 
-const port = 8000;
+var port = 8000;
 
 // Initialize the Express App
 var app = express();
