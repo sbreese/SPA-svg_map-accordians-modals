@@ -6,5 +6,5 @@ tmp
 .DS_Store
 .idea
 
-public/
+public/*
 !public/index.html
