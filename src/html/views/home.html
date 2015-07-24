@@ -7,11 +7,11 @@
             <div class="row">
 
                 <div class="small-6 column">
-                    <a class="large button">Northwest</a>
+                    <a class="large button" href="#REGION_NORTHWEST" du-smooth-scroll>Northwest</a>
                 </div>
 
                 <div class="small-6 column">
-                    <a class="large button">Northeast</a>
+                    <a class="large button" href="#REGION_NORTHEAST" du-smooth-scroll>Northeast</a>
                 </div>
 
 
@@ -20,11 +20,11 @@
             <div class="row">
 
                 <div class="small-6 column">
-                    <a class="large button">Midwest</a>
+                    <a class="large button" href="#REGION_MIDWEST" du-smooth-scroll>Midwest</a>
                 </div>
 
                 <div class="small-6 column">
-                    <a class="large button">Canada</a>
+                    <a class="large button" href="#REGION_CANADA" du-smooth-scroll>Canada</a>
                 </div>
 
             </div>
@@ -32,11 +32,11 @@
             <div class="row">
 
                 <div class="small-6 column">
-                    <a class="large button">Southwest</a>
+                    <a class="large button" href="#REGION_SOUTHWEST" du-smooth-scroll>Southwest</a>
                 </div>
 
                 <div class="small-6 column">
-                    <a class="large button">Southeast</a>
+                    <a class="large button" href="#REGION_SOUTHEAST" du-smooth-scroll>Southeast</a>
                 </div>
 
             </div>
@@ -44,7 +44,7 @@
             <div class="row">
 
                 <div class="small-6 large-offset-3 column">
-                    <a class="large button">Other</a>
+                    <a class="large button" href="#REGION_OTHER" du-smooth-scroll>Other</a>
                 </div>
 
             </div>
@@ -58,9 +58,43 @@
 
             <!-- Search Box & Dropdown -->
             <input type="text" ng-model="customSelected" placeholder="Search City, State or Zip"
-                   typeahead="break as break.HOTEL_NAME for break in breaks | filter:{SEARCH_FIELD: $viewValue} | limitTo:10" typeahead-template-url="html/templates/breakListItem.html"
+                   typeahead="break as break.HOTEL_NAME for break in breaks | filter:{SEARCH_FIELD: $viewValue} | limitTo:10"
+                   typeahead-template-url="html/templates/breakListItem.html"
                    class="form-control">
 
+        </div>
+    </div>
+
+    <div class="section-separator"></div>
+
+    <!-- Group by Region-->
+    <div class="row region-group" ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'">
+        <!-- Region Header -->
+        <h2 id="REGION_{{region}}">{{formatRegionName(region)}}</h2>
+
+        <div class="region-group-header-separator"></div>
+
+        <!-- Group by State -->
+        <div class="row" ng-repeat="(state, hotels) in regionGroup | groupBy: 'MARKET_STATE'">
+            <h3>{{state}}</h3>
+
+            <div class="row">
+
+                <!-- Hotel Item -->
+                <div class="small-6 large-3 column hotel-item-container" ng-repeat="hotel in hotels">
+                    <img src="images/hotel.png"/>
+
+                    <!-- Hotel Description -->
+                    <div class="hotel-item-description-container">
+                        <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
+
+                        <p class="hotel-item-per-night">{{hotel.PER_NIGHT}}</p>
+
+                        <a ng-href="{{hotel.AVAILABILITY_URL}}" class="hotel-item-book-now">Book Now</a>
+                    </div>
+
+                </div>
+            </div>
         </div>
     </div>
 

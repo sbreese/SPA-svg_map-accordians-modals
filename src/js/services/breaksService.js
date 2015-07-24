@@ -35,6 +35,9 @@ angular.module('MarriottBreaks').factory('breaksService', [
 
                 // build a property on the object that has all searchable fields. This should speed up the filtering process
                 formatSearchField(currentBreak);
+
+                // format the per night description. I would rather do it here once than have angular do it for each item
+                formatPerNight(currentBreak);
             }
 
         }
@@ -117,6 +120,26 @@ angular.module('MarriottBreaks').factory('breaksService', [
             }
 
             currentBreak.SEARCH_FIELD = searchField;
+        }
+
+        // Format the "per night" string, i.e. 100-200 per night
+        function formatPerNight(currentBreak){
+            var perNight;
+
+            // start with the min rate
+            perNight = currentBreak.PROPERTY_MIN_RATE + currentBreak.PROPERTY_MIN_ASTERISK;
+
+            // add the max rate (add a + sign if there is none)
+            if (currentBreak.PROPERTY_MAX_RATE){
+                perNight += '-' + currentBreak.PROPERTY_MAX_RATE + currentBreak.PROPERTY_MAX_ASTERISK;
+            }
+            else {
+                perNight += '+';
+            }
+
+            perNight += ' per night';
+
+            currentBreak.PER_NIGHT = perNight;
         }
 
         return {

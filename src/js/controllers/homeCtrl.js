@@ -5,6 +5,11 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
     'breaksService',
     function($scope, breaksService){
 
+        $scope.formatRegionName = function(region){
+            var regionFormatted = region.toLowerCase();
+            return regionFormatted.charAt(0).toUpperCase() + regionFormatted.slice(1);
+        };
+
         function initialize(){
             breaksService.get().then(getBreaksSuccess, getBreaksFail);
         }

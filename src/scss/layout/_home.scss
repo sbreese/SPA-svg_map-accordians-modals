@@ -36,3 +36,66 @@
 .break-list-item-hotel {
     margin: 0;
 }
+
+.section-separator {
+    max-width: none;
+    width: 100%;
+    height: 70px;
+    margin: 20px 0;
+    background-color: #DFDFDF;
+}
+
+.region-group {
+    h2 {
+        text-align: center;
+        color: #458EBC;
+    }
+
+    h3 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+}
+
+.region-group-header-separator {
+    margin: 15px 0;
+    height: 2px;
+    background-color: #DFDFDF;
+}
+
+.hotel-item-container {
+    margin-bottom: 20px;
+
+    img {
+        height: 250px;
+        width: 100%;
+    }
+}
+
+.hotel-item-description-container {
+    position: relative;
+    height: 140px;
+    background-color: #EDEDEE;
+    padding: 10px;
+}
+
+.hotel-item-name {
+    font-weight: bold;
+    line-height: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.hotel-item-per-night {
+    line-height: 0.5rem;
+}
+
+.hotel-item-book-now {
+    @include button;
+
+    position: absolute;
+    bottom: 10px;
+    left: 15px;
+    right: 15px;
+    padding: 10px;
+    margin-bottom: 0;
+}

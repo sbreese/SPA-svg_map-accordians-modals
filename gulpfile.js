@@ -24,6 +24,7 @@ var sources = {
     scss: rootPaths.source + '/scss/**/*.scss',
     scssMaster: rootPaths.source + '/scss/app.scss',
     html: rootPaths.source + '/html/**/*.html',
+    images: rootPaths.source + '/images/**/*',
     server: rootPaths.server + '/**/*.js',
     vendorCopy: [rootPaths.bower + '/modernizr/modernizr.js']
 };
@@ -33,6 +34,7 @@ var dest = {
     js: rootPaths.dest + '/js',
     css: rootPaths.dest + '/css',
     html: rootPaths.dest + '/html',
+    images: rootPaths.dest + '/images',
 
     fileNames: {
         srcJs: 'marriott-breaks.js',
@@ -77,6 +79,13 @@ gulp.task('lintServer', function(){
 gulp.task('compileHtml', function(){
     return gulp.src(sources.html)
         .pipe(gulp.dest(dest.html))
+        .pipe(liveReload());
+});
+
+// Copy all images
+gulp.task('copyImages', function(){
+    return gulp.src(sources.images)
+        .pipe(gulp.dest(dest.images))
         .pipe(liveReload());
 });
 
@@ -138,6 +147,7 @@ gulp.task('watch', function(){
     gulp.watch(sources.server, ['lintServer']);
     gulp.watch(sources.html, ['compileHtml']);
     gulp.watch(sources.scss, ['compileSass']);
+    gulp.watch(sources.images, ['copyImages']);
     // Removing this for now - it keeps triggering when it shouldn't
     //gulp.watch(rootPaths.bower, ['compileBower']);
     gulp.watch(sources.vendorCopy, ['copyVendor']);
@@ -147,7 +157,16 @@ gulp.task('watch', function(){
 gulp.task('lintAll', ['lintJs', 'lintServer']);
 
 // Clean, Lint, and Compile everything
-gulp.task('compile', ['clean', 'lintAll', 'copyVendor', 'compileJs', 'compileSass', 'compileHtml', 'compileBower']);
+gulp.task('compile', [
+    'clean',
+    'lintAll',
+    'copyVendor',
+    'compileJs',
+    'compileSass',
+    'compileHtml',
+    'copyImages',
+    'compileBower']
+);
 
 // Compile and Watch
 gulp.task('compile:watch', ['compile', 'watch']);
