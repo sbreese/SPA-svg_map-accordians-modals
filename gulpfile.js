@@ -6,6 +6,7 @@ var gulp = require('gulp'), // Gulp
     liveReload = require('gulp-livereload'), // Live Reload Plugin
     gulpFilter = require('gulp-filter'), // Build Gulp file filters
     nodemon = require('gulp-nodemon'), // Run Nodemon
+    sass = require('gulp-sass'),
     del = require('del'); // Delete files
 
 // Root Paths for file manipulation
@@ -13,22 +14,25 @@ var rootPaths = {
     source: 'src',
     dest: 'public',
     bower: 'bower_components',
-    server: 'server'
+    server: 'server',
+    foundation: 'bower_components/foundation'
 };
 
 // Locations of source files
 var sources = {
     js: rootPaths.source + '/js/**/*.js',
-    css: rootPaths.source + '/css/**/*.css',
-    views: rootPaths.source + '/views/**/*.html',
-    server: rootPaths.server + '/**/*.js'
+    scss: rootPaths.source + '/scss/**/*.scss',
+    scssMaster: rootPaths.source + '/scss/app.scss',
+    html: rootPaths.source + '/html/**/*.html',
+    server: rootPaths.server + '/**/*.js',
+    vendorCopy: [rootPaths.bower + '/modernizr/modernizr.js']
 };
 
 // Locations of destination (built) files
 var dest = {
     js: rootPaths.dest + '/js',
     css: rootPaths.dest + '/css',
-    views: rootPaths.dest + '/views',
+    html: rootPaths.dest + '/html',
 
     fileNames: {
         srcJs: 'marriott-breaks.js',
@@ -46,9 +50,10 @@ gulp.task('compileJs', function(){
         .pipe(liveReload());
 });
 
-// Compile all CSS
-gulp.task('compileCss', function(){
-    return gulp.src(sources.css)
+// Compile all Sass files
+gulp.task('compileSass', function(){
+    return gulp.src(sources.scssMaster)
+        .pipe(sass())
         .pipe(concat(dest.fileNames.srcCss))
         .pipe(gulp.dest(dest.css))
         .pipe(liveReload());
@@ -68,23 +73,27 @@ gulp.task('lintServer', function(){
         .pipe(jshint.reporter(jshint_stylish));
 });
 
-// Compile all Views
-gulp.task('compileViews', function(){
-    return gulp.src(sources.views)
-        .pipe(gulp.dest(dest.views))
+// Compile all HTML
+gulp.task('compileHtml', function(){
+    return gulp.src(sources.html)
+        .pipe(gulp.dest(dest.html))
         .pipe(liveReload());
 });
 
 // Compiles all Bower JS and CSS files into vendor.js/vendor.css
 gulp.task('compileBower', function(){
-    var jsFilter = gulpFilter('**/*.js');
-    var cssFilter = gulpFilter('**/*.css');
+    // Ignore foundation JS (this gets compiled in a different task) and ignore Modernizr as it needs to be
+    // loaded separately in the <head> tag
+    var jsFilter = gulpFilter(['**/*.js', '!foundation/**/*', '!modernizr/**/*']);
+    var cssFilter = gulpFilter(['**/*.css', '!foundation/**/*']);
 
     return gulp.src(bower(), {base: rootPaths.bower})
+        // Compile JS
         .pipe(jsFilter)
         .pipe(concat(dest.fileNames.vendorJs))
         .pipe(gulp.dest(dest.js))
         .pipe(jsFilter.restore())
+        // Compile CSS
         .pipe(cssFilter)
         .pipe(concat(dest.fileNames.vendorCss))
         .pipe(gulp.dest(dest.css))
@@ -92,6 +101,11 @@ gulp.task('compileBower', function(){
         .pipe(liveReload());
 });
 
+// Copy modernizr to public/js. This needs to be separate from Vendor because it needs to be loaded in the <head> tag.
+gulp.task('copyVendor', function(){
+   return gulp.src(sources.vendorCopy)
+       .pipe(gulp.dest(dest.js));
+});
 
 // Starts the node server using nodemon
 gulp.task('server', function(){
@@ -108,7 +122,7 @@ gulp.task('clean', function(){
     del.sync([
         dest.js,
         dest.css,
-        dest.views
+        dest.html
     ]);
 });
 
@@ -118,16 +132,17 @@ gulp.task('watch', function(){
 
     gulp.watch(sources.js, ['lintJs', 'compileJs']);
     gulp.watch(sources.server, ['lintServer']);
-    gulp.watch(sources.views, ['compileViews']);
-    gulp.watch(sources.css, ['compileCss']);
+    gulp.watch(sources.html, ['compileHtml']);
+    gulp.watch(sources.scss, ['compileSass']);
     gulp.watch(rootPaths.bower, ['compileBower']);
+    gulp.watch(sources.vendorCopy, ['copyVendor']);
 });
 
 // Lint Server and Source JS
 gulp.task('lintAll', ['lintJs', 'lintServer']);
 
 // Clean, Lint, and Compile everything
-gulp.task('compile', ['clean', 'lintAll', 'compileJs', 'compileCss', 'compileViews', 'compileBower']);
+gulp.task('compile', ['clean', 'lintAll', 'copyVendor', 'compileJs', 'compileSass', 'compileHtml', 'compileBower']);
 
 // Compile and Watch
 gulp.task('compile:watch', ['compile', 'watch']);
