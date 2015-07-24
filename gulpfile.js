@@ -134,7 +134,8 @@ gulp.task('watch', function(){
     gulp.watch(sources.server, ['lintServer']);
     gulp.watch(sources.html, ['compileHtml']);
     gulp.watch(sources.scss, ['compileSass']);
-    gulp.watch(rootPaths.bower, ['compileBower']);
+    // Removing this for now - it keeps triggering when it shouldn't
+    //gulp.watch(rootPaths.bower, ['compileBower']);
     gulp.watch(sources.vendorCopy, ['copyVendor']);
 });
 
