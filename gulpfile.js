@@ -110,10 +110,14 @@ gulp.task('copyVendor', function(){
 // Starts the node server using nodemon
 gulp.task('server', function(){
     nodemon({
-        script: 'server/server.js'
+        script: 'server/server.js',
+        ext: 'js',
+        watch: ['server']
     })
     .on('restart', function(){
-        liveReload.reload();
+        setTimeout(function(){
+            liveReload.reload();
+        }, 500);
     });
 });
 
