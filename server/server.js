@@ -23,15 +23,30 @@ app.get('/', function(request, response){
     response.sendfile(path.join(__dirname, '../public/index.html'));
 });
 
-app.get('/breaks', function(request, response){
+app.post('/convert', function(request, response){
     var csvStream = fs.createReadStream('./server/marriott-data.csv');
-    var csvConverter = new Converter({});
+    var jsonStream = fs.createWriteStream('./server/marriott-data.json');
 
-    csvConverter.on('end_parsed', function(jsonData){
-        response.send(jsonData);
+    var csvConverter = new Converter({constructResult:false, toArrayString:true});
+
+    csvConverter.on('end_parsed', function(){
+        console.log('CSV Data successfully converted!');
+
+        response.send('CSV Data successfully converted!');
     });
 
-    csvStream.pipe(csvConverter);
+    csvStream.pipe(csvConverter).pipe(jsonStream);
+});
+
+app.get('/breaks', function(request, response){
+    fs.readFile('./server/marriott-data.json', function(err, data){
+        if (err){
+            response.status(500).send('Error reading eBreaks data');
+        }
+        else {
+            response.send(JSON.parse(data));
+        }
+    });
 });
 
 // Start the server

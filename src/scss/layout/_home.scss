@@ -5,11 +5,26 @@
     padding: 10px 15px;
 }
 
+.region-container {
+    padding: 15px;
+
+    .button {
+        width: 100%;
+    }
+}
+
+// Overrides for dropdown and input styling
 .search-container {
     .f-dropdown {
         width: 95%;
         max-width: none;
         opacity: 0.9;
+    }
+
+    input {
+        font-size: 1.7rem;
+        border-radius: 8px;
+        height: auto;
     }
 }
 
