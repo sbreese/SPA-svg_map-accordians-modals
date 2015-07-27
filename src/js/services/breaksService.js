@@ -124,22 +124,23 @@ angular.module('MarriottBreaks').factory('breaksService', [
 
         // Format the "per night" string, i.e. 100-200 per night
         function formatPerNight(currentBreak){
-            var perNight;
+            var priceRange;
 
-            // start with the min rate
-            perNight = currentBreak.PROPERTY_MIN_RATE + currentBreak.PROPERTY_MIN_ASTERISK;
+            // start with the currency symbol
+            priceRange = currentBreak.CURRENCY_SYMBOL;
+
+            // add the min rate
+            priceRange += currentBreak.PROPERTY_MIN_RATE + currentBreak.PROPERTY_MIN_ASTERISK;
 
             // add the max rate (add a + sign if there is none)
             if (currentBreak.PROPERTY_MAX_RATE){
-                perNight += '-' + currentBreak.PROPERTY_MAX_RATE + currentBreak.PROPERTY_MAX_ASTERISK;
+                priceRange += '-' + currentBreak.PROPERTY_MAX_RATE + currentBreak.PROPERTY_MAX_ASTERISK;
             }
             else {
-                perNight += '+';
+                priceRange += '+';
             }
 
-            perNight += ' per night';
-
-            currentBreak.PER_NIGHT = perNight;
+            currentBreak.PRICE_RANGE = priceRange;
         }
 
         return {
