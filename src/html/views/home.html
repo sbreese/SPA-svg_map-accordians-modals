@@ -69,32 +69,43 @@
 
     <!-- Group by Region-->
     <div class="row region-group" ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'">
-        <!-- Region Header -->
-        <h2 id="REGION_{{region}}">{{formatRegionName(region)}}</h2>
 
-        <div class="region-group-header-separator"></div>
+        <div class="full-column">
 
-        <!-- Group by State -->
-        <div class="row" ng-repeat="(state, hotels) in regionGroup | groupBy: 'MARKET_STATE'">
-            <h3>{{state}}</h3>
+            <!-- Region Header -->
+            <h2 id="REGION_{{region}}">{{formatRegionName(region)}}</h2>
 
-            <div class="row">
+            <div class="region-group-header-separator"></div>
 
-                <!-- Hotel Item -->
-                <div class="small-6 large-3 column hotel-item-container" ng-repeat="hotel in hotels">
-                    <img src="images/hotel.png"/>
+            <!-- Group by State -->
+            <div class="row" ng-repeat="(state, hotels) in regionGroup | groupBy: 'MARKET_STATE'">
 
-                    <!-- Hotel Description -->
-                    <div class="hotel-item-description-container">
-                        <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
+                <div class="full-column">
 
-                        <p class="hotel-item-per-night">{{hotel.PER_NIGHT}}</p>
+                    <!-- State Group Header -->
+                    <h3>{{state}}</h3>
 
-                        <a ng-href="{{hotel.AVAILABILITY_URL}}" class="hotel-item-book-now">Book Now</a>
+                    <div class="row">
+
+                        <!-- Hotel Item -->
+                        <div class="small-12 medium-6 large-3 column hotel-item-container" ng-repeat="hotel in hotels">
+                            <img src="images/hotel.png"/>
+
+                            <!-- Hotel Description -->
+                            <div class="hotel-item-description-container">
+                                <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
+
+                                <p class="hotel-item-per-night">{{hotel.PER_NIGHT}}</p>
+
+                                <a ng-href="{{hotel.AVAILABILITY_URL}}" class="hotel-item-book-now">Book Now</a>
+                            </div>
+
+                        </div>
                     </div>
 
                 </div>
             </div>
+
         </div>
     </div>
 
