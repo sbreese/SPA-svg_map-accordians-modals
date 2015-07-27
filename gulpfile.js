@@ -15,8 +15,7 @@ var rootPaths = {
     source: 'src',
     dest: 'public',
     bower: 'bower_components',
-    server: 'server',
-    foundation: 'bower_components/foundation'
+    server: 'server'
 };
 
 // Locations of source files
@@ -100,12 +99,12 @@ gulp.task('copyImages', function(){
 
 // Compiles all Bower JS and CSS files into vendor.js/vendor.css
 gulp.task('compileBower', function(){
-    // Ignore foundation JS (this gets compiled in a different task) and ignore Modernizr as it needs to be
+    // Ignore foundation JS (we're using angular-foundation for the JS) and ignore Modernizr as it needs to be
     // loaded separately in the <head> tag
     var jsFilter = gulpFilter(['**/*.js', '!foundation/**/*', '!modernizr/**/*']);
     var cssFilter = gulpFilter(['**/*.css', '!foundation/**/*']);
 
-    return gulp.src(bower(), {base: rootPaths.bower})
+    var concatPipe = gulp.src(bower(), {base: rootPaths.bower})
         // Compile JS
         .pipe(jsFilter)
         .pipe(concat(dest.fileNames.vendorJs))
@@ -115,14 +114,13 @@ gulp.task('compileBower', function(){
         .pipe(cssFilter)
         .pipe(concat(dest.fileNames.vendorCss))
         .pipe(gulp.dest(dest.css))
-        .pipe(cssFilter.restore())
-        .pipe(liveReload());
-});
+        .pipe(cssFilter.restore());
 
-// Copy modernizr to public/js. This needs to be separate from Vendor because it needs to be loaded in the <head> tag.
-gulp.task('copyVendor', function(){
-   return gulp.src(sources.vendorCopy)
-       .pipe(gulp.dest(dest.js));
+    var copyPipe = gulp.src(sources.vendorCopy)
+        .pipe(gulp.dest(dest.js));
+
+    return merge(concatPipe, copyPipe)
+        .pipe(liveReload());
 });
 
 // Starts the node server using nodemon
@@ -155,7 +153,6 @@ gulp.task('watch', function(){
     gulp.watch(sources.images, ['copyImages']);
     // Removing this for now - it keeps triggering when it shouldn't
     //gulp.watch(rootPaths.bower, ['compileBower']);
-    gulp.watch(sources.vendorCopy, ['copyVendor']);
 });
 
 // Lint Server and Source JS
@@ -165,7 +162,6 @@ gulp.task('lintAll', ['lintJs', 'lintServer']);
 gulp.task('compile', [
     'clean',
     'lintAll',
-    'copyVendor',
     'compileJs',
     'compileSass',
     'compileHtml',
