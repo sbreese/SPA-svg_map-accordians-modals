@@ -28,6 +28,12 @@
     }
 }
 
+.top-destinations-header {
+    text-align: center;
+    color: $region-header-color;
+    font-weight: bold;
+}
+
 .section-separator {
     max-width: none;
     width: 100%;
@@ -39,7 +45,7 @@
 .region-group {
     h2 {
         text-align: center;
-        color: #458EBC;
+        color: $region-header-color;
     }
 
     h3 {

@@ -1,3 +1,15 @@
 .full-column {
-    @include  grid-column(12);
+    @include grid-column(12);
+}
+
+.hotel-grid {
+    @include block-grid(1);
+
+    @media #{$medium-up} {
+        @include block-grid(2);
+    }
+
+    @media #{$large-up} {
+        @include block-grid(4);
+    }
 }

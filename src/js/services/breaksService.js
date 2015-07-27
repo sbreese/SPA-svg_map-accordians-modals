@@ -21,6 +21,9 @@ angular.module('MarriottBreaks').factory('breaksService', [
                 currentBreak.PROPERTY_PAGE_URL = formatUrl(currentBreak.PROPERTY_PAGE_URL);
                 currentBreak.AVAILABILITY_URL = formatUrl(currentBreak.AVAILABILITY_URL);
 
+                // make top destination a boolean value - much easier to work with and better for performance
+                currentBreak.TOP_DESTINATION = (currentBreak.TOP_DESTINATIONS === 'Y');
+
                 // build addresses
                 formatAddresses(currentBreak);
 

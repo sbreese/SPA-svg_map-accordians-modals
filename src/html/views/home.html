@@ -65,7 +65,71 @@
         </div>
     </div>
 
+    <!-- Section Separator -->
     <div class="section-separator"></div>
+
+    <!-- Top Destinations - Header -->
+
+    <div class="row">
+        <div class="full-column">
+            <h2 class="top-destinations-header">Top Destinations</h2>
+
+            <div class="region-group-header-separator"></div>
+        </div>
+    </div>
+
+    <!-- Top Destinations - List -->
+
+    <div class="row">
+
+        <div class="full-column">
+
+            <ul class="hotel-grid">
+
+                <!-- Hotel Items -->
+                <li hotel-item hotel="break" ng-repeat="break in breaks | filter:{TOP_DESTINATION: true} | limitTo:20"></li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <!-- Section Separator -->
+    <div class="section-separator"></div>
+
+    <!-- Group by State -->
+    <div class="row" ng-repeat="(state, hotels) in regionGroup | groupBy: 'MARKET_STATE'">
+
+        <div class="full-column">
+
+            <!-- State Group Header -->
+            <h3>{{state}}</h3>
+
+            <!-- Hotel List -->
+            <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+
+                <!-- Hotel Item -->
+                <li ng-repeat="hotel in hotels">
+
+                    <!-- Hotel Image -->
+                    <img src="images/hotel.png"/>
+
+                    <!-- Hotel Description -->
+                    <div class="hotel-item-description-container">
+                        <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
+
+                        <p class="hotel-item-per-night">{{hotel.PRICE_RANGE}} per night</p>
+
+                        <a ng-href="{{hotel.AVAILABILITY_URL}}" class="hotel-item-book-now">Book Now</a>
+                    </div>
+
+                </li>
+
+            </ul>
+
+        </div>
+    </div>
 
     <!-- Group by Region-->
     <div class="row region-group" ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'">
@@ -86,24 +150,10 @@
                     <h3>{{state}}</h3>
 
                     <!-- Hotel List -->
-                    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
+                    <ul class="hotel-grid">
 
-                        <!-- Hotel Item -->
-                        <li ng-repeat="hotel in hotels">
-
-                            <!-- Hotel Image -->
-                            <img src="images/hotel.png"/>
-
-                            <!-- Hotel Description -->
-                            <div class="hotel-item-description-container">
-                                <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
-
-                                <p class="hotel-item-per-night">{{hotel.PRICE_RANGE}} per night</p>
-
-                                <a ng-href="{{hotel.AVAILABILITY_URL}}" class="hotel-item-book-now">Book Now</a>
-                            </div>
-
-                        </li>
+                        <!-- Hotel Items -->
+                        <li hotel-item hotel="hotel" ng-repeat="hotel in hotels"></li>
 
                     </ul>
 
