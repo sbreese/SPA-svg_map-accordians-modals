@@ -85,10 +85,13 @@
                     <!-- State Group Header -->
                     <h3>{{state}}</h3>
 
-                    <div class="row">
+                    <!-- Hotel List -->
+                    <ul class="small-block-grid-1 medium-block-grid-2 large-block-grid-4">
 
                         <!-- Hotel Item -->
-                        <div class="small-12 medium-6 large-3 column hotel-item-container" ng-repeat="hotel in hotels">
+                        <li ng-repeat="hotel in hotels">
+
+                            <!-- Hotel Image -->
                             <img src="images/hotel.png"/>
 
                             <!-- Hotel Description -->
@@ -100,8 +103,9 @@
                                 <a ng-href="{{hotel.AVAILABILITY_URL}}" class="hotel-item-book-now">Book Now</a>
                             </div>
 
-                        </div>
-                    </div>
+                        </li>
+
+                    </ul>
 
                 </div>
             </div>
