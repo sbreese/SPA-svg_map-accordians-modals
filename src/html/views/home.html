@@ -8,11 +8,11 @@
             <div class="row">
 
                 <div class="small-6 column">
-                    <a class="large button" href="#REGION_NORTHWEST" du-smooth-scroll>Northwest</a>
+                    <a region-button region="Northwest" action="regionButtonClick(region)"></a>
                 </div>
 
                 <div class="small-6 column">
-                    <a class="large button" href="#REGION_NORTHEAST" du-smooth-scroll>Northeast</a>
+                    <a region-button region="Northeast" action="regionButtonClick(region)"></a>
                 </div>
 
 
@@ -21,11 +21,11 @@
             <div class="row">
 
                 <div class="small-6 column">
-                    <a class="large button" href="#REGION_MIDWEST" du-smooth-scroll>Midwest</a>
+                    <a region-button region="Midwest" action="regionButtonClick(region)"></a>
                 </div>
 
                 <div class="small-6 column">
-                    <a class="large button" href="#REGION_CANADA" du-smooth-scroll>Canada</a>
+                    <a region-button region="Canada" action="regionButtonClick(region)"></a>
                 </div>
 
             </div>
@@ -33,11 +33,11 @@
             <div class="row">
 
                 <div class="small-6 column">
-                    <a class="large button" href="#REGION_SOUTHWEST" du-smooth-scroll>Southwest</a>
+                    <a region-button region="Southwest" action="regionButtonClick(region)"></a>
                 </div>
 
                 <div class="small-6 column">
-                    <a class="large button" href="#REGION_SOUTHEAST" du-smooth-scroll>Southeast</a>
+                    <a region-button region="Southeast" action="regionButtonClick(region)"></a>
                 </div>
 
             </div>
@@ -45,7 +45,7 @@
             <div class="row">
 
                 <div class="small-6 large-offset-3 column">
-                    <a class="large button" href="#REGION_OTHER" du-smooth-scroll>Other</a>
+                    <a region-button region="Other" action="regionButtonClick(region)"></a>
                 </div>
 
             </div>
@@ -69,38 +69,39 @@
     <!-- Section Separator -->
     <div class="section-separator"></div>
 
-    <!-- Top Destinations - Header -->
+    <!-- REGION / TOP DESTINATIONS ACCORDION -->
+    <accordion class="region-group-accordion" close-others="true">
 
-    <div class="row">
-        <div class="full-column">
-            <h2 class="top-destinations-header">Top Destinations</h2>
+        <!-- TOP DESTINATIONS -->
+        <accordion-group class="region-group" is-open="regionAccordionGroups['TOPDEST'].isOpen">
+            <!-- Top Destinations Group Header -->
+            <accordion-heading>
+                <div ng-click="accordionHeaderClicked('TOPDEST')">
+                    <h2 id="REGION_TOPDEST">Top Destinations</h2>
 
-            <div class="region-group-header-separator"></div>
-        </div>
-    </div>
+                    <div class="region-group-header-separator"></div>
+                </div>
+            </accordion-heading>
 
-    <!-- Top Destinations - List -->
-    <div class="row">
-        <div class="full-column">
+            <!-- Hotel List -->
             <ul class="hotel-grid">
-                <!-- Hotel Items -->
-                <li hotel-item hotel="break" ng-repeat="break in breaks | filter:{TOP_DESTINATION: true} | limitTo:20"></li>
+                <li hotel-item hotel="break"
+                    ng-repeat="break in breaks | filter:{TOP_DESTINATION: true} | limitTo:20"></li>
             </ul>
-        </div>
-    </div>
 
-    <!-- Section Separator -->
-    <div class="section-separator"></div>
+        </accordion-group>
 
-    <!-- Group by Region-->
-    <div class="row region-group" ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'">
+        <!-- REGION GROUPS -->
+        <accordion-group class="region-group" is-open="regionAccordionGroups[region].isOpen"
+                         ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'">
+            <!-- Region Group Header -->
+            <accordion-heading>
+                <div ng-click="accordionHeaderClicked(region)">
+                    <h2 id="REGION_{{region}}">{{formatRegionName(region)}}</h2>
 
-        <div class="full-column">
-
-            <!-- Region Header -->
-            <h2 id="REGION_{{region}}">{{formatRegionName(region)}}</h2>
-
-            <div class="region-group-header-separator"></div>
+                    <div class="region-group-header-separator"></div>
+                </div>
+            </accordion-heading>
 
             <!-- Group by State -->
             <div class="row" ng-repeat="(state, hotels) in regionGroup | groupBy: 'MARKET_STATE'">
@@ -121,7 +122,7 @@
                 </div>
             </div>
 
-        </div>
-    </div>
+        </accordion-group>
+    </accordion>
 
 </div>

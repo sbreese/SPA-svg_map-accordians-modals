@@ -28,12 +28,6 @@
     }
 }
 
-.top-destinations-header {
-    text-align: center;
-    color: $region-header-color;
-    font-weight: bold;
-}
-
 .section-separator {
     max-width: none;
     width: 100%;
@@ -42,22 +36,50 @@
     background-color: #DFDFDF;
 }
 
-.region-group {
-    h2 {
-        text-align: center;
-        color: $region-header-color;
+.region-group-accordion {
+
+    // Override default background and padding
+    .accordion dd > a {
+        background: none;
+        padding: 0;
+        margin: 0;
+
+        &:hover {
+            background-color: #EDEDEE;
+        }
     }
 
-    h3 {
-        margin-bottom: 20px;
-        text-align: center;
-    }
-}
+    .region-group {
+        @include grid-row();
 
-.region-group-header-separator {
-    margin: 15px 0;
-    height: 2px;
-    background-color: #DFDFDF;
+        dd > a {
+            background: none;
+            padding: 0;
+            margin: 0;
+
+            &:hover {
+                background-color: #EDEDEE;
+            }
+        }
+
+        h2 {
+            text-align: center;
+            color: $region-header-color;
+            padding: 10px 0;
+            margin: 0;
+        }
+
+        h3 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .region-group-header-separator {
+            margin: 0;
+            height: 2px;
+            background-color: #DFDFDF;
+        }
+    }
 }
 
 .hotel-item-description-container {
