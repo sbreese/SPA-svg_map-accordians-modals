@@ -6,6 +6,7 @@ var gulp = require('gulp'), // Gulp
     liveReload = require('gulp-livereload'), // Live Reload Plugin
     gulpFilter = require('gulp-filter'), // Build Gulp file filters
     nodemon = require('gulp-nodemon'), // Run Nodemon
+    merge = require('merge-stream'), // Merge streams in one task
     sass = require('gulp-sass'),
     del = require('del'); // Delete files
 
@@ -24,6 +25,7 @@ var sources = {
     scss: rootPaths.source + '/scss/**/*.scss',
     scssMaster: rootPaths.source + '/scss/app.scss',
     html: rootPaths.source + '/html/**/*.html',
+    index: rootPaths.source + '/html/index.html',
     images: rootPaths.source + '/images/**/*',
     server: rootPaths.server + '/**/*.js',
     vendorCopy: [rootPaths.bower + '/modernizr/modernizr.js']
@@ -77,8 +79,15 @@ gulp.task('lintServer', function(){
 
 // Compile all HTML
 gulp.task('compileHtml', function(){
-    return gulp.src(sources.html)
-        .pipe(gulp.dest(dest.html))
+    // Compile all HTML except Index and place in public/views
+    var html = gulp.src([sources.html, '!' + sources.index])
+        .pipe(gulp.dest(dest.html));
+
+    // Copy Index to public root folder (separate from other HTML so it stays at the root folder)
+    var index = gulp.src(sources.index)
+        .pipe(gulp.dest(rootPaths.dest));
+
+    return merge(html, index)
         .pipe(liveReload());
 });
 
@@ -132,11 +141,7 @@ gulp.task('server', function(){
 
 // Deletes all existing build files
 gulp.task('clean', function(){
-    del.sync([
-        dest.js,
-        dest.css,
-        dest.html
-    ]);
+    del.sync([rootPaths.dest + '/**/*']);
 });
 
 // Watches source files for automatic build/reload
