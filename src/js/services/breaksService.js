@@ -5,15 +5,6 @@ angular.module('MarriottBreaks').factory('breaksService', [
     '$q',
     function($http, $q){
 
-        // List of properties that are searchable/filterable on the home page. Add items here to make them searchable
-        var filterProperties = [
-            'MARKET_CITY',
-            'MARKET_STATE',
-            'PROPERTY_CITY',
-            'PROPERTY_STATE',
-            'ZIP'
-        ];
-
         function formatBreaksData(breaks){
 
             // if for some reason we didn't get data back, return an empty array
@@ -105,6 +96,16 @@ angular.module('MarriottBreaks').factory('breaksService', [
 
             return fullAddress;
         }
+
+        // List of properties that are searchable/filterable on the home page. Add items here to make them searchable
+        var filterProperties = [
+            'MARKET_CITY',
+            'MARKET_STATE',
+            'PROPERTY_CITY',
+            'PROPERTY_STATE',
+            'ZIP',
+            'REGION'
+        ];
 
         function formatSearchField(currentBreak){
             var searchField = '';
