@@ -1,5 +1,6 @@
 // In order to control the SVG data via CSS, it needs to be included in the SVG itself. Keep this file
 // separate, don't import in the master app.scss file
+@import "variables";
 
 .land
 {
@@ -11,6 +12,14 @@
 }
 
 .land:hover {
-    fill: #9FCA48;
+    fill: $region-header-color;
     cursor: pointer;
+}
+
+.land-text {
+    font-weight: bold;
+}
+
+.land:hover + .land-text {
+    fill: white;
 }

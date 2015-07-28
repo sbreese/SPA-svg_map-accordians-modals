@@ -247,6 +247,25 @@ angular.module('MarriottBreaks').factory('breaksService', [
                 }
 
                 return null;
+            },
+
+            getStates: function(regions){
+                var states = {};
+                var region;
+
+                // search through the region groups until we find our region
+                for (var regionName in regions){
+                    if (regions.hasOwnProperty(regionName)){
+                        region = regions[regionName];
+                        for (var stateName in region.states){
+                            if (region.states.hasOwnProperty(stateName)){
+                                states[stateName] = region.states[stateName];
+                            }
+                        }
+                    }
+                }
+
+                return states;
             }
         };
     }
