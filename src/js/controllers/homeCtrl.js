@@ -3,14 +3,15 @@
 angular.module('MarriottBreaks').controller('homeCtrl', [
     '$scope',
     '$document',
+    '$window',
     '$timeout',
     'breaksService',
-    function($scope, $document, $timeout, breaksService){
+    function($scope, $document, $window, $timeout, breaksService){
         // Regions will be populated when accordion is built. This allows us to open/close via code
         // Example item: $scope.regionAccordionGroups['MIDWEST'] = {isOpen: false}
         $scope.regionAccordionGroups = {};
         // Manually add the top destinations group here
-        $scope.regionAccordionGroups['TOPDEST'] = {isOpen: true};
+        $scope.regionAccordionGroups.TOPDEST = {isOpen: true};
 
         $scope.regionButtonClick = function(region){
             if ($scope.regionAccordionGroups.hasOwnProperty(region)){
@@ -22,7 +23,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         $scope.accordionHeaderClicked = function(region){
             var headerId = 'REGION_' + region;
 
-            var headerItem = document.getElementById(headerId);
+            var headerItem = $window.document.getElementById(headerId);
             if (headerItem){
                 $timeout(function(){
                     $document.scrollToElementAnimated(headerItem);
