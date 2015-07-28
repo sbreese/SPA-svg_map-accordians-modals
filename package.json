@@ -24,6 +24,7 @@
     "csvtojson": "^0.4.1",
     "express": "^4.13.1",
     "fs": "0.0.2",
+    "gulp-filelog": "^0.4.1",
     "gulp-nodemon": "^2.0.3",
     "morgan": "^1.6.1",
     "path": "^0.11.14"

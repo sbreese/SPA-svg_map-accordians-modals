@@ -6,6 +6,7 @@ var gulp = require('gulp'), // Gulp
     bower = require('main-bower-files'), // Grabs main bower files so we can compile them
     liveReload = require('gulp-livereload'), // Live Reload Plugin
     gulpFilter = require('gulp-filter'), // Build Gulp file filters
+    filelog = require('gulp-filelog'), // Logs files in the gulp pipe, used for debugging
     nodemon = require('gulp-nodemon'), // Run Nodemon
     merge = require('merge-stream'), // Merge streams in one task
     sass = require('gulp-sass'),
@@ -21,10 +22,19 @@ gulp.task('compileJs', function(){
 
 // Compile all Sass files
 gulp.task('compileSass', function(){
-    return gulp.src(constants.sources.scssMaster)
+    // Compile master SASS file
+    var appSass =  gulp.src(constants.sources.scssMaster)
         .pipe(sass())
         .pipe(concat(constants.dest.fileNames.srcCss))
-        .pipe(gulp.dest(constants.dest.css))
+        .pipe(gulp.dest(constants.dest.css));
+
+    // Compile the map SASS - this needs to be its own file because it gets included directly into the SVG file
+    // in order for the css to work with an <object> tag
+    var mapSass = gulp.src(constants.sources.scssMap)
+        .pipe(sass())
+        .pipe(gulp.dest(constants.dest.css));
+
+    return merge(appSass, mapSass)
         .pipe(liveReload());
 });
 

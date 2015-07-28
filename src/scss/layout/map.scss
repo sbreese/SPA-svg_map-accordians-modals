@@ -1,0 +1,16 @@
+// In order to control the SVG data via CSS, it needs to be included in the SVG itself. Keep this file
+// separate, don't import in the master app.scss file
+
+.land
+{
+    fill: #CCCCCC;
+    fill-opacity: 1;
+    stroke:white;
+    stroke-opacity: 1;
+    stroke-width:2.0;
+}
+
+.land:hover {
+    fill: #9FCA48;
+    cursor: pointer;
+}

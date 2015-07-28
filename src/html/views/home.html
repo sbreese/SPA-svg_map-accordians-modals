@@ -1,5 +1,16 @@
 <div>
 
+    <!-- Region/State Map -->
+    <div class="row">
+        <div class="full-column testbg">
+
+            <!-- Map Directive -->
+            <div map state-click-action="stateButtonClick(state)"></div>
+
+        </div>
+    </div>
+
+
     <!-- Region Button Group -->
     <div class="row">
         <!-- Region Buttons -->
@@ -104,12 +115,12 @@
             </accordion-heading>
 
             <!-- Group by State -->
-            <div class="row" ng-repeat="(state, hotels) in regionGroup | groupBy: 'MARKET_STATE'">
+            <div class="row" ng-repeat="(state, hotels) in regionGroup | groupBy: 'PROPERTY_STATE'">
 
                 <div class="full-column">
 
                     <!-- State Group Header -->
-                    <h3>{{state}}</h3>
+                    <h3 id="STATE_{{state}}">{{statesService.getStateName(state)}}</h3>
 
                     <!-- Hotel List -->
                     <ul class="hotel-grid">

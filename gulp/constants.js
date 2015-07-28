@@ -11,6 +11,7 @@ var sources = {
     js: rootPaths.source + '/js/**/*.js',
     scss: rootPaths.source + '/scss/**/*.scss',
     scssMaster: rootPaths.source + '/scss/app.scss',
+    scssMap: rootPaths.source + '/scss/layout/map.scss',
     html: rootPaths.source + '/html/**/*.html',
     index: rootPaths.source + '/html/index.html',
     images: rootPaths.source + '/images/**/*',
