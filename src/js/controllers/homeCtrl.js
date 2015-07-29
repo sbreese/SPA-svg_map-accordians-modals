@@ -17,6 +17,14 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         // Add statesService to the scope so we can use it in binding
         $scope.statesService = statesService;
 
+        $scope.inputItemSelected = function($model){
+            if ($model){
+                // Some of the marriott pages take a while to navigate to. Disable the search box until then
+                $scope.disableSearch = true;
+                $window.location.href = $model.PROPERTY_PAGE_URL;
+            }
+        };
+
         $scope.regionButtonClick = function(region){
             expandRegion(region);
         };
@@ -39,6 +47,13 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             var regionFormatted = region.toLowerCase();
             return regionFormatted.charAt(0).toUpperCase() + regionFormatted.slice(1);
         };
+
+        // clear input on "pageshow" event. This is due to bfcache (back/forward caching). Otherwise, if bfcache is enabled,
+        // the input state will be kept and will stay disabled
+        angular.element($window).bind('pageshow', function(){
+            $scope.selectedBreak = null;
+            $scope.disableSearch = false;
+        });
 
         function initialize(){
             breaksService.get().then(getBreaksSuccess, getBreaksFail);

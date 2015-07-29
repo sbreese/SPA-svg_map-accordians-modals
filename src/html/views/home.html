@@ -69,9 +69,9 @@
         <div class="small-10 small-offset-1 large-6 large-offset-3 column search-container">
 
             <!-- Search Box & Dropdown -->
-            <input type="text" ng-model="customSelected" placeholder="Search City, State or Zip"
+            <input type="text" ng-model="selectedBreak" placeholder="Search City, State or Zip" ng-disabled="disableSearch"
                    typeahead="break as break.HOTEL_NAME for break in breaks | filter:{SEARCH_FIELD: $viewValue} | limitTo:10"
-                   typeahead-template-url="html/templates/breakListItem.html"
+                   typeahead-template-url="html/templates/breakListItem.html" typeahead-on-select="inputItemSelected($model)"
                    class="form-control">
 
         </div>
