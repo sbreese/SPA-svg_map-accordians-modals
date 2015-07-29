@@ -33,6 +33,7 @@ Clone the repo, and then from the root folder:
     ```
     $ npm install
     ```
+    
 - Compile and Run
     
     ```
@@ -45,21 +46,25 @@ Clone the repo, and then from the root folder:
     ```
     $ gulp
     ```
+    
 - lintAll - Lints all source files
     
     ```
     $ gulp lintAll
     ```
+    
 - compile - Lints and compiles all code
     
     ```
     $ gulp compile
     ```
+    
 - compile:watch or compile-watch - Lints and compiles all code and starts a file watch
     
     ```
     $ gulp compile:watch
     ```
+    
 - server - Starts the Node server via Nodemon
     
     ```
