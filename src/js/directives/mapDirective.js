@@ -117,7 +117,7 @@ angular.module('MarriottBreaks')
 
             function addStateCountElement(statePathElement, stateCount, stateName){
                 var boundingBox = statePathElement.getBBox();
-                var textElement = document.createElementNS("http://www.w3.org/2000/svg", "text");
+                var textElement = $window.document.createElementNS("http://www.w3.org/2000/svg", "text");
 
                 textElement.textContent = stateCount; // set the text value
 
