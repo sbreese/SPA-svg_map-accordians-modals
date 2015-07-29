@@ -56,7 +56,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         function expandRegion(region){
             if ($scope.regionAccordionGroups.hasOwnProperty(region)){
-                $scope.$apply($scope.regionAccordionGroups[region].isOpen = true);
+                $scope.regionAccordionGroups[region].isOpen = true;
             }
         }
 

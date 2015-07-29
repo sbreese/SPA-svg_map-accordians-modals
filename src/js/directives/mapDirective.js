@@ -29,7 +29,7 @@ angular.module('MarriottBreaks')
                     var stateClicked = scope.getStateFromElement($event.target);
 
                     if (stateClicked) {
-                        scope.stateClickAction({state: stateClicked});
+                        scope.$apply(scope.stateClickAction({state: stateClicked}));
                     }
                 }
 
