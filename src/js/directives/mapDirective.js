@@ -2,7 +2,8 @@
 
 angular.module('MarriottBreaks')
     .directive('map', [
-        function () {
+        'backgroundVideoService',
+        function (backgroundVideoService) {
 
             function linkFunction(scope, element, attrs) {
                 // bind to the maps' load event. We need to wait for the svg to be fully loaded before we try
@@ -17,6 +18,9 @@ angular.module('MarriottBreaks')
                         scope.$apply(scope.mapRoot = mapRoot);
                     }
 
+                    // we need to wait until the map is loaded to load the video, otherwise the height will not be correct
+                    // there may be a better way to do this, but I couldn't get it working without waiting for the map to load
+                    backgroundVideoService.loadVideo();
                 }
 
                 function stateClickFunction($event) {
