@@ -4,7 +4,8 @@ angular.module('MarriottBreaks', [
     'ngRoute',
     'angular.filter',
     'duScroll',
-    'mm.foundation'
+    'mm.foundation',
+    'angular.vertilize'
 ]).
 
 config(['$routeProvider', function ($routeProvider) {

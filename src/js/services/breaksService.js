@@ -21,6 +21,9 @@ angular.module('MarriottBreaks').factory('breaksService', [
             //}
             var regions = {};
 
+            // Keep an array of top destinations
+            var topDestinations = [];
+
             // if for some reason we didn't get data back, return an empty array
             if (!breaks.length || breaks.length <= 0) {
                 breaks = [];
@@ -49,12 +52,15 @@ angular.module('MarriottBreaks').factory('breaksService', [
 
                     // add this item to the regions data
                     addBreakToRegionData(currentBreak, regions);
+
+                    // add this item to the top destinations data
+                    addBreakToTopDestinations(currentBreak, topDestinations);
                 }
             }
 
             updateRegionTotals(regions);
 
-            return {breaks: breaks, regions: regions};
+            return {breaks: breaks, regions: regions, topDestinations: topDestinations};
         }
 
         function formatUrl(url) {
@@ -209,6 +215,12 @@ angular.module('MarriottBreaks').factory('breaksService', [
                         }
                     }
                 }
+            }
+        }
+
+        function addBreakToTopDestinations(currentBreak, topDestinations){
+            if (currentBreak.TOP_DESTINATION && topDestinations.indexOf(currentBreak.MARKET_CITY) === -1){
+                topDestinations.push(currentBreak.MARKET_CITY);
             }
         }
 

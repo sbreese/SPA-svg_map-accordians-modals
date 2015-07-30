@@ -8,6 +8,7 @@ var gulp = require('gulp'), // Gulp
     gulpFilter = require('gulp-filter'), // Build Gulp file filters
     filelog = require('gulp-filelog'), // Logs files in the gulp pipe, used for debugging
     nodemon = require('gulp-nodemon'), // Run Nodemon
+    order = require('gulp-order'), // Compile files in a certain order
     merge = require('merge-stream'), // Merge streams in one task
     sass = require('gulp-sass'),
     del = require('del'); // Delete files
@@ -86,6 +87,12 @@ gulp.task('compileBower', function(){
     var concatPipe = gulp.src(bower(), {base: constants.rootPaths.bower})
         // Compile JS
         .pipe(jsFilter)
+        // some files need to be loaded before others
+        .pipe(order([
+            'jquery/**/*',
+            'angular/**/*',
+            'video.js/**/*'
+        ]))
         .pipe(concat(constants.dest.fileNames.vendorJs))
         .pipe(gulp.dest(constants.dest.js))
         .pipe(jsFilter.restore())

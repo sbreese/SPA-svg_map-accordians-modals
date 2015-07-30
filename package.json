@@ -11,6 +11,7 @@
     "gulp-filter": "^2.0.2",
     "gulp-jshint": "^1.11.2",
     "gulp-livereload": "^3.8.0",
+    "gulp-order": "^1.1.1",
     "gulp-sass": "^2.0.4",
     "jshint-stylish": "^2.0.1",
     "main-bower-files": "^2.9.0",

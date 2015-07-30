@@ -84,6 +84,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         function getBreaksSuccess(data){
             $scope.breaks = data.breaks;
             $scope.regions = data.regions;
+            $scope.topDestinations = data.topDestinations;
         }
 
         function getBreaksFail(response){

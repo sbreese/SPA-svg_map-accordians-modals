@@ -112,14 +112,22 @@
             <accordion-group class="region-group" is-open="regionAccordionGroups['TOPDEST'].isOpen">
                 <!-- Top Destinations Group Header -->
                 <accordion-heading>
-                    <div accordion-header-content group="'TOPDEST'" label="'Top Destinations'" is-open="regionAccordionGroups['TOPDEST'].isOpen"></div>
+                    <div accordion-header-content group="'TOPDEST'" label="'Hot Locations'" is-open="regionAccordionGroups['TOPDEST'].isOpen"></div>
                 </accordion-heading>
 
-                <!-- Hotel List -->
-                <ul class="hotel-grid">
-                    <li hotel-item hotel="break"
-                        ng-repeat="break in breaks | filter:{TOP_DESTINATION: true} | limitTo:20"></li>
+                <!-- Top Destination Buttons -->
+                <ul class="small-block-grid-5" vertilize-container>
+                    <li ng-repeat="topDestination in topDestinations" vertilize>
+                        <a class="large button top-destination-button" href=""
+                           ng-click="topDestinationClick(topDestination)"><p>{{topDestination}}</p></a>
+                    </li>
                 </ul>
+
+                <!-- Hotel List -->
+                <!--<ul class="hotel-grid">-->
+                    <!--<li hotel-item hotel="break"-->
+                        <!--ng-repeat="break in breaks | filter:{TOP_DESTINATION: true} | limitTo:20"></li>-->
+                <!--</ul>-->
 
             </accordion-group>
 

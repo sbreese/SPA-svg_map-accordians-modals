@@ -134,6 +134,25 @@
     }
 }
 
+.top-destination-button {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #9f2b00;
+    display: table;
+
+    &:hover, &:focus, &:active {
+        background-color: #e93c00;
+    }
+
+    p {
+        font-size: 1.2rem;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
 .hotel-item-description-container {
     position: relative;
     height: 140px;
