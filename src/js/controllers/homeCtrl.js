@@ -17,6 +17,23 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         // Add statesService to the scope so we can use it in binding
         $scope.statesService = statesService;
 
+        // Region Views
+        $scope.REGION_VIEWS = {
+            MAP: 'MAP',
+            LIST: 'LIST'
+        };
+
+        // TODO: Switch this on mobile, Map is not allowed
+        $scope.selectedRegionView = $scope.REGION_VIEWS.MAP;
+
+        $scope.selectRegionView = function(viewType){
+            $scope.selectedRegionView = viewType;
+        };
+
+        $scope.isRegionViewActive = function(viewType){
+            return $scope.selectedRegionView === viewType;
+        };
+
         $scope.inputItemSelected = function($model){
             if ($model){
                 // Some of the marriott pages take a while to navigate to. Disable the search box until then

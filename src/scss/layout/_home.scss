@@ -4,6 +4,45 @@
     margin-top: 15px;
 }
 
+.region-view-icon-container {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 2rem;
+    padding: 5px 20px;
+    border-radius: 10px;
+
+    a {
+        opacity: 0.5;
+        color: white;
+        position: relative;
+        z-index: 1;
+
+        &:hover {
+            opacity: 1.0;
+            color: $region-header-color;
+        }
+
+        &.active {
+            color: white;
+            opacity: 1.0;
+        }
+    }
+
+}
+
+.region-icon-background {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.7;
+    background-color: black;
+    border-radius: 10px;
+    z-index: 0;
+}
+
 // This is for content below the video. We need to set the background to white to cover up the video bleed caused
 // by forced aspect ratio
 #breaks-content {
@@ -19,7 +58,7 @@
 }
 
 .region-container {
-    padding: 15px;
+    padding: 25px 15px;
 
     .button {
         width: 100%;
@@ -45,12 +84,8 @@
     max-width: none;
     width: 100%;
     height: 3rem;
-    margin: 20px 0;
+    margin: 10px 0;
     background-color: #DFDFDF;
-
-    &.no-top-margin {
-        margin-top: 0;
-    }
 }
 
 .region-group-accordion {
