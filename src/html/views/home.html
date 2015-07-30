@@ -112,11 +112,7 @@
             <accordion-group class="region-group" is-open="regionAccordionGroups['TOPDEST'].isOpen">
                 <!-- Top Destinations Group Header -->
                 <accordion-heading>
-                    <div ng-click="accordionHeaderClicked('TOPDEST')">
-                        <h2 id="REGION_TOPDEST">Top Destinations</h2>
-
-                        <div class="region-group-header-separator"></div>
-                    </div>
+                    <div accordion-header-content group="'TOPDEST'" label="'Top Destinations'" is-open="regionAccordionGroups['TOPDEST'].isOpen"></div>
                 </accordion-heading>
 
                 <!-- Hotel List -->
@@ -132,11 +128,7 @@
                              ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'">
                 <!-- Region Group Header -->
                 <accordion-heading>
-                    <div ng-click="accordionHeaderClicked(region)">
-                        <h2 id="REGION_{{region}}">{{formatRegionName(region)}}</h2>
-
-                        <div class="region-group-header-separator"></div>
-                    </div>
+                    <div accordion-header-content group="region" label="formatRegionName(region)" is-open="regionAccordionGroups[region].isOpen"></div>
                 </accordion-heading>
 
                 <!-- Group by State -->

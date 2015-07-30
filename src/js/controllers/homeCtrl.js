@@ -2,12 +2,11 @@
 
 angular.module('MarriottBreaks').controller('homeCtrl', [
     '$scope',
-    '$document',
     '$window',
-    '$timeout',
     'breaksService',
     'statesService',
-    function($scope, $document, $window, $timeout, breaksService, statesService){
+    'scrollService',
+    function($scope, $window, breaksService, statesService, scrollService){
         // Regions will be populated when accordion is built. This allows us to open/close via code
         // Example item: $scope.regionAccordionGroups['MIDWEST'] = {isOpen: false}
         $scope.regionAccordionGroups = {};
@@ -52,12 +51,12 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             if (region){
                 expandRegion(region);
             }
-            scrollToElement('STATE_' + state);
+            scrollService.scrollToElement('STATE_' + state);
         };
 
         // Scroll to the clicked group
         $scope.accordionHeaderClicked = function(region){
-            scrollToElement('REGION_' + region);
+            scrollService.scrollToElement('REGION_' + region);
         };
 
         $scope.formatRegionName = function(region){
@@ -74,16 +73,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         function initialize(){
             breaksService.get().then(getBreaksSuccess, getBreaksFail);
-        }
-
-        // Animated scroll the the selected element
-        function scrollToElement(elementId){
-            var element = $window.document.getElementById(elementId);
-            if (element){
-                $timeout(function(){
-                    $document.scrollToElementAnimated(element);
-                }, 50);
-            }
         }
 
         function expandRegion(region){

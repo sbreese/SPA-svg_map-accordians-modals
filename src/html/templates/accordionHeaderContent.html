@@ -1,0 +1,15 @@
+<div ng-click="accordionHeaderClicked()">
+    <div class="accordion-header-content">
+        <!-- Title -->
+        <h2 id="REGION_{{group}}">{{label}}</h2>
+
+        <!-- Expand/Collapse Icons -->
+        <div class="accordion-expand-icon-container">
+            <i class="fi-plus" ng-hide="isOpen"></i>
+            <i class="fi-minus" ng-show="isOpen"></i>
+        </div>
+
+    </div>
+
+    <div class="region-group-header-separator"></div>
+</div>

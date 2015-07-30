@@ -1,0 +1,28 @@
+.accordion-header-content {
+    position: relative;
+
+    .accordion-expand-icon-container {
+        position: absolute;
+        border-radius: 50%;
+
+        width: 27px;
+        height: 27px;
+        line-height: 27px;
+
+        right: 20px;
+        top: 0;
+        bottom: 0;
+        margin: auto 0;
+
+        background-color: $region-header-color;
+
+        i {
+            display: block;
+            font-size: 1.2rem;
+            color: white;
+
+            text-align: center;
+        }
+    }
+
+}
