@@ -51,12 +51,12 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             if (region){
                 expandRegion(region);
             }
-            scrollService.scrollToElement('STATE_' + state);
+            scrollService.scrollToElement('#STATE_' + state);
         };
 
         // Scroll to the clicked group
         $scope.accordionHeaderClicked = function(region){
-            scrollService.scrollToElement('REGION_' + region);
+            scrollService.scrollToElement('#REGION_' + region);
         };
 
         $scope.formatRegionName = function(region){

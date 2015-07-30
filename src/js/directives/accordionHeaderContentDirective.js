@@ -24,7 +24,7 @@ angular.module('MarriottBreaks')
         function ($scope, scrollService) {
 
             $scope.accordionHeaderClicked = function(){
-                scrollService.scrollToElement('REGION_' + $scope.group);
+                scrollService.scrollToElement('#REGION_' + $scope.group);
             };
 
         }

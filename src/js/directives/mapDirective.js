@@ -11,7 +11,7 @@ angular.module('MarriottBreaks')
                 element.on('load', init);
 
                 function init() {
-                    var mapRoot = angular.element(element[0].getSVGDocument().querySelector('svg'));
+                    var mapRoot = angular.element(angular.element(element[0].getSVGDocument()).find('svg'));
 
                     if (mapRoot) {
                         mapRoot.on('click', stateClickFunction);
@@ -49,9 +49,8 @@ angular.module('MarriottBreaks')
     .controller('mapCtrl', [
         '$scope',
         '$window',
-        '$element',
         'breaksService',
-        function ($scope, $window, $element, breaksService) {
+        function ($scope, $window, breaksService) {
 
             $scope.$watch('mapRoot', function (newValue) {
                 buildMapData();
@@ -81,7 +80,7 @@ angular.module('MarriottBreaks')
                 // wait for both of them to be ready and then build the map data
                 if ($scope.regions && $scope.mapRoot) {
                     var stateData = breaksService.getStates($scope.regions);
-                    var statePathElements = $scope.mapRoot[0].querySelectorAll('.land');
+                    var statePathElements = angular.element($scope.mapRoot[0]).find('.land');
 
                     // loop through each state path and add the breaks count
                     var stateCount, statePathElement, stateName;
