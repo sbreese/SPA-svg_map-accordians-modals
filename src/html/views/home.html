@@ -13,129 +13,138 @@
         </div>
     </div>
 
-    <!-- Region Button Group -->
-    <div class="row">
-        <!-- Region Buttons -->
-        <div class="small-10 small-offset-1 large-6 large-offset-3 column region-container">
+    <div id="breaks-content">
 
-            <div class="row">
+        <!-- Section Separator -->
+        <div class="section-separator no-top-margin"></div>
 
-                <div class="small-6 column">
-                    <a region-button region="Northwest" action="regionButtonClick(region)"></a>
+        <!-- Region Button Group -->
+        <div class="row">
+            <!-- Region Buttons -->
+            <div class="small-10 small-offset-1 large-6 large-offset-3 column region-container">
+
+                <div class="row">
+
+                    <div class="small-6 column">
+                        <a region-button region="Northwest" action="regionButtonClick(region)"></a>
+                    </div>
+
+                    <div class="small-6 column">
+                        <a region-button region="Northeast" action="regionButtonClick(region)"></a>
+                    </div>
+
+
                 </div>
 
-                <div class="small-6 column">
-                    <a region-button region="Northeast" action="regionButtonClick(region)"></a>
+                <div class="row">
+
+                    <div class="small-6 column">
+                        <a region-button region="Midwest" action="regionButtonClick(region)"></a>
+                    </div>
+
+                    <div class="small-6 column">
+                        <a region-button region="Canada" action="regionButtonClick(region)"></a>
+                    </div>
+
                 </div>
 
+                <div class="row">
+
+                    <div class="small-6 column">
+                        <a region-button region="Southwest" action="regionButtonClick(region)"></a>
+                    </div>
+
+                    <div class="small-6 column">
+                        <a region-button region="Southeast" action="regionButtonClick(region)"></a>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="small-6 large-offset-3 column">
+                        <a region-button region="Other" action="regionButtonClick(region)"></a>
+                    </div>
+
+                </div>
 
             </div>
-
-            <div class="row">
-
-                <div class="small-6 column">
-                    <a region-button region="Midwest" action="regionButtonClick(region)"></a>
-                </div>
-
-                <div class="small-6 column">
-                    <a region-button region="Canada" action="regionButtonClick(region)"></a>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="small-6 column">
-                    <a region-button region="Southwest" action="regionButtonClick(region)"></a>
-                </div>
-
-                <div class="small-6 column">
-                    <a region-button region="Southeast" action="regionButtonClick(region)"></a>
-                </div>
-
-            </div>
-
-            <div class="row">
-
-                <div class="small-6 large-offset-3 column">
-                    <a region-button region="Other" action="regionButtonClick(region)"></a>
-                </div>
-
-            </div>
-
         </div>
-    </div>
 
-    <!-- Search Box & Dropdown Row -->
-    <div class="row">
-        <div class="small-10 small-offset-1 large-6 large-offset-3 column search-container">
+        <!-- Search Box & Dropdown Row -->
+        <div class="row">
+            <div class="small-10 small-offset-1 large-6 large-offset-3 column search-container">
 
-            <!-- Search Box & Dropdown -->
-            <input type="text" ng-model="selectedBreak" placeholder="Search City, State or Zip" ng-disabled="disableSearch"
-                   typeahead="break as break.HOTEL_NAME for break in breaks | filter:{SEARCH_FIELD: $viewValue} | limitTo:10"
-                   typeahead-template-url="html/templates/breakListItem.html" typeahead-on-select="inputItemSelected($model)"
-                   class="form-control">
+                <!-- Search Box & Dropdown -->
+                <input type="text" ng-model="selectedBreak" placeholder="Search City, State or Zip"
+                       ng-disabled="disableSearch"
+                       typeahead="break as break.HOTEL_NAME for break in breaks | filter:{SEARCH_FIELD: $viewValue} | limitTo:10"
+                       typeahead-template-url="html/templates/breakListItem.html"
+                       typeahead-on-select="inputItemSelected($model)"
+                       class="form-control">
 
-        </div>
-    </div>
-
-    <!-- Section Separator -->
-    <div class="section-separator"></div>
-
-    <!-- REGION / TOP DESTINATIONS ACCORDION -->
-    <accordion class="region-group-accordion" close-others="true">
-
-        <!-- TOP DESTINATIONS -->
-        <accordion-group class="region-group" is-open="regionAccordionGroups['TOPDEST'].isOpen">
-            <!-- Top Destinations Group Header -->
-            <accordion-heading>
-                <div ng-click="accordionHeaderClicked('TOPDEST')">
-                    <h2 id="REGION_TOPDEST">Top Destinations</h2>
-
-                    <div class="region-group-header-separator"></div>
-                </div>
-            </accordion-heading>
-
-            <!-- Hotel List -->
-            <ul class="hotel-grid">
-                <li hotel-item hotel="break"
-                    ng-repeat="break in breaks | filter:{TOP_DESTINATION: true} | limitTo:20"></li>
-            </ul>
-
-        </accordion-group>
-
-        <!-- REGION GROUPS -->
-        <accordion-group class="region-group" is-open="regionAccordionGroups[region].isOpen"
-                         ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'">
-            <!-- Region Group Header -->
-            <accordion-heading>
-                <div ng-click="accordionHeaderClicked(region)">
-                    <h2 id="REGION_{{region}}">{{formatRegionName(region)}}</h2>
-
-                    <div class="region-group-header-separator"></div>
-                </div>
-            </accordion-heading>
-
-            <!-- Group by State -->
-            <div class="row" ng-repeat="(state, hotels) in regionGroup | groupBy: 'PROPERTY_STATE'">
-
-                <div class="full-column">
-
-                    <!-- State Group Header -->
-                    <h3 id="STATE_{{state}}">{{statesService.getStateName(state)}}</h3>
-
-                    <!-- Hotel List -->
-                    <ul class="hotel-grid">
-
-                        <!-- Hotel Items -->
-                        <li hotel-item hotel="hotel" ng-repeat="hotel in hotels"></li>
-
-                    </ul>
-
-                </div>
             </div>
+        </div>
 
-        </accordion-group>
-    </accordion>
+        <!-- Section Separator -->
+        <div class="section-separator"></div>
+
+        <!-- REGION / TOP DESTINATIONS ACCORDION -->
+        <accordion class="region-group-accordion" close-others="true">
+
+            <!-- TOP DESTINATIONS -->
+            <accordion-group class="region-group" is-open="regionAccordionGroups['TOPDEST'].isOpen">
+                <!-- Top Destinations Group Header -->
+                <accordion-heading>
+                    <div ng-click="accordionHeaderClicked('TOPDEST')">
+                        <h2 id="REGION_TOPDEST">Top Destinations</h2>
+
+                        <div class="region-group-header-separator"></div>
+                    </div>
+                </accordion-heading>
+
+                <!-- Hotel List -->
+                <ul class="hotel-grid">
+                    <li hotel-item hotel="break"
+                        ng-repeat="break in breaks | filter:{TOP_DESTINATION: true} | limitTo:20"></li>
+                </ul>
+
+            </accordion-group>
+
+            <!-- REGION GROUPS -->
+            <accordion-group class="region-group" is-open="regionAccordionGroups[region].isOpen"
+                             ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'">
+                <!-- Region Group Header -->
+                <accordion-heading>
+                    <div ng-click="accordionHeaderClicked(region)">
+                        <h2 id="REGION_{{region}}">{{formatRegionName(region)}}</h2>
+
+                        <div class="region-group-header-separator"></div>
+                    </div>
+                </accordion-heading>
+
+                <!-- Group by State -->
+                <div class="row" ng-repeat="(state, hotels) in regionGroup | groupBy: 'PROPERTY_STATE'">
+
+                    <div class="full-column">
+
+                        <!-- State Group Header -->
+                        <h3 id="STATE_{{state}}">{{statesService.getStateName(state)}}</h3>
+
+                        <!-- Hotel List -->
+                        <ul class="hotel-grid">
+
+                            <!-- Hotel Items -->
+                            <li hotel-item hotel="hotel" ng-repeat="hotel in hotels"></li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+            </accordion-group>
+        </accordion>
+
+    </div>
 
 </div>

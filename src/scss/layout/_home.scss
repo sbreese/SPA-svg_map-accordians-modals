@@ -1,6 +1,14 @@
 #region-map {
     position: relative;
     opacity: 0.8;
+    margin-top: 15px;
+}
+
+// This is for content below the video. We need to set the background to white to cover up the video bleed caused
+// by forced aspect ratio
+#breaks-content {
+    position: relative;
+    background: white;
 }
 
 .search-input {
@@ -39,6 +47,10 @@
     height: 70px;
     margin: 20px 0;
     background-color: #DFDFDF;
+
+    &.no-top-margin {
+        margin-top: 0;
+    }
 }
 
 .region-group-accordion {

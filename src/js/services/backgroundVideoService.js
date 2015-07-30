@@ -6,9 +6,9 @@ angular.module('MarriottBreaks').factory('backgroundVideoService', [
         return {
 
             loadVideo: function(){
-                var video = new $.BigVideo({container: $('#background-video')});
+                var video = new $.BigVideo({container: $('#background-video'), useFlashForFirefox:false});
                 video.init();
-                video.show('http://vjs.zencdn.net/v/oceans.mp4', {ambient: true});
+                video.show('assets/videos/leaves.mp4', {ambient: true});
             }
 
         };

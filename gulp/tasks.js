@@ -66,10 +66,10 @@ gulp.task('compileHtml', function(){
         .pipe(liveReload());
 });
 
-// Copy all images
-gulp.task('copyImages', function(){
-    return gulp.src(constants.sources.images)
-        .pipe(gulp.dest(constants.dest.images))
+// Copy all assets (images and video)
+gulp.task('copyAssets', function(){
+    return gulp.src(constants.sources.assets)
+        .pipe(gulp.dest(constants.dest.assets))
         .pipe(liveReload());
 });
 
@@ -78,7 +78,10 @@ gulp.task('compileBower', function(){
     // Ignore foundation JS (we're using angular-foundation for the JS) and ignore Modernizr as it needs to be
     // loaded separately in the <head> tag
     var jsFilter = gulpFilter(['**/*.js', '!foundation/**/*', '!modernizr/**/*']);
-    var cssFilter = gulpFilter(['**/*.css', '!foundation/**/*']);
+
+    // Ignore Foundation (this gets imported manually via the master app.scss SASS file)
+    // also ignore video.js - this is in src, needed to be adjusted
+    var cssFilter = gulpFilter(['**/*.css', '!foundation/**/*', '!video.js/**/*']);
 
     var concatPipe = gulp.src(bower(), {base: constants.rootPaths.bower})
         // Compile JS
@@ -126,7 +129,7 @@ gulp.task('watch', function(){
     gulp.watch(constants.sources.server, ['lintServer']);
     gulp.watch(constants.sources.html, ['compileHtml']);
     gulp.watch(constants.sources.scss, ['compileSass']);
-    gulp.watch(constants.sources.images, ['copyImages']);
+    gulp.watch(constants.sources.assets, ['copyAssets']);
     // Removing this for now - it keeps triggering when it shouldn't
     //gulp.watch(constants.rootPaths.bower, ['compileBower']);
 });
@@ -141,7 +144,7 @@ gulp.task('compile', [
         'compileJs',
         'compileSass',
         'compileHtml',
-        'copyImages',
+        'copyAssets',
         'compileBower']
 );
 

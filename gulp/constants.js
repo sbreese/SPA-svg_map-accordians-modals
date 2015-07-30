@@ -14,7 +14,7 @@ var sources = {
     scssMap: rootPaths.source + '/scss/layout/map.scss',
     html: rootPaths.source + '/html/**/*.html',
     index: rootPaths.source + '/html/index.html',
-    images: rootPaths.source + '/images/**/*',
+    assets: rootPaths.source + '/assets/**/*',
     server: rootPaths.server + '/**/*.js',
     vendorCopy: [rootPaths.bower + '/modernizr/modernizr.js']
 };
@@ -24,7 +24,7 @@ var dest = {
     js: rootPaths.dest + '/js',
     css: rootPaths.dest + '/css',
     html: rootPaths.dest + '/html',
-    images: rootPaths.dest + '/images',
+    assets: rootPaths.dest + '/assets',
 
     fileNames: {
         srcJs: 'marriott-breaks.js',
