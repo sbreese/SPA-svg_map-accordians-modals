@@ -116,18 +116,21 @@
                 </accordion-heading>
 
                 <!-- Top Destination Buttons -->
-                <ul class="small-block-grid-5" vertilize-container>
+                <ul class="small-block-grid-4" vertilize-container>
                     <li ng-repeat="topDestination in topDestinations" vertilize>
-                        <a class="large button top-destination-button" href=""
-                           ng-click="topDestinationClick(topDestination)"><p>{{topDestination}}</p></a>
+                        <a class="large button top-destination-button" href="" ng-class="{'selected': selectedTopDestination === topDestination}"
+                           ng-click="selectTopDestination(topDestination)"><p>{{topDestination}}</p></a>
                     </li>
                 </ul>
 
-                <!-- Hotel List -->
-                <!--<ul class="hotel-grid">-->
-                    <!--<li hotel-item hotel="break"-->
-                        <!--ng-repeat="break in breaks | filter:{TOP_DESTINATION: true} | limitTo:20"></li>-->
-                <!--</ul>-->
+                <!-- Top Destination Hotel List -->
+                <div ng-show="(selectedTopDestination)">
+                    <div class="section-separator small"></div>
+                    <ul class="hotel-grid">
+                        <li hotel-item hotel="break"
+                            ng-repeat="break in breaks | filter:{MARKET_CITY: selectedTopDestination} | limitTo:20"></li>
+                    </ul>
+                </div>
 
             </accordion-group>
 

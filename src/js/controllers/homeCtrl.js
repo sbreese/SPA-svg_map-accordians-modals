@@ -25,8 +25,20 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         // TODO: Switch this on mobile, Map is not allowed
         $scope.selectedRegionView = $scope.REGION_VIEWS.MAP;
 
+        $scope.selectedTopDestination = null;
+
         $scope.selectRegionView = function(viewType){
             $scope.selectedRegionView = viewType;
+        };
+
+        $scope.selectTopDestination = function(topDestination){
+            // Collapse the item if it is already selected
+            if ($scope.selectedTopDestination === topDestination){
+                $scope.selectedTopDestination = null;
+            }
+            else {
+                $scope.selectedTopDestination = topDestination;
+            }
         };
 
         $scope.isRegionViewActive = function(viewType){
