@@ -1,11 +1,19 @@
-<!-- Hotel Image -->
-<img src="assets/images/hotel.png"/>
+<div class="hotel-item-table">
 
-<!-- Hotel Description -->
-<div class="hotel-item-description-container">
-    <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
+    <!-- Hotel Image -->
+    <div class="hotel-image-table-row">
+        <img class="hotel-image" ng-src="{{hotelImage}}"/>
+    </div>
 
-    <p class="hotel-item-per-night">{{hotel.PRICE_RANGE}} per night</p>
+    <!-- Hotel Description -->
+    <div class="hotel-item-description-table-row">
+        <div class="hotel-item-description-container">
+            <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
 
-    <a ng-href="{{hotel.AVAILABILITY_URL}}" class="{{getButtonClass()}}">Book Now</a>
+            <p class="hotel-item-per-night">{{hotel.PRICE_RANGE}} per night</p>
+
+            <a ng-href="{{hotel.AVAILABILITY_URL}}" class="{{getButtonClass()}}">Book Now</a>
+        </div>
+    </div>
+
 </div>

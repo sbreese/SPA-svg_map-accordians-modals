@@ -6,7 +6,7 @@
     @include block-grid(1);
 
     @media #{$medium-up} {
-        @include block-grid(2);
+        @include block-grid(3);
     }
 
     @media #{$large-up} {

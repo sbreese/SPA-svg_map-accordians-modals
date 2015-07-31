@@ -84,7 +84,7 @@ angular.module('MarriottBreaks').factory('statesService', [
         return {
 
             getStateName: function(stateAbbreviation){
-                return states[stateAbbreviation];
+                return (states[stateAbbreviation] ? states[stateAbbreviation] : stateAbbreviation);
             },
 
             getStateAbbreviation: function(stateName){
