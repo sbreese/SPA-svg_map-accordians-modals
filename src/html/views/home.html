@@ -4,7 +4,7 @@
     <div id="background-video">
 
         <!-- Region View Buttons -->
-        <div class="region-view-icon-container">
+        <div class="region-view-icon-container" ng-if="showRegionOptions">
 
             <!-- Map View Button -->
             <a href="" ng-click="selectRegionView(REGION_VIEWS.MAP)" ng-class="{'active': isRegionViewActive(REGION_VIEWS.MAP)}">
@@ -116,7 +116,7 @@
                 </accordion-heading>
 
                 <!-- Top Destination Buttons -->
-                <ul class="small-block-grid-4" vertilize-container>
+                <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4" vertilize-container>
                     <li ng-repeat="topDestination in topDestinations" vertilize>
                         <a class="large button top-destination-button" href="" ng-class="{'selected': selectedTopDestination === topDestination}"
                            ng-click="selectTopDestination(topDestination)"><p>{{topDestination}}</p></a>

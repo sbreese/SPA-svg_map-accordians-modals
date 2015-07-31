@@ -6,7 +6,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
     'breaksService',
     'statesService',
     'scrollService',
-    function($scope, $window, breaksService, statesService, scrollService){
+    'mediaService',
+    function($scope, $window, breaksService, statesService, scrollService, mediaService){
+        $scope.isMobile = mediaService.isMobile();
+
         // Regions will be populated when accordion is built. This allows us to open/close via code
         // Example item: $scope.regionAccordionGroups['MIDWEST'] = {isOpen: false}
         $scope.regionAccordionGroups = {};
@@ -18,12 +21,19 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         // Region Views
         $scope.REGION_VIEWS = {
-            MAP: 'MAP',
             LIST: 'LIST'
         };
 
-        // TODO: Switch this on mobile, Map is not allowed
-        $scope.selectedRegionView = $scope.REGION_VIEWS.MAP;
+        if ($scope.isMobile){
+            $scope.selectedRegionView = $scope.REGION_VIEWS.LIST;
+            $scope.showRegionOptions = false;
+        }
+        else {
+            // Only allow map view if not mobile
+            $scope.REGION_VIEWS.MAP = 'MAP';
+            $scope.selectedRegionView = $scope.REGION_VIEWS.MAP;
+            $scope.showRegionOptions = true;
+        }
 
         $scope.selectedTopDestination = null;
 
@@ -79,8 +89,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         // clear input on "pageshow" event. This is due to bfcache (back/forward caching). Otherwise, if bfcache is enabled,
         // the input state will be kept and will stay disabled
         angular.element($window).bind('pageshow', function(){
-            $scope.selectedBreak = null;
-            $scope.disableSearch = false;
+            $scope.$apply(function(){
+                $scope.selectedBreak = null;
+                $scope.disableSearch = false
+            });
         });
 
         function initialize(){
