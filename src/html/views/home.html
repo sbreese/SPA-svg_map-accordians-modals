@@ -155,7 +155,7 @@
                         <ul class="hotel-grid">
 
                             <!-- Hotel Items -->
-                            <li hotel-item hotel="hotel" ng-repeat="hotel in hotels"></li>
+                            <li hotel-item hotel="hotel" ng-repeat="hotel in hotels | orderBy:'-TOP_DESTINATION'"></li>
 
                         </ul>
 
