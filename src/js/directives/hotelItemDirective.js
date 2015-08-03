@@ -40,7 +40,7 @@ angular.module('MarriottBreaks')
                     var width = Math.floor(Math.random() * (widthRange + 1)) + minWidth;
                     var height = Math.floor(Math.random() * (heightRange + 1)) + minHeight;
 
-                    return ["http://placekitten.com/g/", width, '/', height].join('');
+                    return ["http://placekitten.com/", width, '/', height].join('');
                 }
             }
 
