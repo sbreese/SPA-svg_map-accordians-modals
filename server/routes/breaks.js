@@ -3,33 +3,12 @@
 
 var express = require('express'),
     router = express.Router(),
-    Converter = require('csvtojson').Converter, // Used for converting csv to json
-    fs = require('fs'), // File Stream
-    path = require('path');
-
-var fileNames = {
-    csv: path.join(__dirname, '../data/marriott-data.csv'),
-    json: path.join(__dirname, '../data/marriott-data.json')
-};
-
-// Convert CSV file to JSON file
-function convertData(callback){
-    var csvStream = fs.createReadStream(fileNames.csv);
-    var jsonStream = fs.createWriteStream(fileNames.json);
-
-    var csvConverter = new Converter({constructResult:false, toArrayString:true});
-
-    csvConverter.on('end_parsed', function(){
-        console.log('CSV Data successfully converted!');
-        callback();
-    });
-
-    csvStream.pipe(csvConverter).pipe(jsonStream);
-}
+    breaksParser = require('../util/breaksParser'), // Utility for parsing the CSV data to JSON
+    fs = require('fs'); // File Stream
 
 // Reads the JSON file and sends the data to the callback
 function readJsonData(callback){
-    fs.readFile(fileNames.json, function(err, data){
+    fs.readFile(breaksParser.fileNames.json, function(err, data){
         if (err){
             callback(err, null);
         }
@@ -41,22 +20,27 @@ function readJsonData(callback){
 
 // /breaks/convert POST
 router.post('/convert', function(request, response){
-    convertData(function(){
-        response.send('CSV Data successfully converted!');
+    breaksParser.parseBreaksData(function(err){
+        if (err){
+            response.status(500).send('Error converting eBreaks data');
+        }
+        else {
+            response.send('CSV Data successfully converted!');
+        }
     });
 });
 
 // /breaks GET
 router.get('/', function(request, response){
     // Check if JSON file exists. If not, convert the csv first
-    fs.stat(fileNames.json, function(err, stat){
+    fs.stat(breaksParser.fileNames.json, function(err, stat){
         if (!err){
             // No error, file exists. Read and send
             readJsonData(sendJsonData);
         }
         else if (err.code === 'ENOENT') {
             // File doesn't exist. Convert and send
-            convertData(function(){
+            breaksParser.parseBreaksData(function(){
                 readJsonData(sendJsonData);
             });
         }

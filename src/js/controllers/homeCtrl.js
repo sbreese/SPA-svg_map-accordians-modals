@@ -91,7 +91,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         angular.element($window).bind('pageshow', function(){
             $scope.$apply(function(){
                 $scope.selectedBreak = null;
-                $scope.disableSearch = false
+                $scope.disableSearch = false;
             });
         });
 
@@ -105,10 +105,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             }
         }
 
-        function getBreaksSuccess(data){
-            $scope.breaks = data.breaks;
-            $scope.regions = data.regions;
-            $scope.topDestinations = data.topDestinations;
+        function getBreaksSuccess(response){
+            $scope.breaks = response.data.breaks;
+            $scope.regions = response.data.regions;
+            $scope.topDestinations = response.data.topDestinations;
         }
 
         function getBreaksFail(response){
