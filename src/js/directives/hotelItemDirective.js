@@ -5,9 +5,6 @@ angular.module('MarriottBreaks')
         function () {
 
             function linkFunction(scope, element, attrs, hotelItemContainerCtrl) {
-                // add container class
-                element.addClass('hotel-item-container');
-
                 // get a random image for now
                 scope.hotelImage = getRandomPlaceholder();
 
