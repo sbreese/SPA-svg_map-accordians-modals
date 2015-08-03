@@ -1,18 +1,18 @@
-<div class="hotel-item-table">
+<div class="hotel-item-table" itemscope itemtype="http://schema.org/Hotel">
 
     <!-- Hotel Image -->
     <div class="hotel-image-table-row">
-        <img class="hotel-image" ng-src="{{hotelImage}}"/>
+        <img class="hotel-image" ng-src="{{hotelImage}}" itemprop="image"/>
     </div>
 
     <!-- Hotel Description -->
     <div class="hotel-item-description-table-row">
         <div class="hotel-item-description-container">
-            <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
+            <p class="hotel-item-name" itemprop="name">{{hotel.HOTEL_NAME}}</p>
 
-            <p class="hotel-item-per-night">{{hotel.PRICE_RANGE}} per night</p>
+            <p class="hotel-item-per-night" itemprop="priceRange">{{hotel.PRICE_RANGE}} per night</p>
 
-            <a ng-href="{{hotel.AVAILABILITY_URL}}" class="{{getButtonClass()}}">Book Now</a>
+            <a itemprop="mainEntityOfPage" ng-href="{{hotel.AVAILABILITY_URL}}" class="{{getButtonClass()}}">Book Now</a>
         </div>
     </div>
 
