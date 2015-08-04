@@ -5,6 +5,8 @@ angular.module('MarriottBreaks')
         function () {
 
             function linkFunction(scope, element, attrs, hotelItemContainerCtrl) {
+                element.addClass('hotel-item');
+
                 // get a random image for now
                 scope.hotelImage = getRandomPlaceholder();
 
@@ -16,7 +18,7 @@ angular.module('MarriottBreaks')
                     var hotelImage = element.find('img');
                     if (hotelImage){
                         hotelImage.on('load', function(){
-                            hotelItemContainerCtrl.setItemHeights();
+                            hotelItemContainerCtrl.setItemHeightsForHotelGroup(element);
                         });
                     }
                 }

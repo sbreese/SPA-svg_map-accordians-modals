@@ -127,7 +127,7 @@
                 <div ng-show="(selectedTopDestination)">
                     <div class="section-separator small"></div>
 
-                    <ul class="hotel-grid">
+                    <ul class="hotel-grid" hotel-item-container is-open="regionAccordionGroups['TOPDEST'].isOpen">
                         <li hotel-item hotel="break"
                             ng-repeat="break in breaks | filter:{MARKET_CITY: selectedTopDestination} | limitTo:20"></li>
                     </ul>
@@ -152,7 +152,7 @@
                         <h3 id="STATE_{{state}}">{{statesService.getStateName(state)}}</h3>
 
                         <!-- Hotel List -->
-                        <ul class="hotel-grid">
+                        <ul class="hotel-grid" hotel-item-container is-open="regionAccordionGroups[region].isOpen">
 
                             <!-- Hotel Items -->
                             <li hotel-item hotel="hotel" ng-repeat="hotel in hotels | orderBy:'-TOP_DESTINATION'"></li>
