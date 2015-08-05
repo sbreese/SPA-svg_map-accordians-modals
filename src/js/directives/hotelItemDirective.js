@@ -50,7 +50,8 @@ angular.module('MarriottBreaks')
                 restrict: 'EA',
                 templateUrl: 'html/templates/hotelItem.html',
                 scope: {
-                    hotel: '='
+                    hotel: '=',
+                    topDestination: '='
                 },
                 controller: 'hotelItemCtrl',
                 link: linkFunction,
@@ -60,7 +61,12 @@ angular.module('MarriottBreaks')
     ])
     .controller('hotelItemCtrl', [
         '$scope',
-        function ($scope) {
+        'cookieService',
+        function ($scope, cookieService) {
+
+            // prefix ID with 'TD_' if this is a top destination so that it doesn't clash with its duplicate
+            // we can't set this on the hotel model itself since it is shared between top dest and normal regions
+            $scope.hotelId = ($scope.topDestination ? 'TD_' : '') + $scope.hotel.PROFILE_KEY;
 
             $scope.getButtonClass = function(){
                 // use different button type if this is a top destination
@@ -70,6 +76,11 @@ angular.module('MarriottBreaks')
                 else {
                     return 'hotel-item-book-now';
                 }
+            };
+
+            $scope.hotelItemSelected = function(){
+                // save hotel info in a cookie for when we come back to the site
+                cookieService.saveLastVisitedHotel($scope.hotelId, $scope.hotel, $scope.topDestination);
             };
 
         }

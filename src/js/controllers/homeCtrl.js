@@ -4,12 +4,15 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
     '$scope',
     '$rootScope',
     '$window',
+    '$document',
+    '$timeout',
     'breaksService',
     'statesService',
     'scrollService',
     'mediaService',
     'backgroundVideoService',
-    function($scope, $rootScope, $window, breaksService, statesService, scrollService, mediaService, backgroundVideoService){
+    'cookieService',
+    function($scope, $rootScope, $window, $document, $timeout, breaksService, statesService, scrollService, mediaService, backgroundVideoService, cookieService){
         $scope.isMobile = mediaService.isMobile();
 
         // Regions will be populated when accordion is built. This allows us to open/close via code
@@ -43,14 +46,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             $scope.selectedRegionView = viewType;
         };
 
-        $scope.selectTopDestination = function(topDestination){
+        $scope.toggleTopDestination = function(topDestination){
             // Collapse the item if it is already selected
-            if ($scope.selectedTopDestination === topDestination){
-                $scope.selectedTopDestination = null;
-            }
-            else {
-                $scope.selectedTopDestination = topDestination;
-            }
+            var topDestinationResult = ($scope.selectedTopDestination === topDestination) ? null : topDestination;
+            selectTopDestination(topDestinationResult);
         };
 
         $scope.isRegionViewActive = function(viewType){
@@ -75,12 +74,12 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             if (region){
                 expandRegion(region);
             }
-            scrollService.scrollToElement('#STATE_' + state);
+            scrollService.scrollToState(state);
         };
 
         // Scroll to the clicked group
         $scope.accordionHeaderClicked = function(region){
-            scrollService.scrollToElement('#REGION_' + region);
+            scrollService.scrollToRegion(region);
         };
 
         $scope.formatRegionName = function(region){
@@ -100,6 +99,16 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         $rootScope.$on('window.resize', function () {
             updateMediaOptions();
         });
+
+        var attemptedScroll = false;
+        $scope.$watchCollection('regionAccordionGroups', function(newVal){
+            // wait until region groups have been built via the DOM ng-repeat before trying to scroll to the hotel items
+            if (!attemptedScroll && Object.keys(newVal).length > 1){
+                attemptedScroll = true;
+                goToLastVisitedItem();
+            }
+        });
+
 
         function initialize(){
             breaksService.get().then(getBreaksSuccess, getBreaksFail);
@@ -125,6 +134,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             }
         }
 
+        function selectTopDestination(topDestination){
+            $scope.selectedTopDestination = topDestination;
+        }
+
         function expandRegion(region){
             if ($scope.regionAccordionGroups.hasOwnProperty(region)){
                 $scope.regionAccordionGroups[region].isOpen = true;
@@ -139,6 +152,74 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         function getBreaksFail(response){
             //TODO: Error handling?
+        }
+
+        function goToLastVisitedItem(){
+            var lastVisitedHotel = cookieService.getLastVisitedHotel();
+
+            if (lastVisitedHotel){
+
+                // try to expand the section containing the hotel. this needs to happen first, especially for top destinations
+                // because top dests aren't loaded in the DOM yet
+                if (expandLastVisitedHotelSection(lastVisitedHotel)){
+
+                    // we need a timeout here so that DOM content can load after expanding
+                    $timeout(function(){
+
+                        // try to find the hotel in the DOM
+                        var hotelElement = $document.find('#' + lastVisitedHotel.id);
+
+                        // if we find the hotel element, scroll to it
+                        if (hotelElement.length > 0){
+                            scrollService.scrollToElement(hotelElement, 10);
+                        }
+                        else {
+                            // we couldn't find the exact hotel, so scroll to the next most relevant section
+                            if (lastVisitedHotel.topDestination){
+                                // for top destination, just scroll to the top destinations section
+                                scrollService.scrollToRegion('TOPDEST');
+                            }
+                            else {
+                                // for regular destinations, first try to scroll to the state. If we can't find that,
+                                // just scroll to the region
+                                var stateElement = $document.find('#STATE_' + lastVisitedHotel.state);
+                                if (stateElement.length > 0){
+                                    scrollService.scrollToElement(stateElement);
+                                }
+                                else {
+                                    scrollService.scrollToRegion(lastVisitedHotel.region);
+                                }
+                            }
+                        }
+                    }, 1000);
+                }
+
+                //remove the cookie so that it only happens once
+                cookieService.removeLastVisitedHotel();
+            }
+        }
+
+        // expand the correct hotel section to allow scrolling to it. returns true if the valid section was found and expanded
+        function expandLastVisitedHotelSection(lastVisitedHotel){
+            if (lastVisitedHotel.topDestination){
+                // for top destination, expand the top destination group and open the correct section
+                // check to see if this is a valid top destination first
+                if ($scope.topDestinations.indexOf(lastVisitedHotel.topDestination) !== -1){
+                    $scope.regionAccordionGroups.TOPDEST.isOpen = true;
+                    selectTopDestination(lastVisitedHotel.topDestination);
+
+                    return true;
+                }
+            }
+            else {
+                // make sure this is a valid region before trying to expand
+                if ($scope.regionAccordionGroups.hasOwnProperty(lastVisitedHotel.region)){
+                    expandRegion(lastVisitedHotel.region);
+                    return true;
+                }
+            }
+
+            return false;
         }
 
         initialize();

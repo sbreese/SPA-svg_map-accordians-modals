@@ -119,7 +119,7 @@
                 <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4" vertilize-container>
                     <li ng-repeat="topDestination in topDestinations" vertilize>
                         <a class="large button top-destination-button" href="" ng-class="{'selected': selectedTopDestination === topDestination}"
-                           ng-click="selectTopDestination(topDestination)"><p>{{topDestination}}</p></a>
+                           ng-click="toggleTopDestination(topDestination)"><p>{{topDestination}}</p></a>
                     </li>
                 </ul>
 
@@ -128,7 +128,7 @@
                     <div class="section-separator small"></div>
 
                     <ul class="hotel-grid" hotel-item-container is-open="regionAccordionGroups['TOPDEST'].isOpen">
-                        <li hotel-item hotel="break"
+                        <li hotel-item hotel="break" top-destination="true"
                             ng-repeat="break in breaks | filter:{MARKET_CITY: selectedTopDestination} | limitTo:20"></li>
                     </ul>
                 </div>
@@ -155,7 +155,8 @@
                         <ul class="hotel-grid" hotel-item-container is-open="regionAccordionGroups[region].isOpen">
 
                             <!-- Hotel Items -->
-                            <li hotel-item hotel="hotel" ng-repeat="hotel in hotels | orderBy:'-TOP_DESTINATION'"></li>
+                            <li hotel-item hotel="hotel" top-destination="false"
+                                ng-repeat="hotel in hotels | orderBy:'-TOP_DESTINATION'"></li>
 
                         </ul>
 

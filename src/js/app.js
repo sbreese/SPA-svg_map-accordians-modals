@@ -2,6 +2,7 @@
 
 angular.module('MarriottBreaks', [
     'ngRoute',
+    'ngCookies',
     'angular.filter',
     'duScroll',
     'mm.foundation',

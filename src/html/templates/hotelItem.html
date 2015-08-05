@@ -1,5 +1,5 @@
-<div class="hotel-item-container" itemscope itemtype="http://schema.org/Hotel">
-    <a class="hotel-item-link" ng-href="{{hotel.AVAILABILITY_URL}}" itemprop="mainEntityOfPage">
+<div id="{{hotelId}}" class="hotel-item-container" itemscope itemtype="http://schema.org/Hotel">
+    <a class="hotel-item-link" ng-href="{{hotel.AVAILABILITY_URL}}" ng-click="hotelItemSelected()" itemprop="mainEntityOfPage">
         <div class="hotel-item-content">
 
             <!-- Hotel Image -->

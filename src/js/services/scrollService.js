@@ -3,19 +3,41 @@
 angular.module('MarriottBreaks').factory('scrollService', [
     '$document',
     '$timeout',
-    function($document, $timeout){
+    function ($document, $timeout) {
+
+        var timeoutDuration = 50;
+
+        function scrollToElement(element, offset){
+            $timeout(function () {
+                $document.scrollToElementAnimated(element, offset);
+            }, timeoutDuration);
+        }
+
+        function scrollToElementById(elementId, offset){
+            var element = angular.element($document).find(elementId);
+            if (element) {
+                scrollToElement(element, offset);
+            }
+        }
 
         return {
 
-            // Do an animated scroll to the given element
-            scrollToElement: function(elementId){
-                var element = angular.element($document).find(elementId);
-                if (element){
-                    $timeout(function(){
-                        $document.scrollToElementAnimated(element);
-                    }, 50);
-                }
+            // Do an animated scroll to the given element by ID
+            scrollToElementById: function (elementId, offset) {
+                scrollToElementById(elementId, offset);
+            },
 
+            // Do an animated scroll to the given element
+            scrollToElement: function (element, offset) {
+                scrollToElement(element, offset);
+            },
+
+            scrollToRegion: function(region){
+                scrollToElementById('#REGION_' + region);
+            },
+
+            scrollToState: function(state){
+                scrollToElementById('#STATE_' + state);
             }
 
         };

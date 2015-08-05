@@ -25,7 +25,7 @@ angular.module('MarriottBreaks')
 
             $scope.accordionHeaderClicked = function(){
                 if (!$scope.isOpen){
-                    scrollService.scrollToElement('#REGION_' + $scope.group);
+                    scrollService.scrollToRegion($scope.group);
                 }
             };
 
