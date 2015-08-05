@@ -6,8 +6,6 @@ angular.module('MarriottBreaks').factory('mediaService', [
     '$timeout',
     'mediaQueries',
     function ($rootScope, $window, $timeout, mediaQueries) {
-        var isMobile = null;
-
         var resizeTimeoutPromise = null;
         var resizeTimeoutDuration = 500;
 
@@ -34,10 +32,8 @@ angular.module('MarriottBreaks').factory('mediaService', [
             },
 
             isMobile: function () {
-                if (isMobile === null) {
-                    isMobile = this.isMediumDown();
-                }
-                return isMobile;
+                // for now, just check medium down. but we may need to change this in the future
+                return this.isMediumDown();
             }
 
         };

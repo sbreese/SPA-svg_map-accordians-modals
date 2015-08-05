@@ -24,7 +24,7 @@
         <div class="row">
 
             <!-- MAP VIEW -->
-            <div class="full-column" ng-show="isRegionViewActive(REGION_VIEWS.MAP)">
+            <div class="full-column" ng-if="!isMobile" ng-show="isRegionViewActive(REGION_VIEWS.MAP)">
 
                 <!-- Map Directive -->
                 <div id="region-map" map state-click-action="stateButtonClick(state)" regions="regions"></div>

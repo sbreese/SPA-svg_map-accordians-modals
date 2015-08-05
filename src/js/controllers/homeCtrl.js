@@ -2,12 +2,14 @@
 
 angular.module('MarriottBreaks').controller('homeCtrl', [
     '$scope',
+    '$rootScope',
     '$window',
     'breaksService',
     'statesService',
     'scrollService',
     'mediaService',
-    function($scope, $window, breaksService, statesService, scrollService, mediaService){
+    'backgroundVideoService',
+    function($scope, $rootScope, $window, breaksService, statesService, scrollService, mediaService, backgroundVideoService){
         $scope.isMobile = mediaService.isMobile();
 
         // Regions will be populated when accordion is built. This allows us to open/close via code
@@ -21,7 +23,8 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         // Region Views
         $scope.REGION_VIEWS = {
-            LIST: 'LIST'
+            LIST: 'LIST',
+            MAP: 'MAP'
         };
 
         if ($scope.isMobile){
@@ -30,7 +33,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         }
         else {
             // Only allow map view if not mobile
-            $scope.REGION_VIEWS.MAP = 'MAP';
             $scope.selectedRegionView = $scope.REGION_VIEWS.MAP;
             $scope.showRegionOptions = true;
         }
@@ -95,8 +97,32 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             });
         });
 
+        $rootScope.$on('window.resize', function () {
+            updateMediaOptions();
+        });
+
         function initialize(){
             breaksService.get().then(getBreaksSuccess, getBreaksFail);
+        }
+
+        // update controller options based on media size
+        function updateMediaOptions(){
+            $scope.isMobile = mediaService.isMobile();
+
+            if ($scope.isMobile){
+                $scope.showRegionOptions = false;
+
+                // if we are changing from mobile to non-mobile, we need to move off of the map view
+                if ($scope.selectedRegionView === $scope.REGION_VIEWS.MAP){
+                    $scope.selectedRegionView = $scope.REGION_VIEWS.LIST;
+                }
+
+                backgroundVideoService.hideVideo();
+            }
+            else {
+                $scope.showRegionOptions = true;
+                backgroundVideoService.showVideo();
+            }
         }
 
         function expandRegion(region){
