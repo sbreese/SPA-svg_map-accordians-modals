@@ -15,7 +15,7 @@ angular.module('MarriottBreaks').factory('scrollService', [
 
         function scrollToElementById(elementId, offset){
             var element = angular.element($document).find(elementId);
-            if (element) {
+            if (element.length > 0) {
                 scrollToElement(element, offset);
             }
         }
