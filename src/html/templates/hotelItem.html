@@ -16,4 +16,13 @@
 
         </div>
     </a>
+
+    <!-- This div is invisible and for schema.org info only -->
+    <div class="hotel-item-schema-data" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+        <meta itemprop="streetAddress" content="{{hotel.ADDRESS1}}">
+        <meta itemprop="addressLocality" content="{{hotel.PROPERTY_CITY}}">
+        <meta itemprop="addressRegion" content="{{hotel.PROPERTY_STATE}}">
+        <meta itemprop="postalCode" content="{{hotel.ZIP}}">
+    </div>
+
 </div>
