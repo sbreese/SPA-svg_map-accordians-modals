@@ -6,7 +6,8 @@ angular.module('MarriottBreaks').factory('cookieService', [
     function($cookies){
 
         var COOKIE_KEYS = {
-            LAST_VISITED: 'lastVisited'
+            LAST_VISITED: 'lastVisited',
+            LAST_QUERY: 'lastQuery'
         };
 
         var defaultOptions = {
@@ -15,6 +16,7 @@ angular.module('MarriottBreaks').factory('cookieService', [
 
         return {
 
+            // LAST VISITED HOTEL -----------
             saveLastVisitedHotel: function(id, hotel, isTopDestination){
                 // if this is a top destination, save the market city as top destination. otherwise, save false
                 var topDestination = isTopDestination ? hotel.MARKET_CITY : false;
@@ -36,6 +38,19 @@ angular.module('MarriottBreaks').factory('cookieService', [
 
             removeLastVisitedHotel: function(){
                 $cookies.remove(COOKIE_KEYS.LAST_VISITED, defaultOptions);
+            },
+
+            // LAST QUERY -----------------
+            saveLastQuery: function(value){
+                $cookies.put(COOKIE_KEYS.LAST_QUERY, value, defaultOptions);
+            },
+
+            getLastQuery: function(){
+                return $cookies.get(COOKIE_KEYS.LAST_QUERY);
+            },
+
+            removeLastQuery: function(){
+                return $cookies.remove(COOKIE_KEYS.LAST_QUERY);
             }
 
         };

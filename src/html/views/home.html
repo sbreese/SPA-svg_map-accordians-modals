@@ -90,11 +90,12 @@
 
                 <!-- Search Box & Dropdown -->
                 <input type="text" ng-model="selectedBreak" placeholder="Search City, State or Zip"
-                       ng-disabled="!inputEnabled()"
+                       ng-disabled="disableSearch"
                        typeahead="break as break.HOTEL_NAME for break in getBreaksForInput($viewValue) | breaksSearchFilter:$viewValue:10:50"
                        typeahead-template-url="html/templates/breakListItem.html"
                        typeahead-on-select="inputItemSelected($model)"
                        typeahead-loading="loadingBreaksForInput"
+                       typeahead-auto-open ng-change="inputChanged()"
                        class="form-control">
 
             </div>

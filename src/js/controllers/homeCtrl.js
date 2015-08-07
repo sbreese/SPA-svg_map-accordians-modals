@@ -19,6 +19,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         // set this to true once we get the breaks data from the server
         $scope.breaksDataLoaded = false;
+        // start with search disabled until we load breaks
+        $scope.disableSearch = true;
+        // Keep track of the last query the user searched with
+        var lastQuery = null;
 
         $scope.isMobile = mediaService.isMobile();
 
@@ -63,10 +67,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             return $scope.selectedRegionView === viewType;
         };
 
-        $scope.inputEnabled = function(){
-            return !$scope.disableSearch && $scope.breaksDataLoaded;
-        };
-
         // returns a list of breaks for the input search to work with. If user has a full zip code, it gets
         // other breaks within a certain range via google maps API. Otherwise, just return all the breaks and filter by input value
         $scope.getBreaksForInput = function(query){
@@ -105,10 +105,21 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             return deferred.promise;
         };
 
+        $scope.inputChanged = function(query){
+            // save the last query the user searched with
+            lastQuery = $scope.selectedBreak;
+        };
+
         $scope.inputItemSelected = function($model){
             if ($model){
                 // Some of the marriott pages take a while to navigate to. Disable the search box until then
                 $scope.disableSearch = true;
+
+                // save the last query in a cookie
+                if (lastQuery){
+                    cookieService.saveLastQuery(lastQuery);
+                }
+
                 $window.location.href = $model.PROPERTY_PAGE_URL;
             }
         };
@@ -136,11 +147,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             return regionFormatted.charAt(0).toUpperCase() + regionFormatted.slice(1);
         };
 
-        // clear input on "pageshow" event. This is due to bfcache (back/forward caching). Otherwise, if bfcache is enabled,
-        // the input state will be kept and will stay disabled
-        angular.element($window).bind('pageshow', function(){
+        // Load the previous search info on pageshow since initialize won't be called again if bfcache (back/forward caching) is being used.
+        angular.element($window).on('pageshow', function(){
             $scope.$apply(function(){
-                $scope.selectedBreak = null;
+                reloadLastQuery();
                 $scope.disableSearch = false;
             });
         });
@@ -158,9 +168,26 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             }
         });
 
-
-        function initialize(){
+        function initialize() {
             breaksService.get().then(getBreaksSuccess, getBreaksFail);
+
+            // reload the last query the user searched by (if available)
+            reloadLastQuery();
+        }
+
+        function reloadLastQuery() {
+            // read the lastQuery cookie value
+            var lastQueryCookieValue = cookieService.getLastQuery();
+            if (lastQueryCookieValue){
+                // set the lastQuery variable to the one in the cookie. This is in case the user clicks the dropdown
+                // and selects another hotel without changing the value
+                lastQuery = lastQueryCookieValue;
+
+                $scope.selectedBreak = lastQuery;
+
+                // remove the cookie so it doesn't load again (unless the user uses the search again)
+                cookieService.removeLastQuery();
+            }
         }
 
         // update controller options based on media size
@@ -199,6 +226,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             $scope.topDestinations = response.data.topDestinations;
 
             $scope.breaksDataLoaded = true;
+            $scope.disableSearch = false;
         }
 
         function getBreaksFail(response){
