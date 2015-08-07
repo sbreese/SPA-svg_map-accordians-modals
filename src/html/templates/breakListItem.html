@@ -1,6 +1,7 @@
 <div class="break-list-item-container">
     <div>
         <span class="break-list-item-city">{{match.model.PROPERTY_CITY_STATE}}</span>
+        <span ng-show="match.model.DISTANCE" class="break-list-item-distance"> - {{match.model.DISTANCE}}</span>
         <span class="break-list-item-per-night">{{match.model.PRICE_RANGE}}</span>
     </div>
     <p class="break-list-item-hotel">{{match.model.HOTEL_NAME}}</p>
