@@ -1,28 +1,20 @@
-<div id="{{hotelId}}" class="hotel-item-container" itemscope itemtype="http://schema.org/Hotel">
-    <a class="hotel-item-link" ng-href="{{hotel.AVAILABILITY_URL}}" ng-click="hotelItemSelected()" itemprop="mainEntityOfPage">
+<div id="{{hotelId}}" class="hotel-item-container">
+    <a class="hotel-item-link" ng-href="{{hotel.AVAILABILITY_URL}}" ng-click="hotelItemSelected()">
         <div class="hotel-item-content">
 
             <!-- Hotel Image -->
-            <img class="hotel-image" ng-src="{{hotelImage}}" itemprop="image"/>
+            <img class="hotel-image" ng-src="{{hotel.IMAGE}}"/>
 
             <!-- Hotel Description -->
             <div class="hotel-item-description-container">
-                <p class="hotel-item-name" itemprop="name">{{hotel.HOTEL_NAME}}</p>
+                <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
 
-                <p class="hotel-item-per-night" itemprop="priceRange">{{hotel.PRICE_RANGE}} per night</p>
+                <p class="hotel-item-per-night">{{hotel.PRICE_RANGE}} per night</p>
 
                 <button class="{{getButtonClass()}}">Book Now</button>
             </div>
 
         </div>
     </a>
-
-    <!-- This div is invisible and for schema.org info only -->
-    <div class="hotel-item-schema-data" itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
-        <meta itemprop="streetAddress" content="{{hotel.ADDRESS1}}">
-        <meta itemprop="addressLocality" content="{{hotel.PROPERTY_CITY}}">
-        <meta itemprop="addressRegion" content="{{hotel.PROPERTY_STATE}}">
-        <meta itemprop="postalCode" content="{{hotel.ZIP}}">
-    </div>
 
 </div>
