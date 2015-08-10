@@ -257,7 +257,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                         currentBreak.DISTANCE_VALUE = 0;
                     }
 
-                    validBreaks.push(currentBreak)
+                    validBreaks.push(currentBreak);
                 }
             }
 

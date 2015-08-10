@@ -11,6 +11,7 @@
     "inject": false,
     "console": false,
     "$": false,
-    "Modernizr": false
+    "Modernizr": false,
+    "google": false
   }
 }
