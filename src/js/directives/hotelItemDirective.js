@@ -2,13 +2,14 @@
 
 angular.module('MarriottBreaks')
     .directive('hotelItem', [
-        function () {
+        'schemaService',
+        function (schemaService) {
 
             function linkFunction(scope, element, attrs, hotelItemContainerCtrl) {
                 element.addClass('hotel-item');
 
                 // get a random image for now
-                scope.hotelImage = getRandomPlaceholder();
+                scope.hotel.IMAGE = getRandomPlaceholder();
 
                 // if we have a parent hotel-item-container, add this item to it's list
                 if (hotelItemContainerCtrl !== null){
@@ -22,6 +23,9 @@ angular.module('MarriottBreaks')
                         });
                     }
                 }
+
+                // add the schema.org script tag to the element
+                schemaService.appendHotelItemSchema(element, scope.hotel);
 
                 // remove this item when the directive gets removed
                 element.on('$destroy', function() {
