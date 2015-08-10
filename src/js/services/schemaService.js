@@ -10,7 +10,7 @@ angular.module('MarriottBreaks').factory('schemaService', [
                 // build the <script> element
                 var script = angular.element('<script></script>');
                 // convert the JSON data to string so it can be added to the script element
-                var scriptData = JSON.stringify(schemaData);
+                var scriptData = JSON.stringify(schemaData, null, 2);
 
                 // set the script info and append it to the element
                 script.attr('type', 'application/ld+json');
