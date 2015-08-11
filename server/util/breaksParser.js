@@ -4,11 +4,13 @@
 var Converter = require('csvtojson').Converter, // Used for converting csv to json
     fs = require('fs'), // File Stream
     path = require('path'), // System path helper
-    jsonfile = require('jsonfile'); // Read/Write JSON Files
+    jsonfile = require('jsonfile'), // Read/Write JSON Files
+    promise = require('node-promise'); // Node Promises
 
 var fileNames = {
     csv: path.join(__dirname, '../data/marriott-data.csv'),
-    json: path.join(__dirname, '../data/marriott-data.json')
+    json: path.join(__dirname, '../data/marriott-data.json'),
+    schema: path.join(__dirname, '../data/marriott-data-schema.jsonld')
 };
 
 module.exports = {
@@ -20,10 +22,33 @@ module.exports = {
         var csvConverter = new Converter({constructResult: true, toArrayString: true});
 
         csvConverter.on('end_parsed', function (breaksData) {
-            var data = formatBreaksData(breaksData);
+            var breaksDataFormatted = formatBreaksData(breaksData);
+            var breaksSchemaData = formatBreaksSchemaData(breaksData);
 
-            jsonfile.writeFile(fileNames.json, data, {spaces: 2}, function (err) {
-                callback(err);
+            var dataFilePromise = promise.defer();
+            var schemaFilePromise = promise.defer();
+
+            // wait for both promises to be fulfilled
+            promise.all([dataFilePromise, schemaFilePromise]).then(function(results){
+                // look for any errors in the results
+                var errors = [];
+                for (var i = 0, l = results.length; i < l; i++){
+                    if (results[i]){
+                        errors.push(results[i]);
+                    }
+                }
+
+                callback(errors);
+            });
+
+            // save the Breaks JSON Data
+            jsonfile.writeFile(fileNames.json, breaksDataFormatted, {spaces: 2}, function (err) {
+                dataFilePromise.resolve(err);
+            });
+
+            // Save the Breaks Schema Data
+            jsonfile.writeFile(fileNames.schema, breaksSchemaData, {spaces: 2}, function (err) {
+                schemaFilePromise.resolve(err);
             });
 
         });
@@ -32,6 +57,35 @@ module.exports = {
     }
 
 };
+
+function formatBreaksSchemaData(breaks){
+    var schemaData = [];
+    var currentBreak, currentBreakSchema;
+
+    for (var i = 0, l = breaks.length; i < l; i++){
+        currentBreak = breaks[i];
+
+        currentBreakSchema = {
+            "@context": "http://schema.org",
+            "@type": "Hotel",
+            "name" : currentBreak.HOTEL_NAME,
+            "image": currentBreak.IMAGE,
+            "priceRange": currentBreak.PRICE_RANGE,
+            "mainEntityOfPage": currentBreak.AVAILABILITY_URL,
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": currentBreak.PROPERTY_CITY,
+                "addressRegion": currentBreak.PROPERTY_STATE,
+                "streetAddress": currentBreak.ADDRESS1,
+                "postalCode": currentBreak.ZIP
+            }
+        };
+
+        schemaData.push(currentBreakSchema);
+    }
+
+    return schemaData;
+}
 
 function formatBreaksData(breaks) {
     // Region data will be built from the breaks data. It will contain states and totals for each region

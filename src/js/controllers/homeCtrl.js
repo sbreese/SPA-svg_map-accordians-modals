@@ -15,8 +15,9 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
     'cookieService',
     'googleMapsService',
     'imagePlaceholderService',
+    'schemaService',
     function($scope, $rootScope, $window, $document, $timeout, $q, breaksService, statesService, scrollService, mediaService,
-             backgroundVideoService, cookieService, googleMapsService, imagePlaceholderService){
+             backgroundVideoService, cookieService, googleMapsService, imagePlaceholderService, schemaService){
 
         // set this to true once we get the breaks data from the server
         $scope.breaksDataLoaded = false;
@@ -170,7 +171,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         });
 
         function initialize() {
+            // get the breaks data
             breaksService.get().then(getBreaksSuccess, getBreaksFail);
+            // get the schema data and inject it into a script tag
+            schemaService.getAndInjectSchemaData();
 
             // reload the last query the user searched by (if available)
             reloadLastQuery();

@@ -19,6 +19,7 @@ app.use(express.static(path.join(__dirname, '../public')));
 // Setup Routes
 app.use('/', require('./routes/index'));
 app.use('/breaks', require('./routes/breaks'));
+app.use('/schema', require('./routes/schema'));
 
 // Start the server
 app.listen(port, function(){
