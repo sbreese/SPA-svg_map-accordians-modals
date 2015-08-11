@@ -28,7 +28,7 @@ angular.module('MarriottBreaks').factory('schemaService', [
 
             // retrieves the schema data from the server and injects it into a script tag
             getAndInjectSchemaData: function () {
-                $http.get('/schema').then(function(response){
+                $http.get('assets/data/marriott-data-schema.jsonld').then(function(response){
                     injectSchemaData(response.data);
                 });
             }
