@@ -14,8 +14,9 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
     'backgroundVideoService',
     'cookieService',
     'googleMapsService',
+    'imagePlaceholderService',
     function($scope, $rootScope, $window, $document, $timeout, $q, breaksService, statesService, scrollService, mediaService,
-             backgroundVideoService, cookieService, googleMapsService){
+             backgroundVideoService, cookieService, googleMapsService, imagePlaceholderService){
 
         // set this to true once we get the breaks data from the server
         $scope.breaksDataLoaded = false;
@@ -221,6 +222,9 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         }
 
         function getBreaksSuccess(response){
+            //TODO: this is for testing purposes only. Remove once we have real hotel image URLs
+            imagePlaceholderService.setPlaceholderImagesForBreaks(response.data.breaks);
+
             $scope.breaks = response.data.breaks;
             $scope.regions = response.data.regions;
             $scope.topDestinations = response.data.topDestinations;

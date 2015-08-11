@@ -8,9 +8,6 @@ angular.module('MarriottBreaks')
             function linkFunction(scope, element, attrs, hotelItemContainerCtrl) {
                 element.addClass('hotel-item');
 
-                // get a random image for now
-                scope.hotel.IMAGE = getRandomPlaceholder();
-
                 // if we have a parent hotel-item-container, add this item to it's list
                 if (hotelItemContainerCtrl !== null){
                     hotelItemContainerCtrl.addHotelItem(element);
@@ -33,21 +30,6 @@ angular.module('MarriottBreaks')
                         hotelItemContainerCtrl.removeHotelItem(element);
                     }
                 });
-
-                function getRandomPlaceholder(){
-                    var minWidth = 200;
-                    var maxWidth = 400;
-                    var minHeight = 100;
-                    var maxHeight = 400;
-
-                    var widthRange = maxWidth - minWidth;
-                    var heightRange = maxHeight - minHeight;
-
-                    var width = Math.floor(Math.random() * (widthRange + 1)) + minWidth;
-                    var height = Math.floor(Math.random() * (heightRange + 1)) + minHeight;
-
-                    return ["http://placekitten.com/", width, '/', height].join('');
-                }
             }
 
             return {
