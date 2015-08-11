@@ -6,7 +6,7 @@ angular.module('MarriottBreaks').factory('backgroundVideoService', [
 
         var video = null;
         var videoPlayer = null;
-        var playbackRate = 0.6;
+        var playbackRate = 0.5;
 
         return {
 
@@ -15,7 +15,7 @@ angular.module('MarriottBreaks').factory('backgroundVideoService', [
                 if (video === null && !mediaService.isMobile()){
                     video = new $.BigVideo({container: $('#background-video'), useFlashForFirefox:false});
                     video.init();
-                    video.show('assets/videos/leaves.mp4', {ambient: true});
+                    video.show('assets/videos/roadtrip.mp4', {ambient: true});
 
                     videoPlayer = video.getPlayer();
                     videoPlayer.playbackRate(playbackRate);
