@@ -7,3 +7,6 @@ tmp
 .idea
 
 public/
+
+server/data/*
+!server/data/marriott-data.csv
