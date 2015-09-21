@@ -2,8 +2,7 @@
 
 angular.module('MarriottBreaks')
     .directive('hotelItem', [
-        'schemaService',
-        function (schemaService) {
+        function () {
 
             function linkFunction(scope, element, attrs, hotelItemContainerCtrl) {
                 element.addClass('hotel-item');
@@ -20,9 +19,6 @@ angular.module('MarriottBreaks')
                         });
                     }
                 }
-
-                // add the schema.org script tag to the element
-                schemaService.appendHotelItemSchema(element, scope.hotel);
 
                 // remove this item when the directive gets removed
                 element.on('$destroy', function() {

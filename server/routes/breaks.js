@@ -18,11 +18,21 @@ function readJsonData(callback){
     });
 }
 
+function buildParseBreaksErrorMessage(errors){
+    var message = 'There was an error parsing the eBreaks Data: ';
+
+    for (var i = 0, l = errors.length; i < l; i++){
+        message += ['[', i, ']: ', errors[i].message, ' '].join('');
+    }
+
+    return message;
+}
+
 // /breaks/convert POST
 router.post('/convert', function(request, response){
-    breaksParser.parseBreaksData(function(err){
-        if (err){
-            response.status(500).send('Error converting eBreaks data');
+    breaksParser.parseBreaksData(function(errors){
+        if (errors.length > 0){
+            response.status(500).send(buildParseBreaksErrorMessage(errors));
         }
         else {
             response.send('CSV Data successfully converted!');
@@ -40,8 +50,13 @@ router.get('/', function(request, response){
         }
         else if (err.code === 'ENOENT') {
             // File doesn't exist. Convert and send
-            breaksParser.parseBreaksData(function(){
-                readJsonData(sendJsonData);
+            breaksParser.parseBreaksData(function(errors){
+                if (errors.length > 0){
+                    response.status(500).send(buildParseBreaksErrorMessage(errors));
+                }
+                else {
+                    readJsonData(sendJsonData);
+                }
             });
         }
         else {
