@@ -74,6 +74,11 @@ gulp.task('copyAssets', function(){
         .pipe(liveReload());
 });
 
+gulp.task('copyRobots', function(){
+    return gulp.src('robots.txt')
+        .pipe(gulp.dest(constants.rootPaths.dest));
+});
+
 // Compiles all Bower JS and CSS files into vendor.js/vendor.css
 gulp.task('compileBower', function(){
     // Ignore foundation JS (we're using angular-foundation for the JS) and ignore Modernizr as it needs to be
@@ -111,7 +116,7 @@ gulp.task('compileBower', function(){
 
 // Starts the node server using nodemon
 gulp.task('server', function(){
-    nodemon({
+    return nodemon({
         script: 'server/server.js',
         ext: 'js',
         watch: ['server']
@@ -125,7 +130,7 @@ gulp.task('server', function(){
 
 // Deletes all existing build files
 gulp.task('clean', function(){
-    del.sync([constants.rootPaths.dest + '/**/*']);
+    return del.sync([constants.rootPaths.dest + '/**/*']);
 });
 
 // Watches source files for automatic build/reload
@@ -152,6 +157,7 @@ gulp.task('compile', [
         'compileSass',
         'compileHtml',
         'copyAssets',
+        'copyRobots',
         'compileBower']
 );
 
