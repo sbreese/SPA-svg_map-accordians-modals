@@ -26,7 +26,15 @@ Project for Marriott Hotels - Allows the client to convert .csv files to JSON, w
 - (Optional) - [Install Chrome LiveReload](https://chrome.google.com/webstore/detail/livereload/jnihajbhpnppcggbcgedagnkighmdlei?hl=en) (used to manually reload Chrome when files are compiled/changed)
 
 ##### Install and Build
-Clone the repo, and then from the root folder:
+- Clone the repo and cd into root folder:
+
+    ```
+    $ git clone -b master git@bitbucket.org:jrigerths2/marriottbreaks.git
+    ```
+
+    ```
+    cd marriottbreaks/
+    ```
 
 - Install all dependencies
     
