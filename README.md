@@ -8,13 +8,13 @@ Project for Marriott Hotels - Allows the client to convert .csv files to JSON, w
 - Install Gulp globally
 
     ```
-    $ npm install -g gulp
+    $ sudo npm install -g gulp
     ```
     
 - (Optional) - Install Nodemon globally
     
     ```
-    $ npm install -g nodemon
+    $ sudo npm install -g nodemon
     ```
     
     Nodemon monitors the Node server files and restarts Node automatically when a file is changed. This is optional, but required if you are going to use the gulp tasks to start the server. Otherwise, manually start the server via Node:
