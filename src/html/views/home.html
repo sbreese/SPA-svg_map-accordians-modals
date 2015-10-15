@@ -1,3 +1,11 @@
+<!-- Marriott Header -->
+<div id="header-container">
+    <a href="http://www.marriott.com/default.mi" class="l-main-logo">
+        <img src="http://cache.marriott.com/Images/DigitalFoundations/Header/logo-marriott-markonleft-2x.png" alt="Marriott Logo">
+    </a>
+    <a href="http://www.marriott.com/default.mi" id="marriott-link">Back to Marriott.com</a>
+</div>
+
 <div>
 
     <!-- Region/State Map -->
@@ -18,6 +26,28 @@
 
             <div class="region-icon-background"></div>
 
+        </div>
+
+        <!-- Search Box & Dropdown Row -->
+        <div class="row">
+            <div id="ebreaks-head" class="column">
+                <h1 id="ebreaks-head1">eBreaks&reg;</h1>
+                <h2 id="ebreaks-head2">Save 20% on great locations accross North America.</h2>
+            </div>
+            <div class="small-10 small-offset-1 medium-8 medium-offset-2 column search-container">
+                <!-- Search Box & Dropdown -->
+                <input type="text" ng-model="selectedBreak" placeholder="{{searchPlaceholder}}"
+                       ng-disabled="disableSearch"
+                       typeahead="break as break.HOTEL_NAME for break in getBreaksForInput($viewValue) | breaksSearchFilter:$viewValue:10:50"
+                       typeahead-template-url="html/templates/breakListItem.html"
+                       typeahead-on-select="inputItemSelected($model)"
+                       typeahead-loading="loadingBreaksForInput"
+                       typeahead-auto-open ng-change="inputChanged()"
+                       class="form-control">
+                <div id="button-holder">
+                    <img src="http://demo.codeofaninja.com/tutorials/textbox-search-icon-html-css/magnifying_glass.png">
+                </div>
+            </div>
         </div>
 
         <!-- MAP / REGION BUTTONS -->
@@ -84,20 +114,49 @@
 
         </div>
 
-        <!-- Search Box & Dropdown Row -->
-        <div class="row">
-            <div class="small-10 small-offset-1 medium-8 medium-offset-2 column search-container">
+    </div>
 
-                <!-- Search Box & Dropdown -->
-                <input type="text" ng-model="selectedBreak" placeholder="Search City, State or Zip"
-                       ng-disabled="disableSearch"
-                       typeahead="break as break.HOTEL_NAME for break in getBreaksForInput($viewValue) | breaksSearchFilter:$viewValue:10:50"
-                       typeahead-template-url="html/templates/breakListItem.html"
-                       typeahead-on-select="inputItemSelected($model)"
-                       typeahead-loading="loadingBreaksForInput"
-                       typeahead-auto-open ng-change="inputChanged()"
-                       class="form-control">
-
+    <div class="subscribe-bar show-for-medium-up">
+        <div class="subscribe-content">
+            <div class="never-miss">
+                <i class="fi-mail"></i>Never Miss eBreaks
+            </div>
+            <div class="subscribe-button">
+                <a>Subscribe Today</a>
+            </div>
+        </div>
+    </div>
+    <div class="subscribe-bar show-for-small-only">
+        <div class="subscribe-content">
+            <div class="never-miss">
+                <i class="fi-mail"></i>Get eBreaks
+            </div>
+            <div class="subscribe-button">
+                <a>Subscribe</a>
+            </div>
+        </div>
+    </div>
+    <div class="ways-to-book-bar show-for-medium-up">
+        <div class="ways-to-book-content">
+            <div class="ways-content">
+                <i class="fi-monitor"></i>
+                <div class="ways-text">
+                    <div class="big-text">
+                        3 Easy Ways to Book
+                    </div>
+                    <span class="small-text">Click on a property below to make your reservation.<br>Enter MEB in the corporate/promotional box at Marriott.com<br>Call 1.800.752.7571 or contact your worldwide reservation center.</span>
+                </div>
+            </div>
+            <div class="phone-icon">
+                <i class="fi-telephone"></i>
+            </div>
+        </div>
+    </div>
+    <div class="ways-to-book-bar show-for-small-only">
+        <div class="ways-to-book-content">
+            <div class="ways-text">
+                <div class="big-text">3 Ways to Book</div>
+                <span class="small-text">Click on a Hotel<br>Use Code MEB<br>Call 1.800.752.7571</span>
             </div>
         </div>
     </div>
@@ -105,7 +164,7 @@
     <div id="breaks-content">
 
         <!-- Section Separator -->
-        <div class="section-separator no-margin"></div>
+        <!--div class="section-separator no-margin"></div-->
 
         <!-- REGION / TOP DESTINATIONS ACCORDION -->
         <accordion class="region-group-accordion" close-others="false">
@@ -118,9 +177,9 @@
                 </accordion-heading>
 
                 <!-- Top Destination Buttons -->
-                <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4" vertilize-container>
+                <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-5 text-center the-grid" vertilize-container>
                     <li ng-repeat="topDestination in topDestinations" vertilize>
-                        <a class="large button top-destination-button" href="" ng-class="{'selected': selectedTopDestination === topDestination}"
+                        <a class="large button {{'top-destination-button_'+($index<5?$index:($index<10?$index-5:($index<15?$index-10:'0')))}}" href="" ng-class="{'selected': selectedTopDestination === topDestination}" 
                            ng-click="toggleTopDestination(topDestination)"><p>{{topDestination}}</p></a>
                     </li>
                 </ul>
@@ -136,6 +195,25 @@
                 </div>
 
             </accordion-group>
+
+            <div class="your-ebreaks-bar show-for-medium-up">
+                <div class="ways-to-book-content">
+                    <div class="ways-content">
+                        <div class="ways-text">
+                            <h2>Your eBreaks for July 2-5, 2015</h2>
+                        </div>
+                    </div>
+                    <div class="phone-icon">
+                    </div>
+                </div>
+            </div>
+            <div class="your-ebreaks-bar show-for-small-only">
+                <div class="ways-to-book-content">
+                    <div class="ways-text">
+                        <h2>Your eBreaks for July 2-5, 2015</h2>
+                    </div>
+                </div>
+            </div>
 
             <!-- REGION GROUPS -->
             <accordion-group class="region-group" is-open="regionAccordionGroups[region].isOpen"
@@ -170,4 +248,81 @@
 
     </div>
 
+    <!-- Terms & Conditions -->
+    <div id="t_and_cond">
+        <h4><i class="fi-minus-circle"></i> Terms &amp; Conditions</h4>
+        <ul id="term_and_cond_list">
+            <li>Rates are per night. Thursday requires a Friday night stay. Sunday requires a Saturday night stay.</li>
+            <li>Rates are valid for dates specified in email at advertised hotels only.</li>
+            <li>eBreaks rates are exclusive to customers who subscribe to the eBreaks program. Therefore, these rates do not qualify for Marriott's Look No Further&reg; Best Rate Guarentee.</li>
+            <li>A limited number of rooms are available and will be sold on a first-come, first-served basis.</li>
+            <li>Advance bookings are required and must be guarenteed with a credit card.</li>
+            <li>Rates are offered Thursday through Sunday.  Some hotels only offer eBreaks rates Friday-Sunday.  These hotels are indicated with an asterisk (*) next to the rate.</li>
+            <li>Rates are for standard rooms, per night and based on single or double occupancy.</li>
+            <li>Rates are non-commissionable and do not include taxes, fees, other costs or gratuities.</li>
+            <li>Rates cannot be used in conjunction with other offers and/or discounts.</li>
+            <li>eBreaks does not apply to groups of 10 or more rooms.</li>
+            <li>Canadian cities are quoted in Canadian dollars and U.S. cities are quoted in U.S. dollars. All other destinations are quoted in currency listed.</li>
+            <li>Rates are eligible for Marriott Rewards&reg; Points and miles credit. <a href="http://www.marriott.com/rewards/rewards-program.mi">Join Marriott Rewards&reg; for Free&raquo;</a></li>
+        </ul>
+    </div>
 </div>
+
+<!-- Marriott Footer -->
+<footer class="l-clear">
+        <div id="footer" class="l-em-reset clearfix">
+            <div class="ie-footer-fix">                    
+                <div id="t-legal-footer" class="t-footer-section-spacing clearfix">
+                        <section class="t-legal-utility-links l-float-left t-uppercase-small">
+<ul id="utilities-legal">
+    
+    
+        <li>
+                        
+                            <a href="/marriott/aboutmarriott.mi" title="" class="analytics-click">
+                                About Marriott
+                            </a>
+
+        </li>
+    
+        <li>
+
+                        
+                            <a href="/help/default.mi" title="" class="analytics-click">
+                                Help
+                            </a>
+        </li>
+        <li>
+                            <a href="http://www.roomkey.com/" title="" class="analytics-click" rel="external">
+                                RoomKey
+                            <img class="external-link" src="http://cache.marriott.com/Images/Arrows/icon_newwindow_9x8.gif"></a>
+        </li>
+        <li>
+                            <a href="http://www.marriottvacationclub.com?loc=DB59*1-43X1H6&amp;cid=corp-mvc-mi-global-footer" title="" class="analytics-click">
+                                Marriott Timeshare
+                            </a>
+        </li>
+        <li>
+                            <a href="/about/terms-of-use.mi" title="" class="analytics-click">
+                                Terms of Use
+                            </a>
+        </li>
+        <li>
+                            <a href="/about/privacy.mi" title="" class="analytics-click">
+                                Privacy &amp; Cookie Statement
+                            </a>        
+            </li>
+            <li id="marriottConsent" consent="null">
+
+                <script type="text/javascript" src="//consent.truste.com/notice?domain=marriott.com&amp;c=marriottConsent&amp;text=true&amp;js=0_v3" id="truste_0.30882344441488385"></script><script async="async" type="text/javascript" crossorigin="" src="http://consent.truste.com/get?name=notice.js"></script>
+            <a id="icon-id01810308585409075" tabindex="0" role="button" style="cursor: pointer;">Tracking Preferences</a></li>
+</ul>
+                        </section>
+
+                        <section class="t-copyright l-clear" itemscope="" itemtype="http://schema.org/Hotel">
+                            <p class="t-uppercase-small " id="copyright">© 1996 - 2015 <span itemprop="branchOf" itemscope="" itemtype="http://schema.org/Corporation"><span itemprop="name">Marriott International, Inc.</span></span> All rights reserved. Marriott proprietary information</p>
+                        </section>
+                </div>
+            </div>
+        </div>
+    </footer>

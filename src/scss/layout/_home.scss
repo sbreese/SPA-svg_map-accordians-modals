@@ -1,3 +1,10 @@
+#ebreaks-head {
+    text-align: center;
+    #ebreaks-head1, #ebreaks-head2 {
+        color: white;
+    }
+}
+
 #region-map {
     position: relative;
     opacity: 0.8;
@@ -7,7 +14,8 @@
 .region-view-icon-container {
     position: absolute;
     left: 10px;
-    top: 10px;
+    /*top: 10px;*/
+    top: 65px;
     font-size: 2rem;
     padding: 5px 20px;
     border-radius: 10px;
@@ -67,6 +75,11 @@
 
 // Overrides for dropdown and input styling
 .search-container {
+    float: left !important;
+    text-align: center;
+    #ebreaks-head1, #ebreaks-head2 {
+        color: white;
+    }
     .f-dropdown {
         width: 95%;
         max-width: none;
@@ -77,7 +90,63 @@
         font-size: 1.7rem;
         border-radius: 8px;
         height: auto;
+        float: left;
+        display: inline;
     }
+    #button-holder {
+        position: absolute;
+        top: 0;
+        right: 0;
+        
+        z-index: 999;
+        background-color: #b9d881;
+        cursor: pointer;
+        float: left;
+        height: 51px;
+        margin: 0x 0 0 0;
+        text-align: center;
+        width: 80px;
+        border-top-right-radius: .6rem;
+        border-bottom-right-radius: .6rem;
+        img {
+            margin-top: 8px;
+        }
+    }
+    ul {
+        text-align: left;
+    }
+}
+
+::-webkit-input-placeholder {
+   color: #b9d881;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: #b9d881;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: #b9d881;  
+}
+
+:-ms-input-placeholder {  
+   color: #b9d881;  
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   text-align: center;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   text-align: center;  
+}
+
+:-ms-input-placeholder {  
+   text-align: center; 
 }
 
 .section-separator {
@@ -162,4 +231,402 @@
         vertical-align: middle;
         text-align: center;
     }
+}
+
+
+.top-destination-button_0 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $top-destination-button-color_1;
+    display: table;
+    border-radius: 7px;
+
+    &:hover, &:focus, &:active {
+        background-color: $top-destination-button-color-selected;
+    }
+
+    &.selected {
+        background-color: $top-destination-button-color-selected;
+        box-shadow: 0 0 2px 4px $top-destination-button-color-selected;
+    }
+
+    p {
+        font-size: 1.4rem;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+
+.top-destination-button_1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $top-destination-button-color_2;
+    display: table;
+    border-radius: 7px;
+
+    &:hover, &:focus, &:active {
+        background-color: $top-destination-button-color-selected;
+    }
+
+    &.selected {
+        background-color: $top-destination-button-color-selected;
+        box-shadow: 0 0 2px 4px $top-destination-button-color-selected;
+    }
+
+    p {
+        font-size: 1.4rem;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+
+.top-destination-button_2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $top-destination-button-color_3;
+    display: table;
+    border-radius: 7px;
+
+    &:hover, &:focus, &:active {
+        background-color: $top-destination-button-color-selected;
+    }
+
+    &.selected {
+        background-color: $top-destination-button-color-selected;
+        box-shadow: 0 0 2px 4px $top-destination-button-color-selected;
+    }
+
+    p {
+        font-size: 1.4rem;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+
+.top-destination-button_3 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $top-destination-button-color_4;
+    display: table;
+    border-radius: 7px;
+
+    &:hover, &:focus, &:active {
+        background-color: $top-destination-button-color-selected;
+    }
+
+    &.selected {
+        background-color: $top-destination-button-color-selected;
+        box-shadow: 0 0 2px 4px $top-destination-button-color-selected;
+    }
+
+    p {
+        font-size: 1.4rem;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+
+.top-destination-button_4 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: $top-destination-button-color_5;
+    display: table;
+    border-radius: 7px;
+
+    &:hover, &:focus, &:active {
+        background-color: $top-destination-button-color-selected;
+    }
+
+    &.selected {
+        background-color: $top-destination-button-color-selected;
+        box-shadow: 0 0 2px 4px $top-destination-button-color-selected;
+    }
+
+    p {
+        font-size: 1.4rem;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+}
+
+
+/* Reduce button padding to match comp */
+[class*="block-grid-"] {
+  display: block;
+  padding: 0;
+  margin: 0 -0.625rem; }
+  [class*="block-grid-"]:before, [class*="block-grid-"]:after {
+    content: " ";
+    display: table; }
+  [class*="block-grid-"]:after {
+    clear: both; }
+  [class*="block-grid-"] > li {
+    display: block;
+    float: left;
+    height: auto;
+    padding: 0 0.625rem 1rem; }
+
+/* Center Top Destination buttons */
+[class*="block-grid-"] {
+  &.text-center {
+    font-size: 0;
+    > li {
+      float: none;
+      display: inline-block;
+    }
+  }
+}
+
+/* Coverride Button Padding to match comp */
+  button.large, .button.large {
+    padding: .7rem .2rem .7rem .2rem;
+    font-size: 1.25rem; }
+
+.subscribe-bar {
+    position: relative;
+
+    text-align: center;
+    background-color: #a5ce4c;
+    height: 3rem;
+
+    i {
+    float: left;
+        font-size: 2.2rem;
+        margin-right: .7rem;
+    }
+}
+
+.subscribe-content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.never-miss {
+    display: inline-block;
+    line-height: 50px;
+}
+
+.subscribe-button {
+    display: inline-block;
+    margin-left: 20px;
+    line-height: 35px;
+    padding: .5rem;
+    a {
+        border-radius: 7px;
+        font: bold 22px;
+        text-decoration: none;
+        background-color: #1ea9e2;
+        color: white;
+        padding: 5px 9px 5px 9px;
+    }
+}
+
+.ways-to-book-bar {
+    background-image: url("../assets/images/bg_ebreaks_blue_wavy.png");
+    position: relative;
+    text-align: center;
+    background-color: #20b0e4;
+    height: 9rem;
+    color: white;
+    i {
+    float: left;
+        font-size: 5rem;
+        margin-right: .7rem;
+    }
+}
+
+.your-ebreaks-bar{
+    background-image: url("../assets/images/bg_ebreaks_blue_wavy.png");
+    position: relative;
+    text-align: center;
+    background-color: #20b0e4;
+    height: 4.6rem;
+    color: white;
+    h2 {
+        color: white;
+        margin: 12px 0 12px 0;
+    }
+}
+
+.ways-content {
+    display: inline-block;
+}
+
+.ways-to-book-content {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.ways-text {
+    display: inline-block;
+    
+}
+.phone-icon {
+    display: inline-block;
+    margin-left: 20px;
+    padding: .5;
+}
+.big-text {
+    font-size: 2rem;
+}
+.small-text {
+    font-size: .9rem;
+}
+
+
+/* Marriott Header & Footer */    
+#header-container {
+    background-color: rgb(145, 145, 145);
+    background-image: linear-gradient(rgb(119, 119, 119), rgb(73, 73, 73));
+    border-bottom-color: rgb(28, 28, 28);
+    border-bottom-style: none;
+    border-bottom-width: 0px;
+    border-image-outset: 0px;
+    border-image-repeat: stretch;
+    border-image-slice: 100%;
+    border-image-source: none;
+    border-image-width: 1;
+    border-left-color: rgb(28, 28, 28);
+    border-left-style: none;
+    border-left-width: 0px;
+    border-right-color: rgb(28, 28, 28);
+    border-right-style: none;
+    border-right-width: 0px;
+    border-top-color: rgb(28, 28, 28);
+    border-top-style: none;
+    border-top-width: 0px;
+    box-sizing: border-box;
+    color: rgb(28, 28, 28);
+    display: block;
+    font-family: 'Source Sans Pro', SourceSansPro-Regular, Calibri, Arial, Helvetica, Helvetica, sans-serif;
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    height: 55px;
+    line-height: 16px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    padding-top: 0px;
+    vertical-align: baseline;
+}
+
+.l-main-logo {
+    display: inline-block;
+    height: 100%;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding: 1rem 0.5625rem 1rem 0.8125rem;
+    color: #fff;
+    text-decoration: none;
+    img {
+    width: 130px;
+    vertical-align: baseline;
+    }
+}
+
+#marriott-link {
+    margin-top: 15px;
+    margin-right: 7px;
+    color: white;
+    float: right;
+}
+#t_and_cond {
+    margin: 0px 13% 20px 15%;
+}
+#term_and_cond_list {
+    margin-left: 3%;
+    font-size: .8rem;
+}
+#footer {
+    background: transparent;
+    color: #ededed;
+    font: inherit;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 0 2em 0.5em;
+}
+footer {
+    font: 16px/1em "Source Sans Pro",SourceSansPro-Regular,"Calibri",Arial,"Helvetica",Helvetica,sans-serif;
+    font-size: 1rem;
+    background-color: #919191;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF777777', endColorstr='#FF494949');
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #777777), color-stop(100%, #494949));
+    background-image: -webkit-linear-gradient(#777777,#494949);
+    background-image: -moz-linear-gradient(#777777,#494949);
+    background-image: -o-linear-gradient(#777777,#494949);
+    background-image: linear-gradient(#777777,#494949);
+    margin: 1.25em 0 0;
+
+    ul {
+    list-style: none;
+  }
+}
+#footer #t-legal-footer a, #footer #t-legal-footer a:link, #footer #t-legal-footer a:visited, #footer #t-legal-footer a:hover {
+    font-size: 0.75em;
+}
+#footer #t-legal-footer {
+    padding: 1.25em 0 0;
+    text-transform: uppercase;
+}
+#footer #utilities-legal li {
+    float: none;
+    display: inline-block;
+    margin: 0 0.625rem 0 0;
+    padding: 0;
+}
+#footer p, body.l-responsive #footer li, body.l-responsive #footer dl {
+    font-size: 1em;
+}
+#footer #t-legal-footer .t-copyright p {
+    font-size: 0.625em;
+    line-height: 1em;
+    margin: 0;
+    padding: 0;
+}
+#footer a, #footer a:link, #footer a:visited {
+    color: #ededed;
+    text-decoration: none;
+}
+#footer .t-copyright {
+    color: #d2d2d2;
+}
+#footer .t-legal-utility-links, body.l-responsive #footer .t-copyright {
+    display: block;
+    float: none;
+    margin: 0 auto 0.625rem;
+    text-align: center;
+    width: 90%;
+}
+ol, ul, li, f {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+#footer .t-legal-utility-links, body.l-responsive #footer .t-copyright {
+    text-align: left;
+    width: 100%;
 }
