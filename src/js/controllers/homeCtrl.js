@@ -136,11 +136,17 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             if (region){
                 expandRegion(region);
             }
+            $scope.selectedTopDestination = null;
             scrollService.scrollToState(state);
         };
 
         // Scroll to the clicked group
         $scope.accordionHeaderClicked = function(region){
+            console.log("Accordion Clicked!")
+            /*angular.forEach($scope.regionAccordionGroups, function(value, key) {
+                console.log(key + ': ' + value);
+                $scope.regionAccordionGroups[key].isOpen = false;
+            });*/
             scrollService.scrollToRegion(region);
         };
 
@@ -178,6 +184,23 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
             // reload the last query the user searched by (if available)
             reloadLastQuery();
+
+            ///////////////////////////////////
+            ////   Calculate next weeks dates
+            
+
+            function getThursday(d) {
+                d = new Date(d);
+                var day = d.getDay(),
+                diff = d.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
+                return new Date(d.setDate(diff));
+            }
+
+            var Monday = getThursday(new Date()); // Mon Nov 08 2010
+            var Friday = getThursday(new Date());
+            var numberOfDaysToAdd = 5;
+            Friday.setDate(Monday.getDate() + numberOfDaysToAdd);
+            console.log(Monday.getDate() + " - " + Friday.getDate());
         }
 
         function reloadLastQuery() {
@@ -216,13 +239,31 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         }
 
         function selectTopDestination(topDestination){
+            collapseRegions();
             $scope.selectedTopDestination = topDestination;
+            scrollService.scrollToRegion('TOPDEST');
         }
 
         function expandRegion(region){
+            //console.log($scope.regionAccordionGroups);
+            angular.forEach($scope.regionAccordionGroups, function(value, key) {
+                //console.log(key + ': ' + value);
+                $scope.regionAccordionGroups[key].isOpen = false;
+            });
             if ($scope.regionAccordionGroups.hasOwnProperty(region)){
                 $scope.regionAccordionGroups[region].isOpen = true;
             }
+        }
+
+        function collapseRegions(){
+            //console.log($scope.regionAccordionGroups);
+            angular.forEach($scope.regionAccordionGroups, function(value, key) {
+                //console.log(key + ': ' + value);
+                $scope.regionAccordionGroups[key].isOpen = false;
+            });
+            //if ($scope.regionAccordionGroups.hasOwnProperty(region)){
+            //    $scope.regionAccordionGroups[region].isOpen = true;
+            //}
         }
 
         function getBreaksSuccess(response){
@@ -230,11 +271,64 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             imagePlaceholderService.setPlaceholderImagesForBreaks(response.data.breaks);
 
             $scope.breaks = response.data.breaks;
+            console.log("Breaks:", $scope.breaks);
             $scope.regions = response.data.regions;
             $scope.topDestinations = response.data.topDestinations;
 
             $scope.breaksDataLoaded = true;
             $scope.disableSearch = false;
+
+            // 20150430 20150503
+            var OfferStartDateString = String($scope.breaks[0].OFFER_START_DATE);
+            var OfferEndDateString = String($scope.breaks[0].OFFER_END_DATE);
+
+            var StartYear = OfferStartDateString.substring(0,4);
+            var EndYear = OfferEndDateString.substring(0,4);
+            var StartMonth = OfferStartDateString.substring(4,6);
+            var EndMonth = OfferEndDateString.substring(4,6);
+
+            var OfferStartDate = new Date(StartYear, StartMonth - 1, OfferStartDateString.substring(6,8));
+            var OfferEndDate   = new Date(EndYear, EndMonth - 1, OfferEndDateString.substring(6,8));
+
+            var month = new Array();
+            month[0] = "January";
+            month[1] = "February";
+            month[2] = "March";
+            month[3] = "April";
+            month[4] = "May";
+            month[5] = "June";
+            month[6] = "July";
+            month[7] = "August";
+            month[8] = "September";
+            month[9] = "October";
+            month[10] = "November";
+            month[11] = "December";
+
+            if (StartMonth == EndMonth)
+            {
+                // Only list month once
+                var formattedStartDateRange = month[OfferStartDate.getMonth()] + " " + OfferStartDate.getDate();
+                var formattedEndDateRange = OfferEndDate.getDate() + ", " + OfferEndDate.getFullYear();
+            }
+            else
+            {
+                // List both start month and end month
+                if (StartYear == EndYear)
+                {
+                    // Years are same, so don't show year in Start Date
+                    var formattedStartDateRange = month[OfferStartDate.getMonth()] + " " + OfferStartDate.getDate();
+                }
+                else
+                {
+                    // Years are different, so do show year in Start Date
+                    var formattedStartDateRange = month[OfferStartDate.getMonth()] + " " + OfferStartDate.getDate() + ", " + OfferStartDate.getFullYear();
+                }
+                // Always show year in End Date
+                var formattedEndDateRange = month[OfferEndDate.getMonth()] + " " + OfferEndDate.getDate() + ", " + OfferEndDate.getFullYear();
+            }
+
+            $scope.StartDateRange = formattedStartDateRange;
+            $scope.EndDateRange = formattedEndDateRange;
         }
 
         function getBreaksFail(response){

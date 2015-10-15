@@ -167,10 +167,10 @@
         <!--div class="section-separator no-margin"></div-->
 
         <!-- REGION / TOP DESTINATIONS ACCORDION -->
-        <accordion class="region-group-accordion" close-others="false">
+        <accordion class="region-group-accordion">
 
             <!-- TOP DESTINATIONS -->
-            <accordion-group class="region-group" is-open="regionAccordionGroups['TOPDEST'].isOpen">
+            <accordion-group class="region-group" is-open="true"> <!-- To collapse when regions are clicked, replace true with regionAccordionGroups['TOPDEST'].isOpen -->
                 <!-- Top Destinations Group Header -->
                 <accordion-heading>
                     <div accordion-header-content group="'TOPDEST'" label="'Hot Locations'" is-open="regionAccordionGroups['TOPDEST'].isOpen"></div>
@@ -195,12 +195,13 @@
                 </div>
 
             </accordion-group>
+        </accordion>
 
             <div class="your-ebreaks-bar show-for-medium-up">
                 <div class="ways-to-book-content">
                     <div class="ways-content">
                         <div class="ways-text">
-                            <h2>Your eBreaks for July 2-5, 2015</h2>
+                            <h2>Your eBreaks for {{StartDateRange}}&ndash;{{EndDateRange}}</h2>
                         </div>
                     </div>
                     <div class="phone-icon">
@@ -210,17 +211,18 @@
             <div class="your-ebreaks-bar show-for-small-only">
                 <div class="ways-to-book-content">
                     <div class="ways-text">
-                        <h2>Your eBreaks for July 2-5, 2015</h2>
+                        <h2>Your eBreaks for {{StartDateRange}}&ndash;{{EndDateRange}}</h2>
                     </div>
                 </div>
             </div>
 
+        <accordion class="region-group-accordion" close-others="true">
             <!-- REGION GROUPS -->
             <accordion-group class="region-group" is-open="regionAccordionGroups[region].isOpen"
                              ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'">
                 <!-- Region Group Header -->
                 <accordion-heading>
-                    <div accordion-header-content group="region" label="formatRegionName(region)" is-open="regionAccordionGroups[region].isOpen"></div>
+                    <div accordion-header-content group="region" label="formatRegionName(region)" is-open="regionAccordionGroups[region].isOpen" ng-show="regionAccordionGroups[region].isOpen"></div>
                 </accordion-heading>
 
                 <!-- Group by State -->
@@ -320,7 +322,7 @@
                         </section>
 
                         <section class="t-copyright l-clear" itemscope="" itemtype="http://schema.org/Hotel">
-                            <p class="t-uppercase-small " id="copyright">© 1996 - 2015 <span itemprop="branchOf" itemscope="" itemtype="http://schema.org/Corporation"><span itemprop="name">Marriott International, Inc.</span></span> All rights reserved. Marriott proprietary information</p>
+                            <p class="t-uppercase-small " id="copyright">&copy; 1996 - 2015 <span itemprop="branchOf" itemscope="" itemtype="http://schema.org/Corporation"><span itemprop="name">Marriott International, Inc.</span></span> All rights reserved. Marriott proprietary information</p>
                         </section>
                 </div>
             </div>
