@@ -69,6 +69,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             return $scope.selectedRegionView === viewType;
         };
 
+        $scope.showYourEBreaks = function(){
+            return 
+        }
+
         // returns a list of breaks for the input search to work with. If user has a full zip code, it gets
         // other breaks within a certain range via google maps API. Otherwise, just return all the breaks and filter by input value
         $scope.getBreaksForInput = function(query){
@@ -136,17 +140,34 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             if (region){
                 expandRegion(region);
             }
+            
+            var regionState;
+            angular.forEach($scope.regions[region].states, function(value, key) {
+                //$scope.regionAccordionGroups[key].isOpen = false; $scope.regionAccordionGroups
+                
+                
+                if ($scope.regionAccordionGroups.hasOwnProperty(key)) {
+                    $scope.regionAccordionGroups[key].isHidden = true;
+                }
+                else
+                {
+                    $scope.regionAccordionGroups[key] = {isHidden: true};
+                }
+            });
+            if ($scope.regionAccordionGroups.hasOwnProperty(state)) {
+                $scope.regionAccordionGroups[state].isHidden = false;
+            }
+            else
+            {
+                $scope.regionAccordionGroups[state] = {isHidden: false};
+            }
             $scope.selectedTopDestination = null;
-            scrollService.scrollToState(state);
+            //scrollService.scrollToState(state);
+            scrollService.scrollToElement($document.find('.your-ebreaks-bar'));
         };
 
         // Scroll to the clicked group
         $scope.accordionHeaderClicked = function(region){
-            console.log("Accordion Clicked!")
-            /*angular.forEach($scope.regionAccordionGroups, function(value, key) {
-                console.log(key + ': ' + value);
-                $scope.regionAccordionGroups[key].isOpen = false;
-            });*/
             scrollService.scrollToRegion(region);
         };
 
@@ -184,23 +205,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
             // reload the last query the user searched by (if available)
             reloadLastQuery();
-
-            ///////////////////////////////////
-            ////   Calculate next weeks dates
-            
-
-            function getThursday(d) {
-                d = new Date(d);
-                var day = d.getDay(),
-                diff = d.getDate() - day + (day == 0 ? -6:1); // adjust when day is sunday
-                return new Date(d.setDate(diff));
-            }
-
-            var Monday = getThursday(new Date()); // Mon Nov 08 2010
-            var Friday = getThursday(new Date());
-            var numberOfDaysToAdd = 5;
-            Friday.setDate(Monday.getDate() + numberOfDaysToAdd);
-            console.log(Monday.getDate() + " - " + Friday.getDate());
         }
 
         function reloadLastQuery() {
@@ -245,9 +249,8 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         }
 
         function expandRegion(region){
-            //console.log($scope.regionAccordionGroups);
+            $scope.aRegionIsExpanded = true;
             angular.forEach($scope.regionAccordionGroups, function(value, key) {
-                //console.log(key + ': ' + value);
                 $scope.regionAccordionGroups[key].isOpen = false;
             });
             if ($scope.regionAccordionGroups.hasOwnProperty(region)){
@@ -256,14 +259,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         }
 
         function collapseRegions(){
-            //console.log($scope.regionAccordionGroups);
+            $scope.aRegionIsExpanded = false;
             angular.forEach($scope.regionAccordionGroups, function(value, key) {
-                //console.log(key + ': ' + value);
                 $scope.regionAccordionGroups[key].isOpen = false;
             });
-            //if ($scope.regionAccordionGroups.hasOwnProperty(region)){
-            //    $scope.regionAccordionGroups[region].isOpen = true;
-            //}
         }
 
         function getBreaksSuccess(response){
@@ -271,14 +270,13 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             imagePlaceholderService.setPlaceholderImagesForBreaks(response.data.breaks);
 
             $scope.breaks = response.data.breaks;
-            console.log("Breaks:", $scope.breaks);
             $scope.regions = response.data.regions;
             $scope.topDestinations = response.data.topDestinations;
 
             $scope.breaksDataLoaded = true;
             $scope.disableSearch = false;
 
-            // 20150430 20150503
+            // Grab start & end dates from first eBreak - format: 20150430 20150503
             var OfferStartDateString = String($scope.breaks[0].OFFER_START_DATE);
             var OfferEndDateString = String($scope.breaks[0].OFFER_END_DATE);
 
@@ -403,8 +401,8 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                                 scrollService.scrollToRegion('TOPDEST');
                             }
                             else {
-                                // for regular destinations, first try to scroll to the state. If we can't find that,
-                                // just scroll to the region
+                                /* for regular destinations, first try to scroll to the state. If we can't find that,
+                                 just scroll to the region
                                 var stateElement = $document.find('#STATE_' + lastVisitedHotel.state);
                                 if (stateElement.length > 0){
                                     scrollService.scrollToElement(stateElement);
@@ -412,6 +410,8 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                                 else {
                                     scrollService.scrollToRegion(lastVisitedHotel.region);
                                 }
+                                */
+                                scrollService.scrollToElement($document.find('.your-ebreaks-bar'));
                             }
                         }
                     }, 1000);

@@ -197,7 +197,7 @@
             </accordion-group>
         </accordion>
 
-            <div class="your-ebreaks-bar show-for-medium-up">
+            <div class="your-ebreaks-bar show-for-medium-up" ng-show="aRegionIsExpanded">
                 <div class="ways-to-book-content">
                     <div class="ways-content">
                         <div class="ways-text">
@@ -208,10 +208,10 @@
                     </div>
                 </div>
             </div>
-            <div class="your-ebreaks-bar show-for-small-only">
+            <div class="your-ebreaks-bar show-for-small-only" ng-show="aRegionIsExpanded">
                 <div class="ways-to-book-content">
                     <div class="ways-text">
-                        <h2>Your eBreaks for {{StartDateRange}}&ndash;{{EndDateRange}}</h2>
+                        <h2>eBreaks {{StartDateRange}}&ndash;{{EndDateRange}}</h2>
                     </div>
                 </div>
             </div>
@@ -226,7 +226,7 @@
                 </accordion-heading>
 
                 <!-- Group by State -->
-                <div class="row" ng-repeat="(state, hotels) in regionGroup | groupBy: 'PROPERTY_STATE'">
+                <div class="row ng-hide" ng-hide="regionAccordionGroups[state].isHidden" ng-repeat="(state, hotels) in regionGroup | groupBy: 'PROPERTY_STATE'">
 
                     <div class="full-column">
 
