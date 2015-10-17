@@ -74,13 +74,29 @@ angular.module('MarriottBreaks')
                 return null;
             };
 
+            // Steve's Get Region From Element:
+            $scope.getRegionFromElement = function (element) {
+                if (element.id) {
+                    // IDs are in the "US-{state}" format ("US-MI"). If it follows this format, just return the state part
+                    // Text elements are "TEXT-MI" format
+                    var idSplit = element.id.split('-');
+
+                    if (idSplit.length === 2 && idSplit[0] === 'regionCircle') {
+                        return idSplit[1];
+                    }
+                }
+
+                return null;
+            };
+
             function buildMapData() {
 
                 // there is no way to know whether the regions have loaded or the map has been built first.
                 // wait for both of them to be ready and then build the map data
                 if ($scope.regions && $scope.mapRoot) {
                     var stateData = breaksService.getStates($scope.regions);
-                    var statePathElements = angular.element($scope.mapRoot[0]).find('.land');
+                    //var statePathElements = angular.element($scope.mapRoot[0]).find('.land');
+                    var statePathElements = angular.element($scope.mapRoot[0]).find('.US');
 
                     // loop through each state path and add the breaks count
                     var stateCount, statePathElement, stateName;
@@ -97,6 +113,33 @@ angular.module('MarriottBreaks')
                             }
                         }
                     }
+
+                    // Steve's Build Region Map Data:
+                    var regionData = $scope.regions;
+                    var regionPathElements = angular.element($scope.mapRoot[0]).find('.region-cirlce');
+
+                    // loop through each state path and add the breaks count
+                    var regionCount, regionPathElement, regionName;
+                    for (var i = 0, l = regionPathElements.length; i < l; i++) {
+                        regionPathElement = regionPathElements[i];
+
+                        regionName = $scope.getRegionFromElement(regionPathElement);
+
+                        if (regionName) {
+
+                            if (regionData[regionName] && regionData[regionName].count) {
+                                regionCount = regionData[regionName].count;
+                                if (regionCount) {
+                                    // add the text element to the map
+                                    addRegionCountElement(regionPathElement, regionCount, regionName);
+                                }
+                            }
+                            else{
+                                addRegionCountElement(regionPathElement, 0, regionName);
+                            }
+                        }
+                    }
+
                 }
             }
 
@@ -115,6 +158,25 @@ angular.module('MarriottBreaks')
                 textElement.setAttribute("id", "TEXT-" + stateName); // set ID as "TEXT-{STATE}"
 
                 statePathElement.parentNode.insertBefore(textElement, statePathElement.nextSibling);
+            }
+
+            // Steve's Add Region code:
+            function addRegionCountElement(regionPathElement, regionCount, regionName){
+                console.log(regionPathElement, regionCount, regionName);
+                var boundingBox = regionPathElement.getBBox();
+                var textElement = $window.document.createElementNS("http://www.w3.org/2000/svg", "text");
+
+                textElement.textContent = regionCount; // set the text value
+
+                // set position to the middle of the path
+                textElement.setAttribute("transform", "translate(" + (boundingBox.x + boundingBox.width / 2) + " " + (boundingBox.y + boundingBox.height / 2) + ")");
+                textElement.setAttribute("fill", "black");
+                textElement.setAttribute("font-size", "20");
+                textElement.setAttribute("class", "land-text");
+                textElement.setAttribute("pointer-events", "none"); // ignore mouse events since state itself is clickable
+                textElement.setAttribute("id", "REGION_TEXT-" + regionName); // set ID as "REGION_TEXT-{REGION}"
+
+                regionPathElement.parentNode.insertBefore(textElement, regionPathElement.nextSibling);
             }
 
         }

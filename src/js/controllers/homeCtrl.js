@@ -46,11 +46,13 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         if ($scope.isMobile){
             $scope.selectedRegionView = $scope.REGION_VIEWS.LIST;
             $scope.showRegionOptions = false;
+            $scope.searchPlaceholder = "Find Deals?";
         }
         else {
             // Only allow map view if not mobile
             $scope.selectedRegionView = $scope.REGION_VIEWS.MAP;
             $scope.showRegionOptions = true;
+            $scope.searchPlaceholder = "Where do you want to go?";
         }
 
         $scope.selectedTopDestination = null;
@@ -68,10 +70,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         $scope.isRegionViewActive = function(viewType){
             return $scope.selectedRegionView === viewType;
         };
-
-        $scope.showYourEBreaks = function(){
-            return 
-        }
 
         // returns a list of breaks for the input search to work with. If user has a full zip code, it gets
         // other breaks within a certain range via google maps API. Otherwise, just return all the breaks and filter by input value
@@ -141,10 +139,8 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                 expandRegion(region);
             }
             
-            var regionState;
-            angular.forEach($scope.regions[region].states, function(value, key) {
-                //$scope.regionAccordionGroups[key].isOpen = false; $scope.regionAccordionGroups
-                
+            // Hide all states for this region
+            angular.forEach($scope.regions[region].states, function(value, key) {                
                 
                 if ($scope.regionAccordionGroups.hasOwnProperty(key)) {
                     $scope.regionAccordionGroups[key].isHidden = true;
@@ -154,6 +150,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                     $scope.regionAccordionGroups[key] = {isHidden: true};
                 }
             });
+            // Show this state
             if ($scope.regionAccordionGroups.hasOwnProperty(state)) {
                 $scope.regionAccordionGroups[state].isHidden = false;
             }
@@ -327,6 +324,11 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
             $scope.StartDateRange = formattedStartDateRange;
             $scope.EndDateRange = formattedEndDateRange;
+
+            var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
+            var today = new Date();
+
+            $scope.offerDaysLeft = Math.round(Math.abs((today.getTime() - OfferEndDate.getTime())/(oneDay)));
         }
 
         function getBreaksFail(response){
@@ -402,7 +404,8 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                             }
                             else {
                                 /* for regular destinations, first try to scroll to the state. If we can't find that,
-                                 just scroll to the region
+                                 just scroll to the region */
+                                /*  COMMMENTING OUT AS WE NOW HIDE OTHER REGIONS & STATES AND SHOULD SCROLL TO "YOUR EBREAKS" BAR
                                 var stateElement = $document.find('#STATE_' + lastVisitedHotel.state);
                                 if (stateElement.length > 0){
                                     scrollService.scrollToElement(stateElement);
@@ -411,6 +414,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                                     scrollService.scrollToRegion(lastVisitedHotel.region);
                                 }
                                 */
+                                // Scroll to the Your eBreaks bar
                                 scrollService.scrollToElement($document.find('.your-ebreaks-bar'));
                             }
                         }

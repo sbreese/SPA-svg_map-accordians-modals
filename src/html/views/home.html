@@ -28,30 +28,17 @@
 
         </div>
 
-        <!-- Search Box & Dropdown Row -->
-        <div class="row">
-            <div id="ebreaks-head" class="column">
-                <h1 id="ebreaks-head1">eBreaks&reg;</h1>
-                <h2 id="ebreaks-head2">Save 20% on great locations accross North America.</h2>
-            </div>
-            <div class="small-10 small-offset-1 medium-8 medium-offset-2 column search-container">
-                <!-- Search Box & Dropdown -->
-                <input type="text" ng-model="selectedBreak" placeholder="{{searchPlaceholder}}"
-                       ng-disabled="disableSearch"
-                       typeahead="break as break.HOTEL_NAME for break in getBreaksForInput($viewValue) | breaksSearchFilter:$viewValue:10:50"
-                       typeahead-template-url="html/templates/breakListItem.html"
-                       typeahead-on-select="inputItemSelected($model)"
-                       typeahead-loading="loadingBreaksForInput"
-                       typeahead-auto-open ng-change="inputChanged()"
-                       class="form-control">
-                <div id="button-holder">
-                    <img src="http://demo.codeofaninja.com/tutorials/textbox-search-icon-html-css/magnifying_glass.png">
-                </div>
-            </div>
+        <!-- Countdown Bell -->
+        <div class="countdown-bell-container show-for-medium-up">
+
+            <!-- Map View Button -->
+            <img src="assets/images/countdown-bell.png">
+            <p>{{offerDaysLeft}}</p>
+
         </div>
 
         <!-- MAP / REGION BUTTONS -->
-        <div class="row">
+        <div class="row" id="map-absolute">
 
             <!-- MAP VIEW -->
             <div class="full-column" ng-if="!isMobile" ng-show="isRegionViewActive(REGION_VIEWS.MAP)">
@@ -112,6 +99,28 @@
 
             </div>
 
+        </div>
+
+        <!-- Search Box & Dropdown Row -->
+        <div class="row">
+            <div id="ebreaks-head" class="column">
+                <h1 id="ebreaks-head1">eBreaks&reg;</h1>
+                <h3 id="ebreaks-head2">Save 20% on great locations accross North America.</h3>
+            </div>
+            <div class="small-10 small-offset-1 medium-8 medium-offset-2 column search-container">
+                <!-- Search Box & Dropdown -->
+                <input type="text" ng-model="selectedBreak" placeholder="{{searchPlaceholder}}"
+                       ng-disabled="disableSearch"
+                       typeahead="break as break.HOTEL_NAME for break in getBreaksForInput($viewValue) | breaksSearchFilter:$viewValue:10:50"
+                       typeahead-template-url="html/templates/breakListItem.html"
+                       typeahead-on-select="inputItemSelected($model)"
+                       typeahead-loading="loadingBreaksForInput"
+                       typeahead-auto-open ng-change="inputChanged()"
+                       class="form-control">
+                <div id="button-holder">
+                    <img src="assets/images/magnifying_glass.png">
+                </div>
+            </div>
         </div>
 
     </div>
@@ -251,22 +260,33 @@
     </div>
 
     <!-- Terms & Conditions -->
-    <div id="t_and_cond">
-        <h4><i class="fi-minus-circle"></i> Terms &amp; Conditions</h4>
-        <ul id="term_and_cond_list">
-            <li>Rates are per night. Thursday requires a Friday night stay. Sunday requires a Saturday night stay.</li>
-            <li>Rates are valid for dates specified in email at advertised hotels only.</li>
-            <li>eBreaks rates are exclusive to customers who subscribe to the eBreaks program. Therefore, these rates do not qualify for Marriott's Look No Further&reg; Best Rate Guarentee.</li>
-            <li>A limited number of rooms are available and will be sold on a first-come, first-served basis.</li>
-            <li>Advance bookings are required and must be guarenteed with a credit card.</li>
-            <li>Rates are offered Thursday through Sunday.  Some hotels only offer eBreaks rates Friday-Sunday.  These hotels are indicated with an asterisk (*) next to the rate.</li>
-            <li>Rates are for standard rooms, per night and based on single or double occupancy.</li>
-            <li>Rates are non-commissionable and do not include taxes, fees, other costs or gratuities.</li>
-            <li>Rates cannot be used in conjunction with other offers and/or discounts.</li>
-            <li>eBreaks does not apply to groups of 10 or more rooms.</li>
-            <li>Canadian cities are quoted in Canadian dollars and U.S. cities are quoted in U.S. dollars. All other destinations are quoted in currency listed.</li>
-            <li>Rates are eligible for Marriott Rewards&reg; Points and miles credit. <a href="http://www.marriott.com/rewards/rewards-program.mi">Join Marriott Rewards&reg; for Free&raquo;</a></li>
-        </ul>
+    <accordion class="terms-and-conditions-group-accordion">
+
+            <!-- TOP DESTINATIONS -->
+        <accordion-group class="terms-and-conditions-group" is-open="true"> <!-- To collapse when regions are clicked, replace true with regionAccordionGroups['TOPDEST'].isOpen -->
+                <!-- Top Destinations Group Header -->
+                <accordion-heading>
+                    <div terms-and-conditions-header-content group="t_and_d" label="'Terms &amp; Conditions'" is-open="true"></div>
+                </accordion-heading>
+
+                <ul id="term_and_cond_list">
+                    <li>Rates are per night. Thursday requires a Friday night stay. Sunday requires a Saturday night stay.</li>
+                    <li>Rates are valid for dates specified in email at advertised hotels only.</li>
+                    <li>eBreaks rates are exclusive to customers who subscribe to the eBreaks program. Therefore, these rates do not qualify for Marriott's Look No Further<sup>&reg;</sup> Best Rate Guarentee.</li>
+                    <li>A limited number of rooms are available and will be sold on a first-come, first-served basis.</li>
+                    <li>Advance bookings are required and must be guarenteed with a credit card.</li>
+                    <li>Rates are offered Thursday through Sunday.  Some hotels only offer eBreaks rates Friday-Sunday.  These hotels are indicated with an asterisk (*) next to the rate.</li>
+                    <li>Rates are for standard rooms, per night and based on single or double occupancy.</li>
+                    <li>Rates are non-commissionable and do not include taxes, fees, other costs or gratuities.</li>
+                    <li>Rates cannot be used in conjunction with other offers and/or discounts.</li>
+                    <li>eBreaks does not apply to groups of 10 or more rooms.</li>
+                    <li>Canadian cities are quoted in Canadian dollars and U.S. cities are quoted in U.S. dollars. All other destinations are quoted in currency listed.</li>
+                    <li>Rates are eligible for Marriott Rewards&reg; Points and miles credit. <a href="http://www.marriott.com/rewards/rewards-program.mi">Join Marriott Rewards</a></li>
+                </ul>
+
+            </accordion-group>
+        </accordion>
+
     </div>
 </div>
 

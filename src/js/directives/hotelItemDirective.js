@@ -52,12 +52,13 @@ angular.module('MarriottBreaks')
 
             $scope.getButtonClass = function(){
                 // use different button type if this is a top destination
-                if ($scope.hotel.TOP_DESTINATION){
-                    return 'top-destination-book-now-button';
-                }
-                else {
-                    return 'hotel-item-book-now';
-                }
+
+                //if ($scope.hotel.TOP_DESTINATION){
+                   return 'top-destination-book-now-button';
+                //}
+                //lse {
+                //    return 'hotel-item-book-now';
+                //}
             };
 
             $scope.hotelItemSelected = function(){
