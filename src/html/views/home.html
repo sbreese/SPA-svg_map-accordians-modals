@@ -44,7 +44,7 @@
             <div class="full-column" ng-if="!isMobile" ng-show="isRegionViewActive(REGION_VIEWS.MAP)">
 
                 <!-- Map Directive -->
-                <div id="region-map" map state-click-action="stateButtonClick(state)" regions="regions"></div>
+                <div id="region-map" svgmap region-button-click-action="regionCircleButtonClick(region)" state-click-action="stateButtonClick(state)" regions="regions"></div>
 
             </div>
 
@@ -257,6 +257,25 @@
         </accordion>
 
     </div>
+
+  <script type="text/ng-template" id="myModalContent.html">
+    <h3>States in {{items.selectedRegion}}!</h3>
+    <ul>
+      <li ng-repeat="(state, count) in items.regions[items.selectedRegion].states">
+        <a ng-click="selected.item = state; ok();">{{statesService.getStateName(state)}}</a> ({{count}} deals)
+      </li>
+    </ul>
+    <p>Selected: <b>{{ selected.item }}</b></p>
+    <!--button class="button secondary" ng-click="reposition()">Reset top position</button-->
+    <button class="button" ng-click="ok()">Cancel</button>
+    <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
+  </script>
+
+   <ul id="dropdown-example-1-{{region}}" class="f-dropdown" ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'" style="position: relative !important; top: 342 !important; left: 193 !important">
+        <li ng-repeat="(state, hotels) in regionGroup | groupBy: 'PROPERTY_STATE'">
+            <a>{{state}}</a>
+        </li>
+    </ul>
 
     <!-- Terms & Conditions -->
     <accordion class="terms-and-conditions-group-accordion">

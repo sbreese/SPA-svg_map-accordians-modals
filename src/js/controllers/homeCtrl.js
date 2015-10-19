@@ -6,7 +6,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
     '$window',
     '$document',
     '$timeout',
-    '$q',
+    '$q','$modal', '$log',
     'breaksService',
     'statesService',
     'scrollService',
@@ -16,7 +16,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
     'googleMapsService',
     'imagePlaceholderService',
     'schemaService',
-    function($scope, $rootScope, $window, $document, $timeout, $q, breaksService, statesService, scrollService, mediaService,
+    function($scope, $rootScope, $window, $document, $timeout, $q, $modal, $log, breaksService, statesService, scrollService, mediaService,
              backgroundVideoService, cookieService, googleMapsService, imagePlaceholderService, schemaService){
 
         // set this to true once we get the breaks data from the server
@@ -54,6 +54,33 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             $scope.showRegionOptions = true;
             $scope.searchPlaceholder = "Where do you want to go?";
         }
+
+    $scope.ModalPackage = {};
+    $scope.ModalPackage.selectedRegion = "NORTHWEST";
+    $scope.open = function (region) {
+        $scope.ModalPackage.selectedRegion = region;
+        $scope.ModalPackage.regions = $scope.regions;
+        $scope.ModalPackage.statesService = $scope.statesService;
+        console.log("States ", $scope.ModalPackage.regions);
+        var modalInstance = $modal.open({
+          templateUrl: 'myModalContent.html',
+          controller: 'ModalInstanceCtrl',
+          resolve: {
+            items: function () {
+              return $scope.ModalPackage;
+            }
+          }
+        });
+
+            modalInstance.result.then(function (selectedItem) {
+                $scope.selected = selectedItem;
+
+                $scope.stateButtonClick(selectedItem);
+
+            }, function () {
+                $log.info('Modal dismissed at: ' + new Date());
+            });
+        };
 
         $scope.selectedTopDestination = null;
 
@@ -133,34 +160,39 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         };
 
         $scope.stateButtonClick = function(state){
-            // Expand the region and scroll to the state
-            var region = breaksService.getRegionFromState($scope.regions, state);
-            if (region){
-                expandRegion(region);
-            }
             
-            // Hide all states for this region
-            angular.forEach($scope.regions[region].states, function(value, key) {                
+            if ($scope.regions[state]) {
+                $scope.open(state);
+            } else {
+                // Expand the region and scroll to the state
+                var region = breaksService.getRegionFromState($scope.regions, state);
+                if (region){
+                    expandRegion(region);
+                }
                 
-                if ($scope.regionAccordionGroups.hasOwnProperty(key)) {
-                    $scope.regionAccordionGroups[key].isHidden = true;
+                // Hide all states for this region
+                angular.forEach($scope.regions[region].states, function(value, key) {                
+                    
+                    if ($scope.regionAccordionGroups.hasOwnProperty(key)) {
+                        $scope.regionAccordionGroups[key].isHidden = true;
+                    }
+                    else
+                    {
+                        $scope.regionAccordionGroups[key] = {isHidden: true};
+                    }
+                });
+                // Show this state
+                if ($scope.regionAccordionGroups.hasOwnProperty(state)) {
+                    $scope.regionAccordionGroups[state].isHidden = false;
                 }
                 else
                 {
-                    $scope.regionAccordionGroups[key] = {isHidden: true};
+                    $scope.regionAccordionGroups[state] = {isHidden: false};
                 }
-            });
-            // Show this state
-            if ($scope.regionAccordionGroups.hasOwnProperty(state)) {
-                $scope.regionAccordionGroups[state].isHidden = false;
+                $scope.selectedTopDestination = null;
+                //scrollService.scrollToState(state);
+                scrollService.scrollToElement($document.find('.your-ebreaks-bar'));
             }
-            else
-            {
-                $scope.regionAccordionGroups[state] = {isHidden: false};
-            }
-            $scope.selectedTopDestination = null;
-            //scrollService.scrollToState(state);
-            scrollService.scrollToElement($document.find('.your-ebreaks-bar'));
         };
 
         // Scroll to the clicked group
@@ -453,3 +485,25 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
     }
 ]);
+
+angular.module('MarriottBreaks').controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
+
+  $scope.statesService = items.statesService;
+  //$scope.region = region;
+  $scope.items = items;
+  $scope.selected = {
+    item: $scope.items[0]
+  };
+
+  $scope.reposition = function () {
+    $modalInstance.reposition();
+  };
+
+  $scope.ok = function () {
+    $modalInstance.close($scope.selected.item);
+  };
+
+  $scope.cancel = function () {
+    $modalInstance.dismiss('cancel');
+  };
+});

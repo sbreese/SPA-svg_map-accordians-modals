@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('MarriottBreaks')
-    .directive('map', [
+    .directive('svgmap', [
         'backgroundVideoService',
         function (backgroundVideoService) {
 
@@ -25,7 +25,6 @@ angular.module('MarriottBreaks')
 
                 function stateClickFunction($event) {
                     var stateClicked = scope.getStateFromElement($event.target);
-
                     if (stateClicked) {
                         scope.$apply(scope.stateClickAction({state: stateClicked}));
                     }
@@ -35,7 +34,7 @@ angular.module('MarriottBreaks')
 
             return {
                 restrict: 'EA',
-                templateUrl: 'html/templates/map.html',
+                templateUrl: 'html/templates/svg_map.html',
                 replace: true,
                 controller: 'mapCtrl',
                 scope: {
@@ -66,7 +65,7 @@ angular.module('MarriottBreaks')
                     // Text elements are "TEXT-MI" format
                     var idSplit = element.id.split('-');
 
-                    if (idSplit.length === 2 && (idSplit[0] === 'US' || idSplit[0] === 'TEXT')) {
+                    if (idSplit.length === 2 && (idSplit[0] === 'US' || idSplit[0] === 'TEXT' || idSplit[0] === 'regionCircle')) {
                         return idSplit[1];
                     }
                 }
@@ -116,7 +115,7 @@ angular.module('MarriottBreaks')
 
                     // Steve's Build Region Map Data:
                     var regionData = $scope.regions;
-                    var regionPathElements = angular.element($scope.mapRoot[0]).find('.region-cirlce');
+                    var regionPathElements = angular.element($scope.mapRoot[0]).find('.region-circle');
 
                     // loop through each state path and add the breaks count
                     var regionCount, regionPathElement, regionName;
@@ -162,21 +161,33 @@ angular.module('MarriottBreaks')
 
             // Steve's Add Region code:
             function addRegionCountElement(regionPathElement, regionCount, regionName){
-                console.log(regionPathElement, regionCount, regionName);
                 var boundingBox = regionPathElement.getBBox();
                 var textElement = $window.document.createElementNS("http://www.w3.org/2000/svg", "text");
 
                 textElement.textContent = regionCount; // set the text value
 
-                // set position to the middle of the path
-                textElement.setAttribute("transform", "translate(" + (boundingBox.x + boundingBox.width / 2) + " " + (boundingBox.y + boundingBox.height / 2) + ")");
+                // set count position to the middle of the path
+                textElement.setAttribute("transform", "translate(" + (boundingBox.x + boundingBox.width / 2 - (regionCount<10?18:35)) + " " + (boundingBox.y + boundingBox.height / 2 + 12) + ")");
                 textElement.setAttribute("fill", "black");
-                textElement.setAttribute("font-size", "20");
+                textElement.setAttribute("font-size", "50");
+                textElement.setAttribute("font-family", "verdana,arial,sans-serif");
                 textElement.setAttribute("class", "land-text");
                 textElement.setAttribute("pointer-events", "none"); // ignore mouse events since state itself is clickable
                 textElement.setAttribute("id", "REGION_TEXT-" + regionName); // set ID as "REGION_TEXT-{REGION}"
 
-                regionPathElement.parentNode.insertBefore(textElement, regionPathElement.nextSibling);
+                var textElement2 = $window.document.createElementNS("http://www.w3.org/2000/svg", "text");
+                textElement2.textContent = "DEALS"; // set the text value
+
+                // set label position to the middle of the path
+                textElement2.setAttribute("transform", "translate(" + (boundingBox.x + boundingBox.width / 2 - 27) + " " + (boundingBox.y + boundingBox.height / 2 + 38) + ")");
+                textElement2.setAttribute("fill", "black");
+                textElement2.setAttribute("font-size", "15");
+                textElement2.setAttribute("font-family", "verdana,arial,sans-serif");
+                textElement2.setAttribute("class", "land-text");
+                textElement2.setAttribute("pointer-events", "none"); // ignore mouse events since state itself is clickable
+                textElement2.setAttribute("id", "DEAL_TEXT-" + regionName); // set ID as "REGION_TEXT-{REGION}"
+
+                regionPathElement.parentNode.insertBefore(textElement2, regionPathElement.nextSibling).parentNode.insertBefore(textElement, regionPathElement.nextSibling);
             }
 
         }
