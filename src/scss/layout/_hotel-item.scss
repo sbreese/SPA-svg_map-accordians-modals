@@ -9,7 +9,7 @@
     position: relative;
 
     width: 100%;
-    height: 100%;
+    /*height: 100%;*/
 
     &:hover {
         box-shadow: 0 0 12px 0 black;
@@ -23,7 +23,6 @@
     width: 100%;
     height: 100%;
 
-    background-color: black;
 }
 
 .hotel-item-content {
@@ -63,10 +62,17 @@
     font-weight: bold;
     line-height: 1.2rem;
     margin-bottom: 10px;
+    font-size: .8rem;
 }
 
 .hotel-item-per-night {
     line-height: 0.5rem;
+        strong {
+        font-size: 1.3rem;
+    }
+    small {
+        font-size: 80%;
+    }
 }
 
 .hotel-item-book-now {
@@ -76,6 +82,7 @@
     width: 100%;
     padding: 10px;
     margin: 0;
+    border-radius: 4px;
 }
 
 .top-destination-book-now-button {

@@ -93,6 +93,8 @@ angular.module('MarriottBreaks')
                 // there is no way to know whether the regions have loaded or the map has been built first.
                 // wait for both of them to be ready and then build the map data
                 if ($scope.regions && $scope.mapRoot) {
+                    /* UNCOMMENT TO DISPLAY eBREAK COUNT BY STATE ON MAP
+
                     var stateData = breaksService.getStates($scope.regions);
                     //var statePathElements = angular.element($scope.mapRoot[0]).find('.land');
                     var statePathElements = angular.element($scope.mapRoot[0]).find('.US');
@@ -112,6 +114,7 @@ angular.module('MarriottBreaks')
                             }
                         }
                     }
+                    */
 
                     // Steve's Build Region Map Data:
                     var regionData = $scope.regions;
@@ -143,6 +146,7 @@ angular.module('MarriottBreaks')
             }
 
             function addStateCountElement(statePathElement, stateCount, stateName){
+                // CURRENTLY NOT USED.  ONLY REGION CICLES HAVE CLICK ACTION.
                 var boundingBox = statePathElement.getBBox();
                 var textElement = $window.document.createElementNS("http://www.w3.org/2000/svg", "text");
 

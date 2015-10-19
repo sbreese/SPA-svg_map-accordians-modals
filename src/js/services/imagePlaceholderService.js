@@ -17,7 +17,8 @@ angular.module('MarriottBreaks').factory('imagePlaceholderService', [
             var width = Math.floor(Math.random() * (widthRange + 1)) + minWidth;
             var height = Math.floor(Math.random() * (heightRange + 1)) + minHeight;
 
-            return ["http://placekitten.com/", width, '/', height].join('');
+            //return ["http://placekitten.com/", width, '/', height].join('');
+            return "assets/images/Sample_Hotel_Card.png";
         }
 
         return {

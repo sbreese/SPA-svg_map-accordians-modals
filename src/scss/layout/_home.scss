@@ -2,10 +2,16 @@
     text-align: center;
     #ebreaks-head1, #ebreaks-head2 {
         color: white;
-        line-height: 1;
+        line-height: 1.3;
     }
     #ebreaks-head1 {
         margin-bottom: 4px;
+        sup {
+            font-size: .9rem;
+            vertical-align: top;
+            position: relative; 
+            top: .7rem; 
+        }
     }
     #ebreaks-head2 {
         margin-top: 0;
@@ -25,6 +31,10 @@
     top: 0;
     left: 0;
     right: 0;
+    max-width: 65rem;
+    .full-column {
+        padding-left: 0;
+    }
 }
 .region-view-icon-container {
     position: absolute;
@@ -553,6 +563,26 @@
 }
 .small-text {
     font-size: .9rem;
+
+    a:link {
+        text-decoration: underline;
+        color: white;
+    }
+
+    a:visited {
+        text-decoration: underline;
+        color: white;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: white;
+    }
+
+    a:active {
+        text-decoration: underline;
+        color: white;
+    }
 }
 
 
