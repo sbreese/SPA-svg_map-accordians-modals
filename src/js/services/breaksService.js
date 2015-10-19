@@ -6,7 +6,7 @@ angular.module('MarriottBreaks').factory('breaksService', [
 
         return {
             get: function () {
-                return $http.get('breaks');
+                return $http.get('assets/data/marriott-data.json');
             },
 
             getRegionFromState: function(regions, state){

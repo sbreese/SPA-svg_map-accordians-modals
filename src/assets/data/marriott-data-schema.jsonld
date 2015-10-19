@@ -1,0 +1,2662 @@
+[
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Little Rock West",
+    "priceRange": "$71-95",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=LITCH&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Little Rock",
+      "addressRegion": "AR",
+      "streetAddress": "10900 Financial Centre Parkway",
+      "postalCode": "72211"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Little Rock North",
+    "priceRange": "$87+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=LITCN&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "North Little Rock",
+      "addressRegion": "AR",
+      "streetAddress": "4339 Warden Road",
+      "postalCode": "72116"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Little Rock Marriott",
+    "priceRange": "$103-147",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=LITPB&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Little Rock",
+      "addressRegion": "AR",
+      "streetAddress": "3 Statehouse Plaza",
+      "postalCode": "72201"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Russellville",
+    "priceRange": "$87-91",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=LITRV&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Russellville",
+      "addressRegion": "AR",
+      "streetAddress": "120 East Harrell Drive",
+      "postalCode": "72802"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Little Rock West",
+    "priceRange": "$71+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=LITTS&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Little Rock",
+      "addressRegion": "AR",
+      "streetAddress": "12 Crossings Court",
+      "postalCode": "72205"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Bentonville",
+    "priceRange": "$79-143",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=FYVBN&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bentonville",
+      "addressRegion": "AR",
+      "streetAddress": "1001 McClain Road",
+      "postalCode": "72712"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Bentonville",
+    "priceRange": "$67-71",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=FYVSH&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bentonville",
+      "addressRegion": "AR",
+      "streetAddress": "2304 SE Walton Boulevard",
+      "postalCode": "72712"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Jonesboro",
+    "priceRange": "$79-103",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=JBRFI&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Jonesboro",
+      "addressRegion": "AR",
+      "streetAddress": "3408 Access Road",
+      "postalCode": "72401"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Bentonville Rogers",
+    "priceRange": "$71-103",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ROGTS&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bentonville",
+      "addressRegion": "AR",
+      "streetAddress": "3100 S.E. 14th Street",
+      "postalCode": "72712"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fullerton Marriott at California State University",
+    "priceRange": "$108+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=LAXFL&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Fullerton",
+      "addressRegion": "CA",
+      "streetAddress": "2701 Nutwood Avenue",
+      "postalCode": "92831"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Huntington Beach Fountain Valley",
+    "priceRange": "$111-127*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SNAFC&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Fountain Valley",
+      "addressRegion": "CA",
+      "streetAddress": "9950 Slater Avenue",
+      "postalCode": "92708"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Foothill Ranch Irvine East/Lake Forest",
+    "priceRange": "$87-103",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SNAFR&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Foothill Ranch",
+      "addressRegion": "CA",
+      "streetAddress": "27492 Portola Parkway",
+      "postalCode": "92610"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Laguna Hills Irvine Spectrum/Orange County",
+    "priceRange": "$103-151",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SNALH&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Laguna Hills",
+      "addressRegion": "CA",
+      "streetAddress": "23175 Avenida de la Carlota",
+      "postalCode": "92653"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn La Mirada Buena Park",
+    "priceRange": "$107-115",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SNALM&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "La Mirada",
+      "addressRegion": "CA",
+      "streetAddress": "14419 Firestone Boulevard",
+      "postalCode": "90638"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Corona Riverside",
+    "priceRange": "$95-103",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ONTCR&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Corona",
+      "addressRegion": "CA",
+      "streetAddress": "2025 Compton Ave",
+      "postalCode": "92881"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Boulder",
+    "priceRange": "$111-151*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENBD&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Boulder",
+      "addressRegion": "CO",
+      "streetAddress": "4710 Pearl East Circle",
+      "postalCode": "80301"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Renaissance Boulder Flatiron Hotel",
+    "priceRange": "$95+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENIR&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Broomfield",
+      "addressRegion": "CO",
+      "streetAddress": "500 Flatiron Boulevard",
+      "postalCode": "80021"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Boulder",
+    "priceRange": "$127-159*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=VBOCG&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Boulder",
+      "addressRegion": "CO",
+      "streetAddress": "3030 Center Green Drive",
+      "postalCode": "80301"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Denver at Anschutz Medical Campus",
+    "priceRange": "$103-151",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENAF&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aurora",
+      "addressRegion": "CO",
+      "streetAddress": "13400 East Colfax Avenue",
+      "postalCode": "80011"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Denver Aurora/Parker",
+    "priceRange": "$95-103",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENAS&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aurora",
+      "addressRegion": "CO",
+      "streetAddress": "24192 East Prospect Avenue",
+      "postalCode": "80016"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Denver Aurora/Medical Center",
+    "priceRange": "$83-123",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENAU&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aurora",
+      "addressRegion": "CO",
+      "streetAddress": "13851 East Harvard Avenue",
+      "postalCode": "80014"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Denver Stapleton",
+    "priceRange": "$87-111",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENCA&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Denver",
+      "addressRegion": "CO",
+      "streetAddress": "7415 East 41st Avenue",
+      "postalCode": "80216"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Denver Cherry Creek",
+    "priceRange": "$111-119*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENCH&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Denver",
+      "addressRegion": "CO",
+      "streetAddress": "1475 S. Colorado Blvd",
+      "postalCode": "80222"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Denver Airport",
+    "priceRange": "$95-111*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENDA&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Denver",
+      "addressRegion": "CO",
+      "streetAddress": "18350 East 68th Avenue",
+      "postalCode": "80249"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Denver Tech Center/South",
+    "priceRange": "$95-111",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENFS&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Highlands Ranch",
+      "addressRegion": "CO",
+      "streetAddress": "7056 East County Line",
+      "postalCode": "80126"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Denver Highlands Ranch",
+    "priceRange": "$104-180",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENHR&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Highlands Ranch",
+      "addressRegion": "CO",
+      "streetAddress": "93 West Centennial Boulevard",
+      "postalCode": "80126"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Denver Southwest/Lakewood",
+    "priceRange": "$103-111",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENLK&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lakewood",
+      "addressRegion": "CO",
+      "streetAddress": "7180 West Hampden Avenue",
+      "postalCode": "80227"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Denver Marriott South at Park Meadows",
+    "priceRange": "$94+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENMS&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lone Tree",
+      "addressRegion": "CO",
+      "streetAddress": "10345 Park Meadows Drive",
+      "postalCode": "80124"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Denver Marriott Westminster",
+    "priceRange": "$88+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENMW&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Westminster",
+      "addressRegion": "CO",
+      "streetAddress": "7000 Church Ranch Boulevard",
+      "postalCode": "80021"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Denver Southwest/Lakewood",
+    "priceRange": "$103-107*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENRK&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lakewood",
+      "addressRegion": "CO",
+      "streetAddress": "7050 West Hampden Avenue",
+      "postalCode": "80227"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Denver Tech Center",
+    "priceRange": "$79-127",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENSE&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Greenwood Village",
+      "addressRegion": "CO",
+      "streetAddress": "6565 South Boston Street",
+      "postalCode": "80111"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Denver North/Westminster",
+    "priceRange": "$80-88",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DENWM&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Westminster",
+      "addressRegion": "CO",
+      "streetAddress": "6845 W. 103rd Avenue",
+      "postalCode": "80021"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Shelton",
+    "priceRange": "$79-87",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BDRCY&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Shelton",
+      "addressRegion": "CT",
+      "streetAddress": "780 Bridgeport Avenue",
+      "postalCode": "6484"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn New Haven Wallingford",
+    "priceRange": "$75-87",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=HVNFW&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Wallingford",
+      "addressRegion": "CT",
+      "streetAddress": "100 Miles Drive",
+      "postalCode": "6492"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Port St. Lucie",
+    "priceRange": "$63-71",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=JENSH&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Port St. Lucie",
+      "addressRegion": "FL",
+      "streetAddress": "2000 NW Courtyard Circle",
+      "postalCode": "34986"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Stuart",
+    "priceRange": "$87-111",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PBIST&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Stuart",
+      "addressRegion": "FL",
+      "streetAddress": "7615 SW Lost River Road",
+      "postalCode": "34997"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Columbus",
+    "priceRange": "$71-91",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CSGCH&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Columbus",
+      "addressRegion": "GA",
+      "streetAddress": "3501 Courtyard Way",
+      "postalCode": "31909"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Columbus Phenix City",
+    "priceRange": "$87-103",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CSGCP&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Phenix City",
+      "addressRegion": "AL",
+      "streetAddress": "1400 3rd Avenue",
+      "postalCode": "36867"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Columbus",
+    "priceRange": "$79-95",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CSGSH&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Columbus",
+      "addressRegion": "GA",
+      "streetAddress": "5415 Whittlesey Blvd",
+      "postalCode": "31907"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Columbus",
+    "priceRange": "$79+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CSGTS&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Columbus",
+      "addressRegion": "GA",
+      "streetAddress": "4534 Armour Road",
+      "postalCode": "31904"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Boise ParkCenter",
+    "priceRange": "$87-95*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOIDT&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Boise",
+      "addressRegion": "ID",
+      "streetAddress": "424 East ParkCenter Blvd",
+      "postalCode": "83706"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Boise Downtown",
+    "priceRange": "$95-127*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOIID&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Boise",
+      "addressRegion": "ID",
+      "streetAddress": "1401 S Lusk Pl",
+      "postalCode": "83706"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Renaissance Chicago O'Hare Suites Hotel",
+    "priceRange": "$103*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CHIBR&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chicago",
+      "addressRegion": "IL",
+      "streetAddress": "8500 West Bryn Mawr Avenue",
+      "postalCode": "60631"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Chicago Deerfield",
+    "priceRange": "$95-119",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CHIDF&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Deerfield",
+      "addressRegion": "IL",
+      "streetAddress": "800 Lake Cook Road",
+      "postalCode": "60015"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Chicago Marriott Suites Deerfield",
+    "priceRange": "$87+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CHIDS&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Deerfield",
+      "addressRegion": "IL",
+      "streetAddress": "2 Parkway North",
+      "postalCode": "60015"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Chicago Lombard",
+    "priceRange": "$75-107",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CHIFS&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lombard",
+      "addressRegion": "IL",
+      "streetAddress": "645 West North Ave",
+      "postalCode": "60148"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Lincolnshire Marriott Resort",
+    "priceRange": "$87+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CHILN&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lincolnshire",
+      "addressRegion": "IL",
+      "streetAddress": "Ten Marriott Drive",
+      "postalCode": "60069"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Chicago Marriott Naperville",
+    "priceRange": "$111-167",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CHIMN&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Naperville",
+      "addressRegion": "IL",
+      "streetAddress": "1801 North Naper Boulevard",
+      "postalCode": "60563"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Chicago O'Hare",
+    "priceRange": "$151-159*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CHIRT&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rosemont",
+      "addressRegion": "IL",
+      "streetAddress": "7101 Chestnut Street",
+      "postalCode": "60018"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Chicago Waukegan/Gurnee",
+    "priceRange": "$135-147",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CHIRW&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Waukegan",
+      "addressRegion": "IL",
+      "streetAddress": "1440  South White Oak Drive",
+      "postalCode": "60085"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Chicago Wood Dale/Itasca",
+    "priceRange": "$71-119",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CHIWD&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Wood Dale",
+      "addressRegion": "IL",
+      "streetAddress": "900 N. Wood Dale Road",
+      "postalCode": "60191"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Chicago Waukegan/Gurnee",
+    "priceRange": "$87-135",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CHIWK&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Waukegan",
+      "addressRegion": "IL",
+      "streetAddress": "3800 Northpoint Blvd",
+      "postalCode": "60085"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Bloomington",
+    "priceRange": "$127-135",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BMGSH&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bloomington",
+      "addressRegion": "IN",
+      "streetAddress": "501 North College Avenue",
+      "postalCode": "47404"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn Princeton",
+    "priceRange": "$79-115",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=EVVPC&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Princeton",
+      "addressRegion": "IN",
+      "streetAddress": "2828 Dixon Street",
+      "postalCode": "47670"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Lafayette",
+    "priceRange": "$103-111*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=LAFCY&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lafayette",
+      "addressRegion": "IN",
+      "streetAddress": "150 Fairington Ave",
+      "postalCode": "47905"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Lafayette",
+    "priceRange": "$92-112",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=LAFFI&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lafayette",
+      "addressRegion": "IN",
+      "streetAddress": "4000 South Street",
+      "postalCode": "47905"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Lafayette",
+    "priceRange": "$87-95*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=LAFTS&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lafayette",
+      "addressRegion": "IN",
+      "streetAddress": "163 Frontage Road",
+      "postalCode": "47905"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Portland Marriott at Sable Oaks",
+    "priceRange": "$119-127",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PWMAP&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "South Portland",
+      "addressRegion": "ME",
+      "streetAddress": "200 Sable Oaks Drive",
+      "postalCode": "4106"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Brunswick Freeport",
+    "priceRange": "$119-135",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PWMBW&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Brunswick",
+      "addressRegion": "ME",
+      "streetAddress": "36 Old Portland Road",
+      "postalCode": "4011"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Portland Airport",
+    "priceRange": "$103+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PWMLO&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "South Portland",
+      "addressRegion": "ME",
+      "streetAddress": "100 Southborough Drive",
+      "postalCode": "4106"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Boston Billerica/Bedford",
+    "priceRange": "$87-127",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSBB&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Billerica",
+      "addressRegion": "MA",
+      "streetAddress": "270 Concord Road",
+      "postalCode": "1821"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Boston Tewksbury/Andover",
+    "priceRange": "$127-151",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSBT&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tewksbury",
+      "addressRegion": "MA",
+      "streetAddress": "1775 Andover Street",
+      "postalCode": "1876"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Boston Woburn/Boston North",
+    "priceRange": "$95-103",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSCW&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Woburn",
+      "addressRegion": "MA",
+      "streetAddress": "700 Unicorn Park Dr",
+      "postalCode": "1801"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Boston Dedham",
+    "priceRange": "$159-167",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSDE&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dedham",
+      "addressRegion": "MA",
+      "streetAddress": "259 Elm Street",
+      "postalCode": "2026"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn Boston Dedham",
+    "priceRange": "$103-135",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSDH&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dedham",
+      "addressRegion": "MA",
+      "streetAddress": "235 Elm Street",
+      "postalCode": "2026"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Boston Copley Square",
+    "priceRange": "$223-247*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSDT&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Boston",
+      "addressRegion": "MA",
+      "streetAddress": "88 Exeter Street",
+      "postalCode": "2116"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Boston Danvers",
+    "priceRange": "$127-151",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSDV&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Danvers",
+      "addressRegion": "MA",
+      "streetAddress": "275 Independence Way",
+      "postalCode": "1923"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Boston Framingham",
+    "priceRange": "$111+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSFM&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Framingham",
+      "addressRegion": "MA",
+      "streetAddress": "400 Staples Drive",
+      "postalCode": "1702"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn Boston Tewksbury/Andover",
+    "priceRange": "$71-75",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSFT&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tewksbury",
+      "addressRegion": "MA",
+      "streetAddress": "1695 Andover Street",
+      "postalCode": "1876"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn Boston Woburn/Burlington",
+    "priceRange": "$103-111*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSFW&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Woburn",
+      "addressRegion": "MA",
+      "streetAddress": "285 Mishawum Road",
+      "postalCode": "1801"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Boston Foxborough",
+    "priceRange": "$95-123*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSFX&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Foxborough",
+      "addressRegion": "MA",
+      "streetAddress": "250 Foxborough Blvd",
+      "postalCode": "2035"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Boston Marriott Long Wharf",
+    "priceRange": "$239*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSLW&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Boston",
+      "addressRegion": "MA",
+      "streetAddress": "296 State Street",
+      "postalCode": "2109"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Boston Milford",
+    "priceRange": "$87-143",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSML&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Milford",
+      "addressRegion": "MA",
+      "streetAddress": "10 Fortune Boulevard",
+      "postalCode": "1757"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Boston Milford",
+    "priceRange": "$79-151",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSNM&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Milford",
+      "addressRegion": "MA",
+      "streetAddress": "1 Fortune Boulevard",
+      "postalCode": "1757"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Boston Marriott Newton",
+    "priceRange": "$111+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSNT&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Newton",
+      "addressRegion": "MA",
+      "streetAddress": "2345 Commonwealth Avenue",
+      "postalCode": "2466"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Boston Norwood/Canton",
+    "priceRange": "$103-111",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSNW&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Norwood",
+      "addressRegion": "MA",
+      "streetAddress": "300 River Ridge Drive",
+      "postalCode": "2062"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Boston Marriott Peabody",
+    "priceRange": "$127+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSPB&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Peabody",
+      "addressRegion": "MA",
+      "streetAddress": "8A Centennial Drive",
+      "postalCode": "1960"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Boston Marriott Quincy",
+    "priceRange": "$119+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSQU&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Quincy",
+      "addressRegion": "MA",
+      "streetAddress": "1000 Marriott Drive",
+      "postalCode": "2169"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Boston North",
+    "priceRange": "$143+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSRF&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Revere",
+      "addressRegion": "MA",
+      "streetAddress": "100 Morris Street",
+      "postalCode": "2151"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Boston North Shore/Danvers",
+    "priceRange": "$103+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSTD&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Danvers",
+      "addressRegion": "MA",
+      "streetAddress": "238 Andover Street",
+      "postalCode": "1923"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Boston Tewksbury/Andover",
+    "priceRange": "$75+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSTT&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tewksbury",
+      "addressRegion": "MA",
+      "streetAddress": "20 International Place",
+      "postalCode": "1876"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Boston Harbor on Tudor Wharf",
+    "priceRange": "$215-247*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSTW&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Boston",
+      "addressRegion": "MA",
+      "streetAddress": "34-44 Charles River Avenue",
+      "postalCode": "2129"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Boston Woburn/Burlington",
+    "priceRange": "$95-159*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSWB&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Woburn",
+      "addressRegion": "MA",
+      "streetAddress": "240 Mishawum Road",
+      "postalCode": "1801"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Boston Waltham",
+    "priceRange": "$127*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOSWM&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Waltham",
+      "addressRegion": "MA",
+      "streetAddress": "387 Winter Street",
+      "postalCode": "2451"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn New Bedford Dartmouth",
+    "priceRange": "$119-127",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=EWBRI&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "North Dartmouth",
+      "addressRegion": "MA",
+      "streetAddress": "181 Faunce Corner Road",
+      "postalCode": "2747"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Lenox Great Barrington/Berkshires",
+    "priceRange": "$151-167",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=GBRFI&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Great Barrington",
+      "addressRegion": "MA",
+      "streetAddress": "249 Stockbridge Road, Route 7",
+      "postalCode": "1230"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn Plymouth Middleboro",
+    "priceRange": "$111-119",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PYMFM&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Middleboro",
+      "addressRegion": "MA",
+      "streetAddress": "4 Chalet Road",
+      "postalCode": "2346"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Grand Rapids Airport",
+    "priceRange": "$95-111*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=GRRRI&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Grand Rapids",
+      "addressRegion": "MI",
+      "streetAddress": "4443 28th Street SE",
+      "postalCode": "49512"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Lansing",
+    "priceRange": "$103-111",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=LANCY&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lansing",
+      "addressRegion": "MI",
+      "streetAddress": "2710 Lake Lansing Road",
+      "postalCode": "48912"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Kansas City Marriott Downtown",
+    "priceRange": "$159+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=MCIDT&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kansas City",
+      "addressRegion": "MO",
+      "streetAddress": "200 West 12th Street",
+      "postalCode": "64105"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Kansas City North Near Worlds of Fun",
+    "priceRange": "$99-111",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=MCIKN&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kansas City",
+      "addressRegion": "MO",
+      "streetAddress": "4231 North Corrington Ave",
+      "postalCode": "64117"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Overland Park Marriott",
+    "priceRange": "$103+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=MCIOP&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Overland Park",
+      "addressRegion": "KS",
+      "streetAddress": "10800 Metcalf Avenue",
+      "postalCode": "66210"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Reno Sparks",
+    "priceRange": "$99-107",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=RNOFI&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sparks",
+      "addressRegion": "NV",
+      "streetAddress": "2085 Brierley Way",
+      "postalCode": "89434"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn Manchester-Boston Regional Airport",
+    "priceRange": "$87*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=MHTFM&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Manchester",
+      "addressRegion": "NH",
+      "streetAddress": "860 South Porter Street",
+      "postalCode": "3103"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Hooksett",
+    "priceRange": "$95-103",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=MHTHO&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Hooksett",
+      "addressRegion": "NH",
+      "streetAddress": "8 Bell Ave",
+      "postalCode": "3106"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Keene Downtown",
+    "priceRange": "$791-799*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=MHTDT&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Keene",
+      "addressRegion": "NH",
+      "streetAddress": "75 Railroad Street",
+      "postalCode": "3431"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Gilford",
+    "priceRange": "$119-159",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=MHTGF&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gilford",
+      "addressRegion": "NH",
+      "streetAddress": "14 Sawmill Road",
+      "postalCode": "3249"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Elmira Corning",
+    "priceRange": "$115+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ELMHH&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Horseheads",
+      "addressRegion": "NY",
+      "streetAddress": "1600 County Route 64",
+      "postalCode": "14845"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Lake Placid",
+    "priceRange": "$111-119*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SLKCY&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lake Placid",
+      "addressRegion": "NY",
+      "streetAddress": "5920 Cascade Road",
+      "postalCode": "12946"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Syracuse Downtown at Armory Square",
+    "priceRange": "$151-175*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SYRDR&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Syracuse",
+      "addressRegion": "NY",
+      "streetAddress": "300 West Fayette Street",
+      "postalCode": "13202"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Rochester Airport Marriott",
+    "priceRange": "$115+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ROCAP&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rochester",
+      "addressRegion": "NY",
+      "streetAddress": "1890 Ridge Road West",
+      "postalCode": "14615"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Rochester Brighton",
+    "priceRange": "$95+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ROCCH&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rochester",
+      "addressRegion": "NY",
+      "streetAddress": "33 Corporate Woods Drive",
+      "postalCode": "14623"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Rochester East/Penfield",
+    "priceRange": "$119+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ROCCY&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rochester",
+      "addressRegion": "NY",
+      "streetAddress": "1000 Linden Park",
+      "postalCode": "14625"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "The Del Monte Lodge Renaissance Rochester Hotel & Spa",
+    "priceRange": "$199+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ROCDL&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Pittsford",
+      "addressRegion": "NY",
+      "streetAddress": "41 North Main Street",
+      "postalCode": "14534"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn Rochester Airport",
+    "priceRange": "$111-127",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ROCFA&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rochester",
+      "addressRegion": "NY",
+      "streetAddress": "1200 Brooks Avenue",
+      "postalCode": "14624"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Greensboro",
+    "priceRange": "$111-119*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=GSOSH&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Greensboro",
+      "addressRegion": "NC",
+      "streetAddress": "6006 Landmark Center Blvd",
+      "postalCode": "27407"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Canton",
+    "priceRange": "$103-111",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CAKCC&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "North Canton",
+      "addressRegion": "OH",
+      "streetAddress": "4375 Metro Circle NW",
+      "postalCode": "44720"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Canton South",
+    "priceRange": "$79-83",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CAKFC&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Canton",
+      "addressRegion": "OH",
+      "streetAddress": "4025 Greentree Avenue",
+      "postalCode": "44706"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Cleveland Airport Marriott",
+    "priceRange": "$103+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CLEAP&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Cleveland",
+      "addressRegion": "OH",
+      "streetAddress": "4277 West 150th Street",
+      "postalCode": "44135"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Cleveland Avon",
+    "priceRange": "$119-135",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CLEAV&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Avon",
+      "addressRegion": "OH",
+      "streetAddress": "39050 Colorado Avenue",
+      "postalCode": "44011"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Cleveland Beachwood",
+    "priceRange": "$91-123",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CLEBH&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Beachwood",
+      "addressRegion": "OH",
+      "streetAddress": "3750 Orange Place",
+      "postalCode": "44122"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Cleveland Beachwood",
+    "priceRange": "$95-103",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CLEBW&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Beachwood",
+      "addressRegion": "OH",
+      "streetAddress": "3695 Orange Place",
+      "postalCode": "44122"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Cleveland Westlake",
+    "priceRange": "$99-103*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CLECW&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Westlake",
+      "addressRegion": "OH",
+      "streetAddress": "25050 Sperry Drive",
+      "postalCode": "44145"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Cleveland Westlake",
+    "priceRange": "$103*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=CLETS&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Westlake",
+      "addressRegion": "OH",
+      "streetAddress": "25052 Sperry Drive",
+      "postalCode": "44145"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn Oklahoma City South/Crossroads Mall",
+    "priceRange": "$83-91",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=OKCST&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Oklahoma City",
+      "addressRegion": "OK",
+      "streetAddress": "1101 East I-240 Service Road",
+      "postalCode": "73149"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Harrisburg Hershey",
+    "priceRange": "$111-135*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=HARET&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Harrisburg",
+      "addressRegion": "PA",
+      "streetAddress": "15 Capital Drive at I-81 Progress Avenue Exit 69",
+      "postalCode": "17110"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Harrisburg Carlisle",
+    "priceRange": "$111-119*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=HARRI&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Carlisle",
+      "addressRegion": "PA",
+      "streetAddress": "1 Hampton Court",
+      "postalCode": "17013"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard York",
+    "priceRange": "$103-111*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=HARYK&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "York",
+      "addressRegion": "PA",
+      "streetAddress": "2799 Concord Road",
+      "postalCode": "17402"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites York",
+    "priceRange": "$111-127*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=HARYT&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "York",
+      "addressRegion": "PA",
+      "streetAddress": "2789 Concord Road",
+      "postalCode": "17402"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Allentown Bethlehem/Lehigh Valley Airport",
+    "priceRange": "$119-127",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ABECY&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bethlehem",
+      "addressRegion": "PA",
+      "streetAddress": "2160 Motel Drive",
+      "postalCode": "18018"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Bethlehem Easton",
+    "priceRange": "$127-135",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ABETS&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Easton",
+      "addressRegion": "PA",
+      "streetAddress": "3800 Easton/Nazareth Highway",
+      "postalCode": "18045"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Wilkes-Barre Scranton",
+    "priceRange": "$119+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=AVPFI&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Wilkes-Barre",
+      "addressRegion": "PA",
+      "streetAddress": "884 Kidder Street",
+      "postalCode": "18702"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Towanda Wysox",
+    "priceRange": "$103+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BGMWB&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Towanda",
+      "addressRegion": "PA",
+      "streetAddress": "1248 Golden Mile Road",
+      "postalCode": "18848"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites DuBois",
+    "priceRange": "$79-87*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=DUJFI&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "DuBois",
+      "addressRegion": "PA",
+      "streetAddress": "2219 Bee Line Highway",
+      "postalCode": "15801"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Erie Ambassador Conference Center",
+    "priceRange": "$119-127",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ERICY&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Erie",
+      "addressRegion": "PA",
+      "streetAddress": "7792 Peach St.",
+      "postalCode": "16509"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Erie",
+    "priceRange": "$135-143",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ERISH&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Erie",
+      "addressRegion": "PA",
+      "streetAddress": "2087 Interchange Road",
+      "postalCode": "16509"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Williamsport",
+    "priceRange": "$75-87",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=IPTFI&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Williamsport",
+      "addressRegion": "PA",
+      "streetAddress": "104 Maynard Street",
+      "postalCode": "17701"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Williamsport",
+    "priceRange": "$99-103",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=IPTRI&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Williamsport",
+      "addressRegion": "PA",
+      "streetAddress": "150 West Church Street",
+      "postalCode": "17701"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Williamsport",
+    "priceRange": "$83+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=IPTTS&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Williamsport",
+      "addressRegion": "PA",
+      "streetAddress": "10 West Church Street",
+      "postalCode": "17701"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Philadelphia Lansdale",
+    "priceRange": "$95-135",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLLD&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lansdale",
+      "addressRegion": "PA",
+      "streetAddress": "1737 Sumneytown Pike",
+      "postalCode": "19446"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Huntingdon Route 22/Raystown Lake",
+    "priceRange": "$103*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SCEHD&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Huntingdon",
+      "addressRegion": "PA",
+      "streetAddress": "9970 Shaner Boulevard",
+      "postalCode": "16652"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Philadelphia Airport",
+    "priceRange": "$115-139",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLAT&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Philadelphia",
+      "addressRegion": "PA",
+      "streetAddress": "8900 Bartram Avenue",
+      "postalCode": "19153"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Philadelphia Valley Forge",
+    "priceRange": "$111-175*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLBW&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Berwyn",
+      "addressRegion": "PA",
+      "streetAddress": "600 West Swedesford Road",
+      "postalCode": "19312"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Philadelphia Conshohocken",
+    "priceRange": "$143-151",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLCN&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Conshohocken",
+      "addressRegion": "PA",
+      "streetAddress": "191 Washington Street",
+      "postalCode": "19428"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Philadelphia Coatesville/Exton",
+    "priceRange": "$103-119",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLCV&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Coatesville",
+      "addressRegion": "PA",
+      "streetAddress": "600 Manor Road",
+      "postalCode": "19320"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Philadelphia Plymouth Meeting",
+    "priceRange": "$103-127",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLCY&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Plymouth Meeting",
+      "addressRegion": "PA",
+      "streetAddress": "651 Fountain Road",
+      "postalCode": "19462"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Philadelphia Valley Forge/King of Prussia",
+    "priceRange": "$103-111",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLKP&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "King of Prussia",
+      "addressRegion": "PA",
+      "streetAddress": "875 Mancill Mill Road",
+      "postalCode": "19406"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Philadelphia Plymouth Meeting",
+    "priceRange": "$103-127",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLPY&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Plymouth Meeting",
+      "addressRegion": "PA",
+      "streetAddress": "430 Plymouth Road",
+      "postalCode": "19462"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Mt. Laurel at Bishop's Gate",
+    "priceRange": "$111-135",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLRL&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mount Laurel",
+      "addressRegion": "NJ",
+      "streetAddress": "1000 Bishops Gate Boulevard",
+      "postalCode": "8054"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Philadelphia Willow Grove",
+    "priceRange": "$111-135*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLRW&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Horsham",
+      "addressRegion": "PA",
+      "streetAddress": "3 Walnut Grove Drive",
+      "postalCode": "19044"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Philadelphia Airport/Ridley Park",
+    "priceRange": "$119-127*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLSR&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ridley Park",
+      "addressRegion": "PA",
+      "streetAddress": "201 Industrial Highway",
+      "postalCode": "19078"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Philadelphia Valley Forge/King of Prussia",
+    "priceRange": "$87-135",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLVA&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Wayne",
+      "addressRegion": "PA",
+      "streetAddress": "1100 Drummers Lane",
+      "postalCode": "19087"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Philadelphia Willow Grove",
+    "priceRange": "$95-135*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLWG&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Willow Grove",
+      "addressRegion": "PA",
+      "streetAddress": "2350 Easton Road Route 611",
+      "postalCode": "19090"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Philadelphia Willow Grove",
+    "priceRange": "$95-135*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=PHLWL&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Willow Grove",
+      "addressRegion": "PA",
+      "streetAddress": "2480 Maryland Road",
+      "postalCode": "19090"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Aberdeen",
+    "priceRange": "$99-103",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ABRTS&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Aberdeen",
+      "addressRegion": "SD",
+      "streetAddress": "402 Norwood Street South",
+      "postalCode": "57401"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Brookings",
+    "priceRange": "$119+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BKXFI&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Brookings",
+      "addressRegion": "SD",
+      "streetAddress": "3000 LeFevre Drive",
+      "postalCode": "57006"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Sioux Falls",
+    "priceRange": "$103+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=FSDTS&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Sioux Falls",
+      "addressRegion": "SD",
+      "streetAddress": "4545 W. Homefield Dr.",
+      "postalCode": "57106"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Rapid City",
+    "priceRange": "$79*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=RAPFI&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Rapid City",
+      "addressRegion": "SD",
+      "streetAddress": "1314 N. Elk Vale Road",
+      "postalCode": "57703"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Spearfish",
+    "priceRange": "$67-71",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=RAPSP&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Spearfish",
+      "addressRegion": "SD",
+      "streetAddress": "2720 1st Avenue East",
+      "postalCode": "57783"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard El Paso Airport",
+    "priceRange": "$63-71",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ELPCY&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "El Paso",
+      "addressRegion": "TX",
+      "streetAddress": "6610 International Road",
+      "postalCode": "79925"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites El Paso",
+    "priceRange": "$71-75*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ELPFI&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "El Paso",
+      "addressRegion": "TX",
+      "streetAddress": "7514 Remcon Circle",
+      "postalCode": "79912"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn Burlington Williston",
+    "priceRange": "$127-143",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BTVFB&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Williston",
+      "addressRegion": "VT",
+      "streetAddress": "2844 St. George Road",
+      "postalCode": "5495"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Burlington Williston",
+    "priceRange": "$127-135",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BTVWL&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Williston",
+      "addressRegion": "VT",
+      "streetAddress": "177 Hurricane Lane",
+      "postalCode": "5495"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Norfolk Downtown",
+    "priceRange": "$87-103*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ORFDT&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Norfolk",
+      "addressRegion": "VA",
+      "streetAddress": "520 Plume Street",
+      "postalCode": "23510"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Chesapeake",
+    "priceRange": "$95+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ORFFC&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chesapeake",
+      "addressRegion": "VA",
+      "streetAddress": "1560 Crossways Boulevard",
+      "postalCode": "23320"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Chesapeake Greenbrier",
+    "priceRange": "$123-127",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ORFGB&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chesapeake",
+      "addressRegion": "VA",
+      "streetAddress": "1500 Crossways Blvd.",
+      "postalCode": "23320"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Marriott Chesapeake",
+    "priceRange": "$95-103",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ORFGR&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chesapeake",
+      "addressRegion": "VA",
+      "streetAddress": "725 Woodlake Drive",
+      "postalCode": "23320"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Chesapeake Greenbrier",
+    "priceRange": "$111-115",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ORFNC&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Chesapeake",
+      "addressRegion": "VA",
+      "streetAddress": "1446 Crossways Boulevard",
+      "postalCode": "23320"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Norfolk Virginia Beach",
+    "priceRange": "$111-127",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ORFNW&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Norfolk",
+      "addressRegion": "VA",
+      "streetAddress": "6350 Newtown Rd",
+      "postalCode": "23502"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Norfolk Old Dominion University",
+    "priceRange": "$111-119*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ORFOD&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Norfolk",
+      "addressRegion": "VA",
+      "streetAddress": "4500 Hampton Boulevard",
+      "postalCode": "23508"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Norfolk Airport",
+    "priceRange": "$119-127",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ORFRI&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Norfolk",
+      "addressRegion": "VA",
+      "streetAddress": "1590 North Military Highway",
+      "postalCode": "23502"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Norfolk Downtown",
+    "priceRange": "$103-119*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ORFRN&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Norfolk",
+      "addressRegion": "VA",
+      "streetAddress": "227 West Brambleton Avenue",
+      "postalCode": "23510"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Virginia Beach Norfolk",
+    "priceRange": "$87-111",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=ORFVB&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Virginia Beach",
+      "addressRegion": "VA",
+      "streetAddress": "5700 Greenwich Road",
+      "postalCode": "23462"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Seattle Bellevue/Redmond",
+    "priceRange": "$103-175*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BVUCH&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bellevue",
+      "addressRegion": "WA",
+      "streetAddress": "14615 NE 29th Place",
+      "postalCode": "98007"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Seattle Bellevue/Redmond",
+    "priceRange": "$103-111",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BVUFI&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bellevue",
+      "addressRegion": "WA",
+      "streetAddress": "14595 NE 29th Place",
+      "postalCode": "98007"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Seattle Bellevue/Downtown",
+    "priceRange": "$95*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BVURI&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bellevue",
+      "addressRegion": "WA",
+      "streetAddress": "605 114th Avenue SE",
+      "postalCode": "98004"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Seattle Bellevue",
+    "priceRange": "$95*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BVUWA&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bellevue",
+      "addressRegion": "WA",
+      "streetAddress": "14455 NE 29th Place",
+      "postalCode": "98007"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Seattle Federal Way",
+    "priceRange": "$103-135",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEAFW&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Federal Way",
+      "addressRegion": "WA",
+      "streetAddress": "31910 Gateway Center Blvd. South",
+      "postalCode": "98003"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Seattle North/Lynnwood Everett",
+    "priceRange": "$87-103",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEALN&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lynnwood",
+      "addressRegion": "WA",
+      "streetAddress": "4220 Alderwood Mall Blvd",
+      "postalCode": "98036"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Seattle North/Lynnwood Everett",
+    "priceRange": "$103-111*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEALW&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lynnwood",
+      "addressRegion": "WA",
+      "streetAddress": "18200 Alderwood Mall Parkway",
+      "postalCode": "98037"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Redmond Marriott Town Center",
+    "priceRange": "$111*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEAMC&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Redmond",
+      "addressRegion": "WA",
+      "streetAddress": "7401 164th Avenue NE",
+      "postalCode": "98052"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Tacoma Puyallup",
+    "priceRange": "$111-119*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEAPP&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Puyallup",
+      "addressRegion": "WA",
+      "streetAddress": "202 15th Avenue SW",
+      "postalCode": "98371"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Seattle East/Redmond",
+    "priceRange": "$87-151*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEARD&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Redmond",
+      "addressRegion": "WA",
+      "streetAddress": "7575 164th Ave. N.E.",
+      "postalCode": "98052"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Residence Inn Seattle South/Tukwila",
+    "priceRange": "$87*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEASO&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tukwila",
+      "addressRegion": "WA",
+      "streetAddress": "16201 West Valley Highway",
+      "postalCode": "98188"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "SpringHill Suites Seattle South/Renton",
+    "priceRange": "$103-135",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEASR&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Renton",
+      "addressRegion": "WA",
+      "streetAddress": "200 SW 19th Street",
+      "postalCode": "98057"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn Seattle Sea-Tac Airport",
+    "priceRange": "$87-111",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEATA&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Seattle",
+      "addressRegion": "WA",
+      "streetAddress": "19631 International Blvd.",
+      "postalCode": "98188"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Seattle Kirkland",
+    "priceRange": "$95-103*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEATC&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kirkland",
+      "addressRegion": "WA",
+      "streetAddress": "11215 NE 124th Street",
+      "postalCode": "98034"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Seattle South/Renton",
+    "priceRange": "$95-127",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEATR&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Renton",
+      "addressRegion": "WA",
+      "streetAddress": "300 SW 19th Street",
+      "postalCode": "98057"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Seattle Everett/Mukilteo",
+    "priceRange": "$103*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEATS&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Mukilteo",
+      "addressRegion": "WA",
+      "streetAddress": "8521 Mukilteo Speedway",
+      "postalCode": "98275"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Seattle Airport Marriott",
+    "priceRange": "$119*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEAWA&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Seattle",
+      "addressRegion": "WA",
+      "streetAddress": "3201 South 176th Street",
+      "postalCode": "98188"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Seattle Sea-Tac Area",
+    "priceRange": "$87-95",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SEAWV&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tukwila",
+      "addressRegion": "WA",
+      "streetAddress": "16038 West Valley Highway",
+      "postalCode": "98188"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Montreal Marriott Chateau Champlain",
+    "priceRange": "CAD157-209",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=YULCC&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Montreal",
+      "addressRegion": "Quebec",
+      "streetAddress": "1050 de la Gauchetiere West",
+      "postalCode": "H3B 4C9"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Fairfield Inn & Suites Montreal Airport",
+    "priceRange": "CAD99-115",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=YULFI&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Montreal",
+      "addressRegion": "Quebec",
+      "streetAddress": "700 Avenue Michel Jasmin",
+      "postalCode": "H9P1C5"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Montreal Airport Marriott In-Terminal Hotel",
+    "priceRange": "CAD143-159*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=YULMA&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dorval",
+      "addressRegion": "Quebec",
+      "streetAddress": "800 Place Leigh Capreol",
+      "postalCode": "H4Y 0A4"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Ottawa Marriott Hotel",
+    "priceRange": "CAD135-167",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=YOWMC&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ottawa",
+      "addressRegion": "Ontario",
+      "streetAddress": "100 Kent Street",
+      "postalCode": "K1P 5R7"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "JW Marriott The Rosseau Muskoka Resort & Spa",
+    "priceRange": "CAD183-223*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=YQAJW&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Minett",
+      "addressRegion": "Ontario",
+      "streetAddress": "1050 Paignton House Rd",
+      "postalCode": "P0B 1G0"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "TownePlace Suites Belleville",
+    "priceRange": "CAD127*+",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=YTRTS&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Belleville",
+      "addressRegion": "Ontario",
+      "streetAddress": "400 Bell Boulevard",
+      "postalCode": "K8P 5H8"
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "The Artisan D.C. Hotel, Autograph Collection",
+    "priceRange": "$120-224",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=BOGAK&cc=MEB&fromDate=04/30/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Bogota",
+      "addressRegion": "Colombia",
+      "streetAddress": "Av. Calle 72 No. 5 - 51",
+      "postalCode": ""
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "Courtyard Santo Domingo",
+    "priceRange": "$79-119*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SDQCY&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santo Domingo",
+      "addressRegion": "Dominican Republic",
+      "streetAddress": "50A Maximo Gomez Avenue",
+      "postalCode": ""
+    }
+  },
+  {
+    "@context": "http://schema.org",
+    "@type": "Hotel",
+    "name": "JW Marriott Hotel Santo Domingo",
+    "priceRange": "$183-239*",
+    "mainEntityOfPage": "http://www.marriott.com/reservation/availability.mi?propertyCode=SDQJW&cc=MEB&fromDate=05/01/15&toDate=05/03/15",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santo Domingo",
+      "addressRegion": "Dominican Republic",
+      "streetAddress": "Winston Churchill Avenue No. 93",
+      "postalCode": "10501"
+    }
+  }
+]
