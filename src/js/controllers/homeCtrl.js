@@ -59,6 +59,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
     $scope.ModalPackage.selectedRegion = "NORTHWEST";
     $scope.open = function (region) {
         $scope.ModalPackage.selectedRegion = region;
+        $scope.ModalPackage.selectedRegionFormatted = region.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
         $scope.ModalPackage.regions = $scope.regions;
         $scope.ModalPackage.statesService = $scope.statesService;
         console.log("States ", $scope.ModalPackage.regions);
@@ -171,6 +172,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                 }
                 
                 // Hide all states for this region
+                /* COMMENTED OUT - ALWAYS SHOW ALL STATES
                 angular.forEach($scope.regions[region].states, function(value, key) {                
                     
                     if ($scope.regionAccordionGroups.hasOwnProperty(key)) {
@@ -189,9 +191,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                 {
                     $scope.regionAccordionGroups[state] = {isHidden: false};
                 }
+                */
                 $scope.selectedTopDestination = null;
-                //scrollService.scrollToState(state);
-                scrollService.scrollToElement($document.find('.your-ebreaks-bar'));
+                scrollService.scrollToState(state);
+                //scrollService.scrollToElement($document.find('.your-ebreaks-bar'));
             }
         };
 

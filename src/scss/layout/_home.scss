@@ -10,7 +10,7 @@
             font-size: .9rem;
             vertical-align: top;
             position: relative; 
-            top: .7rem; 
+            top: .7rem;
         }
     }
     #ebreaks-head2 {
@@ -35,6 +35,10 @@
     .full-column {
         padding-left: 0;
     }
+}
+
+.mobile-background {
+    background-image: url("../assets/images/eBreakd_Mobile_Background.png");
 }
 .region-view-icon-container {
     position: absolute;
@@ -62,6 +66,16 @@
         }
     }
 
+}
+
+@media only screen and (min-width: 40.0625em) {
+.reveal-modal {
+    left: 0;
+    margin: 0 auto;
+    max-width: 30rem;
+    right: 0;
+    width: 80%;
+}
 }
 
 .countdown-bell-container {
@@ -112,6 +126,11 @@
     .button {
         width: 100%;
     }
+
+    .column + .column:last-child,
+    .columns + .columns:last-child {
+        float: left; 
+  }
 }
 
 // Overrides for dropdown and input styling

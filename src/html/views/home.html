@@ -9,7 +9,7 @@
 <div>
 
     <!-- Region/State Map -->
-    <div id="background-video">
+    <div id="background-video" class="mobile-background">
 
         <!-- Region View Buttons -->
         <div class="region-view-icon-container" ng-if="showRegionOptions">
@@ -46,6 +46,29 @@
                 <!-- Map Directive -->
                 <div id="region-map" svgmap region-button-click-action="regionCircleButtonClick(region)" state-click-action="stateButtonClick(state)" regions="regions"></div>
 
+            </div>
+
+        </div>
+
+        <!-- Search Box & Dropdown Row -->
+        <div class="row">
+            <div id="ebreaks-head" class="column">
+                <h1 id="ebreaks-head1">eBreaks<sup>&reg;</sup></h1>
+                <h3 id="ebreaks-head2">Save 20% on great locations accross North America.</h3>
+            </div>
+            <div class="small-10 small-offset-1 medium-8 medium-offset-2 column search-container">
+                <!-- Search Box & Dropdown -->
+                <input type="text" ng-model="selectedBreak" placeholder="{{searchPlaceholder}}"
+                       ng-disabled="disableSearch"
+                       typeahead="break as break.HOTEL_NAME for break in getBreaksForInput($viewValue) | breaksSearchFilter:$viewValue:10:50"
+                       typeahead-template-url="html/templates/breakListItem.html"
+                       typeahead-on-select="inputItemSelected($model)"
+                       typeahead-loading="loadingBreaksForInput"
+                       typeahead-auto-open ng-change="inputChanged()"
+                       class="form-control">
+                <div id="button-holder">
+                    <img src="assets/images/magnifying_glass.png">
+                </div>
             </div>
 
             <!-- REGION BUTTON VIEW -->
@@ -98,28 +121,6 @@
 
             </div>
 
-        </div>
-
-        <!-- Search Box & Dropdown Row -->
-        <div class="row">
-            <div id="ebreaks-head" class="column">
-                <h1 id="ebreaks-head1">eBreaks<sup>&reg;</sup></h1>
-                <h3 id="ebreaks-head2">Save 20% on great locations accross North America.</h3>
-            </div>
-            <div class="small-10 small-offset-1 medium-8 medium-offset-2 column search-container">
-                <!-- Search Box & Dropdown -->
-                <input type="text" ng-model="selectedBreak" placeholder="{{searchPlaceholder}}"
-                       ng-disabled="disableSearch"
-                       typeahead="break as break.HOTEL_NAME for break in getBreaksForInput($viewValue) | breaksSearchFilter:$viewValue:10:50"
-                       typeahead-template-url="html/templates/breakListItem.html"
-                       typeahead-on-select="inputItemSelected($model)"
-                       typeahead-loading="loadingBreaksForInput"
-                       typeahead-auto-open ng-change="inputChanged()"
-                       class="form-control">
-                <div id="button-holder">
-                    <img src="assets/images/magnifying_glass.png">
-                </div>
-            </div>
         </div>
 
     </div>
@@ -230,7 +231,7 @@
                              ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'">
                 <!-- Region Group Header -->
                 <accordion-heading>
-                    <div accordion-header-content group="region" label="formatRegionName(region)" is-open="regionAccordionGroups[region].isOpen" ng-show="regionAccordionGroups[region].isOpen"></div>
+                    <div accordion-header-content group="region" label="formatRegionName(region)" is-open="regionAccordionGroups[region].isOpen"></div>
                 </accordion-heading>
 
                 <!-- Group by State -->
@@ -259,15 +260,17 @@
     </div>
 
   <script type="text/ng-template" id="myModalContent.html">
-    <h3>States in {{items.selectedRegion}}!</h3>
-    <ul>
-      <li ng-repeat="(state, count) in items.regions[items.selectedRegion].states">
-        <a ng-click="selected.item = state; ok();">{{statesService.getStateName(state)}}</a> ({{count}} deals)
-      </li>
-    </ul>
-    <p>Selected: <b>{{ selected.item }}</b></p>
+    <div class="text-center"><h3>{{items.selectedRegionFormatted}} Region</h3></div>
+
+                <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-2 text-center the-grid" vertilize-container>
+                    <li ng-repeat="(state, count) in items.regions[items.selectedRegion].states">
+                        <a class="large button top-destination-button_0" ng-click="selected.item = state; ok();"><p>{{statesService.getStateName(state)}}</p></a>
+                    </li>
+                </ul>
+
+    <!--p>Selected: <b>{{ selected.item }}</b></p-->
     <!--button class="button secondary" ng-click="reposition()">Reset top position</button-->
-    <button class="button" ng-click="ok()">Cancel</button>
+    <!--button class="button" ng-click="ok()">Cancel</button-->
     <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
   </script>
 

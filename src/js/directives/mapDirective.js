@@ -65,7 +65,8 @@ angular.module('MarriottBreaks')
                     // Text elements are "TEXT-MI" format
                     var idSplit = element.id.split('-');
 
-                    if (idSplit.length === 2 && (idSplit[0] === 'US' || idSplit[0] === 'TEXT' || idSplit[0] === 'regionCircle')) {
+                    // To add support for STATE click on map, add these conditions to the following IF statement: idSplit[0] === 'US' || idSplit[0] === 'TEXT' || 
+                    if (idSplit.length === 2 && idSplit[0] === 'regionCircle') {
                         return idSplit[1];
                     }
                 }
