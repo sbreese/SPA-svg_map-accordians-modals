@@ -37,7 +37,7 @@ angular.module('MarriottBreaks').factory('scrollService', [
             },
 
             scrollToState: function(state){
-                scrollToElementById('#STATE_' + state);
+                scrollToElementById('#STATE_' + state.replace(/ /g,"_"));
             }
 
         };

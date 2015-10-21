@@ -44,9 +44,12 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         };
 
         if ($scope.isMobile){
-            $scope.selectedRegionView = $scope.REGION_VIEWS.LIST;
+            //$scope.selectedRegionView = $scope.REGION_VIEWS.LIST;
+            $scope.selectedRegionView = $scope.REGION_VIEWS.MAP;
+
             $scope.showRegionOptions = false;
             $scope.searchPlaceholder = "Find Deals?";
+
         }
         else {
             // Only allow map view if not mobile
@@ -56,7 +59,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         }
 
     $scope.ModalPackage = {};
-    $scope.ModalPackage.selectedRegion = "NORTHWEST";
     $scope.open = function (region) {
         $scope.ModalPackage.selectedRegion = region;
         $scope.ModalPackage.selectedRegionFormatted = region.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
@@ -160,13 +162,13 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             expandRegion(region);
         };
 
-        $scope.stateButtonClick = function(state){
-            
-            if ($scope.regions[state]) {
-                $scope.open(state);
+        $scope.stateButtonClick = function(regionOrState){
+            var regionOrStateSpaces = regionOrState.replace(/_/g, ' ');
+            if ($scope.regions[regionOrStateSpaces]) {
+                $scope.open(regionOrStateSpaces);
             } else {
                 // Expand the region and scroll to the state
-                var region = breaksService.getRegionFromState($scope.regions, state);
+                var region = breaksService.getRegionFromState($scope.regions, regionOrStateSpaces);
                 if (region){
                     expandRegion(region);
                 }
@@ -193,7 +195,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                 }
                 */
                 $scope.selectedTopDestination = null;
-                scrollService.scrollToState(state);
+                scrollService.scrollToState(regionOrStateSpaces);
                 //scrollService.scrollToElement($document.find('.your-ebreaks-bar'));
             }
         };
@@ -204,8 +206,9 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         };
 
         $scope.formatRegionName = function(region){
-            var regionFormatted = region.toLowerCase();
-            return regionFormatted.charAt(0).toUpperCase() + regionFormatted.slice(1);
+            //var regionFormatted = region.toLowerCase();
+            //return regionFormatted.charAt(0).toUpperCase() + regionFormatted.slice(1);
+            return region.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
         };
 
         // Load the previous search info on pageshow since initialize won't be called again if bfcache (back/forward caching) is being used.
@@ -258,20 +261,22 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         function updateMediaOptions(){
             $scope.isMobile = mediaService.isMobile();
 
-            if ($scope.isMobile){
+            $scope.showRegionOptions = true;
+            if ($scope.isMobile) {
                 $scope.showRegionOptions = false;
+            }
 
                 // if we are changing from mobile to non-mobile, we need to move off of the map view
-                if ($scope.selectedRegionView === $scope.REGION_VIEWS.MAP){
-                    $scope.selectedRegionView = $scope.REGION_VIEWS.LIST;
-                }
+                //if ($scope.selectedRegionView === $scope.REGION_VIEWS.MAP){
+                //    $scope.selectedRegionView = $scope.REGION_VIEWS.LIST;
+                //}
 
-                backgroundVideoService.hideVideo();
-            }
-            else {
-                $scope.showRegionOptions = true;
+            //    backgroundVideoService.hideVideo();
+            //}
+            //else {
+                //$scope.showRegionOptions = true;
                 backgroundVideoService.showVideo();
-            }
+            //}
         }
 
         function selectTopDestination(topDestination){
@@ -440,7 +445,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                             else {
                                 /* for regular destinations, first try to scroll to the state. If we can't find that,
                                  just scroll to the region */
-                                /*  COMMMENTING OUT AS WE NOW HIDE OTHER REGIONS & STATES AND SHOULD SCROLL TO "YOUR EBREAKS" BAR
+                                /*  COMMMENTING OUT AS WE NOW HIDE OTHER REGIONS & STATES AND SHOULD SCROLL TO "YOUR EBREAKS" BAR */
                                 var stateElement = $document.find('#STATE_' + lastVisitedHotel.state);
                                 if (stateElement.length > 0){
                                     scrollService.scrollToElement(stateElement);
@@ -448,7 +453,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                                 else {
                                     scrollService.scrollToRegion(lastVisitedHotel.region);
                                 }
-                                */
+
                                 // Scroll to the Your eBreaks bar
                                 scrollService.scrollToElement($document.find('.your-ebreaks-bar'));
                             }

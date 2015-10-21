@@ -1,5 +1,14 @@
 #ebreaks-head {
+
     text-align: center;
+    max-width: 45rem;
+    /*background-color: rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 1px 2px 3px rgba(0,0,0,.5);
+    -webkit-box-shadow: 1px 2px 5px 5px rgba(0,0,0,.5);
+    box-shadow: 5px 5px 25px 28px rgba(0,0,0,.5);
+    border-radius:60px 60px 40px 40px;*/
+    margin: 0 auto;
+    z-index: -2;
     #ebreaks-head1, #ebreaks-head2 {
         color: white;
         line-height: 1.3;
@@ -21,7 +30,7 @@
 #region-map {
     position: relative;
     opacity: 0.8;
-    margin-top: 55px;
+    /*margin-top: 55px;*/
 }
 
 #map-absolute {
@@ -38,13 +47,13 @@
 }
 
 .mobile-background {
-    background-image: url("../assets/images/eBreakd_Mobile_Background.png");
+    /*background-image: url("../assets/images/eBreakd_Mobile_Background.png");*/
 }
 .region-view-icon-container {
     position: absolute;
     left: 10px;
     /*top: 10px;*/
-    top: 65px;
+    top: 15px;
     font-size: 2rem;
     padding: 5px 20px;
     border-radius: 10px;
@@ -82,7 +91,7 @@
     position: absolute;
     right: 45px;
     /*top: 10px;*/
-    top: 90px;
+    top: 40px;
     font-size: 3rem;
 
     p {
@@ -126,14 +135,17 @@
     .button {
         width: 100%;
     }
+}
 
-    .column + .column:last-child,
-    .columns + .columns:last-child {
-        float: left; 
-  }
+.column + .column:last-child,
+.columns + .columns:last-child {
+    float: left !important;
 }
 
 // Overrides for dropdown and input styling
+.ebreaks-head-container {
+    text-align: center;
+}
 .search-container {
     float: left !important;
     text-align: center;
@@ -330,6 +342,34 @@
     }
 }
 
+
+.state-button {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /*background-color: $top-destination-button-color_1;*/
+    display: table;
+    border-radius: 7px;
+
+
+    p {
+        font-size: 1.4rem;
+        display: table-cell;
+        vertical-align: middle;
+        text-align: center;
+    }
+
+}
+.state-list {
+    ul
+{
+        margin-top: 1rem;
+    margin-bottom: 0rem;
+li{
+    padding-bottom: 0px;
+    a{margin: 15;}
+}
+    }}
 
 .top-destination-button_0 {
     position: relative;
@@ -605,7 +645,7 @@
 }
 
 
-/* Marriott Header & Footer */    
+/* Marriott Header & Footer
 #header-container {
     background-color: rgb(145, 145, 145);
     background-image: linear-gradient(rgb(119, 119, 119), rgb(73, 73, 73));
@@ -745,3 +785,4 @@ ol, ul, li, f {
     text-align: left;
     width: 100%;
 }
+*/

@@ -26,7 +26,8 @@ angular.module('MarriottBreaks')
                 function stateClickFunction($event) {
                     var stateClicked = scope.getStateFromElement($event.target);
                     if (stateClicked) {
-                        scope.$apply(scope.stateClickAction({state: stateClicked}));
+                        stateClicked = stateClicked.replace('CARRIBEAN_LATIN_AMERICA', 'CARRIBEAN & LATIN AMERICA').replace(/_/g, ' ');
+                        scope.$apply(scope.stateClickAction({state: stateClicked }));
                     }
                 }
 
@@ -48,8 +49,8 @@ angular.module('MarriottBreaks')
     .controller('mapCtrl', [
         '$scope',
         '$window',
-        'breaksService',
-        function ($scope, $window, breaksService) {
+        'breaksService','mediaService',
+        function ($scope, $window, breaksService, mediaService) {
 
             $scope.$watch('mapRoot', function (newValue) {
                 buildMapData();
@@ -116,22 +117,25 @@ angular.module('MarriottBreaks')
                         }
                     }
                     */
+                    if (mediaService.isMobile()) {
+                        $scope.mapRoot[0].setAttribute("viewBox", "135 300 1400 1500");
+                    }
 
                     // Steve's Build Region Map Data:
                     var regionData = $scope.regions;
                     var regionPathElements = angular.element($scope.mapRoot[0]).find('.region-circle');
 
                     // loop through each state path and add the breaks count
-                    var regionCount, regionPathElement, regionName;
+                    var regionCount, regionPathElement, regionName, regionNameSpaces;
                     for (var i = 0, l = regionPathElements.length; i < l; i++) {
                         regionPathElement = regionPathElements[i];
 
                         regionName = $scope.getRegionFromElement(regionPathElement);
 
+                        regionNameSpaces = regionName.replace('CARRIBEAN_LATIN_AMERICA', 'CARRIBEAN & LATIN AMERICA').replace(/_/g, ' ');
                         if (regionName) {
-
-                            if (regionData[regionName] && regionData[regionName].count) {
-                                regionCount = regionData[regionName].count;
+                            if (regionData[regionNameSpaces] && regionData[regionNameSpaces].count) {
+                                regionCount = regionData[regionNameSpaces].count;
                                 if (regionCount) {
                                     // add the text element to the map
                                     addRegionCountElement(regionPathElement, regionCount, regionName);
@@ -169,10 +173,49 @@ angular.module('MarriottBreaks')
                 var boundingBox = regionPathElement.getBBox();
                 var textElement = $window.document.createElementNS("http://www.w3.org/2000/svg", "text");
 
+                var CirlcX, CircleY;
+
+                switch(regionName) {
+                    case "CANADA":
+                        CirlcX = 1146;
+                        CircleY = 891;
+                        break;
+                    case "PACIFIC":
+                        CirlcX = 461;
+                        CircleY = 981;
+                        break;
+                    case "NORTH_CENTRAL":
+                        CirlcX = 941;
+                        CircleY = 1006;
+                        break;
+                    case "SOUTH_CENTRAL":
+                        CirlcX = 916;
+                        CircleY = 1251;
+                        break;
+                    case "MOUNTAIN":
+                        CirlcX = 636;
+                        CircleY = 1051;
+                        break;
+                    case "SOUTHEAST":
+                        CirlcX = 1196;
+                        CircleY = 1196;
+                        break;
+                    case "NEW_ENGLAND":
+                        CirlcX = 1286;
+                        CircleY = 961;
+                        break;
+                    case "CARRIBEAN_LATIN_AMERICA":
+                        CirlcX = 694;
+                        CircleY = 1438;
+                        break;
+                    default:
+                    //default code block
+                }
+
                 textElement.textContent = regionCount; // set the text value
 
                 // set count position to the middle of the path
-                textElement.setAttribute("transform", "translate(" + (boundingBox.x + boundingBox.width / 2 - (regionCount<10?18:35)) + " " + (boundingBox.y + boundingBox.height / 2 + 12) + ")");
+                textElement.setAttribute("transform", "translate(" + (CirlcX + 138 / 2 - (regionCount<10?18:35)) + " " + (CircleY + 138 / 2 + 12) + ")");
                 textElement.setAttribute("fill", "black");
                 textElement.setAttribute("font-size", "50");
                 textElement.setAttribute("font-family", "verdana,arial,sans-serif");
@@ -184,7 +227,7 @@ angular.module('MarriottBreaks')
                 textElement2.textContent = "DEALS"; // set the text value
 
                 // set label position to the middle of the path
-                textElement2.setAttribute("transform", "translate(" + (boundingBox.x + boundingBox.width / 2 - 27) + " " + (boundingBox.y + boundingBox.height / 2 + 38) + ")");
+                textElement2.setAttribute("transform", "translate(" + (CirlcX + 138 / 2 - 27) + " " + (CircleY + 138 / 2 + 38) + ")");
                 textElement2.setAttribute("fill", "black");
                 textElement2.setAttribute("font-size", "15");
                 textElement2.setAttribute("font-family", "verdana,arial,sans-serif");

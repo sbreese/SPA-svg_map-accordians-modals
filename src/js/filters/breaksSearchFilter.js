@@ -53,6 +53,13 @@ angular.module('MarriottBreaks').filter('breaksSearchFilter', [
                     filteredBreaks = orderFilter(filteredBreaks, '+DISTANCE_VALUE', false);
                 }
 
+                if (filteredBreaks.length === 0)
+                {
+                    var filteredBreaksMock = {};
+                    filteredBreaksMock.$$hashKey = "object:627";
+                    filteredBreaksMock.PROPERTY_CITY_STATE = "No eBreaks hotels match this search";
+                    filteredBreaks.push(filteredBreaksMock);
+                }
                 deferred.resolve(filteredBreaks);
             });
 
