@@ -64,7 +64,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         $scope.ModalPackage.selectedRegionFormatted = region.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
         $scope.ModalPackage.regions = $scope.regions;
         $scope.ModalPackage.statesService = $scope.statesService;
-        console.log("States ", $scope.ModalPackage.regions);
+
         var modalInstance = $modal.open({
           templateUrl: 'myModalContent.html',
           controller: 'ModalInstanceCtrl',
@@ -154,7 +154,9 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                     cookieService.saveLastQuery(lastQuery);
                 }
 
-                $window.location.href = $model.PROPERTY_PAGE_URL;
+                //$window.location.href = $model.PROPERTY_PAGE_URL;
+                expandRegion($model.REGION);
+                scrollService.scrollToState($model.PROPERTY_STATE);
             }
         };
 

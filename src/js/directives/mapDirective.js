@@ -65,9 +65,12 @@ angular.module('MarriottBreaks')
                     // IDs are in the "US-{state}" format ("US-MI"). If it follows this format, just return the state part
                     // Text elements are "TEXT-MI" format
                     var idSplit = element.id.split('-');
+                    if (2 in idSplit) {
+                        idSplit[1] = idSplit[1] + '-' + idSplit[2];
+                    }
 
                     // To add support for STATE click on map, add these conditions to the following IF statement: idSplit[0] === 'US' || idSplit[0] === 'TEXT' || 
-                    if (idSplit.length === 2 && idSplit[0] === 'regionCircle') {
+                    if (idSplit[0] === 'regionCircle') {
                         return idSplit[1];
                     }
                 }
@@ -80,9 +83,13 @@ angular.module('MarriottBreaks')
                 if (element.id) {
                     // IDs are in the "US-{state}" format ("US-MI"). If it follows this format, just return the state part
                     // Text elements are "TEXT-MI" format
-                    var idSplit = element.id.split('-');
 
-                    if (idSplit.length === 2 && idSplit[0] === 'regionCircle') {
+                    var idSplit = element.id.split('-'); //element.id.split('-');
+
+                    if (2 in idSplit) {
+                        idSplit[1] = idSplit[1] + '-' + idSplit[2];
+                    }
+                    if (idSplit[0] === 'regionCircle') {
                         return idSplit[1];
                     }
                 }
@@ -173,6 +180,13 @@ angular.module('MarriottBreaks')
                 var boundingBox = regionPathElement.getBBox();
                 var textElement = $window.document.createElementNS("http://www.w3.org/2000/svg", "text");
 
+                var LabelElement = angular.element($scope.mapRoot[0]).find('#text-' + regionName);
+                if (typeof LabelElement[0] !== 'undefined') {
+                    if (!LabelElement[0].innerHTML) {
+                        LabelElement[0].innerHTML = regionCount;
+                    }
+                }
+/*
                 var CirlcX, CircleY;
 
                 switch(regionName) {
@@ -236,6 +250,7 @@ angular.module('MarriottBreaks')
                 textElement2.setAttribute("id", "DEAL_TEXT-" + regionName); // set ID as "REGION_TEXT-{REGION}"
 
                 regionPathElement.parentNode.insertBefore(textElement2, regionPathElement.nextSibling).parentNode.insertBefore(textElement, regionPathElement.nextSibling);
+                */
             }
 
         }

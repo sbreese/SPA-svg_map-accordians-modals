@@ -16,7 +16,7 @@ angular.module('MarriottBreaks').factory('backgroundVideoService', [
                     video = new $.BigVideo({container: $('#background-video'), useFlashForFirefox:false});
                     video.init();
                     //video.show('assets/videos/roadtrip.mp4', {ambient: true});
-                    video.show('assets/videos/Marriott_eBreaks_HD720.mp4', {ambient: true});
+                    video.show('assets/videos/Marriott_eBreaks_HD720.ogv', {ambient: true});
                     videoPlayer = video.getPlayer();
                     videoPlayer.playbackRate(playbackRate);
                 }
