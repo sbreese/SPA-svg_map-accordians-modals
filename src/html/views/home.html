@@ -52,18 +52,22 @@
                     <h3 id="ebreaks-head2">Save 20% on great locations across North America.</h3>
                 </div>
             </div>
-            <div class="small-10 small-offset-1 medium-8 medium-offset-2 column search-container">
-                <!-- Search Box & Dropdown -->
-                <input type="text" ng-model="selectedBreak" placeholder="{{searchPlaceholder}}"
-                       ng-disabled="disableSearch"
-                       typeahead="break as break.HOTEL_NAME for break in getBreaksForInput($viewValue) | breaksSearchFilter:$viewValue:10:50"
-                       typeahead-template-url="html/templates/breakListItem.html"
-                       typeahead-on-select="inputItemSelected($model)"
-                       typeahead-loading="loadingBreaksForInput"
-                       typeahead-auto-open ng-change="inputChanged()"
-                       class="form-control">
-                <div id="button-holder">
-                    <img src="assets/images/magnifying_glass.png">
+            <div sticky-header>
+                <div class="row">
+                    <div class="small-10 small-offset-1 medium-8 medium-offset-2 column search-container">
+                        <!-- Search Box & Dropdown -->
+                        <input type="text" ng-model="selectedBreak" placeholder="{{searchPlaceholder}}"
+                               ng-disabled="disableSearch"
+                               typeahead="break as break.HOTEL_NAME for break in getBreaksForInput($viewValue) | breaksSearchFilter:$viewValue:10:50"
+                               typeahead-template-url="html/templates/breakListItem.html"
+                               typeahead-on-select="inputItemSelected($model)"
+                               typeahead-loading="loadingBreaksForInput"
+                               typeahead-auto-open ng-change="inputChanged()"
+                               class="form-control">
+                        <div id="button-holder">
+                            <img src="assets/images/magnifying_glass.png">
+                        </div>
+                    </div>
                 </div>
             </div>
 

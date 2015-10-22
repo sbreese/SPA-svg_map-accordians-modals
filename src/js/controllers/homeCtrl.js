@@ -146,9 +146,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         $scope.inputItemSelected = function($model){
             if ($model){
-                // Some of the marriott pages take a while to navigate to. Disable the search box until then
-                $scope.disableSearch = true;
-
                 // save the last query in a cookie
                 if (lastQuery){
                     cookieService.saveLastQuery(lastQuery);

@@ -674,6 +674,22 @@ li{
     }
 }
 
+.sticky-header {
+    position: fixed;
+
+    //copy Foundation Row styles
+    max-width: 62.5rem;
+    width: 100%;
+    height: auto;
+
+    // center the div
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    top: 10px;
+    z-index: 1000;
+}
 
 /* Marriott Header & Footer
 #header-container {
