@@ -125,7 +125,7 @@ angular.module('MarriottBreaks')
                     }
                     */
                     if (mediaService.isMobile()) {
-                        $scope.mapRoot[0].setAttribute("viewBox", "135 300 1400 1500");
+                        $scope.mapRoot[0].setAttribute("viewBox", "50 100 500 700");
                     }
 
                     // Steve's Build Region Map Data:

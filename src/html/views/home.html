@@ -138,7 +138,7 @@
     <div class="subscribe-bar show-for-small-only">
         <div class="subscribe-content">
             <div class="never-miss">
-                <i class="fi-mail"></i>Get eBreaks
+                <img src="assets/images/envelope.png">Get eBreaks
             </div>
             <div class="subscribe-button">
                 <a href="https://www.marriott.com/profile/email/signUp.mi">Subscribe</a>
@@ -235,7 +235,7 @@
                 </accordion-heading>
 
                 <!-- Group by State -->
-                <div class="row ng-hide" ng-hide="regionAccordionGroups[state].isHidden" ng-repeat="(state, hotels) in regionGroup | groupBy: 'PROPERTY_STATE'">
+                <div class="row ng-hide state-containers" ng-hide="regionAccordionGroups[state].isHidden" ng-repeat="(state, hotels) in regionGroup | groupBy: 'PROPERTY_STATE'">
 
                     <div class="full-column">
 

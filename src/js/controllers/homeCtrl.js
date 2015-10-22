@@ -263,19 +263,18 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             $scope.showRegionOptions = true;
             if ($scope.isMobile) {
                 $scope.showRegionOptions = false;
-            }
 
                 // if we are changing from mobile to non-mobile, we need to move off of the map view
                 //if ($scope.selectedRegionView === $scope.REGION_VIEWS.MAP){
                 //    $scope.selectedRegionView = $scope.REGION_VIEWS.LIST;
                 //}
 
-            //    backgroundVideoService.hideVideo();
-            //}
-            //else {
-                //$scope.showRegionOptions = true;
+                backgroundVideoService.hideVideo();
+            }
+            else {
+                $scope.showRegionOptions = true;
                 backgroundVideoService.showVideo();
-            //}
+            }
         }
 
         function selectTopDestination(topDestination){

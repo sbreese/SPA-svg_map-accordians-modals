@@ -63,16 +63,24 @@
     line-height: 1.2rem;
     margin-bottom: 10px;
     font-size: .8rem;
+    min-height: 2.6rem;
 }
 
 .hotel-item-per-night {
     line-height: 0.5rem;
+    margin-bottom: .6rem;
         strong {
         font-size: 1.3rem;
     }
     small {
         font-size: 80%;
     }
+}
+
+.hotel-item-original-per-night {
+    line-height: 0.5rem;
+    font-size: 70%;
+    text-decoration: line-through;
 }
 
 .hotel-item-book-now {

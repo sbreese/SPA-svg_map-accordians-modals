@@ -4,7 +4,7 @@
         <h2 id="REGION_{{group}}">{{label}}</h2>
 
         <!-- Expand/Collapse Icons -->
-        <div class="accordion-expand-icon-container">
+        <div class="accordion-expand-icon-container" ng-hide="label == 'Hot Locations'">
             <i class="fi-plus" ng-hide="isOpen"></i>
             <i class="fi-minus" ng-show="isOpen"></i>
         </div>

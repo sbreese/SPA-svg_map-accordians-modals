@@ -6,15 +6,15 @@
 	.st0{display:none;}
 	.st1{display:inline;}
 	.st2{display:inline;opacity:0.4;}
-	.st3{fill:#9AB89D;} /* newengland */
-	.st4{fill:#728CAB;} /* midwest */
-	.st5{fill:#CFA77E;} /* southcentral */
-	.st6{fill:#B3726B;} /* southeast */
-	.st7{fill:#85C1E9;} /* mid-atlantic */
-	.st8{fill:#8FB7B7;} /* mountain */
+	.st3{fill:#9AB89D;opacity: 0.8;} /* newengland */
+	.st4{fill:#728CAB;opacity: 0.8;} /* midwest */
+	.st5{fill:#CFA77E;opacity: 0.8;} /* southcentral */
+	.st6{fill:#B3726B;opacity: 0.8;} /* southeast */
+	.st7{fill:#85C1E9;opacity: 0.8;} /* mid-atlantic */
+	.st8{fill:#8FB7B7;opacity: 0.8;} /* mountain */
 	.st9{fill:none;}
-	.st10{fill:#DC9E95;} /* canada */
-	.st11{fill:#B6AC8F;} /* pacific */
+	.st10{fill:#DC9E95;opacity: 0.8;} /* canada */
+	.st11{fill:#B6AC8F;opacity: 0.8;} /* pacific */
 	.pacific{fill-rule:evenodd;clip-rule:evenodd;fill:#B6AC8F;}
 	.st13{fill:none;stroke:#ABABAB;stroke-width:0;stroke-linecap:round;stroke-linejoin:round;}
 	.st14{fill:#ABABAB;} /* Carribean and Latin America */
@@ -23,29 +23,34 @@
 	.st17{font-family:'MyriadPro-Regular';}
 	.st18{fill:#FF00FF;stroke:#FF00FF;stroke-miterlimit:10;}
 
+.bubble-font {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+}
+
 .carribeanlatinamerica
 {
 	fill: #ABABAB;
 	/*fill-rule:evenodd;
 	stroke:#ffffff;
-	stroke-width:1.0;
-	fill-opacity:0.6;*/
+	stroke-width:1.0;*/
+	fill-opacity:0.6;
 }
 .mountain
 {
 	fill: #8FB7B7;
 	/*fill-rule:evenodd;
 	stroke:#ffffff;
-	stroke-width:1.0;
-	fill-opacity:0.6;*/
+	stroke-width:1.0;*/
+	fill-opacity:0.6;
 }
 .southcentral
 {
 	fill: #CFA77E;
 	/*fill-rule:evenodd;
 	stroke:#ffffff;
-	stroke-width:1.0;
-	fill-opacity:0.6;*/
+	stroke-width:1.0;*/
+	fill-opacity:0.6;
 }
 
 .pacific
@@ -53,8 +58,8 @@
 	fill: #B6AC8F;
 	/*fill-rule:evenodd;
 	stroke:#ffffff;
-	stroke-width:1.0;
-	fill-opacity:0.6;*/
+	stroke-width:1.0;*/
+	fill-opacity:0.6;
 }
 
 .southeast
@@ -62,8 +67,8 @@
 	fill: #B3726B;
 	/*fill-rule:evenodd;
 	stroke:#ffffff;
-	stroke-width:1.0;
-	fill-opacity:0.6;*/
+	stroke-width:1.0;*/
+	fill-opacity:0.6;
 }
 
 .mid-atlantic
@@ -71,8 +76,8 @@
 	fill: #85C1E9;
 	/*fill-rule:evenodd;
 	stroke:#ffffff;
-	stroke-width:1.0;
-	fill-opacity:0.6;*/
+	stroke-width:1.0;*/
+	fill-opacity:0.6;
 }
 
 .midwest
@@ -80,8 +85,8 @@
 	fill: #86a1be;
 	/*fill-rule:evenodd;
 	stroke:#ffffff;
-	stroke-width:1.0;
-	fill-opacity:0.6;*/
+	stroke-width:1.0;*/
+	fill-opacity:0.6;
 }
 
 .newengland
@@ -89,8 +94,8 @@
 	fill: #9AB89D;
 	/*fill-rule:evenodd;
 	stroke:#ffffff;
-	stroke-width:1.0;
-	fill-opacity:0.6;*/
+	stroke-width:1.0;*/
+	fill-opacity:0.6;
 }
 
 .CA
@@ -98,8 +103,8 @@
 	fill: #DC9E95;
 	/*fill-rule:evenodd;
 	stroke:#ffffff;
-	stroke-width:1.0;
-	fill-opacity:0.6;*/
+	stroke-width:1.0;*/
+	fill-opacity:0.6;
 }
 
 .region-circle {
@@ -4938,222 +4943,182 @@ jZ/1dD8Re8bQn/dUP41fX2gH+6ofxq7cbN/93Q/ETy3Gzf8A3dD8Re8bNv8Ad0PxF7zs/wCrofiL
 
 
     <circle id="darkPacific" cx="185" cy="440" r="30" stroke="black" stroke-width="0" fill="darkgray" opacity="0" />
-    <circle id="whitePacific" cx="184" cy="438" r="0" stroke="black" stroke-width="0" fill="white">
-    		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
-            <!--animate attributeName="stroke-width" from="0" to="10" dur="7s"/-->
-    	</circle>
- 	<text x="184" y="448" font-family="sans-serif" font-size="30px" text-anchor="middle" fill="#b6ac8f" id="text-PACIFIC" class="text-PACIFIC"></text>
- 	<text x="184" y="458" font-family="sans-serif" font-size="7px" text-anchor="middle" fill="#b6ac8f" id="deals-PACIFIC" class="text-PACIFIC">DEALS</text>
-	<circle id="regionCircle-PACIFIC" class="region-circle" cx="184" cy="438" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
+    <circle id="whitePacific" cx="184" cy="438" r="0" stroke="black" stroke-width="0" fill="white" />
+ 	<text x="184" y="445" font-family="sans-serif" font-size="26px" text-anchor="middle" fill="#b6ac8f" id="text-PACIFIC" class="text-PACIFIC bubble-font"></text>
+ 	<text x="184" y="455" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#b6ac8f" id="deals-PACIFIC" class="text-PACIFIC bubble-font">DEALS</text>
+	<circle id="regionCircle-PACIFIC" class="region-circle" cx="184" cy="436" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
 		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
-	</circle><!-- Pacific fill="white"  -->
+	</circle><!-- Pacific  -->
 
 
 	<circle id="darkMountain" cx="270" cy="454" r="30" stroke="black" stroke-width="0" fill="darkgray" opacity="0" />
-    <circle id="whiteMOUNTAIN" cx="269" cy="452" r="0" stroke="black" stroke-width="0" fill="white">
-    	<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
-            <!--animate attributeName="stroke-width" from="0" to="10" dur="7s"/-->
-    </circle><!-- Mountain -->
-    <text x="267" y="462" font-family="sans-serif" font-size="30px" text-anchor="middle" fill="#8fb7b7" id="text-MOUNTAIN" class="text-MOUNTAIN"></text>
-    <text x="269" y="472" font-family="sans-serif" font-size="7px" text-anchor="middle" fill="#8fb7b7" id="deals-MOUNTAIN" class="text-MOUNTAIN">DEALS</text>
-    <circle id="regionCircle-MOUNTAIN" class="region-circle" cx="269" cy="452" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
+    <circle id="whiteMountain" cx="269" cy="452" r="0" stroke="black" stroke-width="0" fill="white"/><!-- Mountain -->
+    <text x="267" y="459" font-family="sans-serif" font-size="26px" text-anchor="middle" fill="#8fb7b7" id="text-MOUNTAIN" class="text-MOUNTAIN bubble-font"></text>
+    <text x="269" y="469" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#8fb7b7" id="deals-MOUNTAIN" class="text-MOUNTAIN bubble-font">DEALS</text>
+    <circle id="regionCircle-MOUNTAIN" class="region-circle" cx="269" cy="450" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
 
 	<circle id="darkCarribeanLatinAmerica" cx="300" cy="624" r="30" stroke="black" stroke-width="0" fill="darkgray" opacity="0" />
-	<circle id="whiteCarribean" cx="299" cy="622" r="0" stroke="black" stroke-width="0" fill="white">
-		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
-        <!--animate attributeName="stroke-width" from="0" to="10" dur="7s"/-->
-	</circle><!-- Other (i.e. Carribean & Latin America) -->
-    <text x="299" y="632" font-family="sans-serif" font-size="30px" text-anchor="middle" fill="#ababab" id="text-CARRIBEAN_LATIN_AMERICA" class="text-CARRIBEAN_LATIN_AMERICA"></text>
-    <text x="299" y="642" font-family="sans-serif" font-size="7px" text-anchor="middle" fill="#ababab" id="deals-CARRIBEAN_LATIN_AMERICA" class="text-CARRIBEAN_LATIN_AMERICA">DEALS</text>
-    <circle id="regionCircle-CARRIBEAN_LATIN_AMERICA" class="region-circle" cx="299" cy="622" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
+	<circle id="whiteCarribean" cx="299" cy="622" r="0" stroke="black" stroke-width="0" fill="white" /><!-- Other (i.e. Carribean & Latin America) -->
+    <text x="299" y="629" font-family="sans-serif" font-size="26px" text-anchor="middle" fill="#ababab" id="text-CARRIBEAN_LATIN_AMERICA" class="text-CARRIBEAN_LATIN_AMERICA bubble-font"></text>
+    <text x="299" y="639" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#ababab" id="deals-CARRIBEAN_LATIN_AMERICA" class="text-CARRIBEAN_LATIN_AMERICA bubble-font">DEALS</text>
+    <circle id="regionCircle-CARRIBEAN_LATIN_AMERICA" class="region-circle" cx="299" cy="620" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
 
 	<circle id="darkSouthCentral" cx="360" cy="524" r="30" stroke="black" stroke-width="0" fill="darkgray" opacity="0" />
-	<circle id="whiteSouthCentral" cx="359" cy="522" r="0" stroke="black" stroke-width="0" fill="white" opacity="1">
-		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
-        <!--animate attributeName="stroke-width" from="0" to="10" dur="7s"/-->
-	</circle><!-- South Central -->
-    <text x="359" y="532" font-family="sans-serif" font-size="30px" text-anchor="middle" fill="#ababab" id="text-SOUTH_CENTRAL" class="text-SOUTH_CENTRAL"></text>
-    <text x="359" y="542" font-family="sans-serif" font-size="7px" text-anchor="middle" fill="#ababab" id="deals-SOUTH_CENTRAL" class="text-SOUTH_CENTRAL">DEALS</text>
-    <circle id="regionCircle-SOUTH_CENTRAL" class="region-circle" cx="359" cy="522" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
+	<circle id="whiteSouthCentral" cx="359" cy="522" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" /><!-- South Central -->
+    <text x="359" y="529" font-family="sans-serif" font-size="26px" text-anchor="middle" fill="#ababab" id="text-SOUTH_CENTRAL" class="text-SOUTH_CENTRAL bubble-font"></text>
+    <text x="359" y="539" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#ababab" id="deals-SOUTH_CENTRAL" class="text-SOUTH_CENTRAL bubble-font">DEALS</text>
+    <circle id="regionCircle-SOUTH_CENTRAL" class="region-circle" cx="359" cy="520" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
 
 	<circle id="darkMidwest" cx="420" cy="454" r="30" stroke="black" stroke-width="0" fill="darkgray" opacity="0" />
-	<circle id="whiteMidwest" cx="419" cy="452" r="0" stroke="black" stroke-width="0" fill="white" opacity="1">
-		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
-        <!--animate attributeName="stroke-width" from="0" to="10" dur="7s"/-->
-	</circle><!-- Midwest -->
-    <text x="419" y="462" font-family="sans-serif" font-size="30px" text-anchor="middle" fill="#cfa77e" id="text-MIDWEST" class="text-MIDWEST"></text>
-    <text x="419" y="472" font-family="sans-serif" font-size="7px" text-anchor="middle" fill="#cfa77e" id="deals-MIDWEST" class="text-MIDWEST">DEALS</text>
-    <circle id="regionCircle-MIDWEST" class="region-circle" cx="419" cy="452" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
+	<circle id="whiteMidwest" cx="419" cy="452" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" /><!-- Midwest -->
+    <text x="419" y="459" font-family="sans-serif" font-size="26px" text-anchor="middle" fill="#cfa77e" id="text-MIDWEST" class="text-MIDWEST bubble-font"></text>
+    <text x="419" y="469" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#cfa77e" id="deals-MIDWEST" class="text-MIDWEST bubble-font">DEALS</text>
+    <circle id="regionCircle-MIDWEST" class="region-circle" cx="419" cy="450" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
 
 	<circle id="darkSoutheast" cx="460" cy="529" r="30" stroke="black" stroke-width="0" fill="darkgray" opacity="0" />
-	<circle id="whiteSoutheast" cx="459" cy="527" r="0" stroke="black" stroke-width="0" fill="white" opacity="1">
-		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
-	</circle><!-- Southeast -->
-    <text x="459" y="537" font-family="sans-serif" font-size="30px" text-anchor="middle" fill="#dc9e95" id="text-SOUTHEAST" class="text-SOUTHEAST"></text>
-    <text x="459" y="547" font-family="sans-serif" font-size="7px" text-anchor="middle" fill="#dc9e95" id="deals-SOUTHEAST" class="text-SOUTHEAST">DEALS</text>
-    <circle id="regionCircle-SOUTHEAST" class="region-circle" cx="459" cy="527" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
+	<circle id="whiteSoutheast" cx="459" cy="527" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" /><!-- Southeast -->
+    <text x="459" y="534" font-family="sans-serif" font-size="26px" text-anchor="middle" fill="#dc9e95" id="text-SOUTHEAST" class="text-SOUTHEAST bubble-font"></text>
+    <text x="459" y="544" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#dc9e95" id="deals-SOUTHEAST" class="text-SOUTHEAST bubble-font">DEALS</text>
+    <circle id="regionCircle-SOUTHEAST" class="region-circle" cx="459" cy="525" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
 
 	<circle id="darkMid-Atlantic" cx="500" cy="468" r="30" stroke="black" stroke-width="0" fill="darkgray" opacity="0" />
-	<circle id="whiteMidAtlantic" cx="499" cy="466" r="0" stroke="black" stroke-width="0" fill="white" opacity="1">
-		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
-        <!--animate attributeName="stroke-width" from="0" to="10" dur="7s"/-->
-	</circle><!-- Mid-Atlantic -->
-    <text x="499" y="476" font-family="sans-serif" font-size="30px" text-anchor="middle" fill="#85c1e9" id="text-MID-ATLANTIC" class="text-MID-ATLANTIC"></text>
-    <text x="499" y="486" font-family="sans-serif" font-size="7px" text-anchor="middle" fill="#85c1e9" id="deals-MID-ATLANTIC" class="text-MID-ATLANTIC">DEALS</text>
-    <circle id="regionCircle-MID-ATLANTIC" class="region-circle" cx="499" cy="466" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
+	<circle id="whiteMidAtlantic" cx="499" cy="466" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" /><!-- Mid-Atlantic -->
+    <text x="499" y="473" font-family="sans-serif" font-size="26px" text-anchor="middle" fill="#85c1e9" id="text-MID-ATLANTIC" class="text-MID-ATLANTIC bubble-font"></text>
+    <text x="499" y="483" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#85c1e9" id="deals-MID-ATLANTIC" class="text-MID-ATLANTIC bubble-font">DEALS</text>
+    <circle id="regionCircle-MID-ATLANTIC" class="region-circle" cx="499" cy="464" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     	<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
 
 	<circle id="darkNewEngland" cx="530" cy="413" r="30" stroke="black" stroke-width="0" fill="darkgray" opacity="0" />
-	<circle id="whiteNewEngland" cx="529" cy="411" r="0" stroke="black" stroke-width="0" fill="white" opacity="1">
-		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
-        <!--animate attributeName="stroke-width" from="0" to="10" dur="7s"/-->
-	</circle><!-- New England -->
-    <text x="529" y="421" font-family="sans-serif" font-size="30px" text-anchor="middle" fill="#9ab89d" id="text-NEW_ENGLAND" class="text-ENGLAND"></text>
-    <text x="529" y="431" font-family="sans-serif" font-size="7px" text-anchor="middle" fill="#9ab89d" id="deals-NEW_ENGLAND" class="text-ENGLAND">DEALS</text>
-    <circle id="regionCircle-NEW_ENGLAND" class="region-circle" cx="529" cy="411" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
+	<circle id="whiteNewEngland" cx="529" cy="411" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" /><!-- New England -->
+    <text x="529" y="418" font-family="sans-serif" font-size="26px" text-anchor="middle" fill="#9ab89d" id="text-NEW_ENGLAND" class="text-NEW_ENGLAND bubble-font"></text>
+    <text x="529" y="428" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#9ab89d" id="deals-NEW_ENGLAND" class="text-NEW_ENGLAND bubble-font">DEALS</text>
+    <circle id="regionCircle-NEW_ENGLAND" class="region-circle" cx="529" cy="409" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
 
 	<circle id="darkCanada" cx="470" cy="387" r="30" stroke="black" stroke-width="0" fill="darkgray" opacity="0" />
-	<circle id="whiteCanada" r="0" cx="469" cy="385" stroke="black" stroke-width="0" fill="white" opacity="1">
-		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze" />
-        <!--animate attributeName="stroke-width" from="0" to="10" dur="7s"/-->
-	</circle><!-- Canada -->
-    <text x="469" y="395" font-family="sans-serif" font-size="30px" text-anchor="middle" fill="#9ab89d" id="text-CANADA" class="text-CANADA"></text>
-    <text x="469" y="405" font-family="sans-serif" font-size="7px" text-anchor="middle" fill="#9ab89d" id="deals-CANADA" class="text-CANADA">DEALS</text>
-    <circle id="regionCircle-CANADA" class="region-circle" cx="469" cy="385" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
+	<circle id="whiteCanada" r="0" cx="469" cy="385" stroke="black" stroke-width="0" fill="white" opacity="1" /><!-- Canada -->
+    <text x="469" y="392" font-family="sans-serif" font-size="26px" text-anchor="middle" fill="#9ab89d" id="text-CANADA" class="text-CANADA bubble-font"></text>
+    <text x="469" y="402" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#9ab89d" id="deals-CANADA" class="text-CANADA bubble-font">DEALS</text>
+    <circle id="regionCircle-CANADA" class="region-circle" cx="469" cy="383" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     		<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
 
 <style>
 
 @-webkit-keyframes popin {
-    from {r: 0;}
-    to {r: 30;}
+    0% {r: 0;}
+    50% {r: 30;}
+    100% {r: 25;}
 }
 @keyframes visible {
-    from {r: 0;}
-    to {r: 30;}
+    0% {r: 0;}
+    50% {r: 30;}
+    100% {r: 25;}
 }
 
 #whitePacific {
-    -webkit-animation-name: popin; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: .4s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: .5s; /* Chrome, Safari, Opera */
-    -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+    -webkit-animation-name: popin;
+    -webkit-animation-duration: .4s;
+    -webkit-animation-delay: .5s;
+    -webkit-animation-fill-mode: forwards; 
     animation-name: popin;
     animation-duration: .4s;
     animation-delay: .5s;
     animation-fill-mode: forwards;
 }
 #whiteMountain {
-    -webkit-animation-name: popin; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: .4s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: .6s; /* Chrome, Safari, Opera */
-    -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+    -webkit-animation-name: popin;
+    -webkit-animation-duration: .4s;
+    -webkit-animation-delay: .6s;
+    -webkit-animation-fill-mode: forwards; 
     animation-name: popin;
     animation-duration: .4s;
     animation-delay: .6s;
     animation-fill-mode: forwards;
 }
 #whiteCarribean {
-   -webkit-animation-name: popin; /* Chrome, Safari, Opera */
-   -webkit-animation-duration: .4s; /* Chrome, Safari, Opera */
-   -webkit-animation-delay: .7s; /* Chrome, Safari, Opera */
-   -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+   -webkit-animation-name: popin;
+   -webkit-animation-duration: .4s;
+   -webkit-animation-delay: .7s;
+   -webkit-animation-fill-mode: forwards; 
    animation-name: popin;
    animation-duration: .4s;
    animation-delay: .7s;
    animation-fill-mode: forwards;
 }
 #whiteSouthCentral {
-	 -webkit-animation-name: popin; /* Chrome, Safari, Opera */
-	 -webkit-animation-duration: .4s; /* Chrome, Safari, Opera */
-	 -webkit-animation-delay: .8s; /* Chrome, Safari, Opera */
-	 -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+	 -webkit-animation-name: popin;
+	 -webkit-animation-duration: .4s;
+	 -webkit-animation-delay: .8s;
+	 -webkit-animation-fill-mode: forwards; 
 	 animation-name: popin;
 	 animation-duration: .4s;
 	 animation-delay: .8s;
 	 animation-fill-mode: forwards;
 }
 #whiteMidwest {
-	 -webkit-animation-name: popin; /* Chrome, Safari, Opera */
-	 -webkit-animation-duration: .4s; /* Chrome, Safari, Opera */
-	 -webkit-animation-delay: .9s; /* Chrome, Safari, Opera */
-	 -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+	 -webkit-animation-name: popin;
+	 -webkit-animation-duration: .4s;
+	 -webkit-animation-delay: .9s;
+	 -webkit-animation-fill-mode: forwards; 
 	 animation-name: popin;
 	 animation-duration: .4s;
 	 animation-delay: .9s;
 	 animation-fill-mode: forwards;
 }
 #whiteSoutheast {
-	 -webkit-animation-name: popin; /* Chrome, Safari, Opera */
-	 -webkit-animation-duration: .4s; /* Chrome, Safari, Opera */
-	 -webkit-animation-delay: 1s; /* Chrome, Safari, Opera */
-	 -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+	 -webkit-animation-name: popin;
+	 -webkit-animation-duration: .4s;
+	 -webkit-animation-delay: 1s;
+	 -webkit-animation-fill-mode: forwards; 
 	 animation-name: popin;
 	 animation-duration: .4s;
 	 animation-delay: 1s;
 	 animation-fill-mode: forwards;
 }
 #whiteMidAtlantic {
-	 -webkit-animation-name: popin; /* Chrome, Safari, Opera */
-	 -webkit-animation-duration: .4s; /* Chrome, Safari, Opera */
-	 -webkit-animation-delay: 1.1s; /* Chrome, Safari, Opera */
-	 -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+	 -webkit-animation-name: popin;
+	 -webkit-animation-duration: .4s;
+	 -webkit-animation-delay: 1.1s;
+	 -webkit-animation-fill-mode: forwards; 
 	 animation-name: popin;
 	 animation-duration: .4s;
 	 animation-delay: 1.1s;
 	 animation-fill-mode: forwards;
 }
 #whiteNewEngland {
-	 -webkit-animation-name: popin; /* Chrome, Safari, Opera */
-	 -webkit-animation-duration: .4s; /* Chrome, Safari, Opera */
-	 -webkit-animation-delay: 1.2s; /* Chrome, Safari, Opera */
-	 -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+	 -webkit-animation-name: popin;
+	 -webkit-animation-duration: .4s;
+	 -webkit-animation-delay: 1.2s;
+	 -webkit-animation-fill-mode: forwards; 
 	 animation-name: popin;
 	 animation-duration: .4s;
 	 animation-delay: 1.2s;
 	 animation-fill-mode: forwards;
 }
 #whiteCanada {
-	 -webkit-animation-name: popin; /* Chrome, Safari, Opera */
-	 -webkit-animation-duration: .4s; /* Chrome, Safari, Opera */
-	 -webkit-animation-delay: 1.3s; /* Chrome, Safari, Opera */
-	 -webkit-animation-fill-mode: forwards;  /* Chrome, Safari, Opera */
+	 -webkit-animation-name: popin;
+	 -webkit-animation-duration: .4s;
+	 -webkit-animation-delay: 1.3s;
+	 -webkit-animation-fill-mode: forwards; 
 	 animation-name: popin;
 	 animation-duration: .4s;
 	 animation-delay: 1.3s;
 	 animation-fill-mode: forwards;
 }
-@-webkit-keyframes popin {
-    from {r: 0;}
-    to {r: 30;}
-}
-@keyframes visible {
-    from {r: 0;}
-    to {r: 30;}
-}
 
-#whitePacific {
-    -webkit-animation-name: popin; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 999s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: .5s; /* Chrome, Safari, Opera */
-    animation-name: popin;
-    animation-duration: .4s;
-    animation-delay: .5s;
-}
 
 /* The animation code */
 @-webkit-keyframes visible {
@@ -5169,9 +5134,9 @@ jZ/1dD8Re8bQn/dUP41fX2gH+6ofxq7cbN/93Q/ETy3Gzf8A3dD8Re8bNv8Ad0PxF7zs/wCrofiL
 .text-PACIFIC {
 	visibility: hidden;
 	cursor:pointer;
-    -webkit-animation-name: visible; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 999s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: .5s; /* Chrome, Safari, Opera */
+    -webkit-animation-name: visible;
+    -webkit-animation-duration: 999s;
+    -webkit-animation-delay: .5s;
     animation-name: visible;
     animation-duration: 999s;
     animation-delay: .5s;
@@ -5180,9 +5145,9 @@ jZ/1dD8Re8bQn/dUP41fX2gH+6ofxq7cbN/93Q/ETy3Gzf8A3dD8Re8bNv8Ad0PxF7zs/wCrofiL
 .text-MOUNTAIN {
     visibility: hidden;
     cursor:pointer;
-    -webkit-animation-name: visible; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 999s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: .6s; /* Chrome, Safari, Opera */
+    -webkit-animation-name: visible;
+    -webkit-animation-duration: 999s;
+    -webkit-animation-delay: .6s;
     animation-name: visible;
     animation-duration: 999s;
     animation-delay: .6s;
@@ -5191,9 +5156,9 @@ jZ/1dD8Re8bQn/dUP41fX2gH+6ofxq7cbN/93Q/ETy3Gzf8A3dD8Re8bNv8Ad0PxF7zs/wCrofiL
 .text-CARRIBEAN_LATIN_AMERICA {
 	visibility: hidden;
 	cursor:pointer;
-    -webkit-animation-name: visible; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 999s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: .7s; /* Chrome, Safari, Opera */
+    -webkit-animation-name: visible;
+    -webkit-animation-duration: 999s;
+    -webkit-animation-delay: .7s;
     animation-name: visible;
     animation-duration: 999s;
     animation-delay: .7s;
@@ -5202,9 +5167,9 @@ jZ/1dD8Re8bQn/dUP41fX2gH+6ofxq7cbN/93Q/ETy3Gzf8A3dD8Re8bNv8Ad0PxF7zs/wCrofiL
 .text-SOUTH_CENTRAL {
 	visibility: hidden;
 	cursor:pointer;
-    -webkit-animation-name: visible; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 999s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: .8s; /* Chrome, Safari, Opera */
+    -webkit-animation-name: visible;
+    -webkit-animation-duration: 999s;
+    -webkit-animation-delay: .8s;
     animation-name: visible;
     animation-duration: 999s;
     animation-delay: .8s;
@@ -5213,9 +5178,9 @@ jZ/1dD8Re8bQn/dUP41fX2gH+6ofxq7cbN/93Q/ETy3Gzf8A3dD8Re8bNv8Ad0PxF7zs/wCrofiL
 .text-MIDWEST {
     visibility: hidden;
     cursor:pointer;
-    -webkit-animation-name: visible; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 999s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: .9s; /* Chrome, Safari, Opera */
+    -webkit-animation-name: visible;
+    -webkit-animation-duration: 999s;
+    -webkit-animation-delay: .9s;
     animation-name: visible;
     animation-duration: 999s;
     animation-delay: .9s;
@@ -5224,9 +5189,9 @@ jZ/1dD8Re8bQn/dUP41fX2gH+6ofxq7cbN/93Q/ETy3Gzf8A3dD8Re8bNv8Ad0PxF7zs/wCrofiL
 .text-SOUTHEAST {
 	visibility: hidden;
 	cursor:pointer;
-    -webkit-animation-name: visible; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 999s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: 1; /* Chrome, Safari, Opera */
+    -webkit-animation-name: visible;
+    -webkit-animation-duration: 999s;
+    -webkit-animation-delay: 1;
     animation-name: visible;
     animation-duration: 999s;
     animation-delay: 1s;
@@ -5235,9 +5200,9 @@ jZ/1dD8Re8bQn/dUP41fX2gH+6ofxq7cbN/93Q/ETy3Gzf8A3dD8Re8bNv8Ad0PxF7zs/wCrofiL
 .text-MID-ATLANTIC {
 	visibility: hidden;
 	cursor:pointer;
-    -webkit-animation-name: visible; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 999s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: 1.1s; /* Chrome, Safari, Opera */
+    -webkit-animation-name: visible;
+    -webkit-animation-duration: 999s;
+    -webkit-animation-delay: 1.1s;
     animation-name: visible;
     animation-duration: 999s;
     animation-delay: 1.1s;
@@ -5246,9 +5211,9 @@ jZ/1dD8Re8bQn/dUP41fX2gH+6ofxq7cbN/93Q/ETy3Gzf8A3dD8Re8bNv8Ad0PxF7zs/wCrofiL
 .text-NEW_ENGLAND {
     visibility: hidden;
     cursor:pointer;
-    -webkit-animation-name: visible; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 999s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: 1.2s; /* Chrome, Safari, Opera */
+    -webkit-animation-name: visible;
+    -webkit-animation-duration: 999s;
+    -webkit-animation-delay: 1.2s;
     animation-name: visible;
     animation-duration: 999s;
     animation-delay: 1.2s;
@@ -5257,9 +5222,9 @@ jZ/1dD8Re8bQn/dUP41fX2gH+6ofxq7cbN/93Q/ETy3Gzf8A3dD8Re8bNv8Ad0PxF7zs/wCrofiL
 .text-CANADA {
 	visibility: hidden;
 	cursor:pointer;
-    -webkit-animation-name: visible; /* Chrome, Safari, Opera */
-    -webkit-animation-duration: 999s; /* Chrome, Safari, Opera */
-    -webkit-animation-delay: 1.3; /* Chrome, Safari, Opera */
+    -webkit-animation-name: visible;
+    -webkit-animation-duration: 999s;
+    -webkit-animation-delay: 1.3;
     animation-name: visible;
     animation-duration: 999s;
     animation-delay: 1.3s;
