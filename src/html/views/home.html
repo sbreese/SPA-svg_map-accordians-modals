@@ -5,7 +5,7 @@
     <div id="background-video" class="mobile-background">
         <div id="darken-video"></div>
         <!-- Region View Buttons -->
-        <div class="region-view-icon-container" ng-if="showRegionOptions">
+        <div class="region-view-icon-container" ng-class="{'region-icon-background-mobile': isMobile}"><!-- Add ng-if="showRegionOptions" to hide icon in mobile -->
 
             <!-- Map View Button -->
             <a href="" ng-click="selectRegionView(REGION_VIEWS.MAP)" ng-class="{'active': isRegionViewActive(REGION_VIEWS.MAP)}">
@@ -49,7 +49,7 @@
             <div class="column ebreaks-head-container">
                 <div id="ebreaks-head">
                     <h1 id="ebreaks-head1">eBreaks<sup>&reg;</sup></h1>
-                    <h3 id="ebreaks-head2">Save 20% on great locations across North America.</h3>
+                    <h3 id="ebreaks-head2">Save 20% on great locations across&nbsp;North&nbsp;America.</h3>
                 </div>
             </div>
             <div sticky-header>

@@ -5282,13 +5282,14 @@ jZ/1dD8Re8bQn/dUP41fX2gH+6ofxq7cbN/93Q/ETy3Gzf8A3dD8Re8bNv8Ad0PxF7zs/wCrofiL
  	animation-fill-mode: forwards;
 }
 .text-PACIFIC {
+	visibility: hidden;
 	cursor:pointer;
     -webkit-animation-name: visible;
-    -webkit-animation-duration: .4;
+    -webkit-animation-duration: 999s;
     -webkit-animation-delay: .5s;
 	-webkit-animation-fill-mode: forwards;
     animation-name: visible;
-    animation-duration: .4;
+    animation-duration: 999s;
     animation-delay: .5s;
  	animation-fill-mode: forwards;
 }

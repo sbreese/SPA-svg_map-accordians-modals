@@ -19,7 +19,8 @@ h1, h2, h3, h4, h5, h6 {
         line-height: 1.3;
     }
     #ebreaks-head1 {
-        margin-bottom: 4px;
+        /*margin-bottom: 4px;*/
+        margin: 10px auto;
         sup {
             font-size: .9rem;
             vertical-align: top;
@@ -52,12 +53,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-background {
-    position:relative;
+    /*position:relative;*/
     background-image: url("../assets/images/eBreaks_Mobile_Background.png");
-    background: -webkit-linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)); /* Standard syntax */
 }
 #darken-video {
     width: 100%;
@@ -75,6 +72,7 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     left: 10px;
     /*top: 10px;*/
+    z-index: 10;
     top: 15px;
     font-size: 2rem;
     padding: 5px 20px;
@@ -142,6 +140,9 @@ h1, h2, h3, h4, h5, h6 {
     background-color: black;
     border-radius: 10px;
     z-index: 0;
+}
+.region-icon-background-mobile {
+    top: 0;
 }
 
 // This is for content below the video. We need to set the background to white to cover up the video bleed caused

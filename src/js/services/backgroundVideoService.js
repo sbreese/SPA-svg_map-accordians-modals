@@ -12,7 +12,7 @@ angular.module('MarriottBreaks').factory('backgroundVideoService', [
 
             loadVideo: function(){
                 // don't allow video in mobile  && !mediaService.isMobile()
-                if (video === null){
+                if (video === null && !mediaService.isMobile()){
                     video = new $.BigVideo({container: $('#background-video'), useFlashForFirefox:false});
                     video.init();
                     //video.show('assets/videos/roadtrip.mp4', {ambient: true});

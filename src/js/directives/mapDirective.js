@@ -47,10 +47,12 @@ angular.module('MarriottBreaks')
         }
     ])
     .controller('mapCtrl', [
+        '$rootScope',
+        '$document',
         '$scope',
         '$window',
         'breaksService','mediaService',
-        function ($scope, $window, breaksService, mediaService) {
+        function ($rootScope, $document, $scope, $window, breaksService, mediaService) {
 
             $scope.$watch('mapRoot', function (newValue) {
                 buildMapData();
@@ -58,6 +60,10 @@ angular.module('MarriottBreaks')
 
             $scope.$watch('regions', function (newValue) {
                 buildMapData();
+            });
+
+            $rootScope.$on('window.resize', function () {
+                updateViewBox();
             });
 
             $scope.getStateFromElement = function (element) {
@@ -97,6 +103,94 @@ angular.module('MarriottBreaks')
                 return null;
             };
 
+            function updateViewBox() {
+                console.log("The current window width is ", window.innerWidth);
+                // 696 push down
+                //viewBox="-20 240 700 1065"
+                // mobile 50 100 500 700
+                /*
+                When 1269+ 240
+                When 696  100
+
+                 */
+                var pushMapRight;
+                var pushMapDown;
+                var MapWidth;
+                var MapHeight;
+                var videoDiv = $document.find("#background-video");  // Default is min-height: 690px;
+                if (window.innerWidth < 450) {
+                    pushMapRight = 50;
+                    pushMapDown = 65;
+                    MapWidth = 575;
+                    MapHeight = 700;
+                    videoDiv.height(440);
+                } else if (window.innerWidth < 500){
+                    pushMapRight = 50;
+                    pushMapDown = 100;
+                    MapWidth = 580;
+                    MapHeight = 700;
+                    videoDiv.height(460);
+                } else if (window.innerWidth < 550){
+                    pushMapRight = 50;
+                    pushMapDown = 140;
+                    MapWidth = 580;
+                    MapHeight = 700;
+                    videoDiv.height(470);
+                } else if (window.innerWidth < 600) {
+                    pushMapRight = 40;
+                    pushMapDown = 180;
+                    MapWidth = 575;
+                    MapHeight = 800;
+                    videoDiv.height(500);
+                } else if (window.innerWidth < 700) {
+                    pushMapRight = 30;
+                    pushMapDown = 180;
+                    MapWidth = 620;
+                    MapHeight = 850;
+                    videoDiv.height(530);
+                } else if (window.innerWidth < 800) {
+                    pushMapRight = 20;
+                    pushMapDown = 190;
+                    MapWidth = 630;
+                    MapHeight = 875;
+                    videoDiv.height(570);
+                } else if (window.innerWidth < 900) {
+                    pushMapRight = 10;
+                    pushMapDown = 200;
+                    MapWidth = 640;
+                    MapHeight = 900;
+                    videoDiv.height(620);
+                } else if (window.innerWidth < 1000) {
+                    pushMapRight = -10;
+                    pushMapDown = 237;
+                    MapWidth = 650;
+                    MapHeight = 1000;
+                    videoDiv.height(660);
+                } else if (window.innerWidth < 1100) {
+                    pushMapRight = -20;
+                    pushMapDown = 235;
+                    MapWidth = 670;
+                    MapHeight = 1000;
+                    videoDiv.height(670);
+                } else if (window.innerWidth < 1200) {
+                    pushMapRight = -22;
+                    pushMapDown = 230;
+                    MapWidth = 685;
+                    MapHeight = 1000;
+                    videoDiv.height(680);
+                } else { // > 1200
+                    pushMapRight = -25;
+                    pushMapDown = 230;
+                    MapWidth = 700;
+                    MapHeight = 1065;
+                    videoDiv.height(690);
+                }
+
+                //if (mediaService.isMobile()) {
+                    $scope.mapRoot[0].setAttribute("viewBox", pushMapRight + " " + pushMapDown + " "+ MapWidth + " " + MapHeight);
+                //}
+            };
+
             function buildMapData() {
 
                 // there is no way to know whether the regions have loaded or the map has been built first.
@@ -124,9 +218,7 @@ angular.module('MarriottBreaks')
                         }
                     }
                     */
-                    if (mediaService.isMobile()) {
-                        $scope.mapRoot[0].setAttribute("viewBox", "50 100 500 700");
-                    }
+                    updateViewBox();
 
                     // Steve's Build Region Map Data:
                     var regionData = $scope.regions;
