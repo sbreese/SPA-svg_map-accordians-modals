@@ -62,7 +62,10 @@ angular.module('MarriottBreaks')
                 buildMapData();
             });
 
-            $rootScope.$on('window.resize', function () {
+            //$rootScope.$on('window.resize', function () { // $rootScope.$on  use window.resize if you only want to change when user is done.
+            //    updateViewBox();
+            //});
+            angular.element($window).on('resize', function () { // $rootScope.$on  use window.resize if you only want to change when user is done.
                 updateViewBox();
             });
 
@@ -120,7 +123,7 @@ angular.module('MarriottBreaks')
                 var videoDiv = $document.find("#background-video");  // Default is min-height: 690px;
                 if (window.innerWidth < 450) {
                     pushMapRight = 50;
-                    pushMapDown = 65;
+                    pushMapDown = 55;
                     MapWidth = 575;
                     MapHeight = 700;
                     videoDiv.height(440);
@@ -142,6 +145,12 @@ angular.module('MarriottBreaks')
                     MapWidth = 575;
                     MapHeight = 800;
                     videoDiv.height(500);
+                } else if (window.innerWidth < 650) {
+                    pushMapRight = 30;
+                    pushMapDown = 140;
+                    MapWidth = 620;
+                    MapHeight = 850;
+                    videoDiv.height(540);
                 } else if (window.innerWidth < 700) {
                     pushMapRight = 30;
                     pushMapDown = 180;
