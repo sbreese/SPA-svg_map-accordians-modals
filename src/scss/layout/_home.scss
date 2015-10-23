@@ -160,11 +160,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .region-container {
-    padding: 25px 15px;
-
+    /*padding: 25px 15px;*/
     .button {
         width: 100%;
     }
+    button.large, .button.large {
+        padding: 0 .2rem 0 .2rem;
+        font-size: 1.25rem;
+        vertical-align: middle;
+        display: table-cell;
+        height: 48px;
+        width: 203px;
+    }
+}
+
+/* Coverride Button Padding to match comp */
+button.large, .button.large {
+    padding: .7rem .2rem .7rem .2rem;
+    font-size: 1.25rem;
 }
 
 .column + .column:last-child,
@@ -663,11 +676,10 @@ li{
   }
 }
 
-/* Coverride Button Padding to match comp */
-  button.large, .button.large {
-    padding: .7rem .2rem .7rem .2rem;
-    font-size: 1.25rem; }
-
+.region-list-container {
+    border-spacing: 10px;
+    border-collapse: separate;
+}
 .subscribe-bar {
     position: relative;
 

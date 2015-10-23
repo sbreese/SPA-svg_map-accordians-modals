@@ -145,7 +145,7 @@
     fill: #728CFF;
 }
 
-@media screen and (max-width: 25em) {
+@media screen and (max-width: 30em) {
     @-webkit-keyframes lineCircle {
         0% {stroke-width: 0;}
         50% {stroke-width: 90;}
@@ -608,6 +608,34 @@
 	-o-transform: translate(0px,5px); /* Opera */
 	-moz-transform: translate(0px,5px); /* Firefox */
  }
+.dealsTextShiftLeft {
+ 	transform: translate(-40px,5px);
+ 	-ms-transform: translate(-40px,5px); /* IE 9 */
+ 	-webkit-transform: translate(-40px,5px); /* Safari and Chrome */
+ 	-o-transform: translate(-40px,5px); /* Opera */
+ 	-moz-transform: translate(-40px,5px); /* Firefox */
+ }
+.dealsTextShiftSouthEast{
+    transform: translate(40px,25px);
+    -ms-transform: translate(40px,25px); /* IE 9 */
+    -webkit-transform: translate(40px,25px); /* Safari and Chrome */
+    -o-transform: translate(40px,25px); /* Opera */
+    -moz-transform: translate(40px,25px); /* Firefox */
+ }
+ .dealsTextShiftEast {
+     transform: translate(40px,5px);
+     -ms-transform: translate(40px,5px); /* IE 9 */
+     -webkit-transform: translate(40px,5px); /* Safari and Chrome */
+     -o-transform: translate(40px,5px); /* Opera */
+     -moz-transform: translate(40px,5px); /* Firefox */
+     }
+  .dealsTextShiftNorthWest{
+    transform: translate(-40px,-35px);
+    -ms-transform: translate(-40px,-35px); /* IE 9 */
+    -webkit-transform: translate(-40px,-35px); /* Safari and Chrome */
+    -o-transform: translate(-40px,-35px); /* Opera */
+    -moz-transform: translate(-40px,-35px); /* Firefox */
+ }
 .shiftLeft {
 transform: translate(-40px,0px);
 -ms-transform: translate(-40px,0px); /* IE 9 */
@@ -640,7 +668,7 @@ transform: translate(40px,0px);
 }
 
 
-@media screen and (min-width: 25em) {
+@media screen and (min-width: 30em) {
 
 
 @-webkit-keyframes lineCircle {
@@ -4372,7 +4400,7 @@ transform: translate(40px,0px);
     <circle id="whitePacific" cx="184" cy="438" r="0" stroke="black" stroke-width="0" fill="white" class="shiftLeft" />
     <line x1="184" y1="438" x2="184" y2="438" stroke="white" id="circlePacific" class="shiftLeft" /><!--font-size="26px"-->
  	<text x="184" y="445" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#b6ac8f" id="text-PACIFIC" class="bubble-font shiftLeft"></text>
- 	<text x="184" y="455" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#b6ac8f" id="deals-PACIFIC" class="dealsText text-PACIFIC bubble-font shiftLeft">DEALS</text>
+ 	<text x="184" y="455" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#b6ac8f" id="deals-PACIFIC" class="dealsTextShiftLeft text-PACIFIC bubble-font">DEALS</text>
 	<circle id="regionCircle-PACIFIC" class="region-circle shiftLeft" cx="184" cy="436" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
 	<animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
 	</circle><!-- Pacific  -->
@@ -4381,7 +4409,7 @@ transform: translate(40px,0px);
     <circle id="whiteMountain" cx="269" cy="452" r="0" stroke="black" stroke-width="0" fill="white"/><!-- Mountain -->
     <line x1="269" y1="452" x2="269" y2="452" stroke="white" id="circleMountain" />
     <text x="267" y="459" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#8fb7b7" id="text-MOUNTAIN" class="bubble-font"></text>
-    <text x="269" y="469" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#8fb7b7" id="deals-MOUNTAIN" class="dealsText text-MOUNTAIN bubble-font">DEALS</text>
+    <text x="269" y="469" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#8fb7b7" id="deals-MOUNTAIN" class="dealsText text-MOUNTAIN bubble-font">DEALS</text>
     <circle id="regionCircle-MOUNTAIN" class="region-circle" cx="269" cy="450" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     <animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
@@ -4390,7 +4418,7 @@ transform: translate(40px,0px);
 	<circle id="whiteCarribean" cx="299" cy="622" r="0" stroke="black" stroke-width="0" fill="white" /><!-- Other (i.e. Carribean & Latin America) -->
     <line x1="299" y1="622" x2="299" y2="622" stroke="white" id="circleCarribean" />
     <text x="299" y="629" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#ababab" id="text-CARRIBEAN_LATIN_AMERICA" class="bubble-font"></text>
-    <text x="299" y="639" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#ababab" id="deals-CARRIBEAN_LATIN_AMERICA" class="dealsText text-CARRIBEAN_LATIN_AMERICA bubble-font">DEALS</text>
+    <text x="299" y="639" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#ababab" id="deals-CARRIBEAN_LATIN_AMERICA" class="dealsText text-CARRIBEAN_LATIN_AMERICA bubble-font">DEALS</text>
     <circle id="regionCircle-CARRIBEAN_LATIN_AMERICA" class="region-circle" cx="299" cy="620" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     <animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
@@ -4399,7 +4427,7 @@ transform: translate(40px,0px);
 	<circle id="whiteSouthCentral" cx="359" cy="522" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" /><!-- South Central -->
     <line x1="359" y1="522" x2="359" y2="522" stroke="white" id="circleSouthCentral" />
     <text x="359" y="529" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#cfa77d" id="text-SOUTH_CENTRAL" class="bubble-font"></text>
-    <text x="359" y="539" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#cfa77d" id="deals-SOUTH_CENTRAL" class="dealsText text-SOUTH_CENTRAL bubble-font">DEALS</text>
+    <text x="359" y="539" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#cfa77d" id="deals-SOUTH_CENTRAL" class="dealsText text-SOUTH_CENTRAL bubble-font">DEALS</text>
     <circle id="regionCircle-SOUTH_CENTRAL" class="region-circle" cx="359" cy="520" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     <animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
@@ -4408,7 +4436,7 @@ transform: translate(40px,0px);
 	<circle id="whiteMidwest" cx="419" cy="452" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" class="shiftNorthWest"/><!-- Midwest -->
 	<line x1="419" y1="452" x2="419" y2="452" stroke="white" id="circleMidwest" class="shiftNorthWest"/>
     <text x="419" y="459" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#728cab" id="text-MIDWEST" class="bubble-font shiftNorthWest"></text>
-    <text x="419" y="469" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#728cab" id="deals-MIDWEST" class="dealsText text-MIDWEST bubble-font shiftNorthWest">DEALS</text>
+    <text x="419" y="469" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#728cab" id="deals-MIDWEST" class="dealsTextShiftNorthWest text-MIDWEST bubble-font">DEALS</text>
     <circle id="regionCircle-MIDWEST" class="region-circle shiftNorthWest" cx="419" cy="450" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     <animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
@@ -4417,7 +4445,7 @@ transform: translate(40px,0px);
 	<circle id="whiteSoutheast" cx="459" cy="527" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" class="shiftDownRight"/><!-- Southeast -->
  	<line x1="459" y1="527" x2="459" y2="527" stroke="white" id="circleSoutheast" class="shiftDownRight"/>
     <text x="459" y="534" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#dc9e95" id="text-SOUTHEAST" class="bubble-font shiftDownRight"></text>
-    <text x="459" y="544" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#dc9e95" id="deals-SOUTHEAST" class="dealsText text-SOUTHEAST bubble-font shiftDownRight">DEALS</text>
+    <text x="459" y="544" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#dc9e95" id="deals-SOUTHEAST" class="dealsTextShiftSouthEast text-SOUTHEAST bubble-font">DEALS</text>
     <circle id="regionCircle-SOUTHEAST" class="region-circle shiftDownRight" cx="459" cy="525" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     <animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
@@ -4426,7 +4454,7 @@ transform: translate(40px,0px);
 	<circle id="whiteMidAtlantic" cx="499" cy="466" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" class="shiftDownRight"/><!-- Mid-Atlantic -->
   	<line x1="499" y1="466" x2="499" y2="466" stroke="white" id="circleMidAtlantic" class="shiftDownRight"/>
     <text x="499" y="473" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#85c1e9" id="text-MID-ATLANTIC" class="bubble-font shiftDownRight"></text>
-    <text x="499" y="483" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#85c1e9" id="deals-MID-ATLANTIC" class="dealsText text-MID-ATLANTIC bubble-font shiftDownRight">DEALS</text>
+    <text x="499" y="483" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#85c1e9" id="deals-MID-ATLANTIC" class="dealsTextShiftSouthEast text-MID-ATLANTIC bubble-font">DEALS</text>
     <circle id="regionCircle-MID-ATLANTIC" class="region-circle shiftDownRight" cx="499" cy="464" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     <animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
@@ -4435,7 +4463,7 @@ transform: translate(40px,0px);
 	<circle id="whiteNewEngland" cx="529" cy="411" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" class="shiftRight"/><!-- New England -->
     <line x1="529" y1="411" x2="529" y2="411" stroke="white" id="circleNewEngland" class="shiftRight"/>
     <text x="529" y="418" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#9ab89d" id="text-NEW_ENGLAND" class="bubble-font shiftRight"></text>
-    <text x="529" y="428" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#9ab89d" id="deals-NEW_ENGLAND" class="dealsText text-NEW_ENGLAND bubble-font shiftRight">DEALS</text>
+    <text x="529" y="428" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#9ab89d" id="deals-NEW_ENGLAND" class="dealsTextShiftEast text-NEW_ENGLAND bubble-font">DEALS</text>
     <circle id="regionCircle-NEW_ENGLAND" class="region-circle shiftRight" cx="529" cy="409" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     <animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
@@ -4444,7 +4472,7 @@ transform: translate(40px,0px);
 	<circle id="whiteCanada" r="0" cx="469" cy="385" stroke="black" stroke-width="0" fill="white" opacity="1" /><!-- Canada -->
     <line x1="469" y1="385" x2="469" y2="385" stroke="white" id="circleCanada" />
     <text x="469" y="392" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#b3726b" id="text-CANADA" class="bubble-font"></text>
-    <text x="469" y="402" font-family="sans-serif" font-size="6px" text-anchor="middle" fill="#b3726b" id="deals-CANADA" class="dealsText text-CANADA bubble-font">DEALS</text>
+    <text x="469" y="402" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#b3726b" id="deals-CANADA" class="dealsText text-CANADA bubble-font">DEALS</text>
     <circle id="regionCircle-CANADA" class="region-circle" cx="469" cy="383" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0">
     <animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>

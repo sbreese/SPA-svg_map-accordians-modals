@@ -132,7 +132,7 @@ angular.module('MarriottBreaks')
                     pushMapDown = 100;
                     MapWidth = 580;
                     MapHeight = 700;
-                    videoDiv.height(460);
+                    videoDiv.height(470);
                 } else if (window.innerWidth < 550){
                     pushMapRight = 50;
                     pushMapDown = 140;

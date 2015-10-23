@@ -61,7 +61,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
     $scope.ModalPackage = {};
     $scope.open = function (region) {
         $scope.ModalPackage.selectedRegion = region;
-        $scope.ModalPackage.selectedRegionFormatted = region.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+        $scope.ModalPackage.selectedRegionFormatted = region.replace(/\w[^\s-]*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
         $scope.ModalPackage.regions = $scope.regions;
         $scope.ModalPackage.statesService = $scope.statesService;
 
