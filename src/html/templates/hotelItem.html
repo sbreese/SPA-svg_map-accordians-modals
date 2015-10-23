@@ -1,20 +1,19 @@
 <div id="{{hotelId}}" class="hotel-item-container">
-    <a class="hotel-item-link" ng-href="{{hotel.AVAILABILITY_URL}}" ng-click="hotelItemSelected()">
-        <div class="hotel-item-content">
-
-            <!-- Hotel Image -->
-            <img class="hotel-image" ng-src="http://cache.marriott.com/propertyimages/{{hotel.MARSHA_CODE.charAt(0)}}/{{hotel.MARSHA_CODE}}/{{hotel.MARSHA_CODE}}e01.jpg"/>
-
-            <!-- Hotel Description -->
-            <div class="hotel-item-description-container">
-                <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
-
-                <p class="hotel-item-per-night"><strong>{{hotel.PRICE_RANGE}}</strong><small> night</small></p>
-                <p class="hotel-item-original-per-night">{{hotel.ORIGINAL_PRICE_RANGE}}</p>
-                <button class="{{getButtonClass()}}">Check Availability</button>
-            </div>
-
+    <div class="hotel-item-content">
+        <div class="hotel-image-container">
+        <!-- Hotel Image -->
+            <a href="{{hotel.PROPERTY_PAGE_URL}}"><img class="hotel-image" ng-src="http://cache.marriott.com/propertyimages/{{hotel.MARSHA_CODE.charAt(0)}}/{{hotel.MARSHA_CODE}}/{{hotel.MARSHA_CODE}}e01.jpg"/></a>
         </div>
-    </a>
+        <!-- Hotel Description -->
+        <div class="hotel-item-description-container">
+            <a class="hotel-item-link" ng-href="{{hotel.AVAILABILITY_URL}}" ng-click="hotelItemSelected()">
+            <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
 
+            <p class="hotel-item-per-night"><strong>{{hotel.PRICE_RANGE}}</strong><small> night</small></p>
+            <p class="hotel-item-original-per-night">{{hotel.ORIGINAL_PRICE_RANGE}}</p>
+
+                <button class="{{getButtonClass()}}">Check Availability</button>
+            </a>
+        </div>
+    </div>
 </div>

@@ -205,9 +205,9 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         };
 
         $scope.formatRegionName = function(region){
-            //var regionFormatted = region.toLowerCase();
+            //var regionFormatted = region.toLowerCase(); \w\S*
             //return regionFormatted.charAt(0).toUpperCase() + regionFormatted.slice(1);
-            return region.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
+            return region.replace(/\w[^\s-]*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
         };
 
         // Load the previous search info on pageshow since initialize won't be called again if bfcache (back/forward caching) is being used.

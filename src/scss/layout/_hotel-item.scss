@@ -33,14 +33,20 @@
 
     margin-top: auto;
     bottom: 0;
+    .hotel-image-container {
+        /*background: transparent url(http://davidrhysthomas.co.uk/linked/astrid_avatar.png) 50% 50% no-repeat;
+        min-width: 300px;
+        min-height: 300px;*/
+        box-shadow: inset 0 0 25px #EDEDEE, inset 0 0 25px #EDEDEE, inset 0 0 25px #EDEDEE;
+    }
 }
 
 .hotel-image {
-    position: relative;
-    display: block;
-
-    width: 100%;
-    height: auto;
+    /*position: relative;*/
+    /*display: block;*/
+    margin: 18.5px; //11.5px 18.5px 11.5px 18.5px;
+    /*width: 100%;
+    height: auto;*/
 
     //max-height: 275px;
 }
