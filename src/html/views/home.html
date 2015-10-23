@@ -78,23 +78,13 @@
                 <div class="row">
 
                     <div class="small-6 column region-list-container">
-                        <a region-button region="Pacific" action="regionButtonClick(region)"></a>
+                        <!-- ADD BACK TO REGION BUTTON IF YOU WANT TO JUMP TO REGION INSTEAD: ng-href="#REGION_{{regionUppercase}}" ng-click="onClick()" du-smooth-scroll
+                        And make this the action: regionButtonClick-->
+                        <a region-button region="Pacific" action="stateButtonClick(region)"></a>
                     </div>
 
                     <div class="small-6 column region-list-container">
-                        <a region-button region="New England" action="regionButtonClick(region)"></a>
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="small-6 column region-list-container">
-                        <a region-button region="Midwest" action="regionButtonClick(region)"></a>
-                    </div>
-
-                    <div class="small-6 column region-list-container">
-                        <a region-button region="Mid-Atlantic" action="regionButtonClick(region)"></a>
+                        <a region-button region="New England" action="stateButtonClick(region)"></a>
                     </div>
 
                 </div>
@@ -102,11 +92,11 @@
                 <div class="row">
 
                     <div class="small-6 column region-list-container">
-                        <a region-button region="Mountain" action="regionButtonClick(region)"></a>
+                        <a region-button region="Midwest" action="stateButtonClick(region)"></a>
                     </div>
 
                     <div class="small-6 column region-list-container">
-                        <a region-button region="Southeast" action="regionButtonClick(region)"></a>
+                        <a region-button region="Mid-Atlantic" action="stateButtonClick(region)"></a>
                     </div>
 
                 </div>
@@ -114,11 +104,23 @@
                 <div class="row">
 
                     <div class="small-6 column region-list-container">
-                        <a region-button region="Carribean & Latin America" action="regionButtonClick(region)"></a>
+                        <a region-button region="Mountain" action="stateButtonClick(region)"></a>
                     </div>
 
                     <div class="small-6 column region-list-container">
-                        <a region-button region="Canada" action="regionButtonClick(region)"></a>
+                        <a region-button region="Southeast" action="stateButtonClick(region)"></a>
+                    </div>
+
+                </div>
+
+                <div class="row">
+
+                    <div class="small-6 column region-list-container">
+                        <a region-button region="Carribean & Latin America" action="stateButtonClick(region)"></a>
+                    </div>
+
+                    <div class="small-6 column region-list-container">
+                        <a region-button region="Canada" action="stateButtonClick(region)"></a>
                     </div>
                 </div>
 

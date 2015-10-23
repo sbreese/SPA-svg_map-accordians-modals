@@ -162,6 +162,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         };
 
         $scope.stateButtonClick = function(regionOrState){
+            console.log("Here is what you clicked: ", regionOrState);
             var regionOrStateSpaces = regionOrState.replace(/_/g, ' ');
             if ($scope.regions[regionOrStateSpaces]) {
                 $scope.open(regionOrStateSpaces);
