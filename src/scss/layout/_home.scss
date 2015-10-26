@@ -2,7 +2,7 @@ h1, h2, h3, h4, h5, h6 {
     color: #555555;
 }
 
-#ebreaks-head {
+.ebreaks-head {
     font-family: Helvetica, sans-serif;
     font-weight: bold;
     text-align: center;
@@ -14,11 +14,11 @@ h1, h2, h3, h4, h5, h6 {
     border-radius:60px 60px 40px 40px;*/
     margin: 0 auto;
     z-index: -2;
-    #ebreaks-head1, #ebreaks-head2 {
+    .ebreaks-head1, .ebreaks-head2 {
         color: white;
         line-height: 1.3;
     }
-    #ebreaks-head1 {
+    .ebreaks-head1 {
         /*margin-bottom: 4px;*/
         margin: 10px auto;
         sup {
@@ -28,7 +28,7 @@ h1, h2, h3, h4, h5, h6 {
             top: .7rem;
         }
     }
-    #ebreaks-head2 {
+    .ebreaks-head2 {
         margin-top: 0;
     }
 }
@@ -153,6 +153,35 @@ h1, h2, h3, h4, h5, h6 {
     background: white;
 }
 
+.sticky-header-container {
+    z-index: 1000;
+}
+
+.sticky-header-background {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 0;
+
+    overflow: hidden;
+    z-index: 1001;
+
+    transition: height 0.2s ease-in;
+
+    background-image: url("../assets/images/bg_ebreaks_blue_wavy.png");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+    h1 {
+        margin-top: 10px;
+        color: white;
+        text-align: center;
+
+        text-shadow: 0 2px 3px #333333;
+    }
+}
+
 .search-input {
     font-size: 28px;
     border-radius: 8px;
@@ -160,26 +189,10 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 15px;
 }
 
-
-
-/* Coverride Button Padding to match comp */
-button.large, .button.large {
-    padding: .7rem .2rem .7rem .2rem;
-    font-size: 1.25rem;
-}
-
-.column + .column:last-child,
-.columns + .columns:last-child {
-    float: left !important;
-}
-
-// Overrides for dropdown and input styling
-.ebreaks-head-container {
-    text-align: center;
-}
 .search-container {
-    float: left !important;
     text-align: center;
+    z-index: 1002;
+
     .f-dropdown {
         width: 95%;
         max-width: none;
@@ -198,13 +211,13 @@ button.large, .button.large {
         position: absolute;
         top: 0;
         right: 0;
-        
+
         z-index: 999;
         background-color: #A5CE4C;
         cursor: pointer;
         float: left;
         height: 51px;
-        margin: 0x 0 0 0;
+        margin: 0 0 0 0;
         text-align: center;
         width: 80px;
         border-top-right-radius: .6rem;
@@ -216,6 +229,48 @@ button.large, .button.large {
     ul {
         text-align: left;
     }
+}
+
+.sticky-header {
+
+    .sticky-header-container {
+        position: fixed;
+
+        //copy Foundation Row styles
+        max-width: 62.5rem;
+        width: 100%;
+        height: auto;
+
+        // center the div
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+
+    }
+
+    .search-container {
+        top: 85px;
+    }
+
+    .sticky-header-background {
+        height: 170px;
+    }
+}
+
+/* Coverride Button Padding to match comp */
+button.large, .button.large {
+    padding: .7rem .2rem .7rem .2rem;
+    font-size: 1.25rem;
+}
+
+.column + .column:last-child,
+.columns + .columns:last-child {
+    float: left !important;
+}
+
+// Overrides for dropdown and input styling
+.ebreaks-head-container {
+    text-align: center;
 }
 
 ::-webkit-input-placeholder {
@@ -864,23 +919,6 @@ button.large, .button.large {
     a:active {
         color: white;
     }
-}
-
-.sticky-header {
-    position: fixed;
-
-    //copy Foundation Row styles
-    max-width: 62.5rem;
-    width: 100%;
-    height: auto;
-
-    // center the div
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-
-    top: 10px;
-    z-index: 1000;
 }
 
 

@@ -47,13 +47,22 @@
         <!-- Search Box & Dropdown Row -->
         <div class="row">
             <div class="column ebreaks-head-container">
-                <div id="ebreaks-head">
-                    <h1 id="ebreaks-head1">eBreaks<sup>&reg;</sup></h1>
-                    <h3 id="ebreaks-head2">Save 20% on great locations across&nbsp;North&nbsp;America.</h3>
+                <div class="ebreaks-head">
+                    <h1 class="ebreaks-head1">eBreaks<sup>&reg;</sup></h1>
+                    <h3 class="ebreaks-head2">Save 20% on great locations across&nbsp;North&nbsp;America.</h3>
                 </div>
             </div>
             <div sticky-header>
-                <div class="row">
+                <div class="row sticky-header-container">
+
+                    <!-- Blue Header Background -->
+                    <div class="sticky-header-background">
+                        <div class="ebreaks-head">
+                            <h1 class="ebreaks-head1">eBreaks.<sup>&reg;</sup></h1>
+                        </div>
+                    </div>
+
+                    <!-- Search Box Container -->
                     <div class="small-10 small-offset-1 medium-8 medium-offset-2 column search-container">
                         <!-- Search Box & Dropdown -->
                         <input type="text" ng-model="selectedBreak" placeholder="{{searchPlaceholder}}"
