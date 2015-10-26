@@ -1,20 +1,24 @@
 .terms-and-conditions-header-content {
     position: relative;
+    margin-top: 1rem;
 
     .t_and_c_label {
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: bold;
+        font-size: 120%;
     }
 
     .accordion-expand-icon-container {
         position: absolute;
         border-radius: 50%;
 
-        width: 22px;
-        height: 22px;
-        line-height: 22px;
+        width: 24px;
+        height: 24px;
+        line-height: 24px;
+        padding-left: .5px;
+        padding-bottom: 1px;
 
-        left: 20px;
+        left: 21px;
         top: 0;
         bottom: 0;
         margin: auto 0;
