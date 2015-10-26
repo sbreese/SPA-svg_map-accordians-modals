@@ -121,7 +121,19 @@ angular.module('MarriottBreaks')
                 var MapWidth;
                 var MapHeight;
                 var videoDiv = $document.find("#background-video");  // Default is min-height: 690px;
-                if (window.innerWidth < 450) {
+                if (window.innerWidth < 350) {
+                    pushMapRight = 50;
+                    pushMapDown = -85;
+                    MapWidth = 575;
+                    MapHeight = 800;
+                    videoDiv.height(400);
+                } else if (window.innerWidth < 400) {
+                    pushMapRight = 50;
+                    pushMapDown = 5;
+                    MapWidth = 580;
+                    MapHeight = 700;
+                    videoDiv.height(440);
+                } else if (window.innerWidth < 450) {
                     pushMapRight = 50;
                     pushMapDown = 55;
                     MapWidth = 575;
@@ -282,10 +294,12 @@ angular.module('MarriottBreaks')
                 var textElement = $window.document.createElementNS("http://www.w3.org/2000/svg", "text");
 
                 var LabelElement = angular.element($scope.mapRoot[0]).find('#text-' + regionName);
+
                 if (typeof LabelElement[0] !== 'undefined') {
-                    if (!LabelElement[0].innerHTML) {
-                        LabelElement[0].innerHTML = regionCount;
-                    }
+                    //if (!LabelElement[0].innerHTML) {
+                    //    LabelElement[0].innerHTML = regionCount;  DOES NOT WORK IN SAFARI!
+                    // }
+                    LabelElement.html(regionCount);
                 }
 /*
                 var CirlcX, CircleY;

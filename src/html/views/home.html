@@ -73,58 +73,12 @@
 
             <!-- REGION BUTTON VIEW -->
             <!-- Region Buttons -->
-            <div class="small-10 small-offset-1 medium-8 medium-offset-2 column region-container" ng-show="isRegionViewActive(REGION_VIEWS.LIST)">
+            <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-3 text-center the-grid region-container" vertilize-container ng-show="isRegionViewActive(REGION_VIEWS.LIST)">
+                <li ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'" vertilize>
+                    <a class="large button region-list-button" href="" ng-click="stateButtonClick(region)"><p>{{region}}</p></a>
+                </li>
+            </ul>
 
-                <div class="row">
-
-                    <div class="small-6 column region-list-container">
-                        <!-- ADD BACK TO REGION BUTTON IF YOU WANT TO JUMP TO REGION INSTEAD: ng-href="#REGION_{{regionUppercase}}" ng-click="onClick()" du-smooth-scroll
-                        And make this the action: regionButtonClick-->
-                        <a region-button region="Pacific" action="stateButtonClick(region)"></a>
-                    </div>
-
-                    <div class="small-6 column region-list-container">
-                        <a region-button region="New England" action="stateButtonClick(region)"></a>
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="small-6 column region-list-container">
-                        <a region-button region="Midwest" action="stateButtonClick(region)"></a>
-                    </div>
-
-                    <div class="small-6 column region-list-container">
-                        <a region-button region="Mid-Atlantic" action="stateButtonClick(region)"></a>
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="small-6 column region-list-container">
-                        <a region-button region="Mountain" action="stateButtonClick(region)"></a>
-                    </div>
-
-                    <div class="small-6 column region-list-container">
-                        <a region-button region="Southeast" action="stateButtonClick(region)"></a>
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="small-6 column region-list-container">
-                        <a region-button region="Carribean & Latin America" action="stateButtonClick(region)"></a>
-                    </div>
-
-                    <div class="small-6 column region-list-container">
-                        <a region-button region="Canada" action="stateButtonClick(region)"></a>
-                    </div>
-                </div>
-
-            </div>
 
         </div>
 
@@ -195,7 +149,7 @@
                 </accordion-heading>
 
                 <!-- Top Destination Buttons -->
-                <ul class="small-block-grid-2 medium-block-grid-4 large-block-grid-5 text-center the-grid" vertilize-container>
+                <ul id="top-dest-container" class="small-block-grid-2 medium-block-grid-4 large-block-grid-5 text-center the-grid" vertilize-container>
                     <li ng-repeat="topDestination in topDestinations" vertilize>
                         <a class="large button {{'top-destination-button_'+($index<5?$index:($index<10?$index-5:($index<15?$index-10:'0')))}}" href="" ng-class="{'selected': selectedTopDestination === topDestination}" 
                            ng-click="toggleTopDestination(topDestination)"><p>{{topDestination}}</p></a>
@@ -283,20 +237,14 @@
     <a class="close-reveal-modal" ng-click="cancel()">&#215;</a>
   </script>
 
-   <ul id="dropdown-example-1-{{region}}" class="f-dropdown" ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'" style="position: relative !important; top: 342 !important; left: 193 !important">
-        <li ng-repeat="(state, hotels) in regionGroup | groupBy: 'PROPERTY_STATE'">
-            <a>{{state}}</a>
-        </li>
-    </ul>
-
     <!-- Terms & Conditions -->
-    <accordion class="terms-and-conditions-group-accordion">
+    <accordion class="terms-and-conditions-group-accordion" id="t_and_d">
 
             <!-- TOP DESTINATIONS -->
-        <accordion-group class="terms-and-conditions-group" is-open="true"> <!-- To collapse when regions are clicked, replace true with regionAccordionGroups['TOPDEST'].isOpen -->
+        <accordion-group class="terms-and-conditions-group" is-open="isOpen"> <!-- To collapse when regions are clicked, replace true with regionAccordionGroups['TOPDEST'].isOpen -->
                 <!-- Top Destinations Group Header -->
                 <accordion-heading>
-                    <div terms-and-conditions-header-content group="t_and_d" label="'Terms &amp; Conditions'" is-open="true"></div>
+                    <div terms-and-conditions-header-content group="t_and_d" label="'Terms &amp; Conditions'" is-open="$parent.isOpen"></div>
                 </accordion-heading>
 
                 <ul id="term_and_cond_list">

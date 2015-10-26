@@ -13,7 +13,8 @@
         bottom: 0;
         margin: auto 0;
 
-        background-color: $region-header-color;
+        background-color: white;
+        border: 1px solid $region-header-color;
 
         i {
             display: block;
@@ -21,6 +22,14 @@
             color: white;
 
             text-align: center;
+        }
+        .fi-plus:before {
+            color: $region-header-color;
+            content: "\f199";
+        }
+        .fi-minus:before {
+            color: $region-header-color;
+            content: "\f176";
         }
     }
 

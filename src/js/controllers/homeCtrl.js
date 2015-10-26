@@ -88,6 +88,39 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         $scope.selectedTopDestination = null;
 
         $scope.selectRegionView = function(viewType){
+            if (viewType === 'LIST') {
+
+                var videoDiv = $document.find("#background-video");  // Default is min-height: 690px;
+                if (window.innerWidth < 350) {
+                    videoDiv.height(600);
+                } else if (window.innerWidth < 400) {
+                    videoDiv.height(580);
+                } else if (window.innerWidth < 450) {
+                    videoDiv.height(560);
+                } else if (window.innerWidth < 500){
+                    videoDiv.height(540);
+                } else if (window.innerWidth < 550){
+                    videoDiv.height(540); // DONE
+                } else if (window.innerWidth < 600) {
+                    videoDiv.height(540);
+                } else if (window.innerWidth < 650) {
+                    videoDiv.height(540);
+                } else if (window.innerWidth < 700) {
+                    videoDiv.height(540);
+                } else if (window.innerWidth < 800) {
+                    videoDiv.height(540);
+                } else if (window.innerWidth < 900) {
+                    videoDiv.height(540);
+                } else if (window.innerWidth < 1000) {
+                    videoDiv.height(540);
+                } else if (window.innerWidth < 1100) {
+                    videoDiv.height(540);
+                } else if (window.innerWidth < 1200) {
+                    videoDiv.height(540);
+                } else { // > 1200
+                    videoDiv.height(540);
+                }
+            }
             $scope.selectedRegionView = viewType;
         };
 

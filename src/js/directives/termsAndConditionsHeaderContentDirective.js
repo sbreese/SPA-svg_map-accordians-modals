@@ -21,9 +21,8 @@ angular.module('MarriottBreaks')
     .controller('termsAndConditionsHeaderContentCtrl', [
         '$scope',
         'scrollService',
+
         function ($scope, scrollService) {
-            $scope.termsAndConditionsHeaderClicked = function(){
-                    scrollService.scrollToRegion('t_and_d');
-            };
+            $scope.isOpen = true;
         }
     ]);
