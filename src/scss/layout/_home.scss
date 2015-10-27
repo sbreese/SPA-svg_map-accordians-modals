@@ -27,7 +27,7 @@ h1, h2, h3, h4, h5, h6 {
         sup {
             font-size: .9rem;
             vertical-align: top;
-            position: relative; 
+            position: relative;
             top: .7rem;
         }
     }
@@ -101,13 +101,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media only screen and (min-width: 40.0625em) {
-.reveal-modal {
-    left: 0;
-    margin: 0 auto;
-    max-width: 30rem;
-    right: 0;
-    width: 80%;
-}
+    .reveal-modal {
+        left: 0;
+        margin: 0 auto;
+        max-width: 30rem;
+        right: 0;
+        width: 80%;
+    }
 }
 
 .countdown-bell-container {
@@ -275,19 +275,19 @@ button.large, .button.large {
 }
 
 ::-webkit-input-placeholder {
-   color: #A5CE4C;
+    color: #A5CE4C;
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   color: #A5CE4C;
+    color: #A5CE4C;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   color: #A5CE4C;
+    color: #A5CE4C;
 }
 
-:-ms-input-placeholder {  
-   color: #A5CE4C;
+:-ms-input-placeholder {
+    color: #A5CE4C;
 }
 
 ::-webkit-input-placeholder {
@@ -295,15 +295,15 @@ button.large, .button.large {
 }
 
 :-moz-placeholder { /* Firefox 18- */
-   text-align: center;  
+    text-align: center;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-   text-align: center;  
+    text-align: center;
 }
 
-:-ms-input-placeholder {  
-   text-align: center; 
+:-ms-input-placeholder {
+    text-align: center;
 }
 
 .section-separator {
@@ -321,6 +321,27 @@ button.large, .button.large {
 
 .accordion-header-content {
     border-bottom: 2px #e9e9e9 solid;
+}
+
+
+.top-destination-accordion {
+    .region-group {
+        @include grid-row();
+
+        h3 {
+            text-align: center;
+            color: #2a81b7;
+            padding: 10px 0;
+            margin: 0;
+
+        }
+
+        .region-group-header-separator {
+            margin: 0;
+            height: 2px;
+            /*background-color: #DFDFDF;*/
+        }
+    }
 }
 
 .region-group-accordion {
@@ -349,11 +370,13 @@ button.large, .button.large {
             }
         }
 
-        h2 {
-            text-align: center;
-            color: $region-header-color;
-            padding: 10px 0;
-            margin: 0;
+        .accordion-header-content {
+            h3 {
+                text-align: center;
+                color: $region-header-color;
+                padding: 10px 0;
+                margin: 0;
+            }
         }
 
         h3 {
@@ -476,10 +499,10 @@ button.large, .button.large {
     li {
         max-height: 90px;
 
-            display: block;
-            float: left;
-            height: auto;
-            padding: 0 0.625rem 0 0;
+        display: block;
+        float: left;
+        height: auto;
+        padding: 0 0.625rem 0 0;
         a {
             margin-bottom: 2px;
             p {
@@ -492,9 +515,9 @@ button.large, .button.large {
         padding: 0 0.2rem 0 0.2rem;
     }
     li {
-                float: none;
-                display: inline-block;
-                margin-bottom: 1rem;
+        float: none;
+        display: inline-block;
+        margin-bottom: 1rem;
     }
 
 }
@@ -774,12 +797,12 @@ button.large, .button.large {
     }
 }
 #top-dest-container {
-
-       [class*="block-grid-"] > li {
-       display: block;
-       float: left;
-       height: auto;
-       padding: 0 0.625rem 0rem; }
+    margin-top: 1.4rem;
+    [class*="block-grid-"] > li {
+        display: block;
+        float: left;
+        height: auto;
+        padding: 0 0.625rem 0rem; }
 }
 .region-list-container {
     border-spacing: 10px;

@@ -148,14 +148,18 @@
         <!--div class="section-separator no-margin"></div-->
 
         <!-- REGION / TOP DESTINATIONS ACCORDION -->
-        <accordion class="region-group-accordion">
+        <div class="top-destination-accordion">
 
             <!-- TOP DESTINATIONS -->
-            <accordion-group class="region-group" is-open="true"> <!-- To collapse when regions are clicked, replace true with regionAccordionGroups['TOPDEST'].isOpen -->
-                <!-- Top Destinations Group Header -->
-                <accordion-heading>
-                    <div accordion-header-content group="'TOPDEST'" label="'Hot Locations'" is-open="true"></div>
-                </accordion-heading>
+            <div class="region-group">
+
+                <div class="accordion-header-content">
+                    <!-- Title -->
+                    <h3>Hot Locations</h3>
+
+                </div>
+
+                <div class="region-group-header-separator"></div>
 
                 <!-- Top Destination Buttons -->
                 <ul id="top-dest-container" class="small-block-grid-2 medium-block-grid-4 large-block-grid-5 text-center the-grid" vertilize-container>
@@ -175,8 +179,8 @@
                     </ul>
                 </div>
 
-            </accordion-group>
-        </accordion>
+            </div>
+        </div>
 
             <div class="your-ebreaks-bar show-for-medium-up" ng-show="aRegionIsExpanded">
                 <div class="ways-to-book-content">
