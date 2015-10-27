@@ -195,17 +195,77 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             }
         };
 
-        $scope.regionButtonClick = function(region){
-            expandRegion(region);
+        $scope.stateRegionButtonClick = function(regionOrState){
+            //expandRegion(regionOrState);
+            console.log("Here is what you clicked: ", regionOrState);
+            var regionOrStateSpaces = regionOrState.replace(/_/g, ' ');
+
+            if ($scope.regions[regionOrStateSpaces]) {
+                $scope.open(regionOrStateSpaces);
+            } else {
+                // Expand the region and scroll to the state
+                console.log("Here is what the format should be:", $scope.regions);
+
+                var regionObject = {'MOUNTAIN': {'states':{'MT':1, 'WY':1, 'UT': 1,'CO':1, 'AZ':1, 'NM':1}},
+                    'PACIFIC': {'states':{'WA':1,'ID':1,'OR':1,'CA':1,'NV':1,'AK':1,'HI':1}},
+                    'MIDWEST': {'states':{'ND':1,'SD':1,'MN':1,'WI':1,'IA':1,'IL':1, 'IN':1,'MI':1,'OH':1}},
+                    'SOUTH CENTRAL': {'states':{'NE':1,'KS':1,'MO':1,'OK':1,'TX':1,'AR':1,'LA':1,'KY':1}},
+                    'SOUTHEAST': {'states':{'TN':1,'MS':1,'AL':1,'GA':1,'FL':1,'SC':1,'NC':1}},
+                    'MID-ATLANTIC': {'states':{'VA':1,'WV':1,'MD':1,'DE':1,'PA':1,'NJ':1}},
+                    'NEW ENGLAND': {'states':{'NY':1,'VT':1,'NH':1,'RI':1,'MA':1,'CT':1,'ME':1}}};
+
+                /*MIDWEST: Object
+                states: Object
+                IL: 10
+                IN: 5
+                MI: 2
+                OH: 8
+                SD: 5 $scope.regions
+                */
+
+
+                var region = breaksService.getRegionFromState(regionObject, regionOrStateSpaces);
+                $scope.open(region);
+                //if (region){
+                //    expandRegion(region);
+                //}
+
+                // Hide all states for this region
+                /* COMMENTED OUT - ALWAYS SHOW ALL STATES
+                 angular.forEach($scope.regions[region].states, function(value, key) {
+
+                 if ($scope.regionAccordionGroups.hasOwnProperty(key)) {
+                 $scope.regionAccordionGroups[key].isHidden = true;
+                 }
+                 else
+                 {
+                 $scope.regionAccordionGroups[key] = {isHidden: true};
+                 }
+                 });
+                 // Show this state
+                 if ($scope.regionAccordionGroups.hasOwnProperty(state)) {
+                 $scope.regionAccordionGroups[state].isHidden = false;
+                 }
+                 else
+                 {
+                 $scope.regionAccordionGroups[state] = {isHidden: false};
+                 }
+                 */
+                //$scope.selectedTopDestination = null;
+                //scrollService.scrollToState(regionOrStateSpaces);
+                //scrollService.scrollToElement($document.find('.your-ebreaks-bar'));
+            }
         };
 
         $scope.stateButtonClick = function(regionOrState){
             console.log("Here is what you clicked: ", regionOrState);
             var regionOrStateSpaces = regionOrState.replace(/_/g, ' ');
+            alert(regionOrStateSpaces + " clicked!");
             if ($scope.regions[regionOrStateSpaces]) {
                 $scope.open(regionOrStateSpaces);
             } else {
                 // Expand the region and scroll to the state
+
                 var region = breaksService.getRegionFromState($scope.regions, regionOrStateSpaces);
                 if (region){
                     expandRegion(region);

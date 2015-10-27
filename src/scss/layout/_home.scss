@@ -944,6 +944,10 @@ button.large, .button.large {
         color: white;
     }
 }
+#term_and_cond_list {
+    margin-left: 3rem;
+    font-size: .8rem;
+}
 
 
 /* Marriott Header & Footer
@@ -1010,10 +1014,7 @@ button.large, .button.large {
     float: right;
 }
 
-#term_and_cond_list {
-    margin-left: 1.2rem;
-    font-size: .8rem;
-}
+
 #footer {
     background: transparent;
     color: #ededed;

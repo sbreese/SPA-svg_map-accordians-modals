@@ -14,7 +14,7 @@ angular.module('MarriottBreaks')
                     var mapRoot = angular.element(angular.element(element[0].getSVGDocument()).find('svg'));
 
                     if (mapRoot) {
-                        mapRoot.on('click', stateClickFunction);
+                        mapRoot.on('click', stateRegionClickFunction);
                         scope.$apply(scope.mapRoot = mapRoot);
                     }
 
@@ -23,11 +23,12 @@ angular.module('MarriottBreaks')
                     backgroundVideoService.loadVideo();
                 }
 
-                function stateClickFunction($event) {
-                    var stateClicked = scope.getStateFromElement($event.target);
-                    if (stateClicked) {
-                        stateClicked = stateClicked.replace('CARRIBEAN_LATIN_AMERICA', 'CARRIBEAN & LATIN AMERICA').replace(/_/g, ' ');
-                        scope.$apply(scope.stateClickAction({state: stateClicked }));
+                function stateRegionClickFunction($event) {
+
+                    var stateRegionClicked = scope.getRegionStateFromElement($event.target);
+                    if (stateRegionClicked) {
+                        stateRegionClicked = stateRegionClicked.replace('CARRIBEAN_LATIN_AMERICA', 'CARRIBEAN & LATIN AMERICA').replace(/_/g, ' ');
+                        scope.$apply(scope.stateClickAction({state: stateRegionClicked }));
                     }
                 }
 
@@ -69,7 +70,7 @@ angular.module('MarriottBreaks')
                 updateViewBox();
             });
 
-            $scope.getStateFromElement = function (element) {
+            $scope.getRegionStateFromElement = function (element) {
                 if (element.id) {
                     // IDs are in the "US-{state}" format ("US-MI"). If it follows this format, just return the state part
                     // Text elements are "TEXT-MI" format
@@ -79,8 +80,8 @@ angular.module('MarriottBreaks')
                     }
 
                     // To add support for STATE click on map, add these conditions to the following IF statement: idSplit[0] === 'US' || idSplit[0] === 'TEXT' || 
-                    if (idSplit[0] === 'regionCircle') {
-                        return idSplit[1];
+                    if (idSplit[0] === 'regionCircle' || idSplit[0] === 'US' || idSplit[0] === 'CANADA' || idSplit[0] === 'CARRIBEAN_LATIN_AMERICA') {
+                        return (idSplit[1]?idSplit[1]:idSplit[0]);
                     }
                 }
 
