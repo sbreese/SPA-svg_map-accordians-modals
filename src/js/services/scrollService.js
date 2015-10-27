@@ -33,7 +33,9 @@ angular.module('MarriottBreaks').factory('scrollService', [
             },
 
             scrollToRegion: function(region){
-                scrollToElementById('#REGION_' + region);
+                // replace spaces and &'s with underscore
+                var regionId = '#REGION_' + region.replace(/["& ]+/g, '_');
+                scrollToElementById(regionId);
             },
 
             scrollToState: function(state){

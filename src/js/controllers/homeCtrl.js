@@ -238,11 +238,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             }
         };
 
-        // Scroll to the clicked group
-        $scope.accordionHeaderClicked = function(region){
-            scrollService.scrollToRegion(region);
-        };
-
         $scope.formatRegionName = function(region){
             //var regionFormatted = region.toLowerCase(); \w\S*
             //return regionFormatted.charAt(0).toUpperCase() + regionFormatted.slice(1);

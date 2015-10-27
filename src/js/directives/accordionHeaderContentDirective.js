@@ -23,9 +23,12 @@ angular.module('MarriottBreaks')
         'scrollService',
         function ($scope, scrollService) {
 
+            // build the ID of the region header - replace all spaces and &'s with underscore
+            $scope.id = 'REGION_' + $scope.group.replace(/["& ]+/g, '_');
+
             $scope.accordionHeaderClicked = function(){
                 if (!$scope.isOpen){
-                    scrollService.scrollToRegion($scope.group);
+                    scrollService.scrollToElementById('#' + $scope.id);
                 }
             };
 

@@ -13,6 +13,9 @@ angular.module('MarriottBreaks')
                 // scroll offset when the input becomes sticky
                 var scrollThreshold;
 
+                // keep track of if we are in sticky mode or not
+                var isSticky = false;
+
                 // find the internal input element to get it's position
                 var inputElement = element.find('input');
 
@@ -29,6 +32,11 @@ angular.module('MarriottBreaks')
                 });
 
                 function setScrollThreshold(){
+                    // don't do anything here if already sticky
+                    if (isSticky){
+                        return;
+                    }
+
                     // set the threshold for when the element will become sticky - essentially happens once the input
                     // reaches the top, so use the input's top offset
                     // do this in a timeout so elements have time to adjust
@@ -48,9 +56,11 @@ angular.module('MarriottBreaks')
                     // add/remove sticky class based on scroll position
                     if ($document.scrollTop() >= scrollThreshold){
                         element.addClass('sticky-header');
+                        isSticky = true;
                     }
                     else {
                         element.removeClass('sticky-header');
+                        isSticky = false;
                     }
                 }
             }
