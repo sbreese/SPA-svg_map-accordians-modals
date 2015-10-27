@@ -329,6 +329,7 @@ button.large, .button.large {
         @include grid-row();
 
         h3 {
+            font-family: 'Source Sans Pro', sans-serif;
             text-align: center;
             color: #2a81b7;
             padding: 10px 0;
@@ -372,6 +373,7 @@ button.large, .button.large {
 
         .accordion-header-content {
             h3 {
+                font-family: 'Source Sans Pro', sans-serif;
                 text-align: center;
                 color: $region-header-color;
                 padding: 10px 0;
@@ -380,6 +382,7 @@ button.large, .button.large {
         }
 
         h3 {
+            font-family: 'Open Sans', sans-serif;
             margin-bottom: 20px;
             text-align: center;
         }
@@ -388,6 +391,9 @@ button.large, .button.large {
             margin: 0;
             height: 2px;
             /*background-color: #DFDFDF;*/
+        }
+        .content {
+            padding: 0;
         }
     }
 }
@@ -831,7 +837,7 @@ button.large, .button.large {
     margin-top: .5rem;
     display: inline-block;
     line-height: 50px;
-    font-family: 'Open Sans';
+    font-family: 'Source Sans Pro', sans-serif;
     color: white;
     font-size: 1.2rem;
     img {
@@ -860,6 +866,7 @@ button.large, .button.large {
     line-height: 35px;
     padding: .5rem;
     span {
+        font-family: 'Source Sans Pro', sans-serif;
         border-radius: 7px;
         font-size: 23px;
         font-weight: bold;
@@ -923,10 +930,12 @@ button.large, .button.large {
     }
 }
 .big-text {
+    font-family: 'Open Sans', sans-serif;
     font-size: 2rem;
     text-shadow: 0 2px 3px #333333;
 }
 .small-text {
+    font-family: 'Open Sans', sans-serif;
     font-size: .9rem;
 
     a:link {
@@ -946,8 +955,9 @@ button.large, .button.large {
     }
 }
 #term_and_cond_list {
-    margin-left: 3rem;
+    margin-left: 3.5rem;
     font-size: .8rem;
+    color: #555555;
 }
 
 
