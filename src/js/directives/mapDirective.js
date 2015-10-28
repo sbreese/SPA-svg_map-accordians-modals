@@ -122,90 +122,203 @@ angular.module('MarriottBreaks')
                 var MapWidth;
                 var MapHeight;
                 var videoDiv = $document.find("#background-video");  // Default is min-height: 690px;
-                if (window.innerWidth < 350) {
-                    pushMapRight = 50;
-                    pushMapDown = -85;
-                    MapWidth = 575;
-                    MapHeight = 800;
-                    videoDiv.height(400);
-                } else if (window.innerWidth < 400) {
-                    pushMapRight = 50;
-                    pushMapDown = 5;
-                    MapWidth = 580;
-                    MapHeight = 700;
-                    videoDiv.height(440);
-                } else if (window.innerWidth < 450) {
-                    pushMapRight = 50;
-                    pushMapDown = 55;
-                    MapWidth = 575;
-                    MapHeight = 700;
-                    videoDiv.height(440);
-                } else if (window.innerWidth < 500){
-                    pushMapRight = 50;
-                    pushMapDown = 100;
-                    MapWidth = 580;
-                    MapHeight = 700;
-                    videoDiv.height(470);
-                } else if (window.innerWidth < 550){
-                    pushMapRight = 50;
-                    pushMapDown = 140;
-                    MapWidth = 580;
-                    MapHeight = 700;
-                    videoDiv.height(470);
-                } else if (window.innerWidth < 600) {
-                    pushMapRight = 40;
-                    pushMapDown = 180;
-                    MapWidth = 575;
-                    MapHeight = 800;
-                    videoDiv.height(500);
-                } else if (window.innerWidth < 650) {
-                    pushMapRight = 30;
-                    pushMapDown = 140;
-                    MapWidth = 620;
-                    MapHeight = 850;
-                    videoDiv.height(540);
-                } else if (window.innerWidth < 700) {
-                    pushMapRight = 30;
-                    pushMapDown = 180;
-                    MapWidth = 620;
-                    MapHeight = 850;
-                    videoDiv.height(530);
-                } else if (window.innerWidth < 800) {
-                    pushMapRight = 20;
-                    pushMapDown = 190;
-                    MapWidth = 630;
-                    MapHeight = 875;
-                    videoDiv.height(570);
-                } else if (window.innerWidth < 900) {
-                    pushMapRight = 10;
-                    pushMapDown = 200;
-                    MapWidth = 640;
-                    MapHeight = 900;
-                    videoDiv.height(620);
-                } else if (window.innerWidth < 1000) {
-                    pushMapRight = -10;
-                    pushMapDown = 237;
-                    MapWidth = 650;
-                    MapHeight = 1000;
-                    videoDiv.height(660);
-                } else if (window.innerWidth < 1100) {
-                    pushMapRight = -20;
-                    pushMapDown = 235;
-                    MapWidth = 670;
-                    MapHeight = 1000;
-                    videoDiv.height(670);
-                } else if (window.innerWidth < 1200) {
-                    pushMapRight = -22;
-                    pushMapDown = 230;
-                    MapWidth = 685;
-                    MapHeight = 1000;
-                    videoDiv.height(680);
-                } else { // > 1200
-                    pushMapRight = -25;
-                    pushMapDown = 230;
-                    MapWidth = 700;
-                    MapHeight = 1065;
-                    videoDiv.height(690);
+                if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                    if (window.innerWidth < 350) {
+                        pushMapRight = 50;
+                        pushMapDown = -15;
+                        MapWidth = 590;
+                        MapHeight = 800;
+                        videoDiv.height(420);
+                    } else if (window.innerWidth < 400) {
+                        pushMapRight = 50;
+                        pushMapDown = 90;
+                        MapWidth = 580;
+                        MapHeight = 700;
+                        videoDiv.height(450);
+                    } else if (window.innerWidth < 450) {
+                        pushMapRight = 50;
+                        pushMapDown = 140;
+                        MapWidth = 575;
+                        MapHeight = 700;
+                        videoDiv.height(480);
+                    } else if (window.innerWidth < 500) {
+                        pushMapRight = 50;
+                        pushMapDown = 150;
+                        MapWidth = 580;
+                        MapHeight = 700;
+                        videoDiv.height(510);
+                    } else if (window.innerWidth < 550) {
+                        pushMapRight = 50;
+                        pushMapDown = 190;
+                        MapWidth = 580;
+                        MapHeight = 700;
+                        videoDiv.height(530);
+                    } else if (window.innerWidth < 600) {
+                        pushMapRight = 40;
+                        pushMapDown = 195;
+                        MapWidth = 575;
+                        MapHeight = 800;
+                        videoDiv.height(540);
+                    } else if (window.innerWidth < 650) {
+                        pushMapRight = 30;
+                        pushMapDown = 200;
+                        MapWidth = 620;
+                        MapHeight = 850;
+                        videoDiv.height(550);
+                    } else if (window.innerWidth < 700) {
+                        pushMapRight = 30;
+                        pushMapDown = 210;
+                        MapWidth = 620;
+                        MapHeight = 850;
+                        videoDiv.height(560);
+                    } else if (window.innerWidth < 750) {
+                        pushMapRight = 30;
+                        pushMapDown = 220;
+                        MapWidth = 620;
+                        MapHeight = 850;
+                        videoDiv.height(565);
+                    } else if (window.innerWidth < 800) {
+                        pushMapRight = 20;
+                        pushMapDown = 230;
+                        MapWidth = 630;
+                        MapHeight = 875;
+                        videoDiv.height(580);
+                    } else if (window.innerWidth < 850) {
+                        pushMapRight = 20;
+                        pushMapDown = 240;
+                        MapWidth = 630;
+                        MapHeight = 875;
+                        videoDiv.height(600);
+                    } else if (window.innerWidth < 900) {
+                        pushMapRight = 10;
+                        pushMapDown = 250;
+                        MapWidth = 640;
+                        MapHeight = 900;
+                        videoDiv.height(620);
+                    } else if (window.innerWidth < 950) {
+                        pushMapRight = 10;
+                        pushMapDown = 260;
+                        MapWidth = 640;
+                        MapHeight = 900;
+                        videoDiv.height(640);
+                    } else if (window.innerWidth < 1000) {
+                        pushMapRight = 10;
+                        pushMapDown = 270;
+                        MapWidth = 650;
+                        MapHeight = 900;
+                        videoDiv.height(660);
+                    } else if (window.innerWidth < 1100) {
+                        pushMapRight = 0;
+                        pushMapDown = 235;
+                        MapWidth = 670;
+                        MapHeight = 1000;
+                        videoDiv.height(670);
+                    } else if (window.innerWidth < 1200) {
+                        pushMapRight = -22;
+                        pushMapDown = 240;
+                        MapWidth = 685;
+                        MapHeight = 1000;
+                        videoDiv.height(680);
+                    } else { // > 1200
+                        pushMapRight = -25;
+                        pushMapDown = 210;
+                        MapWidth = 700;
+                        MapHeight = 1065;
+                        videoDiv.height(690);
+                    }
+                }
+                else {
+                    if (window.innerWidth < 350) {
+                        pushMapRight = 50;
+                        pushMapDown = -85;
+                        MapWidth = 575;
+                        MapHeight = 800;
+                        videoDiv.height(400);
+                    } else if (window.innerWidth < 400) {
+                        pushMapRight = 50;
+                        pushMapDown = 5;
+                        MapWidth = 580;
+                        MapHeight = 700;
+                        videoDiv.height(440);
+                    } else if (window.innerWidth < 450) {
+                        pushMapRight = 50;
+                        pushMapDown = 55;
+                        MapWidth = 575;
+                        MapHeight = 700;
+                        videoDiv.height(440);
+                    } else if (window.innerWidth < 500){
+                        pushMapRight = 50;
+                        pushMapDown = 100;
+                        MapWidth = 580;
+                        MapHeight = 700;
+                        videoDiv.height(470);
+                    } else if (window.innerWidth < 550){
+                        pushMapRight = 50;
+                        pushMapDown = 140;
+                        MapWidth = 580;
+                        MapHeight = 700;
+                        videoDiv.height(470);
+                    } else if (window.innerWidth < 600) {
+                        pushMapRight = 40;
+                        pushMapDown = 180;
+                        MapWidth = 575;
+                        MapHeight = 800;
+                        videoDiv.height(500);
+                    } else if (window.innerWidth < 650) {
+                        pushMapRight = 30;
+                        pushMapDown = 140;
+                        MapWidth = 620;
+                        MapHeight = 850;
+                        videoDiv.height(540);
+                    } else if (window.innerWidth < 700) {
+                        pushMapRight = 30;
+                        pushMapDown = 180;
+                        MapWidth = 620;
+                        MapHeight = 850;
+                        videoDiv.height(530);
+                    } else if (window.innerWidth < 800) {
+                        pushMapRight = 20;
+                        pushMapDown = 190;
+                        MapWidth = 630;
+                        MapHeight = 875;
+                        videoDiv.height(570);
+                    } else if (window.innerWidth < 900) {
+                        pushMapRight = 10;
+                        pushMapDown = 200;
+                        MapWidth = 640;
+                        MapHeight = 900;
+                        videoDiv.height(620);
+                    } else if (window.innerWidth < 950) {
+                        pushMapRight = 10;
+                        pushMapDown = 220;
+                        MapWidth = 640;
+                        MapHeight = 900;
+                        videoDiv.height(640);
+                    } else if (window.innerWidth < 1000) {
+                        pushMapRight = -10;
+                        pushMapDown = 237;
+                        MapWidth = 650;
+                        MapHeight = 1000;
+                        videoDiv.height(660);
+                    } else if (window.innerWidth < 1100) {
+                        pushMapRight = -20;
+                        pushMapDown = 235;
+                        MapWidth = 670;
+                        MapHeight = 1000;
+                        videoDiv.height(670);
+                    } else if (window.innerWidth < 1200) {
+                        pushMapRight = -22;
+                        pushMapDown = 230;
+                        MapWidth = 685;
+                        MapHeight = 1000;
+                        videoDiv.height(680);
+                    } else { // > 1200
+                        pushMapRight = -25;
+                        pushMapDown = 230;
+                        MapWidth = 700;
+                        MapHeight = 1065;
+                        videoDiv.height(690);
+                    }
                 }
 
                 //if (mediaService.isMobile()) {
