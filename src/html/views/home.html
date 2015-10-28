@@ -110,9 +110,9 @@
             <div class="never-miss">
                 <a href="https://www.marriott.com/rewards/myAccount/editEmailPreferences.mi"><img src="assets/images/envelope.png">Get eBreaks</a>
             </div>
-            <a href="https://www.marriott.com/rewards/myAccount/editEmailPreferences.mi>
+            <a href="https://www.marriott.com/rewards/myAccount/editEmailPreferences.mi">
                 <div class="subscribe-button">
-                Subscribe
+                <span>Subscribe</span>
                 </div>
             </a>
         </div>
@@ -171,7 +171,7 @@
 
                 <!-- Top Destination Hotel List -->
                 <div ng-show="(selectedTopDestination)">
-                    <div class="section-separator small"></div>
+                    <!--div class="section-separator small"></div-->
 
                     <ul class="hotel-grid" hotel-item-container is-open="regionAccordionGroups['TOPDEST'].isOpen">
                         <li hotel-item hotel="break" top-destination="true"
@@ -236,7 +236,7 @@
     </div>
 
   <script type="text/ng-template" id="myModalContent.html">
-    <div class="text-center state-list"><h3>{{items.selectedRegionFormatted}} Region</h3>
+    <div class="text-center state-list"><h3>{{items.selectedRegionFormatted}}{{items.RegionLabel}}</h3>
 
                 <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-2 text-center the-grid" vertilize-container>
                     <li ng-repeat="(state, count) in items.regions[items.selectedRegion].states">

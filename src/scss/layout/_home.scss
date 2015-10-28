@@ -100,6 +100,23 @@ h1, h2, h3, h4, h5, h6 {
 
 }
 
+@media only screen and (max-width: 40.0625em) {
+    .reveal-modal {
+        padding: 1.875rem 0 1.875rem 0;
+
+        ul {
+            display: block;
+            padding: 0;
+            margin: 0 0rem;
+        }
+    }
+
+    #term_and_cond_list {
+        margin-left: .5rem;
+        font-size: .8rem;
+        color: #555555;
+    }
+}
 @media only screen and (min-width: 40.0625em) {
     .reveal-modal {
         left: 0;
@@ -107,6 +124,11 @@ h1, h2, h3, h4, h5, h6 {
         max-width: 30rem;
         right: 0;
         width: 80%;
+    }
+    #term_and_cond_list {
+        margin-left: 3.5rem;
+        font-size: .8rem;
+        color: #555555;
     }
 }
 
@@ -376,7 +398,7 @@ button.large, .button.large {
                 font-family: 'Source Sans Pro', sans-serif;
                 text-align: center;
                 color: $region-header-color;
-                padding: 10px 0;
+                padding: 10px 0 10px 32px;
                 margin: 0;
             }
         }
@@ -814,7 +836,7 @@ button.large, .button.large {
     border-spacing: 10px;
     border-collapse: separate;
 }
-.subscribe-bar {
+.subscribe-bar.show-for-medium-up {
     position: relative;
 
     text-align: center;
@@ -826,23 +848,88 @@ button.large, .button.large {
         font-size: 2.2rem;
         margin-right: .7rem;
     }
+    .subscribe-content {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .never-miss {
+        margin-top: .5rem;
+        display: inline-block;
+        line-height: 50px;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: white;
+        font-size: 1.2rem;
+        img {
+            margin: .2rem 1.5rem .5rem .8rem;
+        }
+    }
+    .subscribe-button {
+        margin-left: 1.8rem;
+        display: inline-block;
+        line-height: 35px;
+        padding: .5rem;
+        span {
+            font-family: 'Source Sans Pro', sans-serif;
+            border-radius: 7px;
+            font-size: 23px;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #1ea9e2;
+            color: white;
+            padding: 5px 9px 5px 9px;
+        }
+    }
+}
+.subscribe-bar.show-for-small-only {
+    position: relative;
+
+    text-align: center;
+    background-color: #a5ce4c;
+    height: 4rem;
+
+    i {
+        float: left;
+        font-size: 2.2rem;
+        margin-right: .7rem;
+    }
+    .subscribe-content {
+        max-width: 25rem;
+        margin: 0 auto;
+    }
+    .never-miss {
+        margin-top: .5rem;
+        display: inline-block;
+        line-height: 50px;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: white;
+        font-size: 1.2rem;
+        img {
+            margin: .2rem .7rem .5rem .8rem;
+        }
+    }
+    .subscribe-button {
+        float: right;
+        display: inline-block;
+        line-height: 35px;
+        padding: .5rem;
+        margin: .5rem 1rem 0 0;
+        span {
+            font-family: 'Source Sans Pro', sans-serif;
+            border-radius: 7px;
+            font-size: 23px;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #1ea9e2;
+            color: white;
+            padding: 5px 9px 5px 9px;
+        }
+    }
+
 }
 
-.subscribe-content {
-    width: 90%;
-    margin: 0 auto;
-}
 
 .never-miss {
-    margin-top: .5rem;
-    display: inline-block;
-    line-height: 50px;
-    font-family: 'Source Sans Pro', sans-serif;
-    color: white;
-    font-size: 1.2rem;
-    img {
-        margin: .2rem 1.5rem .5rem 0;
-    }
+
     a:link {
         color: white;
     }
@@ -857,23 +944,6 @@ button.large, .button.large {
 
     a:active {
         color: white;
-    }
-}
-
-.subscribe-button {
-    display: inline-block;
-    margin-left: 20px;
-    line-height: 35px;
-    padding: .5rem;
-    span {
-        font-family: 'Source Sans Pro', sans-serif;
-        border-radius: 7px;
-        font-size: 23px;
-        font-weight: bold;
-        text-decoration: none;
-        background-color: #1ea9e2;
-        color: white;
-        padding: 5px 9px 5px 9px;
     }
 }
 
@@ -953,11 +1023,6 @@ button.large, .button.large {
     a:active {
         color: white;
     }
-}
-#term_and_cond_list {
-    margin-left: 3.5rem;
-    font-size: .8rem;
-    color: #555555;
 }
 
 

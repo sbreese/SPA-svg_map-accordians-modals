@@ -9,8 +9,8 @@
             <a class="hotel-item-link" ng-href="{{hotel.AVAILABILITY_URL}}" ng-click="hotelItemSelected()">
             <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
 
-            <p class="hotel-item-per-night"><strong>{{hotel.PRICE_RANGE}}</strong><small> night</small></p>
-            <p class="hotel-item-original-per-night">{{hotel.ORIGINAL_PRICE_RANGE}}</p>
+            <p class="hotel-item-per-night"><strong>{{hotel.PRICE_RANGE}}</strong> <small>{{hotel.CURRENCY_SYMBOL}} / night</small></p>
+            <p class="hotel-item-original-per-night">{{(hotel.ORIGINAL_PRICE_RANGE?hotel.ORIGINAL_PRICE_RANGE:"&nbsp;")}}</p>
 
                 <button class="{{getButtonClass()}}">Check Availability</button>
             </a>

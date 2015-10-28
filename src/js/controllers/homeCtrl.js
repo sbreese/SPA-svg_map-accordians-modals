@@ -48,7 +48,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             $scope.selectedRegionView = $scope.REGION_VIEWS.MAP;
 
             $scope.showRegionOptions = false;
-            $scope.searchPlaceholder = "Find Deals?";
+            $scope.searchPlaceholder = "Find Deals";
 
         }
         else {
@@ -61,6 +61,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
     $scope.ModalPackage = {};
     $scope.open = function (region) {
         $scope.ModalPackage.selectedRegion = region;
+        $scope.ModalPackage.RegionLabel = (region=="CANADA" || region=="CARRIBEAN & LATIN AMERICA"?"":" Region");
         $scope.ModalPackage.selectedRegionFormatted = region.replace(/\w[^\s-]*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
         $scope.ModalPackage.regions = $scope.regions;
         $scope.ModalPackage.statesService = $scope.statesService;
@@ -133,6 +134,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             // Collapse the item if it is already selected
             var topDestinationResult = ($scope.selectedTopDestination === topDestination) ? null : topDestination;
             selectTopDestination(topDestinationResult);
+            scrollService.scrollToElement($document.find('.top-destination-accordion'));
         };
 
         $scope.isRegionViewActive = function(viewType){
@@ -197,7 +199,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         $scope.stateRegionButtonClick = function(regionOrState){
             //expandRegion(regionOrState);
-            console.log("Here is what you clicked: ", regionOrState);
             var regionOrStateSpaces = regionOrState.replace(/_/g, ' ');
 
             if ($scope.regions[regionOrStateSpaces]) {
@@ -258,7 +259,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         };
 
         $scope.stateButtonClick = function(regionOrState){
-            console.log("Here is what you clicked: ", regionOrState);
             var regionOrStateSpaces = regionOrState.replace(/_/g, ' ');
             if ($scope.regions[regionOrStateSpaces]) {
                 $scope.open(regionOrStateSpaces);
@@ -300,6 +300,9 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         $scope.formatRegionName = function(region){
             //var regionFormatted = region.toLowerCase(); \w\S*
             //return regionFormatted.charAt(0).toUpperCase() + regionFormatted.slice(1);
+            if ($scope.isMobile && region == "CARRIBEAN & LATIN AMERICA") {
+                region = "Carribean & Mexico";
+            }
             return region.replace(/\w[^\s-]*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
         };
 

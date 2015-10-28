@@ -5,16 +5,22 @@
 .hotel-grid {
     @include block-grid(1);
 
-    @media screen and (min-width:450px) {
+    @media screen and (min-width:300px) {
         @include block-grid(2);
     }
 
-    @media #{$medium-up} {
+    /*@media #{$small-up} {*/
+    @media screen and (min-width:500px) {
         @include block-grid(3);
     }
 
-    @media #{$large-up} {
+    /*@media #{$medium-up} {*/
+    @media screen and (min-width:800px) {
         @include block-grid(4);
     }
+
+    /*@media #{$large-up} {
+        @include block-grid(4);
+    }*/
 
 }

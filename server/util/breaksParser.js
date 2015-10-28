@@ -239,10 +239,10 @@ function formatPerNight(currentBreak) {
     var priceRange;
 
     // start with the currency symbol
-    priceRange = currentBreak.CURRENCY_SYMBOL;
+    //priceRange = currentBreak.CURRENCY_SYMBOL;
 
     // add the min rate
-    priceRange += currentBreak.PROPERTY_MIN_RATE + currentBreak.PROPERTY_MIN_ASTERISK;
+    priceRange = currentBreak.PROPERTY_MIN_RATE + currentBreak.PROPERTY_MIN_ASTERISK;
 
     // add the max rate (add a + sign if there is none)
     if (currentBreak.PROPERTY_MAX_RATE) {
