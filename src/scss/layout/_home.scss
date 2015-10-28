@@ -39,7 +39,7 @@ h1, h2, h3, h4, h5, h6 {
 #region-map {
     position: relative;
     /*opacity: 0.8;*/
-    /*margin-top: 55px;*/
+    margin-top: 65px;
 }
 
 #map-absolute {
@@ -63,7 +63,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     position: absolute;
-    top: 0;
+    top: 65px;
     left: 0;
     z-index: 0;
     background: -webkit-linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.6)); /* For Safari 5.1 to 6.0 */
@@ -76,7 +76,8 @@ h1, h2, h3, h4, h5, h6 {
     left: 10px;
     /*top: 10px;*/
     z-index: 10;
-    top: 15px;
+    /*top: 15px;*/
+    top: 80px;
     font-size: 2rem;
     padding: 5px 20px;
     border-radius: 10px;
@@ -116,6 +117,32 @@ h1, h2, h3, h4, h5, h6 {
         font-size: .8rem;
         color: #555555;
     }
+
+
+    ::-webkit-input-placeholder {
+        font-size: 75%;
+        vertical-align: middle;
+    }
+
+    :-moz-placeholder { /* Firefox 18- */
+        font-size: 75%;
+        vertical-align: middle;
+    }
+
+    ::-moz-placeholder {  /* Firefox 19+ */
+        font-size: 75%;
+        vertical-align: middle;
+    }
+
+    :-ms-input-placeholder {
+        font-size: 75%;
+        vertical-align: middle;
+    }
+    #top-dest-container {
+        p {
+            font-size: .9rem !important;
+        }
+    }
 }
 @media only screen and (min-width: 40.0625em) {
     .reveal-modal {
@@ -130,20 +157,25 @@ h1, h2, h3, h4, h5, h6 {
         font-size: .8rem;
         color: #555555;
     }
+    #top-dest-container {
+        p {
+            font-size: 1.2rem !important;
+        }
+    }
 }
 
 .countdown-bell-container {
     position: absolute;
     right: 45px;
-    /*top: 10px;*/
-    top: 40px;
+    /*top: 10px; 65*/
+    top: 105px;
     z-index: 10;
 
     #offer-days {
         color: #ac1500;
         position: absolute;
-        right: 35px;
-        top: 10px;
+        right: 36px;
+        top: 11px;
         font-size: 2.3rem;
     }
     #days-label {
@@ -167,7 +199,7 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 0;
 }
 .region-icon-background-mobile {
-    top: 0;
+    top: 65px;
     left: 0;
 }
 
@@ -249,7 +281,7 @@ h1, h2, h3, h4, h5, h6 {
         background-color: #A5CE4C;
         cursor: pointer;
         float: left;
-        height: 51px;
+        height: 50px;
         margin: 0 0 0 0;
         text-align: center;
         width: 80px;
@@ -412,12 +444,12 @@ button.large, .button.large {
                 font-family: 'Source Sans Pro', sans-serif;
                 text-align: center;
                 color: $region-header-color;
-                padding: 10px 0 10px 32px;
+                padding: 10px 0 10px 0;
                 margin: 0;
             }
         }
 
-        h3 {
+        h4 {
             font-family: 'Open Sans', sans-serif;
             margin-bottom: 20px;
             text-align: center;
@@ -496,7 +528,6 @@ button.large, .button.large {
     }
 
     p {
-        font-size: 1.2rem;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
@@ -524,8 +555,18 @@ button.large, .button.large {
         margin-top: 1rem;
         li {
             padding-bottom: 0px;
+            .button.large, .button.large {
+                padding: .1rem .1rem .1rem .1rem !important;
+                font-size: 1.25rem;
+                height: 30px !important;
+            }
             a {
-                margin: 15;
+
+                p{
+                    line-height: 1;
+                    height: 45px;
+                }
+
             }
         }
     }
@@ -582,7 +623,7 @@ button.large, .button.large {
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1rem;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
@@ -606,11 +647,13 @@ button.large, .button.large {
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
         line-height: 1;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
     }
 }
 
@@ -632,11 +675,13 @@ button.large, .button.large {
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
         line-height: 1;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
     }
 }
 
@@ -659,11 +704,13 @@ button.large, .button.large {
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
         line-height: 1;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
     }
 }
 
@@ -686,10 +733,12 @@ button.large, .button.large {
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
     }
 }
 
@@ -712,10 +761,12 @@ button.large, .button.large {
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
     }
 }
 
@@ -737,10 +788,12 @@ button.large, .button.large {
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
     }
 }
 
@@ -762,10 +815,12 @@ button.large, .button.large {
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
     }
 }
 .top-destination-button_7 {
@@ -786,10 +841,12 @@ button.large, .button.large {
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
     }
 }
 .top-destination-button_8 {
@@ -810,10 +867,12 @@ button.large, .button.large {
     }
 
     p {
-        font-size: 1.4rem;
+        font-size: 1.2rem;
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        font-family: 'Open Sans', sans-serif;
+        font-weight: bold;
     }
 }
 
@@ -853,6 +912,7 @@ button.large, .button.large {
     border-spacing: 10px;
     border-collapse: separate;
 }
+
 .subscribe-bar.show-for-medium-up {
     position: relative;
 
@@ -877,7 +937,7 @@ button.large, .button.large {
         color: white;
         font-size: 1.2rem;
         img {
-            margin: .2rem 1.5rem .5rem .8rem;
+            margin: .2rem 1.5rem .5rem 0;
         }
     }
     .subscribe-button {
@@ -910,23 +970,29 @@ button.large, .button.large {
         margin-right: .7rem;
     }
     .subscribe-content {
+        display: inline-block;
+        white-space: nowrap;
         max-width: 25rem;
         margin: 0 auto;
+        max-height: 60px;
     }
     .never-miss {
-        margin-top: .5rem;
+
         display: inline-block;
+        float: left;
         line-height: 50px;
         font-family: 'Source Sans Pro', sans-serif;
         color: white;
         font-size: 1.2rem;
+        margin-top: .6rem;
         img {
             margin: .2rem .7rem .5rem .8rem;
         }
     }
+    a {display: inline-block;}
     .subscribe-button {
-        float: right;
         display: inline-block;
+        float: right;
         line-height: 35px;
         padding: .5rem;
         margin: .5rem 1rem 0 0;
@@ -1021,7 +1087,7 @@ button.large, .button.large {
 }
 .big-text {
     font-family: 'Open Sans', sans-serif;
-    font-size: 2rem;
+    font-size: 1.7rem;
     text-shadow: 0 2px 3px #333333;
 }
 .small-text {
@@ -1046,141 +1112,95 @@ button.large, .button.large {
 }
 
 
-/* Marriott Header & Footer
-#header-container {
-    background-color: rgb(145, 145, 145);
-    background-image: linear-gradient(rgb(119, 119, 119), rgb(73, 73, 73));
-    border-bottom-color: rgb(28, 28, 28);
-    border-bottom-style: none;
-    border-bottom-width: 0px;
-    border-image-outset: 0px;
-    border-image-repeat: stretch;
-    border-image-slice: 100%;
-    border-image-source: none;
-    border-image-width: 1;
-    border-left-color: rgb(28, 28, 28);
-    border-left-style: none;
-    border-left-width: 0px;
-    border-right-color: rgb(28, 28, 28);
-    border-right-style: none;
-    border-right-width: 0px;
-    border-top-color: rgb(28, 28, 28);
-    border-top-style: none;
-    border-top-width: 0px;
-    box-sizing: border-box;
-    color: rgb(28, 28, 28);
-    display: block;
-    font-family: 'Source Sans Pro', SourceSansPro-Regular, Calibri, Arial, Helvetica, Helvetica, sans-serif;
-    font-size: 16px;
-    font-stretch: normal;
-    font-style: normal;
-    font-variant: normal;
-    font-weight: normal;
-    height: 55px;
-    line-height: 16px;
-    margin-bottom: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-    margin-top: 0px;
-    padding-bottom: 0px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 0px;
-    vertical-align: baseline;
-}
+/* Marriott Header & Footer */
+/* CSS for the static Footer */
+header, footer {
+    html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after, q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
 
-.l-main-logo {
-    display: inline-block;
-    height: 100%;
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem;
-    padding: 1rem 0.5625rem 1rem 0.8125rem;
-    color: #fff;
-    text-decoration: none;
-    img {
-    width: 130px;
-    vertical-align: baseline;
+    .clearfix:after {
+        content: ".";
+        display: block;
+        clear: both;
+        visibility: hidden;
+        line-height: 0;
+        height: 0;
+    }
+    .clearfix {
+        display: inline-block;
+    }
+    html[xmlns] .clearfix {
+        display: block;
+    }
+    * html .clearfix {
+        height: 1%;
+    }
+
+    body {
+        font-size: 16px;
+        font-family: "Source Sans Pro", SourceSansPro-Regular, "Calibri", Arial, "Helvetica", Helvetica, sans-serif;
+        color: #1c1c1c;
+    }
+
+    .l-float-left {
+        float: left;
+    }
+    .l-float-right {
+        float: right;
+    }
+    .l-padding-top-quarter {
+        padding-top: 0.25em;
+    }
+    .l-padding-right {
+        padding-right: 1em;
+    }
+    .t-uppercase-small {
+        text-transform: uppercase;
+    }
+    .t-border-top-lightstGry {
+        border-top: 1px solid #ededed;
     }
 }
+/* Footer treatment */
+footer {width: 100%;max-width: 1024px;margin: 1rem auto;text-align: center;}
+#utilities-legal li {display: inline-block;float: none;margin: 0 0.675rem 0;padding:0;}
+#t-legal-footer {padding:1.25em 0 0;}
+#t-legal-footer a:link {text-decoration: none;}
+#t-legal-footer a:hover {text-decoration: underline;}
+#t-legal-footer a,#t-legal-footer a:link,#t-legal-footer a:visited,#t-legal-footer a:hover {font-size: 0.75em;color: #494949;}
+.t-copyright p {font-size: 0.625em;line-height: 1em;margin: 0.675rem 0 0 0.675rem;color: #777;}
 
-#marriott-link {
-    margin-top: 15px;
-    margin-right: 7px;
-    color: white;
-    float: right;
-}
-
-
-#footer {
-    background: transparent;
-    color: #ededed;
-    font: inherit;
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 0 0 2em 0.5em;
-}
-footer {
-    font: 16px/1em "Source Sans Pro",SourceSansPro-Regular,"Calibri",Arial,"Helvetica",Helvetica,sans-serif;
-    font-size: 1rem;
-    background-color: #919191;
-    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF777777', endColorstr='#FF494949');
-    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #777777), color-stop(100%, #494949));
-    background-image: -webkit-linear-gradient(#777777,#494949);
-    background-image: -moz-linear-gradient(#777777,#494949);
-    background-image: -o-linear-gradient(#777777,#494949);
-    background-image: linear-gradient(#777777,#494949);
-    margin: 1.25em 0 0;
-
-    ul {
-    list-style: none;
-  }
-}
-#footer #t-legal-footer a, #footer #t-legal-footer a:link, #footer #t-legal-footer a:visited, #footer #t-legal-footer a:hover {
-    font-size: 0.75em;
-}
-#footer #t-legal-footer {
-    padding: 1.25em 0 0;
-    text-transform: uppercase;
-}
-#footer #utilities-legal li {
-    float: none;
-    display: inline-block;
-    margin: 0 0.625rem 0 0;
-    padding: 0;
-}
-#footer p, body.l-responsive #footer li, body.l-responsive #footer dl {
-    font-size: 1em;
-}
-#footer #t-legal-footer .t-copyright p {
-    font-size: 0.625em;
-    line-height: 1em;
-    margin: 0;
-    padding: 0;
-}
-#footer a, #footer a:link, #footer a:visited {
-    color: #ededed;
-    text-decoration: none;
-}
-#footer .t-copyright {
-    color: #d2d2d2;
-}
-#footer .t-legal-utility-links, body.l-responsive #footer .t-copyright {
-    display: block;
-    float: none;
-    margin: 0 auto 0.625rem;
-    text-align: center;
-    width: 90%;
-}
-ol, ul, li, f {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
-}
-#footer .t-legal-utility-links, body.l-responsive #footer .t-copyright {
-    text-align: left;
-    width: 100%;
-}
-*/
+/* Header treatment */
+header {width:100%;}
+.t-header {height: 4.0625rem;background-color: #919191;background-image: -webkit-linear-gradient(#777,#494949);background-image: -moz-linear-gradient(#777,#494949);background-image: -o-linear-gradient(#777,#494949);background-image: linear-gradient(#777,#494949);color:#fff;}
+.t-header a:link, .t-header a:visited, .t-header a:active,.t-header a:hover {color:#fff;text-decoration: none;}
+.t-header a:hover {text-decoration: underline;}
+.m-logo {padding: 1.05rem 0 0 1rem;}
+.l-main-logo img{width: 130px;}

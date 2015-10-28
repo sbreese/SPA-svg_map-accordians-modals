@@ -10,7 +10,7 @@
     }
 
     /*@media #{$small-up} {*/
-    @media screen and (min-width:500px) {
+    @media screen and (min-width:550px) {
         @include block-grid(3);
     }
 
