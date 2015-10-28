@@ -6,8 +6,7 @@ angular.module('MarriottBreaks').factory('cookieService', [
     function($cookies){
 
         var COOKIE_KEYS = {
-            LAST_VISITED: 'lastVisited',
-            LAST_QUERY: 'lastQuery'
+            LAST_VISITED: 'lastVisited'
         };
 
         var defaultOptions = {
@@ -38,19 +37,6 @@ angular.module('MarriottBreaks').factory('cookieService', [
 
             removeLastVisitedHotel: function(){
                 $cookies.remove(COOKIE_KEYS.LAST_VISITED, defaultOptions);
-            },
-
-            // LAST QUERY -----------------
-            saveLastQuery: function(value){
-                $cookies.put(COOKIE_KEYS.LAST_QUERY, value, defaultOptions);
-            },
-
-            getLastQuery: function(){
-                return $cookies.get(COOKIE_KEYS.LAST_QUERY);
-            },
-
-            removeLastQuery: function(){
-                return $cookies.remove(COOKIE_KEYS.LAST_QUERY);
             }
 
         };

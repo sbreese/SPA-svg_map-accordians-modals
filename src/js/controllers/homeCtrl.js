@@ -23,8 +23,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         $scope.breaksDataLoaded = false;
         // start with search disabled until we load breaks
         $scope.disableSearch = true;
-        // Keep track of the last query the user searched with
-        var lastQuery = null;
 
         $scope.isMobile = mediaService.isMobile();
 
@@ -179,18 +177,8 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             return deferred.promise;
         };
 
-        $scope.inputChanged = function(query){
-            // save the last query the user searched with
-            lastQuery = $scope.selectedBreak;
-        };
-
         $scope.inputItemSelected = function($model){
             if ($model){
-                // save the last query in a cookie
-                if (lastQuery){
-                    cookieService.saveLastQuery(lastQuery);
-                }
-
                 //$window.location.href = $model.PROPERTY_PAGE_URL;
                 expandRegion($model.REGION);
                 scrollService.scrollToState($model.PROPERTY_STATE);
@@ -309,7 +297,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         // Load the previous search info on pageshow since initialize won't be called again if bfcache (back/forward caching) is being used.
         angular.element($window).on('pageshow', function(){
             $scope.$apply(function(){
-                reloadLastQuery();
                 $scope.disableSearch = false;
             });
         });
@@ -332,24 +319,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             breaksService.get().then(getBreaksSuccess, getBreaksFail);
             // get the schema data and inject it into a script tag
             schemaService.getAndInjectSchemaData();
-
-            // reload the last query the user searched by (if available)
-            reloadLastQuery();
-        }
-
-        function reloadLastQuery() {
-            // read the lastQuery cookie value
-            var lastQueryCookieValue = cookieService.getLastQuery();
-            if (lastQueryCookieValue){
-                // set the lastQuery variable to the one in the cookie. This is in case the user clicks the dropdown
-                // and selects another hotel without changing the value
-                lastQuery = lastQueryCookieValue;
-
-                $scope.selectedBreak = lastQuery;
-
-                // remove the cookie so it doesn't load again (unless the user uses the search again)
-                cookieService.removeLastQuery();
-            }
         }
 
         // update controller options based on media size
