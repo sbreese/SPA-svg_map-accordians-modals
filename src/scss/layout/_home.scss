@@ -295,8 +295,9 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Coverride Button Padding to match comp */
 button.large, .button.large {
-    padding: .7rem .2rem .7rem .2rem;
+    padding: .2rem .1rem .2rem .1rem;
     font-size: 1.25rem;
+    max-height: 52px;
 }
 
 .column + .column:last-child,
@@ -535,7 +536,7 @@ button.large, .button.large {
     padding: 0;
     margin: 0 1rem; }
 .region-container {
-
+    margin-top: 12rem;
     ul {margin: 1rem; }
     li {
         max-height: 90px;
@@ -609,6 +610,7 @@ button.large, .button.large {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        line-height: 1;
     }
 }
 
@@ -634,6 +636,7 @@ button.large, .button.large {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        line-height: 1;
     }
 }
 
@@ -660,6 +663,7 @@ button.large, .button.large {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        line-height: 1;
     }
 }
 
@@ -838,7 +842,7 @@ button.large, .button.large {
     }
 }
 #top-dest-container {
-    margin-top: 1.4rem;
+    margin: 1.4rem 10% 0 10%;
     [class*="block-grid-"] > li {
         display: block;
         float: left;
@@ -976,8 +980,10 @@ button.large, .button.large {
 }
 
 .your-ebreaks-bar{
+    display: flex;
+    justify-content: center;
     background-image: url("../assets/images/bg_ebreaks_blue_wavy.png");
-    position: relative;
+
     text-align: center;
     background-color: #20b0e4;
     height: 4.6rem;
@@ -997,6 +1003,7 @@ button.large, .button.large {
 }
 
 .ways-to-book-content {
+    align-self: center;
     width: 90%;
     margin: 0 auto;
 }

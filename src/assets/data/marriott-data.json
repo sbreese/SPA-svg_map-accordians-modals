@@ -393,7 +393,7 @@
       "PROPERTY_CITY_STATE": "Fountain Valley, CA",
       "FULL_ADDRESS": "9950 Slater Avenue, Fountain Valley, CA 92708",
       "SEARCH_FIELD": "ANAHEIM-ORANGE COUNTYCALIFORNIAFOUNTAIN VALLEYCA92708PACIFIC",
-      "PRICE_RANGE": "111-127*",
+      "PRICE_RANGE": "111-127",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -573,7 +573,7 @@
       "PROPERTY_CITY_STATE": "Boulder, CO",
       "FULL_ADDRESS": "4710 Pearl East Circle, Boulder, CO 80301",
       "SEARCH_FIELD": "BOULDERCOLORADOBOULDERCO80301MOUNTAIN",
-      "PRICE_RANGE": "111-151*",
+      "PRICE_RANGE": "111-151",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -645,7 +645,7 @@
       "PROPERTY_CITY_STATE": "Boulder, CO",
       "FULL_ADDRESS": "3030 Center Green Drive, Boulder, CO 80301",
       "SEARCH_FIELD": "BOULDERCOLORADOBOULDERCO80301MOUNTAIN",
-      "PRICE_RANGE": "127-159*",
+      "PRICE_RANGE": "127-159",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -825,7 +825,7 @@
       "PROPERTY_CITY_STATE": "Denver, CO",
       "FULL_ADDRESS": "1475 S. Colorado Blvd, Denver, CO 80222",
       "SEARCH_FIELD": "DENVERCOLORADODENVERCO80222MOUNTAIN",
-      "PRICE_RANGE": "111-119*",
+      "PRICE_RANGE": "111-119",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -861,7 +861,7 @@
       "PROPERTY_CITY_STATE": "Denver, CO",
       "FULL_ADDRESS": "18350 East 68th Avenue, Denver, CO 80249",
       "SEARCH_FIELD": "DENVERCOLORADODENVERCO80249MOUNTAIN",
-      "PRICE_RANGE": "95-111*",
+      "PRICE_RANGE": "95-111",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -1077,7 +1077,7 @@
       "PROPERTY_CITY_STATE": "Lakewood, CO",
       "FULL_ADDRESS": "7050 West Hampden Avenue, Lakewood, CO 80227",
       "SEARCH_FIELD": "DENVERCOLORADOLAKEWOODCO80227MOUNTAIN",
-      "PRICE_RANGE": "103-107*",
+      "PRICE_RANGE": "103-107",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -1473,7 +1473,7 @@
       "PROPERTY_CITY_STATE": "Boise, ID",
       "FULL_ADDRESS": "424 East ParkCenter Blvd, Boise, ID 83706",
       "SEARCH_FIELD": "BOISEIDAHOBOISEID83706PACIFIC",
-      "PRICE_RANGE": "87-95*",
+      "PRICE_RANGE": "87-95",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -1509,7 +1509,7 @@
       "PROPERTY_CITY_STATE": "Boise, ID",
       "FULL_ADDRESS": "1401 S Lusk Pl, Boise, ID 83706",
       "SEARCH_FIELD": "BOISEIDAHOBOISEID83706PACIFIC",
-      "PRICE_RANGE": "95-127*",
+      "PRICE_RANGE": "95-127",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -1545,7 +1545,7 @@
       "PROPERTY_CITY_STATE": "Chicago, IL",
       "FULL_ADDRESS": "8500 West Bryn Mawr Avenue, Chicago, IL 60631",
       "SEARCH_FIELD": "CHICAGOILLINOISCHICAGOIL60631NORTH CENTRAL",
-      "PRICE_RANGE": "103*+",
+      "PRICE_RANGE": "103",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -1761,7 +1761,7 @@
       "PROPERTY_CITY_STATE": "Rosemont, IL",
       "FULL_ADDRESS": "7101 Chestnut Street, Rosemont, IL 60018",
       "SEARCH_FIELD": "CHICAGOILLINOISROSEMONTIL60018NORTH CENTRAL",
-      "PRICE_RANGE": "151-159*",
+      "PRICE_RANGE": "151-159",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -1977,7 +1977,7 @@
       "PROPERTY_CITY_STATE": "Lafayette, IN",
       "FULL_ADDRESS": "150 Fairington Ave, Lafayette, IN 47905",
       "SEARCH_FIELD": "MULTIPLE CITIESINDIANALAFAYETTEIN47905NORTH CENTRAL",
-      "PRICE_RANGE": "103-111*",
+      "PRICE_RANGE": "103-111",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2049,7 +2049,7 @@
       "PROPERTY_CITY_STATE": "Lafayette, IN",
       "FULL_ADDRESS": "163 Frontage Road, Lafayette, IN 47905",
       "SEARCH_FIELD": "MULTIPLE CITIESINDIANALAFAYETTEIN47905NORTH CENTRAL",
-      "PRICE_RANGE": "87-95*",
+      "PRICE_RANGE": "87-95",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2373,7 +2373,7 @@
       "PROPERTY_CITY_STATE": "Boston, MA",
       "FULL_ADDRESS": "88 Exeter Street, Boston, MA 2116",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSBOSTONMA2116NEW ENGLAND",
-      "PRICE_RANGE": "223-247*",
+      "PRICE_RANGE": "223-247",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2517,7 +2517,7 @@
       "PROPERTY_CITY_STATE": "Woburn, MA",
       "FULL_ADDRESS": "285 Mishawum Road, Woburn, MA 1801",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSWOBURNMA1801NEW ENGLAND",
-      "PRICE_RANGE": "103-111*",
+      "PRICE_RANGE": "103-111",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2553,7 +2553,7 @@
       "PROPERTY_CITY_STATE": "Foxborough, MA",
       "FULL_ADDRESS": "250 Foxborough Blvd, Foxborough, MA 2035",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSFOXBOROUGHMA2035NEW ENGLAND",
-      "PRICE_RANGE": "95-123*",
+      "PRICE_RANGE": "95-123",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2589,7 +2589,7 @@
       "PROPERTY_CITY_STATE": "Boston, MA",
       "FULL_ADDRESS": "296 State Street, Boston, MA 2109",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSBOSTONMA2109NEW ENGLAND",
-      "PRICE_RANGE": "239*+",
+      "PRICE_RANGE": "239",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2949,7 +2949,7 @@
       "PROPERTY_CITY_STATE": "Boston, MA",
       "FULL_ADDRESS": "34-44 Charles River Avenue, Boston, MA 2129",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSBOSTONMA2129NEW ENGLAND",
-      "PRICE_RANGE": "215-247*",
+      "PRICE_RANGE": "215-247",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2985,7 +2985,7 @@
       "PROPERTY_CITY_STATE": "Woburn, MA",
       "FULL_ADDRESS": "240 Mishawum Road, Woburn, MA 1801",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSWOBURNMA1801NEW ENGLAND",
-      "PRICE_RANGE": "95-159*",
+      "PRICE_RANGE": "95-159",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3021,7 +3021,7 @@
       "PROPERTY_CITY_STATE": "Waltham, MA",
       "FULL_ADDRESS": "387 Winter Street, Waltham, MA 2451",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSWALTHAMMA2451NEW ENGLAND",
-      "PRICE_RANGE": "127*+",
+      "PRICE_RANGE": "127-150",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3165,7 +3165,7 @@
       "PROPERTY_CITY_STATE": "Grand Rapids, MI",
       "FULL_ADDRESS": "4443 28th Street SE, Grand Rapids, MI 49512",
       "SEARCH_FIELD": "GRAND RAPIDSMICHIGANGRAND RAPIDSMI49512NORTH CENTRAL",
-      "PRICE_RANGE": "95-111*",
+      "PRICE_RANGE": "95-111",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3381,7 +3381,7 @@
       "PROPERTY_CITY_STATE": "Manchester, NH",
       "FULL_ADDRESS": "860 South Porter Street, Manchester, NH 3103",
       "SEARCH_FIELD": "MANCHESTER-CONCORDNEW HAMPSHIREMANCHESTERNH3103NEW ENGLAND",
-      "PRICE_RANGE": "87*+",
+      "PRICE_RANGE": "87",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3453,7 +3453,7 @@
       "PROPERTY_CITY_STATE": "Keene, NH",
       "FULL_ADDRESS": "75 Railroad Street, Keene, NH 3431",
       "SEARCH_FIELD": "MULTIPLE CITIESNEW HAMPSHIREKEENENH3431NEW ENGLAND",
-      "PRICE_RANGE": "791-799*",
+      "PRICE_RANGE": "791-799",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3561,7 +3561,7 @@
       "PROPERTY_CITY_STATE": "Lake Placid, NY",
       "FULL_ADDRESS": "5920 Cascade Road, Lake Placid, NY 12946",
       "SEARCH_FIELD": "MULTIPLE CITIESNEW YORKLAKE PLACIDNY12946NEW ENGLAND",
-      "PRICE_RANGE": "111-119*",
+      "PRICE_RANGE": "111-119",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3597,7 +3597,7 @@
       "PROPERTY_CITY_STATE": "Syracuse, NY",
       "FULL_ADDRESS": "300 West Fayette Street, Syracuse, NY 13202",
       "SEARCH_FIELD": "MULTIPLE CITIESNEW YORKSYRACUSENY13202NEW ENGLAND",
-      "PRICE_RANGE": "151-175*",
+      "PRICE_RANGE": "151-175",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3813,7 +3813,7 @@
       "PROPERTY_CITY_STATE": "Greensboro, NC",
       "FULL_ADDRESS": "6006 Landmark Center Blvd, Greensboro, NC 27407",
       "SEARCH_FIELD": "GREENSBORONORTH CAROLINAGREENSBORONC27407SOUTHEAST",
-      "PRICE_RANGE": "111-119*",
+      "PRICE_RANGE": "111-119",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -4065,7 +4065,7 @@
       "PROPERTY_CITY_STATE": "Westlake, OH",
       "FULL_ADDRESS": "25050 Sperry Drive, Westlake, OH 44145",
       "SEARCH_FIELD": "CLEVELANDOHIOWESTLAKEOH44145NORTH CENTRAL",
-      "PRICE_RANGE": "99-103*",
+      "PRICE_RANGE": "99-103",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -4101,7 +4101,7 @@
       "PROPERTY_CITY_STATE": "Westlake, OH",
       "FULL_ADDRESS": "25052 Sperry Drive, Westlake, OH 44145",
       "SEARCH_FIELD": "CLEVELANDOHIOWESTLAKEOH44145NORTH CENTRAL",
-      "PRICE_RANGE": "103*+",
+      "PRICE_RANGE": "103",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -4173,7 +4173,7 @@
       "PROPERTY_CITY_STATE": "Harrisburg, PA",
       "FULL_ADDRESS": "15 Capital Drive at I-81 Progress Avenue Exit 69, Harrisburg, PA 17110",
       "SEARCH_FIELD": "HARRISBURGPENNSYLVANIAHARRISBURGPA17110NEW ENGLAND",
-      "PRICE_RANGE": "111-135*",
+      "PRICE_RANGE": "111-135",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -4209,7 +4209,7 @@
       "PROPERTY_CITY_STATE": "Carlisle, PA",
       "FULL_ADDRESS": "1 Hampton Court, Carlisle, PA 17013",
       "SEARCH_FIELD": "HARRISBURGPENNSYLVANIACARLISLEPA17013NEW ENGLAND",
-      "PRICE_RANGE": "111-119*",
+      "PRICE_RANGE": "111-119",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -4245,7 +4245,7 @@
       "PROPERTY_CITY_STATE": "York, PA",
       "FULL_ADDRESS": "2799 Concord Road, York, PA 17402",
       "SEARCH_FIELD": "HARRISBURGPENNSYLVANIAYORKPA17402NEW ENGLAND",
-      "PRICE_RANGE": "103-111*",
+      "PRICE_RANGE": "103-111",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -4281,7 +4281,7 @@
       "PROPERTY_CITY_STATE": "York, PA",
       "FULL_ADDRESS": "2789 Concord Road, York, PA 17402",
       "SEARCH_FIELD": "HARRISBURGPENNSYLVANIAYORKPA17402NEW ENGLAND",
-      "PRICE_RANGE": "111-127*",
+      "PRICE_RANGE": "111-127",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -4461,7 +4461,7 @@
       "PROPERTY_CITY_STATE": "DuBois, PA",
       "FULL_ADDRESS": "2219 Bee Line Highway, DuBois, PA 15801",
       "SEARCH_FIELD": "MULTIPLE CITIESPENNSYLVANIADUBOISPA15801NEW ENGLAND",
-      "PRICE_RANGE": "79-87*",
+      "PRICE_RANGE": "79-87",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -4713,7 +4713,7 @@
       "PROPERTY_CITY_STATE": "Huntingdon, PA",
       "FULL_ADDRESS": "9970 Shaner Boulevard, Huntingdon, PA 16652",
       "SEARCH_FIELD": "MULTIPLE CITIESPENNSYLVANIAHUNTINGDONPA16652NEW ENGLAND",
-      "PRICE_RANGE": "103*+",
+      "PRICE_RANGE": "103",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -4785,7 +4785,7 @@
       "PROPERTY_CITY_STATE": "Berwyn, PA",
       "FULL_ADDRESS": "600 West Swedesford Road, Berwyn, PA 19312",
       "SEARCH_FIELD": "PHILADELPHIAPENNSYLVANIABERWYNPA19312NEW ENGLAND",
-      "PRICE_RANGE": "111-175*",
+      "PRICE_RANGE": "111-175",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5037,7 +5037,7 @@
       "PROPERTY_CITY_STATE": "Horsham, PA",
       "FULL_ADDRESS": "3 Walnut Grove Drive, Horsham, PA 19044",
       "SEARCH_FIELD": "PHILADELPHIAPENNSYLVANIAHORSHAMPA19044NEW ENGLAND",
-      "PRICE_RANGE": "111-135*",
+      "PRICE_RANGE": "111-135",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5073,7 +5073,7 @@
       "PROPERTY_CITY_STATE": "Ridley Park, PA",
       "FULL_ADDRESS": "201 Industrial Highway, Ridley Park, PA 19078",
       "SEARCH_FIELD": "PHILADELPHIAPENNSYLVANIARIDLEY PARKPA19078NEW ENGLAND",
-      "PRICE_RANGE": "119-127*",
+      "PRICE_RANGE": "119-127",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5145,7 +5145,7 @@
       "PROPERTY_CITY_STATE": "Willow Grove, PA",
       "FULL_ADDRESS": "2350 Easton Road Route 611, Willow Grove, PA 19090",
       "SEARCH_FIELD": "PHILADELPHIAPENNSYLVANIAWILLOW GROVEPA19090NEW ENGLAND",
-      "PRICE_RANGE": "95-135*",
+      "PRICE_RANGE": "95-135",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5181,7 +5181,7 @@
       "PROPERTY_CITY_STATE": "Willow Grove, PA",
       "FULL_ADDRESS": "2480 Maryland Road, Willow Grove, PA 19090",
       "SEARCH_FIELD": "PHILADELPHIAPENNSYLVANIAWILLOW GROVEPA19090NEW ENGLAND",
-      "PRICE_RANGE": "95-135*",
+      "PRICE_RANGE": "95-135",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5325,7 +5325,7 @@
       "PROPERTY_CITY_STATE": "Rapid City, SD",
       "FULL_ADDRESS": "1314 N. Elk Vale Road, Rapid City, SD 57703",
       "SEARCH_FIELD": "MULTIPLE CITIESSOUTH DAKOTARAPID CITYSD57703NORTH CENTRAL",
-      "PRICE_RANGE": "79*+",
+      "PRICE_RANGE": "79",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5433,7 +5433,7 @@
       "PROPERTY_CITY_STATE": "El Paso, TX",
       "FULL_ADDRESS": "7514 Remcon Circle, El Paso, TX 79912",
       "SEARCH_FIELD": "EL PASOTEXASEL PASOTX79912SOUTHWEST",
-      "PRICE_RANGE": "71-75*",
+      "PRICE_RANGE": "71-75",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5541,7 +5541,7 @@
       "PROPERTY_CITY_STATE": "Norfolk, VA",
       "FULL_ADDRESS": "520 Plume Street, Norfolk, VA 23510",
       "SEARCH_FIELD": "NORFOLK-VIRGINIA BEACHVIRGINIANORFOLKVA23510SOUTHEAST",
-      "PRICE_RANGE": "87-103*",
+      "PRICE_RANGE": "87-103",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5757,7 +5757,7 @@
       "PROPERTY_CITY_STATE": "Norfolk, VA",
       "FULL_ADDRESS": "4500 Hampton Boulevard, Norfolk, VA 23508",
       "SEARCH_FIELD": "NORFOLK-VIRGINIA BEACHVIRGINIANORFOLKVA23508SOUTHEAST",
-      "PRICE_RANGE": "111-119*",
+      "PRICE_RANGE": "111-119",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5829,7 +5829,7 @@
       "PROPERTY_CITY_STATE": "Norfolk, VA",
       "FULL_ADDRESS": "227 West Brambleton Avenue, Norfolk, VA 23510",
       "SEARCH_FIELD": "NORFOLK-VIRGINIA BEACHVIRGINIANORFOLKVA23510SOUTHEAST",
-      "PRICE_RANGE": "103-119*",
+      "PRICE_RANGE": "103-119",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5901,7 +5901,7 @@
       "PROPERTY_CITY_STATE": "Bellevue, WA",
       "FULL_ADDRESS": "14615 NE 29th Place, Bellevue, WA 98007",
       "SEARCH_FIELD": "SEATTLEWASHINGTONBELLEVUEWA98007PACIFIC",
-      "PRICE_RANGE": "103-175*",
+      "PRICE_RANGE": "103-175",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5973,7 +5973,7 @@
       "PROPERTY_CITY_STATE": "Bellevue, WA",
       "FULL_ADDRESS": "605 114th Avenue SE, Bellevue, WA 98004",
       "SEARCH_FIELD": "SEATTLEWASHINGTONBELLEVUEWA98004PACIFIC",
-      "PRICE_RANGE": "95*+",
+      "PRICE_RANGE": "95",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6009,7 +6009,7 @@
       "PROPERTY_CITY_STATE": "Bellevue, WA",
       "FULL_ADDRESS": "14455 NE 29th Place, Bellevue, WA 98007",
       "SEARCH_FIELD": "SEATTLEWASHINGTONBELLEVUEWA98007PACIFIC",
-      "PRICE_RANGE": "95*+",
+      "PRICE_RANGE": "95",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6117,7 +6117,7 @@
       "PROPERTY_CITY_STATE": "Lynnwood, WA",
       "FULL_ADDRESS": "18200 Alderwood Mall Parkway, Lynnwood, WA 98037",
       "SEARCH_FIELD": "SEATTLEWASHINGTONLYNNWOODWA98037PACIFIC",
-      "PRICE_RANGE": "103-111*",
+      "PRICE_RANGE": "103-111",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6153,7 +6153,7 @@
       "PROPERTY_CITY_STATE": "Redmond, WA",
       "FULL_ADDRESS": "7401 164th Avenue NE, Redmond, WA 98052",
       "SEARCH_FIELD": "SEATTLEWASHINGTONREDMONDWA98052PACIFIC",
-      "PRICE_RANGE": "111*+",
+      "PRICE_RANGE": "111",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6189,7 +6189,7 @@
       "PROPERTY_CITY_STATE": "Puyallup, WA",
       "FULL_ADDRESS": "202 15th Avenue SW, Puyallup, WA 98371",
       "SEARCH_FIELD": "SEATTLEWASHINGTONPUYALLUPWA98371PACIFIC",
-      "PRICE_RANGE": "111-119*",
+      "PRICE_RANGE": "111-119",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6225,7 +6225,7 @@
       "PROPERTY_CITY_STATE": "Redmond, WA",
       "FULL_ADDRESS": "7575 164th Ave. N.E., Redmond, WA 98052",
       "SEARCH_FIELD": "SEATTLEWASHINGTONREDMONDWA98052PACIFIC",
-      "PRICE_RANGE": "87-151*",
+      "PRICE_RANGE": "87-151",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6261,7 +6261,7 @@
       "PROPERTY_CITY_STATE": "Tukwila, WA",
       "FULL_ADDRESS": "16201 West Valley Highway, Tukwila, WA 98188",
       "SEARCH_FIELD": "SEATTLEWASHINGTONTUKWILAWA98188PACIFIC",
-      "PRICE_RANGE": "87*+",
+      "PRICE_RANGE": "87",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6369,7 +6369,7 @@
       "PROPERTY_CITY_STATE": "Kirkland, WA",
       "FULL_ADDRESS": "11215 NE 124th Street, Kirkland, WA 98034",
       "SEARCH_FIELD": "SEATTLEWASHINGTONKIRKLANDWA98034PACIFIC",
-      "PRICE_RANGE": "95-103*",
+      "PRICE_RANGE": "95-103",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6441,7 +6441,7 @@
       "PROPERTY_CITY_STATE": "Mukilteo, WA",
       "FULL_ADDRESS": "8521 Mukilteo Speedway, Mukilteo, WA 98275",
       "SEARCH_FIELD": "SEATTLEWASHINGTONMUKILTEOWA98275PACIFIC",
-      "PRICE_RANGE": "103*+",
+      "PRICE_RANGE": "103",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6477,7 +6477,7 @@
       "PROPERTY_CITY_STATE": "Seattle, WA",
       "FULL_ADDRESS": "3201 South 176th Street, Seattle, WA 98188",
       "SEARCH_FIELD": "SEATTLEWASHINGTONSEATTLEWA98188PACIFIC",
-      "PRICE_RANGE": "119*+",
+      "PRICE_RANGE": "119",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6621,7 +6621,7 @@
       "PROPERTY_CITY_STATE": "Dorval, Quebec",
       "FULL_ADDRESS": "800 Place Leigh Capreol, Dorval, Quebec H4Y 0A4",
       "SEARCH_FIELD": "MONTREALCANADADORVALQUEBECH4Y 0A4CANADA",
-      "PRICE_RANGE": "143-159*",
+      "PRICE_RANGE": "143-159",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6693,7 +6693,7 @@
       "PROPERTY_CITY_STATE": "Minett, Ontario",
       "FULL_ADDRESS": "1050 Paignton House Rd, Minett, Ontario P0B 1G0",
       "SEARCH_FIELD": "ONTARIOCANADAMINETTONTARIOP0B 1G0CANADA",
-      "PRICE_RANGE": "183-223*",
+      "PRICE_RANGE": "183-223",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6729,7 +6729,7 @@
       "PROPERTY_CITY_STATE": "Belleville, Ontario",
       "FULL_ADDRESS": "400 Bell Boulevard, Belleville, Ontario K8P 5H8",
       "SEARCH_FIELD": "ONTARIOCANADABELLEVILLEONTARIOK8P 5H8CANADA",
-      "PRICE_RANGE": "127*+",
+      "PRICE_RANGE": "127",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6801,7 +6801,7 @@
       "PROPERTY_CITY_STATE": "Santo Domingo, Dominican Republic",
       "FULL_ADDRESS": "50A Maximo Gomez Avenue, Santo Domingo, Dominican Republic",
       "SEARCH_FIELD": "SANTO DOMINGODOMINICAN REPUBLICSANTO DOMINGODOMINICAN REPUBLIC",
-      "PRICE_RANGE": "79-119*",
+      "PRICE_RANGE": "79-119",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -6837,7 +6837,7 @@
       "PROPERTY_CITY_STATE": "Santo Domingo, Dominican Republic",
       "FULL_ADDRESS": "Winston Churchill Avenue No. 93, Santo Domingo, Dominican Republic 10501",
       "SEARCH_FIELD": "SANTO DOMINGODOMINICAN REPUBLICSANTO DOMINGODOMINICAN REPUBLIC10501",
-      "PRICE_RANGE": "183-239*",
+      "PRICE_RANGE": "183-239",
       "ORIGINAL_PRICE_RANGE": ""
     }
   ],

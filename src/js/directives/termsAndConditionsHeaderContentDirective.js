@@ -23,6 +23,6 @@ angular.module('MarriottBreaks')
         'scrollService',
 
         function ($scope, scrollService) {
-            $scope.isOpen = true;
+            $scope.isOpen = false;
         }
     ]);

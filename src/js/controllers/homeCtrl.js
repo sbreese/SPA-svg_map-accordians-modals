@@ -402,6 +402,20 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             month[10] = "November";
             month[11] = "December";
 
+            var shortMonth = new Array();
+            shortMonth[0] = "Jan";
+            shortMonth[1] = "Feb";
+            shortMonth[2] = "March";
+            shortMonth[3] = "April";
+            shortMonth[4] = "May";
+            shortMonth[5] = "June";
+            shortMonth[6] = "July";
+            shortMonth[7] = "Aug";
+            shortMonth[8] = "Sept";
+            shortMonth[9] = "Oct";
+            shortMonth[10] = "Nov";
+            shortMonth[11] = "Dec";
+
             if (StartMonth == EndMonth)
             {
                 // Only list month once
@@ -414,15 +428,15 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                 if (StartYear == EndYear)
                 {
                     // Years are same, so don't show year in Start Date
-                    var formattedStartDateRange = month[OfferStartDate.getMonth()] + " " + OfferStartDate.getDate();
+                    var formattedStartDateRange = shortMonth[OfferStartDate.getMonth()] + " " + OfferStartDate.getDate();
                 }
                 else
                 {
                     // Years are different, so do show year in Start Date
-                    var formattedStartDateRange = month[OfferStartDate.getMonth()] + " " + OfferStartDate.getDate() + ", " + OfferStartDate.getFullYear();
+                    var formattedStartDateRange = shortMonth[OfferStartDate.getMonth()] + " " + OfferStartDate.getDate() + ", " + OfferStartDate.getFullYear();
                 }
                 // Always show year in End Date
-                var formattedEndDateRange = month[OfferEndDate.getMonth()] + " " + OfferEndDate.getDate() + ", " + OfferEndDate.getFullYear();
+                var formattedEndDateRange = shortMonth[OfferEndDate.getMonth()] + " " + OfferEndDate.getDate() + ", " + OfferEndDate.getFullYear();
             }
 
             $scope.StartDateRange = formattedStartDateRange;

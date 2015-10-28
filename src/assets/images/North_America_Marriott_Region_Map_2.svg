@@ -123,7 +123,7 @@
 }
 
 #Pacific_Region:hover .pacific, #Pacific_Region.hover .pacific {
-    	fill: #FFAC8F;
+    	fill: #FFF8DC;
 }
 #Midwest_Region:hover .midwest, #Midwest_Region.hover .midwest {
     	fill: #728CFF;
