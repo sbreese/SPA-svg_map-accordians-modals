@@ -212,9 +212,18 @@ h1, h2, h3, h4, h5, h6 {
     padding: 10px 15px;
 }
 
+.search-wrapper {
+    z-index: 1002;
+}
+
 .search-container {
     text-align: center;
-    z-index: 1002;
+    z-index: 1003;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 
     .f-dropdown {
         width: 95%;
@@ -229,13 +238,14 @@ h1, h2, h3, h4, h5, h6 {
         float: left;
         display: inline;
         padding-right: 80px;
+        z-index: 1004;
     }
     #button-holder {
         position: absolute;
         top: 0;
         right: 0;
 
-        z-index: 999;
+        z-index: 1004;
         background-color: #A5CE4C;
         cursor: pointer;
         float: left;
@@ -245,6 +255,7 @@ h1, h2, h3, h4, h5, h6 {
         width: 80px;
         border-top-right-radius: .6rem;
         border-bottom-right-radius: .6rem;
+
         img {
             margin-top: .7rem;
         }
@@ -258,17 +269,19 @@ h1, h2, h3, h4, h5, h6 {
 
     .sticky-header-container {
         position: fixed;
-
-        //copy Foundation Row styles
-        max-width: 62.5rem;
         width: 100%;
-        height: auto;
+    }
 
-        // center the div
+    .search-wrapper {
+        position: fixed;
         left: 0;
         right: 0;
+        top: 0;
+
         margin: 0 auto;
 
+        //copy Foundation Row style
+        max-width: 62.5rem;
     }
 
     .search-container {
