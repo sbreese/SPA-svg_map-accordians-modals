@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('MarriottBreaks').factory('backgroundVideoService', [
-    'mediaService',
-    function(mediaService){
+    'mediaService','$document',
+    function(mediaService, $document){
 
         var video = null;
         var videoPlayer = null;
@@ -31,6 +31,44 @@ angular.module('MarriottBreaks').factory('backgroundVideoService', [
             showVideo: function(){
                 if (videoPlayer){
                     videoPlayer.show();
+                }
+            },
+
+            updateBackgroundVideoHeight: function(){
+                var newHeight;
+                if (window.innerWidth < 350) {
+                    newHeight = 600;
+                } else if (window.innerWidth < 400) {
+                    newHeight = 580;
+                } else if (window.innerWidth < 450) {
+                    newHeight = 560;
+                } else if (window.innerWidth < 500){
+                    newHeight = 540;
+                } else if (window.innerWidth < 550){
+                    newHeight = 540;
+                } else if (window.innerWidth < 600) {
+                    newHeight = 540;
+                } else if (window.innerWidth < 650) {
+                    newHeight = 540;
+                } else if (window.innerWidth < 700) {
+                    newHeight = 540;
+                } else if (window.innerWidth < 800) {
+                    newHeight = 540;
+                } else if (window.innerWidth < 900) {
+                    newHeight = 540;
+                } else if (window.innerWidth < 1000) {
+                    newHeight = 540;
+                } else if (window.innerWidth < 1100) {
+                    newHeight = 540;
+                } else if (window.innerWidth < 1200) {
+                    newHeight = 540;
+                } else { // > 1200
+                    newHeight = 540;
+                }
+
+                var videoDiv = $document.find("#background-video");  // Default is min-height: 690px;
+                if (videoDiv.height() < newHeight) {
+                    videoDiv.height(newHeight);
                 }
             }
 

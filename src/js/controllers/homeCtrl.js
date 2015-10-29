@@ -88,6 +88,8 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         $scope.selectRegionView = function(viewType){
             if (viewType === 'LIST') {
 
+                backgroundVideoService.updateBackgroundVideoHeight();
+                /*
                 var newHeight;
                 if (window.innerWidth < 350) {
                     newHeight = 600;
@@ -123,6 +125,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                 if (videoDiv.height() < newHeight) {
                     videoDiv.height(newHeight);
                 }
+                */
             }
             $scope.selectedRegionView = viewType;
         };

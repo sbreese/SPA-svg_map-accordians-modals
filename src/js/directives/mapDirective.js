@@ -53,8 +53,8 @@ angular.module('MarriottBreaks')
         '$document',
         '$scope',
         '$window',
-        'breaksService','mediaService',
-        function ($rootScope, $document, $scope, $window, breaksService, mediaService) {
+        'breaksService','mediaService', 'backgroundVideoService',
+        function ($rootScope, $document, $scope, $window, breaksService, mediaService, backgroundVideoService) {
 
             $scope.$watch('mapRoot', function (newValue) {
                 buildMapData();
@@ -64,48 +64,11 @@ angular.module('MarriottBreaks')
                 buildMapData();
             });
 
-            //$rootScope.$on('window.resize', function () { // $rootScope.$on  use window.resize if you only want to change when user is done.
-            //    updateViewBox();
-            //});
             angular.element($window).on('resize', function () { // $rootScope.$on  use window.resize if you only want to change when user is done.
                 if ($scope.selectedRegionView=='LIST')
                 {
-
-                    var newHeight;
-                    if (window.innerWidth < 350) {
-                        newHeight = 600;
-                    } else if (window.innerWidth < 400) {
-                        newHeight = 580;
-                    } else if (window.innerWidth < 450) {
-                        newHeight = 560;
-                    } else if (window.innerWidth < 500){
-                        newHeight = 540;
-                    } else if (window.innerWidth < 550){
-                        newHeight = 540;
-                    } else if (window.innerWidth < 600) {
-                        newHeight = 540;
-                    } else if (window.innerWidth < 650) {
-                        newHeight = 540;
-                    } else if (window.innerWidth < 700) {
-                        newHeight = 540;
-                    } else if (window.innerWidth < 800) {
-                        newHeight = 540;
-                    } else if (window.innerWidth < 900) {
-                        newHeight = 540;
-                    } else if (window.innerWidth < 1000) {
-                        newHeight = 540;
-                    } else if (window.innerWidth < 1100) {
-                        newHeight = 540;
-                    } else if (window.innerWidth < 1200) {
-                        newHeight = 540;
-                    } else { // > 1200
-                        newHeight = 540;
-                    }
-
-                    var videoDiv = $document.find("#background-video");  // Default is min-height: 690px;
-                    if (videoDiv.height() < newHeight) {
-                        videoDiv.height(newHeight);
-                    }
+                    //updateBackgroundVideoHeight();
+                    backgroundVideoService.updateBackgroundVideoHeight();
                 }
                 else {
                     updateViewBox();
@@ -151,14 +114,7 @@ angular.module('MarriottBreaks')
 
             function updateViewBox() {
                 console.log("The current window width is ", window.innerWidth);
-                // 696 push down
-                //viewBox="-20 240 700 1065"
-                // mobile 50 100 500 700
-                /*
-                When 1269+ 240
-                When 696  100
 
-                 */
                 var pushMapRight;
                 var pushMapDown;
                 var MapWidth;
