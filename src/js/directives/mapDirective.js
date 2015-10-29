@@ -41,6 +41,7 @@ angular.module('MarriottBreaks')
                 controller: 'mapCtrl',
                 scope: {
                     stateClickAction: '&',
+                    selectedRegionView: '=',
                     regions: '='
                 },
                 link: linkFunction
@@ -67,7 +68,48 @@ angular.module('MarriottBreaks')
             //    updateViewBox();
             //});
             angular.element($window).on('resize', function () { // $rootScope.$on  use window.resize if you only want to change when user is done.
-                updateViewBox();
+                if ($scope.selectedRegionView=='LIST')
+                {
+
+                    var newHeight;
+                    if (window.innerWidth < 350) {
+                        newHeight = 600;
+                    } else if (window.innerWidth < 400) {
+                        newHeight = 580;
+                    } else if (window.innerWidth < 450) {
+                        newHeight = 560;
+                    } else if (window.innerWidth < 500){
+                        newHeight = 540;
+                    } else if (window.innerWidth < 550){
+                        newHeight = 540;
+                    } else if (window.innerWidth < 600) {
+                        newHeight = 540;
+                    } else if (window.innerWidth < 650) {
+                        newHeight = 540;
+                    } else if (window.innerWidth < 700) {
+                        newHeight = 540;
+                    } else if (window.innerWidth < 800) {
+                        newHeight = 540;
+                    } else if (window.innerWidth < 900) {
+                        newHeight = 540;
+                    } else if (window.innerWidth < 1000) {
+                        newHeight = 540;
+                    } else if (window.innerWidth < 1100) {
+                        newHeight = 540;
+                    } else if (window.innerWidth < 1200) {
+                        newHeight = 540;
+                    } else { // > 1200
+                        newHeight = 540;
+                    }
+
+                    var videoDiv = $document.find("#background-video");  // Default is min-height: 690px;
+                    if (videoDiv.height() < newHeight) {
+                        videoDiv.height(newHeight);
+                    }
+                }
+                else {
+                    updateViewBox();
+                }
             });
 
             $scope.getRegionStateFromElement = function (element) {
@@ -131,7 +173,7 @@ angular.module('MarriottBreaks')
                         videoDiv.height(420);
                     } else if (window.innerWidth < 400) {
                         pushMapRight = 50;
-                        pushMapDown = 90;
+                        pushMapDown = 0;
                         MapWidth = 595;
                         MapHeight = 700;
                         videoDiv.height(450);
@@ -228,7 +270,13 @@ angular.module('MarriottBreaks')
                     }
                 }
                 else {
-                    if (window.innerWidth < 300) {
+                    if (window.innerWidth < 250) {
+                        pushMapRight = 50;
+                        pushMapDown = -260;
+                        MapWidth = 585;
+                        MapHeight = 1000;
+                        videoDiv.height(400);
+                    } else if (window.innerWidth < 300) {
                         pushMapRight = 50;
                         pushMapDown = -150;
                         MapWidth = 585;
