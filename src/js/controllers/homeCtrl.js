@@ -13,11 +13,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
     'mediaService',
     'backgroundVideoService',
     'cookieService',
-    'googleMapsService',
     'imagePlaceholderService',
     'schemaService',
     function($scope, $rootScope, $window, $document, $timeout, $q, $modal, $log, breaksService, statesService, scrollService, mediaService,
-             backgroundVideoService, cookieService, googleMapsService, imagePlaceholderService, schemaService){
+             backgroundVideoService, cookieService, imagePlaceholderService, schemaService){
 
         // set this to true once we get the breaks data from the server
         $scope.breaksDataLoaded = false;
@@ -139,46 +138,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             return $scope.selectedRegionView === viewType;
         };
 
-        // returns a list of breaks for the input search to work with. If user has a full zip code, it gets
-        // other breaks within a certain range via google maps API. Otherwise, just return all the breaks and filter by input value
-        $scope.getBreaksForInput = function(query){
-            $scope.loadingBreaksForInput = true;
-
-            var deferred = $q.defer();
-
-            // check if this is a zip code
-            if (query && query.length === 5 && $.isNumeric(query)){
-                // if a full zip code was entered, let's check google maps for zip code distances
-                var closeBreaks = breaksService.getBreaksWithSimilarZipCode(query, $scope.breaks);
-
-                googleMapsService.getBreaksDistancesFromZipCode(query, closeBreaks)
-                    .then(
-                    function(response){
-                        $scope.closeBreaks = formatBreaksDistanceData(response, closeBreaks);
-                        $scope.loadingBreaksForInput = false;
-
-                        deferred.resolve($scope.closeBreaks);
-                    },
-                    function(){
-                        clearBreaksDistanceData();
-                        $scope.loadingBreaksForInput = false;
-
-                        deferred.resolve($scope.breaks);
-                    });
-            }
-            else {
-                // not a valid zip code, so clear any previous distance data and just return the full list of breaks to filter on
-                clearBreaksDistanceData();
-                $scope.loadingBreaksForInput = false;
-
-                deferred.resolve($scope.breaks);
-            }
-
-            return deferred.promise;
-        };
-
         $scope.inputItemSelected = function($model){
-            if ($model){
+            // scroll to item if model is valid and not a placeholder (isPlaceholder will be true if this is the
+            // "No hotels match" message)
+            if ($model && !$model.isPlaceholder){
                 //$window.location.href = $model.PROPERTY_PAGE_URL;
                 expandRegion($model.REGION);
                 scrollService.scrollToState($model.PROPERTY_STATE);
@@ -450,48 +413,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         function getBreaksFail(response){
             //TODO: Error handling?
-        }
-
-        function formatBreaksDistanceData(response, breaks){
-            // clear any existing data
-            clearBreaksDistanceData();
-
-            var distanceObjects = response.rows[0].elements;
-            var distanceObject, currentBreak;
-            var validBreaks = [];
-
-            for (var i = 0, l = breaks.length; i < l; i++){
-                // google distance response will be in the same order as the breaks
-                distanceObject = distanceObjects[i];
-                currentBreak = breaks[i];
-
-                if (distanceObject && distanceObject.distance){
-                    currentBreak.DISTANCE = distanceObject.distance.text;
-
-                    // distance is in string format - i.e. "28 mi". Strip the "mi" and make this numeric for comparison reasons
-                    try {
-                        currentBreak.DISTANCE_VALUE = Number(currentBreak.DISTANCE.split(' ')[0]);
-                    }
-                    catch(e) {
-                        currentBreak.DISTANCE_VALUE = 0;
-                    }
-
-                    validBreaks.push(currentBreak);
-                }
-            }
-
-            return validBreaks;
-        }
-
-        function clearBreaksDistanceData(){
-            if ($scope.closeBreaks){
-                for (var i = 0, l = $scope.closeBreaks.length; i < l; i++){
-                    $scope.closeBreaks[i].DISTANCE = null;
-                    $scope.closeBreaks[i].DISTANCE_VALUE = null;
-                }
-            }
-
-            $scope.closeBreaks = null;
         }
 
         function goToLastVisitedItem(){

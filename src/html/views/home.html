@@ -83,10 +83,9 @@
                                     <!-- Search Box & Dropdown -->
                                     <input type="text" ng-model="selectedBreak" placeholder="{{searchPlaceholder}}"
                                            ng-disabled="disableSearch"
-                                           typeahead="break as break.HOTEL_NAME for break in getBreaksForInput($viewValue) | breaksSearchFilter:$viewValue:10:50"
+                                           typeahead="break as break.HOTEL_NAME for break in breaks | breaksSearchFilter:$viewValue:10:50"
                                            typeahead-template-url="html/templates/breakListItem.html"
                                            typeahead-on-select="inputItemSelected($model)"
-                                           typeahead-loading="loadingBreaksForInput"
                                            typeahead-auto-open
                                            class="form-control">
                                     <div id="button-holder">
