@@ -379,11 +379,12 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             shortMonth[10] = "Nov";
             shortMonth[11] = "Dec";
 
+            var endYear = ", " + OfferEndDate.getFullYear();
             if (StartMonth == EndMonth)
             {
                 // Only list month once
                 var formattedStartDateRange = month[OfferStartDate.getMonth()] + " " + OfferStartDate.getDate();
-                var formattedEndDateRange = OfferEndDate.getDate() + ", " + OfferEndDate.getFullYear();
+                var formattedEndDateRange = OfferEndDate.getDate();
             }
             else
             {
@@ -399,11 +400,12 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                     var formattedStartDateRange = shortMonth[OfferStartDate.getMonth()] + " " + OfferStartDate.getDate() + ", " + OfferStartDate.getFullYear();
                 }
                 // Always show year in End Date
-                var formattedEndDateRange = shortMonth[OfferEndDate.getMonth()] + " " + OfferEndDate.getDate() + ", " + OfferEndDate.getFullYear();
+                var formattedEndDateRange = shortMonth[OfferEndDate.getMonth()] + " " + OfferEndDate.getDate();
             }
 
             $scope.StartDateRange = formattedStartDateRange;
             $scope.EndDateRange = formattedEndDateRange;
+            $scope.EndYear = endYear;
 
             var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
             var today = new Date();
