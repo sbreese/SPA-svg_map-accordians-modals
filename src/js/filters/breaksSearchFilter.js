@@ -31,7 +31,7 @@ angular.module('MarriottBreaks').filter('breaksSearchFilter', [
             if (filteredBreaks.length === 0) {
                 var filteredBreaksMock = {};
                 filteredBreaksMock.$$hashKey = "object:627";
-                filteredBreaksMock.PROPERTY_CITY_STATE = "No eBreaks hotels match this search";
+                filteredBreaksMock.PROPERTY_CITY_STATE = "No hotels match this search";
                 filteredBreaksMock.HOTEL_NAME = "";
                 filteredBreaksMock.isPlaceholder = true;
                 filteredBreaks.push(filteredBreaksMock);

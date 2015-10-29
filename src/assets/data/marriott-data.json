@@ -69,7 +69,7 @@
       "PROPERTY_CITY_STATE": "North Little Rock, AR",
       "FULL_ADDRESS": "4339 Warden Road, North Little Rock, AR 72116",
       "SEARCH_FIELD": "LITTLE ROCKARKANSASNORTH LITTLE ROCKAR72116SOUTH CENTRAL",
-      "PRICE_RANGE": "87+",
+      "PRICE_RANGE": "87",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -177,7 +177,7 @@
       "PROPERTY_CITY_STATE": "Little Rock, AR",
       "FULL_ADDRESS": "12 Crossings Court, Little Rock, AR 72205",
       "SEARCH_FIELD": "LITTLE ROCKARKANSASLITTLE ROCKAR72205SOUTH CENTRAL",
-      "PRICE_RANGE": "71+",
+      "PRICE_RANGE": "71",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -357,7 +357,7 @@
       "PROPERTY_CITY_STATE": "Fullerton, CA",
       "FULL_ADDRESS": "2701 Nutwood Avenue, Fullerton, CA 92831",
       "SEARCH_FIELD": "ANAHEIM-ORANGE COUNTYCALIFORNIAFULLERTONCA92831PACIFIC",
-      "PRICE_RANGE": "108+",
+      "PRICE_RANGE": "108",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -609,7 +609,7 @@
       "PROPERTY_CITY_STATE": "Broomfield, CO",
       "FULL_ADDRESS": "500 Flatiron Boulevard, Broomfield, CO 80021",
       "SEARCH_FIELD": "BOULDERCOLORADOBROOMFIELDCO80021MOUNTAIN",
-      "PRICE_RANGE": "95+",
+      "PRICE_RANGE": "95",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -1005,7 +1005,7 @@
       "PROPERTY_CITY_STATE": "Lone Tree, CO",
       "FULL_ADDRESS": "10345 Park Meadows Drive, Lone Tree, CO 80124",
       "SEARCH_FIELD": "DENVERCOLORADOLONE TREECO80124MOUNTAIN",
-      "PRICE_RANGE": "94+",
+      "PRICE_RANGE": "94",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -1041,7 +1041,7 @@
       "PROPERTY_CITY_STATE": "Westminster, CO",
       "FULL_ADDRESS": "7000 Church Ranch Boulevard, Westminster, CO 80021",
       "SEARCH_FIELD": "DENVERCOLORADOWESTMINSTERCO80021MOUNTAIN",
-      "PRICE_RANGE": "88+",
+      "PRICE_RANGE": "88",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -1437,7 +1437,7 @@
       "PROPERTY_CITY_STATE": "Columbus, GA",
       "FULL_ADDRESS": "4534 Armour Road, Columbus, GA 31904",
       "SEARCH_FIELD": "COLUMBUSGEORGIACOLUMBUSGA31904SOUTHEAST",
-      "PRICE_RANGE": "79+",
+      "PRICE_RANGE": "79",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -1617,7 +1617,7 @@
       "PROPERTY_CITY_STATE": "Deerfield, IL",
       "FULL_ADDRESS": "2 Parkway North, Deerfield, IL 60015",
       "SEARCH_FIELD": "CHICAGOILLINOISDEERFIELDIL60015NORTH CENTRAL",
-      "PRICE_RANGE": "87+",
+      "PRICE_RANGE": "87",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -1689,7 +1689,7 @@
       "PROPERTY_CITY_STATE": "Lincolnshire, IL",
       "FULL_ADDRESS": "Ten Marriott Drive, Lincolnshire, IL 60069",
       "SEARCH_FIELD": "CHICAGOILLINOISLINCOLNSHIREIL60069NORTH CENTRAL",
-      "PRICE_RANGE": "87+",
+      "PRICE_RANGE": "87",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2157,7 +2157,7 @@
       "PROPERTY_CITY_STATE": "South Portland, ME",
       "FULL_ADDRESS": "100 Southborough Drive, South Portland, ME 4106",
       "SEARCH_FIELD": "PORTLANDMAINESOUTH PORTLANDME4106NEW ENGLAND",
-      "PRICE_RANGE": "103+",
+      "PRICE_RANGE": "103",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2445,7 +2445,7 @@
       "PROPERTY_CITY_STATE": "Framingham, MA",
       "FULL_ADDRESS": "400 Staples Drive, Framingham, MA 1702",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSFRAMINGHAMMA1702NEW ENGLAND",
-      "PRICE_RANGE": "111+",
+      "PRICE_RANGE": "111",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2697,7 +2697,7 @@
       "PROPERTY_CITY_STATE": "Newton, MA",
       "FULL_ADDRESS": "2345 Commonwealth Avenue, Newton, MA 2466",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSNEWTONMA2466NEW ENGLAND",
-      "PRICE_RANGE": "111+",
+      "PRICE_RANGE": "111",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2769,7 +2769,7 @@
       "PROPERTY_CITY_STATE": "Peabody, MA",
       "FULL_ADDRESS": "8A Centennial Drive, Peabody, MA 1960",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSPEABODYMA1960NEW ENGLAND",
-      "PRICE_RANGE": "127+",
+      "PRICE_RANGE": "127",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2805,7 +2805,7 @@
       "PROPERTY_CITY_STATE": "Quincy, MA",
       "FULL_ADDRESS": "1000 Marriott Drive, Quincy, MA 2169",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSQUINCYMA2169NEW ENGLAND",
-      "PRICE_RANGE": "119+",
+      "PRICE_RANGE": "119",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2841,7 +2841,7 @@
       "PROPERTY_CITY_STATE": "Revere, MA",
       "FULL_ADDRESS": "100 Morris Street, Revere, MA 2151",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSREVEREMA2151NEW ENGLAND",
-      "PRICE_RANGE": "143+",
+      "PRICE_RANGE": "143",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2877,7 +2877,7 @@
       "PROPERTY_CITY_STATE": "Danvers, MA",
       "FULL_ADDRESS": "238 Andover Street, Danvers, MA 1923",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSDANVERSMA1923NEW ENGLAND",
-      "PRICE_RANGE": "103+",
+      "PRICE_RANGE": "103",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -2913,7 +2913,7 @@
       "PROPERTY_CITY_STATE": "Tewksbury, MA",
       "FULL_ADDRESS": "20 International Place, Tewksbury, MA 1876",
       "SEARCH_FIELD": "BOSTONMASSACHUSETTSTEWKSBURYMA1876NEW ENGLAND",
-      "PRICE_RANGE": "75+",
+      "PRICE_RANGE": "75",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3237,7 +3237,7 @@
       "PROPERTY_CITY_STATE": "Kansas City, MO",
       "FULL_ADDRESS": "200 West 12th Street, Kansas City, MO 64105",
       "SEARCH_FIELD": "KANSAS CITYMISSOURIKANSAS CITYMO64105SOUTH CENTRAL",
-      "PRICE_RANGE": "159+",
+      "PRICE_RANGE": "159",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3309,7 +3309,7 @@
       "PROPERTY_CITY_STATE": "Overland Park, KS",
       "FULL_ADDRESS": "10800 Metcalf Avenue, Overland Park, KS 66210",
       "SEARCH_FIELD": "KANSAS CITYMISSOURIOVERLAND PARKKS66210SOUTH CENTRAL",
-      "PRICE_RANGE": "103+",
+      "PRICE_RANGE": "103",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3525,7 +3525,7 @@
       "PROPERTY_CITY_STATE": "Horseheads, NY",
       "FULL_ADDRESS": "1600 County Route 64, Horseheads, NY 14845",
       "SEARCH_FIELD": "MULTIPLE CITIESNEW YORKHORSEHEADSNY14845NEW ENGLAND",
-      "PRICE_RANGE": "115+",
+      "PRICE_RANGE": "115",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3633,7 +3633,7 @@
       "PROPERTY_CITY_STATE": "Rochester, NY",
       "FULL_ADDRESS": "1890 Ridge Road West, Rochester, NY 14615",
       "SEARCH_FIELD": "ROCHESTERNEW YORKROCHESTERNY14615NEW ENGLAND",
-      "PRICE_RANGE": "115+",
+      "PRICE_RANGE": "115",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3669,7 +3669,7 @@
       "PROPERTY_CITY_STATE": "Rochester, NY",
       "FULL_ADDRESS": "33 Corporate Woods Drive, Rochester, NY 14623",
       "SEARCH_FIELD": "ROCHESTERNEW YORKROCHESTERNY14623NEW ENGLAND",
-      "PRICE_RANGE": "95+",
+      "PRICE_RANGE": "95",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3705,7 +3705,7 @@
       "PROPERTY_CITY_STATE": "Rochester, NY",
       "FULL_ADDRESS": "1000 Linden Park, Rochester, NY 14625",
       "SEARCH_FIELD": "ROCHESTERNEW YORKROCHESTERNY14625NEW ENGLAND",
-      "PRICE_RANGE": "119+",
+      "PRICE_RANGE": "119",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3741,7 +3741,7 @@
       "PROPERTY_CITY_STATE": "Pittsford, NY",
       "FULL_ADDRESS": "41 North Main Street, Pittsford, NY 14534",
       "SEARCH_FIELD": "ROCHESTERNEW YORKPITTSFORDNY14534NEW ENGLAND",
-      "PRICE_RANGE": "199+",
+      "PRICE_RANGE": "199",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -3921,7 +3921,7 @@
       "PROPERTY_CITY_STATE": "Cleveland, OH",
       "FULL_ADDRESS": "4277 West 150th Street, Cleveland, OH 44135",
       "SEARCH_FIELD": "CLEVELANDOHIOCLEVELANDOH44135NORTH CENTRAL",
-      "PRICE_RANGE": "103+",
+      "PRICE_RANGE": "103",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -4389,7 +4389,7 @@
       "PROPERTY_CITY_STATE": "Wilkes-Barre, PA",
       "FULL_ADDRESS": "884 Kidder Street, Wilkes-Barre, PA 18702",
       "SEARCH_FIELD": "MULTIPLE CITIESPENNSYLVANIAWILKES-BARREPA18702NEW ENGLAND",
-      "PRICE_RANGE": "119+",
+      "PRICE_RANGE": "119",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -4425,7 +4425,7 @@
       "PROPERTY_CITY_STATE": "Towanda, PA",
       "FULL_ADDRESS": "1248 Golden Mile Road, Towanda, PA 18848",
       "SEARCH_FIELD": "MULTIPLE CITIESPENNSYLVANIATOWANDAPA18848NEW ENGLAND",
-      "PRICE_RANGE": "103+",
+      "PRICE_RANGE": "103",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -4641,7 +4641,7 @@
       "PROPERTY_CITY_STATE": "Williamsport, PA",
       "FULL_ADDRESS": "10 West Church Street, Williamsport, PA 17701",
       "SEARCH_FIELD": "MULTIPLE CITIESPENNSYLVANIAWILLIAMSPORTPA17701NEW ENGLAND",
-      "PRICE_RANGE": "83+",
+      "PRICE_RANGE": "83",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5253,7 +5253,7 @@
       "PROPERTY_CITY_STATE": "Brookings, SD",
       "FULL_ADDRESS": "3000 LeFevre Drive, Brookings, SD 57006",
       "SEARCH_FIELD": "MULTIPLE CITIESSOUTH DAKOTABROOKINGSSD57006NORTH CENTRAL",
-      "PRICE_RANGE": "119+",
+      "PRICE_RANGE": "119",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5289,7 +5289,7 @@
       "PROPERTY_CITY_STATE": "Sioux Falls, SD",
       "FULL_ADDRESS": "4545 W. Homefield Dr., Sioux Falls, SD 57106",
       "SEARCH_FIELD": "MULTIPLE CITIESSOUTH DAKOTASIOUX FALLSSD57106NORTH CENTRAL",
-      "PRICE_RANGE": "103+",
+      "PRICE_RANGE": "103",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
@@ -5577,7 +5577,7 @@
       "PROPERTY_CITY_STATE": "Chesapeake, VA",
       "FULL_ADDRESS": "1560 Crossways Boulevard, Chesapeake, VA 23320",
       "SEARCH_FIELD": "NORFOLK-VIRGINIA BEACHVIRGINIACHESAPEAKEVA23320SOUTHEAST",
-      "PRICE_RANGE": "95+",
+      "PRICE_RANGE": "95",
       "ORIGINAL_PRICE_RANGE": "150-200"
     },
     {
