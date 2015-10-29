@@ -280,6 +280,8 @@ h1, h2, h3, h4, h5, h6 {
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
+    box-shadow: 0 6px 6px 0 rgba(0, 0, 0, 0.20);
+
     h1 {
         margin-top: 10px;
         color: white;
@@ -372,6 +374,10 @@ h1, h2, h3, h4, h5, h6 {
 
     .sticky-header-background {
         height: 170px;
+    }
+
+    .ebreaks-head1 {
+        text-shadow: none;
     }
 }
 
