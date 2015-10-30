@@ -2725,7 +2725,7 @@
 	<circle id="whiteMidwest" cx="379" cy="412" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" /><!-- Midwest -->
 	<line x1="379" y1="412" x2="379" y2="412" stroke="white" id="circleMidwest" />
     <text x="379" y="419" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#728cab" id="text-MIDWEST" class="bubble-font"></text>
-    <text x="379" y="429" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#728cab" id="deals-MIDWEST" class="text-MIDWEST bubble-font">DEALS</text>
+    <text x="379" y="429" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#728cab" id="deals-MIDWEST" class="dealsText text-MIDWEST bubble-font">DEALS</text>
     <circle id="regionCircle-MIDWEST" class="region-circle" cx="379" cy="412" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0" onmouseover="changeRegionColor('midwest','#6495ED')" onmouseout="changeRegionColor('midwest','#728cab')">
     <animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
@@ -2743,7 +2743,7 @@
 	<circle id="whiteMidAtlantic" cx="549" cy="466" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" class=""/><!-- Mid-Atlantic -->
   	<line x1="549" y1="466" x2="549" y2="466" stroke="white" id="circleMidAtlantic" class=""/>
     <text x="549" y="473" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#85c1e9" id="text-MID-ATLANTIC" class="bubble-font"></text>
-    <text x="549" y="483" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#85c1e9" id="deals-MID-ATLANTIC" class="text-MID-ATLANTIC bubble-font">DEALS</text>
+    <text x="549" y="483" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#85c1e9" id="deals-MID-ATLANTIC" class="dealsText text-MID-ATLANTIC bubble-font">DEALS</text>
     <circle id="regionCircle-MID-ATLANTIC" class="region-circle" cx="549" cy="464" r="0" stroke="black" stroke-width="0" fill-opacity="0.0" opacity="0" stroke-opacity="0" onmouseover="changeRegionColor('mid-atlantic','#00BFFF')" onmouseout="changeRegionColor('mid-atlantic','#85c1e9')">
     <animate attributeName="r" from="0" to="30" dur="1s" begin="1s" fill="freeze"/>
     </circle>
@@ -3383,13 +3383,7 @@
      -o-transform: translate(20px,5px); /* Opera */
      -moz-transform: translate(20px,5px); /* Firefox */
      }
-  .dealsTextShiftNorthWest{
-    transform: translate(-40px,-35px);
-    -ms-transform: translate(-40px,-35px); /* IE 9 */
-    -webkit-transform: translate(-40px,-35px); /* Safari and Chrome */
-    -o-transform: translate(-40px,-35px); /* Opera */
-    -moz-transform: translate(-40px,-35px); /* Firefox */
- }
+
 .shiftLeft {
 transform: translate(-40px,0px);
 -ms-transform: translate(-40px,0px); /* IE 9 */
@@ -3411,13 +3405,6 @@ transform: translate(20px,0px);
   -o-transform: translate(40px,20px); /* Opera */
   -moz-transform: translate(40px,20px); /* Firefox */
   }
-.shiftNorthWest {
-   transform: translate(-40px,-40px);
-   -ms-transform: translate(-40px,-40px); /* IE 9 */
-   -webkit-transform: translate(-40px,-40px); /* Safari and Chrome */
-   -o-transform: translate(-40px,-40px); /* Opera */
-   -moz-transform: translate(-40px,-40px); /* Firefox */
-}
 
 }
 
