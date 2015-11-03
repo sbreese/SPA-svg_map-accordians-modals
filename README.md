@@ -29,7 +29,7 @@ Project for Marriott Hotels - Allows the client to convert .csv files to JSON, w
 - Clone the repo and cd into root folder:
 
     ```
-    $ git clone -b master git@bitbucket.org:jrigerths2/marriottbreaks.git
+    $ git clone -b master git@bitbucket.org:hs2studio/marriottbreaks.git
     ```
 
     ```
