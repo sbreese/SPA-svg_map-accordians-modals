@@ -1240,13 +1240,23 @@ header, footer {
     }
 }
 /* Footer treatment */
-footer {width: 100%;max-width: 1024px;margin: 1rem auto;text-align: center;}
+footer {width: 100%;margin: 1rem auto 0 auto;text-align: center;
+
+    background-color: #494949;
+    filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF777777', endColorstr='#FF494949');
+    background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #777777), color-stop(100%, #494949));
+    background-image: -webkit-linear-gradient(#777777,#494949);
+    background-image: -moz-linear-gradient(#777777,#494949);
+    background-image: -o-linear-gradient(#777777,#494949);
+    background-image: linear-gradient(#777777,#494949);
+    color: #f4f4f4;
+}
 #utilities-legal li {display: inline-block;float: none;margin: 0 0.675rem 0;padding:0;}
 #t-legal-footer {padding:1.25em 0 0;}
 #t-legal-footer a:link {text-decoration: none;}
 #t-legal-footer a:hover {text-decoration: underline;}
-#t-legal-footer a,#t-legal-footer a:link,#t-legal-footer a:visited,#t-legal-footer a:hover {font-size: 0.75em;color: #494949;}
-.t-copyright p {font-size: 0.625em;line-height: 1em;margin: 0.675rem 0 0 0.675rem;color: #777;}
+#t-legal-footer a,#t-legal-footer a:link,#t-legal-footer a:visited,#t-legal-footer a:hover {font-size: 0.75em;color: #494949;     color: #f4f4f4;}
+.t-copyright p {font-size: 0.625em;line-height: 1em;margin: 0.675rem 0 0 0.675rem;color: #777;    color: #f4f4f4;}
 
 /* Header treatment */
 header {width:100%;}
@@ -1255,3 +1265,22 @@ header {width:100%;}
 .t-header a:hover {text-decoration: underline;}
 .m-logo {padding: 1.05rem 0 0 1rem;}
 .l-main-logo img{width: 130px;}
+
+.header-bg-right-marriott {
+    background-image: url("../assets/images/Header_right.png");
+    height: 64px;
+    width:543px;
+    position: absolute;
+
+    right:0;
+    background-repeat: no-repeat;
+}
+.header-bg-left-marriott {
+    background-image: url("../assets/images/Header_left.png");
+    height: 64px;
+    width:378px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+}
