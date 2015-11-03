@@ -1271,7 +1271,6 @@ header {width:100%;}
     height: 64px;
     width:543px;
     position: absolute;
-
     right:0;
     background-repeat: no-repeat;
 }
@@ -1281,6 +1280,25 @@ header {width:100%;}
     width:378px;
     position: absolute;
     left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+}
+
+.header-bg-left-small-marriott{
+    background-image: url("../assets/images/Header_left_Small.png");
+    height: 64px;
+    width:226px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-repeat: no-repeat;
+}
+.header-bg-right-small-marriott {
+    background-image: url("../assets/images/Header_right_Small.png");
+    height: 64px;
+    width: 352px;
+    position: absolute;
+    right: 0;
     top: 0;
     background-repeat: no-repeat;
 }
