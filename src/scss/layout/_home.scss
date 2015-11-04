@@ -1260,12 +1260,18 @@ footer {width: 100%;margin: 1rem auto 0 auto;text-align: center;
 
 /* Header treatment */
 header {width:100%;}
+
 .t-header {height: 4.0625rem;background-color: #919191;background-image: -webkit-linear-gradient(#777,#494949);background-image: -moz-linear-gradient(#777,#494949);background-image: -o-linear-gradient(#777,#494949);background-image: linear-gradient(#777,#494949);color:#fff;}
 .t-header a:link, .t-header a:visited, .t-header a:active,.t-header a:hover {color:#fff;text-decoration: none;}
 .t-header a:hover {text-decoration: underline;}
 .m-logo {padding: 1.05rem 0 0 1rem;}
 .l-main-logo img{width: 130px;}
 
+@media only screen and (max-width: 64em) {
+
+    .t-header {height: 55px;background-color: #919191;background-image: -webkit-linear-gradient(#777,#494949);background-image: -moz-linear-gradient(#777,#494949);background-image: -o-linear-gradient(#777,#494949);background-image: linear-gradient(#777,#494949);color:#fff;}
+
+}
 .header-bg-right-marriott {
     background-image: url("../assets/images/Header_right.png");
     height: 64px;
@@ -1286,8 +1292,8 @@ header {width:100%;}
 
 .header-bg-left-small-marriott{
     background-image: url("../assets/images/Header_left_Small.png");
-    height: 64px;
-    width:226px;
+    height: 55px;
+    width: 354px;
     position: absolute;
     left: 0;
     top: 0;
@@ -1297,6 +1303,15 @@ header {width:100%;}
     background-image: url("../assets/images/Header_right_Small.png");
     height: 64px;
     width: 352px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-repeat: no-repeat;
+}
+.header-bg-right-medium-marriott {
+    background-image: url("../assets/images/Header_Medium.png");
+    height: 55px;
+    width: 207px;
     position: absolute;
     right: 0;
     top: 0;

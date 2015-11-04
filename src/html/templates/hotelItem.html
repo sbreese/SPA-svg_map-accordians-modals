@@ -2,9 +2,9 @@
     <div class="hotel-item-content">
         <div class="hotel-image-container">
         <!-- Hotel Image -->
-            <a href="{{hotel.PROPERTY_PAGE_URL}}"><img class="hotel-image" ng-src="http://cache.marriott.com/propertyimages/{{hotel.MARSHA_CODE.charAt(0)}}/{{hotel.MARSHA_CODE}}/{{hotel.MARSHA_CODE}}e01.jpg"/></a>
+            <a href="{{hotel.PROPERTY_PAGE_URL}}" target="_blank"><img class="hotel-image" ng-src="http://cache.marriott.com/propertyimages/{{hotel.MARSHA_CODE.charAt(0)}}/{{hotel.MARSHA_CODE}}/{{hotel.MARSHA_CODE}}e01.jpg"/></a>
         </div>
-        <!-- Hotel Description -->
+        <!-- Hotel description -->
         <div class="hotel-item-description-container">
             <a class="hotel-item-link" ng-href="{{hotel.AVAILABILITY_URL}}" ng-click="hotelItemSelected()">
             <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
