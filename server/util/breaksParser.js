@@ -119,18 +119,6 @@ function formatBreaksData(breaks) {
             currentBreak.PROPERTY_PAGE_URL = formatUrl(currentBreak.PROPERTY_PAGE_URL);
             currentBreak.AVAILABILITY_URL = formatUrl(currentBreak.AVAILABILITY_URL);
 
-            // make top destination a boolean value - much easier to work with and better for performance
-            currentBreak.TOP_DESTINATION = (currentBreak.TOP_DESTINATIONS === 'Y');
-
-            // build addresses
-            formatAddresses(currentBreak);
-
-            // build a property on the object that has all searchable fields. This should speed up the filtering process
-            formatSearchField(currentBreak);
-
-            // format the per night description. I would rather do it here once than have angular do it for each item
-            formatPerNight(currentBreak);
-
             // add this item to the regions data
             addBreakToRegionData(currentBreak, regions);
 
