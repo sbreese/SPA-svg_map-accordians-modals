@@ -27,7 +27,7 @@ angular.module('MarriottBreaks')
 
                     var stateRegionClicked = scope.getRegionStateFromElement($event.target);
                     if (stateRegionClicked) {
-                        stateRegionClicked = stateRegionClicked.replace('CARRIBEAN_LATIN_AMERICA', 'CARRIBEAN & LATIN AMERICA').replace(/_/g, ' ');
+                        stateRegionClicked = stateRegionClicked.replace('CARIBBEAN_LATIN_AMERICA', 'CARIBBEAN & LATIN AMERICA').replace(/_/g, ' ');
                         scope.$apply(scope.stateClickAction({state: stateRegionClicked }));
                     }
                 }
@@ -85,7 +85,7 @@ angular.module('MarriottBreaks')
                     }
 
                     // To add support for STATE click on map, add these conditions to the following IF statement: idSplit[0] === 'US' || idSplit[0] === 'TEXT' || 
-                    if (idSplit[0] === 'regionCircle' || idSplit[0] === 'US' || idSplit[0] === 'CANADA' || idSplit[0] === 'CARRIBEAN_LATIN_AMERICA') {
+                    if (idSplit[0] === 'regionCircle' || idSplit[0] === 'US' || idSplit[0] === 'CANADA' || idSplit[0] === 'CARIBBEAN_LATIN_AMERICA') {
                         return (idSplit[1]?idSplit[1]:idSplit[0]);
                     }
                 }
@@ -376,7 +376,7 @@ angular.module('MarriottBreaks')
 
                         regionName = $scope.getRegionFromElement(regionPathElement);
 
-                        regionNameSpaces = regionName.replace('CARRIBEAN_LATIN_AMERICA', 'CARRIBEAN & LATIN AMERICA').replace(/_/g, ' ');
+                        regionNameSpaces = regionName.replace('CARIBBEAN_LATIN_AMERICA', 'CARIBBEAN & LATIN AMERICA').replace(/_/g, ' ');
                         if (regionName) {
                             if (regionData[regionNameSpaces] && regionData[regionNameSpaces].count) {
                                 regionCount = regionData[regionNameSpaces].count;
@@ -457,7 +457,7 @@ angular.module('MarriottBreaks')
                         CirlcX = 1286;
                         CircleY = 961;
                         break;
-                    case "CARRIBEAN_LATIN_AMERICA":
+                    case "CARIBBEAN_LATIN_AMERICA":
                         CirlcX = 694;
                         CircleY = 1438;
                         break;

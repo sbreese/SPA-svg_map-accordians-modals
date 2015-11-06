@@ -126,7 +126,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
                 var regionObject = {'MOUNTAIN': {'states':{'MT':1, 'WY':1, 'UT': 1,'CO':1, 'AZ':1, 'NM':1}},
                     'PACIFIC': {'states':{'WA':1,'ID':1,'OR':1,'CA':1,'NV':1,'AK':1,'HI':1}},
-                    'MIDWEST': {'states':{'ND':1,'SD':1,'MN':1,'WI':1,'IA':1,'IL':1, 'IN':1,'MI':1,'OH':1}},
+                    'NORTH CENTRAL': {'states':{'ND':1,'SD':1,'MN':1,'WI':1,'IA':1,'IL':1, 'IN':1,'MI':1,'OH':1}},
                     'SOUTH CENTRAL': {'states':{'NE':1,'KS':1,'MO':1,'OK':1,'TX':1,'AR':1,'LA':1,'KY':1}},
                     'SOUTHEAST': {'states':{'TN':1,'MS':1,'AL':1,'GA':1,'FL':1,'SC':1,'NC':1}},
                     'MID-ATLANTIC': {'states':{'VA':1,'WV':1,'MD':1,'DE':1,'PA':1,'NJ':1}},

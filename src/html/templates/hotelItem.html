@@ -4,12 +4,12 @@
         <!-- Hotel Image -->
             <a href="{{hotel.PROPERTY_PAGE_URL}}" target="_blank"><img class="hotel-image" ng-src="http://cache.marriott.com/propertyimages/{{hotel.MARSHA_CODE.charAt(0)}}/{{hotel.MARSHA_CODE}}/{{hotel.MARSHA_CODE}}e01.jpg"/></a>
         </div>
-        <!-- Hotel description -->
+        <!-- Hotel Description -->
         <div class="hotel-item-description-container">
-            <a class="hotel-item-link" ng-href="{{hotel.AVAILABILITY_URL}}" ng-click="hotelItemSelected()">
+            <a class="hotel-item-link" ng-href="{{hotel.AVAILABILITY_URL}}" ng-click="hotelItemSelected()" target="_blank">
             <p class="hotel-item-name">{{hotel.HOTEL_NAME}}</p>
 
-            <p class="hotel-item-per-night"><strong>{{hotel.PRICE_RANGE}}</strong> <small>{{hotel.CURRENCY_SYMBOL}}/night</small></p>
+            <p class="hotel-item-per-night"><strong>{{hotel.PRICE_RANGE}}</strong> <small>{{hotel.PRICE_RANGE_SUFFIX}}</small></p>
             <p class="hotel-item-original-per-night">{{(hotel.ORIGINAL_PRICE_RANGE?hotel.ORIGINAL_PRICE_RANGE:"&nbsp;")}}</p>
 
                 <button class="{{getButtonClass()}}">Check Availability</button>
