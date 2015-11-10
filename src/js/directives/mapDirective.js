@@ -119,6 +119,7 @@ angular.module('MarriottBreaks')
                 var MapWidth;
                 var MapHeight;
                 var videoDiv = $document.find("#background-video");  // Default is min-height: 690px;
+
                 if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
                     if (window.innerWidth < 350) {
                         pushMapRight = 50;
@@ -330,7 +331,11 @@ angular.module('MarriottBreaks')
                     }
                 }
 
-                //var isIE = (navigator.userAgent.indexOf("MSIE") != -1);
+                //function isIE() { return ((navigator.appName == 'Microsoft Internet Explorer') || ((navigator.appName == 'Netscape') && (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null))); }
+                //var isIE10 = navigator.userAgent.indexOf("MSIE") != -1
+                //if (isIE()) {
+                    //MapHeight = 2000;
+                //}
 
                     $scope.mapRoot[0].setAttribute("viewBox", pushMapRight + " " + pushMapDown + " "+ MapWidth + " " + MapHeight);
 

@@ -2740,7 +2740,7 @@
     </circle>
 
 	<circle id="darkMid-Atlantic" cx="550" cy="468" r="30" stroke="black" stroke-width="0" fill="darkgray" opacity="0" class=""/>
-	<circle id="whiteMidAtlantic" cx="549" cy="466" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" class=""/><!-- Mid-Atlantic -->
+	<circle id="whiteMidAtlantic" cx="549" cy="466" r="0" stroke="black" stroke-width="0" fill="white" opacity="1" class="whiteCircle"/><!-- Mid-Atlantic -->
   	<line x1="549" y1="466" x2="549" y2="466" stroke="white" id="circleMidAtlantic" class=""/>
     <text x="549" y="473" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#85c1e9" id="text-MID-ATLANTIC" class="bubble-font"></text>
     <text x="549" y="483" font-family="sans-serif" font-size="0px" text-anchor="middle" fill="#85c1e9" id="deals-MID-ATLANTIC" class="dealsText text-MID-ATLANTIC bubble-font">DEALS</text>
@@ -3895,6 +3895,55 @@ function changeRegionColor(region, hoverColor) {
         x[i].style.fill = hoverColor;
     }
 }
+
+           function isIE() { return ((navigator.appName == 'Microsoft Internet Explorer') || ((navigator.appName == 'Netscape') && (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null))); }
+                //var isIE10 =
+                if (isIE() || navigator.userAgent.indexOf("MSIE") != -1) {
+                    var Pac= document.getElementById('whitePacific');
+                    Pac.setAttribute('r', 25);
+                    var Mou= document.getElementById('whiteMountain');
+                    Mou.setAttribute('r', 25);
+                    var Car= document.getElementById('whiteCarribean');
+                    Car.setAttribute('r', 25);
+                    var SC= document.getElementById('whiteSouthCentral');
+                    SC.setAttribute('r', 25);
+                    var MW= document.getElementById('whiteMidwest');
+                    MW.setAttribute('r', 25);
+                    var SE= document.getElementById('whiteSoutheast');
+                    SE.setAttribute('r', 25);
+                    var MA= document.getElementById('whiteMidAtlantic');
+                    MA.setAttribute('r', 25);
+                    var NE= document.getElementById('whiteNewEngland');
+                    NE.setAttribute('r', 25);
+                    var Can= document.getElementById('whiteCanada');
+                    Can.setAttribute('r', 25);
+
+                    document.getElementById('text-PACIFIC').setAttribute('font-size','26px');
+                    document.getElementById('deals-PACIFIC').setAttribute('font-size', '6px');
+                    document.getElementById('text-MOUNTAIN').setAttribute('font-size','26px');
+                    document.getElementById('deals-MOUNTAIN').setAttribute('font-size', '6px');
+                    document.getElementById('text-CARIBBEAN_LATIN_AMERICA').setAttribute('font-size','26px');
+                    document.getElementById('deals-CARIBBEAN_LATIN_AMERICA').setAttribute('font-size', '6px');
+                    document.getElementById('text-SOUTH_CENTRAL').setAttribute('font-size','26px');
+                    document.getElementById('deals-SOUTH_CENTRAL').setAttribute('font-size', '6px');
+                    document.getElementById('text-NORTH_CENTRAL').setAttribute('font-size','26px');
+                    document.getElementById('deals-NORTH_CENTRAL').setAttribute('font-size', '6px');
+                    document.getElementById('text-SOUTH_EAST').setAttribute('font-size','26px');
+                    document.getElementById('deals-SOUTH_EAST').setAttribute('font-size', '6px');
+                    document.getElementById('text-MID-ATLANTIC').setAttribute('font-size','26px');
+                    document.getElementById('deals-MID-ATLANTIC').setAttribute('font-size', '6px');
+                    document.getElementById('text-NEW_ENGLAND').setAttribute('font-size','26px');
+                    document.getElementById('deals-NEW_ENGLAND').setAttribute('font-size', '6px');
+                    document.getElementById('text-CANADA').setAttribute('font-size','26px');
+                    document.getElementById('deals-CANADA').setAttribute('font-size', '6px');
+
+                    var AllRegionCircles = document.getElementsByClassName('region-circle');
+                    var i;
+                    for (i = 0; i < AllRegionCircles.length; i++) {
+                        AllRegionCircles[i].setAttribute('r', 25);
+                    }
+
+                }
 
   ]]></script>
 </svg>

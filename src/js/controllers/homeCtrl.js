@@ -110,7 +110,8 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             if ($model && !$model.isPlaceholder){
                 //$window.location.href = $model.PROPERTY_PAGE_URL;
                 expandRegion($model.REGION);
-                scrollService.scrollToState($model.PROPERTY_STATE);
+                //scrollService.scrollToState($model.PROPERTY_STATE);
+                scrollService.scrollToElementById('#' + $model.PROFILE_KEY);
             }
         };
 
