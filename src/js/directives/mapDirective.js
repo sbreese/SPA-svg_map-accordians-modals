@@ -113,7 +113,6 @@ angular.module('MarriottBreaks')
             };
 
             function updateViewBox() {
-                console.log("The current window width is ", window.innerWidth);
 
                 var pushMapRight;
                 var pushMapDown;
@@ -333,10 +332,8 @@ angular.module('MarriottBreaks')
 
                 //var isIE = (navigator.userAgent.indexOf("MSIE") != -1);
 
-
-                //if (mediaService.isMobile()) {
                     $scope.mapRoot[0].setAttribute("viewBox", pushMapRight + " " + pushMapDown + " "+ MapWidth + " " + MapHeight);
-                //}
+
             };
 
             function buildMapData() {

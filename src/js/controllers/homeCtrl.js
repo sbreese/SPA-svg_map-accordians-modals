@@ -122,7 +122,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                 $scope.open(regionOrStateSpaces);
             } else {
                 // Expand the region and scroll to the state
-                console.log("Here is what the format should be:", $scope.regions);
 
                 var regionObject = {'MOUNTAIN': {'states':{'MT':1, 'WY':1, 'UT': 1,'CO':1, 'AZ':1, 'NM':1}},
                     'PACIFIC': {'states':{'WA':1,'ID':1,'OR':1,'CA':1,'NV':1,'AK':1,'HI':1}},
