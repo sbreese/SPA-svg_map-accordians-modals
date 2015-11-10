@@ -402,6 +402,7 @@ button.large, .button.large {
 // Overrides for dropdown and input styling
 .ebreaks-head-container {
     text-align: center;
+    z-index: 3;
 }
 
 ::-webkit-input-placeholder {
@@ -809,6 +810,7 @@ button.large, .button.large {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        line-height: 1;
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: bold;
     }
@@ -837,6 +839,7 @@ button.large, .button.large {
         display: table-cell;
         vertical-align: middle;
         text-align: center;
+        line-height: 1;
         font-family: 'Source Sans Pro', sans-serif;
         font-weight: bold;
     }

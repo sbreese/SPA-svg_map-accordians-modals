@@ -204,7 +204,7 @@
                 <!-- Top Destination Buttons -->
                 <ul id="top-dest-container" class="small-block-grid-2 medium-block-grid-4 large-block-grid-5 text-center the-grid" vertilize-container>
                     <li ng-repeat="topDestination in topDestinations" vertilize>
-                        <a class="large button {{'top-destination-button_'+($index<5?$index:($index<10?$index-5:($index<15?$index-10:'0')))}}" href="" ng-class="{'selected': selectedTopDestination === topDestination}" 
+                        <a class="large button {{'top-destination-button_'+($index<5?$index:($index<10?$index-5:($index<15?$index-10:($index<20?$index-15:($index<25?$index-20:($index<30?$index-25:($index<30?$index-25:($index<35?$index-30:($index<40?$index-35:($index<45?$index-40:($index<50?$index-45:($index<55?$index-50:'0'))))))))))))}}" href="" ng-class="{'selected': selectedTopDestination === topDestination}"
                            ng-click="toggleTopDestination(topDestination)"><p>{{topDestination}}</p></a>
                     </li>
                 </ul>

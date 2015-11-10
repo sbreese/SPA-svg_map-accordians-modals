@@ -331,6 +331,9 @@ angular.module('MarriottBreaks')
                     }
                 }
 
+                //var isIE = (navigator.userAgent.indexOf("MSIE") != -1);
+
+
                 //if (mediaService.isMobile()) {
                     $scope.mapRoot[0].setAttribute("viewBox", pushMapRight + " " + pushMapDown + " "+ MapWidth + " " + MapHeight);
                 //}
