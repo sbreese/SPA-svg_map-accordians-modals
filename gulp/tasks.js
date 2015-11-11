@@ -1,6 +1,7 @@
 var gulp = require('gulp'), // Gulp
     constants = require('./constants'), // Gulp constants
     jshint = require('gulp-jshint'), // JSHint
+    minify = require('gulp-minify'),
     jshint_stylish = require('jshint-stylish'), // Make the JSHint pretty
     concat = require('gulp-concat'), // Concatinate piped files
     bower = require('main-bower-files'), // Grabs main bower files so we can compile them
@@ -17,6 +18,9 @@ var gulp = require('gulp'), // Gulp
 gulp.task('compileJs', function(){
     return gulp.src(constants.sources.js)
         .pipe(concat(constants.dest.fileNames.srcJs))
+        .pipe(minify({
+            ignoreFiles: ['-min.js']
+         }))
         .pipe(gulp.dest(constants.dest.js))
         .pipe(liveReload());
 });
@@ -99,6 +103,9 @@ gulp.task('compileBower', function(){
             'video.js/**/*'
         ]))
         .pipe(concat(constants.dest.fileNames.vendorJs))
+        .pipe(minify({
+            ignoreFiles: ['.combo.js', '-min.js']
+        }))
         .pipe(gulp.dest(constants.dest.js))
         .pipe(jsFilter.restore())
         // Compile CSS

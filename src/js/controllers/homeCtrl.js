@@ -461,24 +461,29 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
     }
 ]);
 
-angular.module('MarriottBreaks').controller('ModalInstanceCtrl', function ($scope, $modalInstance, items) {
+angular.module('MarriottBreaks').controller('ModalInstanceCtrl', [
+    '$scope',
+    '$modalInstance',
+    'items',
+    function ($scope, $modalInstance, items) {
 
-  $scope.statesService = items.statesService;
-  //$scope.region = region;
-  $scope.items = items;
-  $scope.selected = {
-    item: $scope.items[0]
-  };
+        $scope.statesService = items.statesService;
+        //$scope.region = region;
+        $scope.items = items;
+        $scope.selected = {
+            item: $scope.items[0]
+        };
 
-  $scope.reposition = function () {
-    $modalInstance.reposition();
-  };
+        $scope.reposition = function () {
+            $modalInstance.reposition();
+        };
 
-  $scope.ok = function () {
-    $modalInstance.close($scope.selected.item);
-  };
+        $scope.ok = function () {
+            $modalInstance.close($scope.selected.item);
+        };
 
-  $scope.cancel = function () {
-    $modalInstance.dismiss('cancel');
-  };
-});
+        $scope.cancel = function () {
+            $modalInstance.dismiss('cancel');
+        };
+    }
+]);
