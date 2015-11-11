@@ -6,7 +6,6 @@ angular.module('MarriottBreaks').factory('breaksService', [
 
         return {
             get: function () {
-                //return $http.get('assets/data/marriott-data.json');
                 return $http.get('assets/data/marriott-data.json', { headers: { 'Cache-Control' : 'no-cache' } });
             },
 

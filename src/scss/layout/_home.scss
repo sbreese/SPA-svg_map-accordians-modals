@@ -46,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .svg-object {
     height: 100%;
+
 }
 #map-absolute {
     position: absolute;
@@ -58,6 +59,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 100%;
     .full-column {
         padding-left: 0;
+        padding-right: 0;
     }
 }
 
@@ -163,6 +165,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 @media screen and (max-width: 400px) {
+    .accordion-header-content {
+        h3 {padding: 10px 0 10px 20px !important;}
+    }
     .hotel-grid > li {
         list-style: none;
         padding: 0 0.325rem 1.25rem;

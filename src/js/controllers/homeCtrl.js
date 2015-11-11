@@ -111,6 +111,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                 //$window.location.href = $model.PROPERTY_PAGE_URL;
                 expandRegion($model.REGION);
                 //scrollService.scrollToState($model.PROPERTY_STATE);
+
                 scrollService.scrollToElementById('#' + $model.PROFILE_KEY);
             }
         };

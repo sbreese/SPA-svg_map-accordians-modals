@@ -13,10 +13,19 @@ angular.module('MarriottBreaks').factory('scrollService', [
             }, timeoutDuration);
         }
 
+        function hideKeyboard() {
+            document.activeElement.blur();
+            var inputs = document.querySelectorAll('input');
+            for (var i = 0; i < inputs.length; i++) {
+                inputs[i].blur();
+            }
+        }
+
         function scrollToElementById(elementId, offset){
             var element = angular.element($document).find(elementId);
             if (element.length > 0) {
                 scrollToElement(element, offset);
+                setTimeout(function(){ hideKeyboard();}, 1000);
             }
         }
 

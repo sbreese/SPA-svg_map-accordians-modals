@@ -6,6 +6,11 @@ angular.module('MarriottBreaks').filter('breaksSearchFilter', [
         return function (breaks, input, limit) {
             var query = input.toUpperCase();
 
+            if (query.indexOf(',') > -1)
+            {
+                query = query.substr(0, query.indexOf(','));
+            }
+
             // make sure we have valid breaks...
             if (!breaks || breaks.length === 0) {
                 return [];

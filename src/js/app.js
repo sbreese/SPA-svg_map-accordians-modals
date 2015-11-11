@@ -9,10 +9,18 @@ angular.module('MarriottBreaks', [
     'angular.vertilize'
 ]).
 
-config(['$routeProvider', function ($routeProvider) {
+config(['$routeProvider', '$locationProvider',function ($routeProvider, $locationProvider) {
     $routeProvider.when('/home', {templateUrl: 'html/views/home.html', controller: 'homeCtrl'});
+    $routeProvider.when('/', {templateUrl: 'html/views/home.html', controller: 'homeCtrl'});
 
-    $routeProvider.otherwise({redirectTo: '/home'});
+    $routeProvider.otherwise({redirectTo: '/'});
+
+        /* Uncomment to remove # sign from URL.  Must add base tag to HTML if not to level directory.
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
+        */
 }]).
 
  // Setup scroll easing for duScroll directive

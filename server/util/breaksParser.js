@@ -288,7 +288,7 @@ function updateRegionTotals(regions) {
 }
 
 function addBreakToTopDestinations(currentBreak, topDestinations) {
-    if (currentBreak.TOP_DESTINATION && topDestinations.indexOf(currentBreak.MARKET_CITY) === -1) {
+    if (currentBreak.TOP_DESTINATION == 'TRUE' && topDestinations.indexOf(currentBreak.MARKET_CITY) === -1) {
         topDestinations.push(currentBreak.MARKET_CITY);
     }
 }

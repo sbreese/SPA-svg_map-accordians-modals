@@ -119,8 +119,9 @@ angular.module('MarriottBreaks')
                 var MapWidth;
                 var MapHeight;
                 var videoDiv = $document.find("#background-video");  // Default is min-height: 690px;
-
+                console.log("Window width: "+ window.innerWidth);
                 if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+                    console.log("Set for FF");
                     if (window.innerWidth < 350) {
                         pushMapRight = 50;
                         pushMapDown = -15;
@@ -135,7 +136,7 @@ angular.module('MarriottBreaks')
                         videoDiv.height(450);
                     } else if (window.innerWidth < 450) {
                         pushMapRight = 50;
-                        pushMapDown = 140;
+                        pushMapDown = 80;
                         MapWidth = 595;
                         MapHeight = 700;
                         videoDiv.height(480);
@@ -147,37 +148,37 @@ angular.module('MarriottBreaks')
                         videoDiv.height(510);
                     } else if (window.innerWidth < 550) {
                         pushMapRight = 50;
-                        pushMapDown = 190;
+                        pushMapDown = 160;
                         MapWidth = 585;
                         MapHeight = 700;
                         videoDiv.height(530);
                     } else if (window.innerWidth < 600) {
                         pushMapRight = 40;
-                        pushMapDown = 195;
+                        pushMapDown = 175;
                         MapWidth = 595;
                         MapHeight = 800;
                         videoDiv.height(540);
                     } else if (window.innerWidth < 650) {
                         pushMapRight = 30;
-                        pushMapDown = 200;
+                        pushMapDown = 185;
                         MapWidth = 620;
                         MapHeight = 850;
                         videoDiv.height(550);
                     } else if (window.innerWidth < 700) {
                         pushMapRight = 30;
-                        pushMapDown = 220;
+                        pushMapDown = 200;
                         MapWidth = 620;
                         MapHeight = 850;
                         videoDiv.height(560);
                     } else if (window.innerWidth < 750) {
                         pushMapRight = 30;
-                        pushMapDown = 220;
+                        pushMapDown = 205;
                         MapWidth = 620;
                         MapHeight = 850;
                         videoDiv.height(565);
                     } else if (window.innerWidth < 800) {
                         pushMapRight = 20;
-                        pushMapDown = 230;
+                        pushMapDown = 210;
                         MapWidth = 630;
                         MapHeight = 875;
                         videoDiv.height(580);
@@ -234,13 +235,13 @@ angular.module('MarriottBreaks')
                         videoDiv.height(400);
                     } else if (window.innerWidth < 300) {
                         pushMapRight = 50;
-                        pushMapDown = -150;
+                        pushMapDown = -100;
                         MapWidth = 585;
                         MapHeight = 900;
                         videoDiv.height(400);
                     } else if (window.innerWidth < 350) {
                         pushMapRight = 50;
-                        pushMapDown = -40;
+                        pushMapDown = 0;
                         MapWidth = 585;
                         MapHeight = 800;
                         videoDiv.height(400);
@@ -287,7 +288,7 @@ angular.module('MarriottBreaks')
                         MapHeight = 850;
                         videoDiv.height(530);
                     } else if (window.innerWidth < 800) {
-                        pushMapRight = 20;
+                        pushMapRight = 50;
                         pushMapDown = 190;
                         MapWidth = 630;
                         MapHeight = 875;
@@ -337,7 +338,7 @@ angular.module('MarriottBreaks')
                     //MapHeight = 2000;
                 //}
 
-                    $scope.mapRoot[0].setAttribute("viewBox", pushMapRight + " " + pushMapDown + " "+ MapWidth + " " + MapHeight);
+                    $scope.mapRoot[0].setAttribute("viewBox", pushMapRight + " " + pushMapDown + " " + MapWidth + " " + MapHeight);
 
             };
 
@@ -395,6 +396,8 @@ angular.module('MarriottBreaks')
                             }
                         }
                     }
+
+                    updateViewBox();
 
                 }
             }
