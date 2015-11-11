@@ -2,6 +2,7 @@ var gulp = require('gulp'), // Gulp
     constants = require('./constants'), // Gulp constants
     jshint = require('gulp-jshint'), // JSHint
     minify = require('gulp-minify'),
+    minifyCss = require('gulp-minify-css'),
     jshint_stylish = require('jshint-stylish'), // Make the JSHint pretty
     concat = require('gulp-concat'), // Concatinate piped files
     bower = require('main-bower-files'), // Grabs main bower files so we can compile them
@@ -31,12 +32,14 @@ gulp.task('compileSass', function(){
     var appSass =  gulp.src(constants.sources.scssMaster)
         .pipe(sass())
         .pipe(concat(constants.dest.fileNames.srcCss))
+        .pipe(minifyCss())
         .pipe(gulp.dest(constants.dest.css));
 
     // Compile the map SASS - this needs to be its own file because it gets included directly into the SVG file
     // in order for the css to work with an <object> tag
     var mapSass = gulp.src(constants.sources.scssMap)
         .pipe(sass())
+        .pipe(minifyCss())
         .pipe(gulp.dest(constants.dest.css));
 
     return merge(appSass, mapSass)
