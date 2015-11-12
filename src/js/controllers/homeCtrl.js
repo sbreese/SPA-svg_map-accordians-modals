@@ -42,7 +42,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         if ($scope.isMobile){
             //$scope.selectedRegionView = $scope.REGION_VIEWS.LIST;
-            $scope.selectedRegionView = $scope.REGION_VIEWS.MAP;
 
             $scope.showRegionOptions = false;
             $scope.searchPlaceholder = "Find Deals";
@@ -53,6 +52,20 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             $scope.selectedRegionView = $scope.REGION_VIEWS.MAP;
             $scope.showRegionOptions = true;
             $scope.searchPlaceholder = "Where do you want to go?";
+        }
+
+        function getAndroidVersion(ua) {
+            ua = (ua || navigator.userAgent).toLowerCase();
+            var match = ua.match(/android\s([0-9\.]*)/);
+            return match ? match[1] : false;
+        };
+
+        //getAndroidVersion(); //"4.2.1"
+        var AndroidVersion = parseInt(getAndroidVersion(), 10);
+        if (AndroidVersion && AndroidVersion < 5) {
+            $scope.selectedRegionView = $scope.REGION_VIEWS.LIST;
+        } else{
+            $scope.selectedRegionView = $scope.REGION_VIEWS.MAP;
         }
 
     $scope.ModalPackage = {};
@@ -97,7 +110,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             // Collapse the item if it is already selected
             var topDestinationResult = ($scope.selectedTopDestination === topDestination) ? null : topDestination;
             selectTopDestination(topDestinationResult);
-            scrollService.scrollToElement($document.find('.top-destination-accordion'));
+            scrollService.scrollToElement($document.find('.top-destination-results'));
         };
 
         $scope.isRegionViewActive = function(viewType){
