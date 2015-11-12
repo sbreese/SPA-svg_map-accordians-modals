@@ -2,11 +2,26 @@
 
 angular.module('MarriottBreaks').factory('breaksService', [
     '$http',
-    function ($http) {
+    '$q',
+    'breaksFormatterService',
+    function ($http, $q, breaksFormatterService) {
 
         return {
             get: function () {
-                return $http.get('assets/data/marriott-data.json', { headers: { 'Cache-Control' : 'no-cache' } });
+                var deferred = $q.defer();
+
+                $http.get('assets/data/marriott-data.json', { headers: { 'Cache-Control' : 'no-cache' } }).then(
+                    function(response){
+                        // format the breaks before returning the data - adds regionGroups and topDestinationGroups to the response
+                        breaksFormatterService.formatBreaksData(response.data);
+                        deferred.resolve(response);
+                    },
+                    function(response){
+                        deferred.reject(response);
+                    }
+                );
+
+                return deferred.promise;
             },
 
             getRegionFromState: function(regions, state){
