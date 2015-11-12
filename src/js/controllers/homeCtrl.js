@@ -223,21 +223,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             return region.replace(/\w[^\s-]*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
         };
 
-        function getBreaksForTopDestination(destination){
-            var topDestinationGroup;
-
-            for (var i = 0, l = $scope.topDestinationGroups.length; i < l; i++){
-                topDestinationGroup = $scope.topDestinationGroups[i];
-
-                if (topDestinationGroup.destination === destination){
-                    return topDestinationGroup.breaks;
-                }
-            }
-
-            // return an empty array if we didn't find the group, just in case
-            return [];
-        }
-
         // Load the previous search info on pageshow since initialize won't be called again if bfcache (back/forward caching) is being used.
         angular.element($window).on('pageshow', function(){
             $scope.$apply(function(){
@@ -281,11 +266,27 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             collapseRegions();
             $scope.selectedTopDestination = topDestination;
 
+            // get the list of breaks to show for the selected top destination
             $scope.selectedTopDestinationBreaks = getBreaksForTopDestination(topDestination);
-            console.log('selectedTopDestinationBreaks');
-            console.log($scope.selectedTopDestinationBreaks);
 
             scrollService.scrollToRegion('TOPDEST');
+        }
+
+        // get a list of breaks for the selected top destination
+        function getBreaksForTopDestination(destination){
+            var topDestinationGroup;
+
+            // loop through the top destination groups until we find the selected group
+            for (var i = 0, l = $scope.topDestinationGroups.length; i < l; i++){
+                topDestinationGroup = $scope.topDestinationGroups[i];
+
+                if (topDestinationGroup.destination === destination){
+                    return topDestinationGroup.breaks;
+                }
+            }
+
+            // return an empty array if we didn't find the group, just in case
+            return [];
         }
 
         function expandRegion(region){
@@ -309,10 +310,15 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             //TODO: this is for testing purposes only. Remove once we have real hotel image URLs
             imagePlaceholderService.setPlaceholderImagesForBreaks(response.data.breaks);
 
+            // regionGroups: array of breaks grouped by region
             $scope.regionGroups = response.data.regionGroups;
+            // topDestinationGroups: array of breaks grouped by top destination
             $scope.topDestinationGroups = response.data.topDestinationGroups;
+            // breaks: array of all eBreaks
             $scope.breaks = response.data.breaks;
+            // regions: list of all region and state hotel counts
             $scope.regions = response.data.regions;
+            // topDestinations: string array of top destination names
             $scope.topDestinations = response.data.topDestinations;
 
             $scope.breaksDataLoaded = true;
