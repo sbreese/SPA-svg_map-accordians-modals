@@ -103,12 +103,11 @@
                             <div class="small-10 small-offset-1 medium-8 medium-offset-2 column">
                                 <div class="search-container">
                                     <!-- Search Box & Dropdown -->
-                                    <input id="to-blur" type="text" ng-model="selectedBreak" placeholder="{{searchPlaceholder}}"
+                                    <input id="to-blur" onfocus="this.value='';" type="text" ng-model="selectedBreak" placeholder="{{searchPlaceholder}}"
                                            ng-disabled="disableSearch"
                                            typeahead="break as break.PROPERTY_CITY_STATE for break in breaks | breaksSearchFilter:$viewValue:10:50"
                                            typeahead-template-url="html/templates/breakListItem.html"
                                            typeahead-on-select="inputItemSelected($model)"
-                                           typeahead-auto-open
                                            class="form-control">
                                     <div id="button-holder">
                                         <img src="assets/images/magnifying_glass.png">

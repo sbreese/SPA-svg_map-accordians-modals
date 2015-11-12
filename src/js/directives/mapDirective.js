@@ -119,7 +119,7 @@ angular.module('MarriottBreaks')
                 var MapWidth;
                 var MapHeight;
                 var videoDiv = $document.find("#background-video");  // Default is min-height: 690px;
-                console.log("Window width: "+ window.innerWidth);
+                //alert("Window width: "+ window.innerWidth);
                 if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
                     console.log("Set for FF");
                     if (window.innerWidth < 350) {
