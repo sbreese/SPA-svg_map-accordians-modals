@@ -12,11 +12,10 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
     'scrollService',
     'mediaService',
     'backgroundVideoService',
-    'cookieService',
     'imagePlaceholderService',
     'schemaService',
     function($scope, $rootScope, $window, $document, $timeout, $q, $modal, $log, breaksService, statesService, scrollService, mediaService,
-             backgroundVideoService, cookieService, imagePlaceholderService, schemaService){
+             backgroundVideoService, imagePlaceholderService, schemaService){
 
         // set this to true once we get the breaks data from the server
         $scope.breaksDataLoaded = false;
@@ -224,6 +223,21 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             return region.replace(/\w[^\s-]*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
         };
 
+        function getBreaksForTopDestination(destination){
+            var topDestinationGroup;
+
+            for (var i = 0, l = $scope.topDestinationGroups.length; i < l; i++){
+                topDestinationGroup = $scope.topDestinationGroups[i];
+
+                if (topDestinationGroup.destination === destination){
+                    return topDestinationGroup.breaks;
+                }
+            }
+
+            // return an empty array if we didn't find the group, just in case
+            return [];
+        }
+
         // Load the previous search info on pageshow since initialize won't be called again if bfcache (back/forward caching) is being used.
         angular.element($window).on('pageshow', function(){
             $scope.$apply(function(){
@@ -233,15 +247,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         $rootScope.$on('window.resize', function () {
             updateMediaOptions();
-        });
-
-        var attemptedScroll = false;
-        $scope.$watchCollection('regionAccordionGroups', function(newVal){
-            // wait until region groups have been built via the DOM ng-repeat before trying to scroll to the hotel items
-            if (!attemptedScroll && Object.keys(newVal).length > 1){
-                attemptedScroll = true;
-                goToLastVisitedItem();
-            }
         });
 
         function initialize() {
@@ -275,6 +280,11 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
         function selectTopDestination(topDestination){
             collapseRegions();
             $scope.selectedTopDestination = topDestination;
+
+            $scope.selectedTopDestinationBreaks = getBreaksForTopDestination(topDestination);
+            console.log('selectedTopDestinationBreaks');
+            console.log($scope.selectedTopDestinationBreaks);
+
             scrollService.scrollToRegion('TOPDEST');
         }
 
@@ -299,6 +309,8 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             //TODO: this is for testing purposes only. Remove once we have real hotel image URLs
             imagePlaceholderService.setPlaceholderImagesForBreaks(response.data.breaks);
 
+            $scope.regionGroups = response.data.regionGroups;
+            $scope.topDestinationGroups = response.data.topDestinationGroups;
             $scope.breaks = response.data.breaks;
             $scope.regions = response.data.regions;
             $scope.topDestinations = response.data.topDestinations;
@@ -382,78 +394,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         function getBreaksFail(response){
             //TODO: Error handling?
-        }
-
-        function goToLastVisitedItem(){
-            var lastVisitedHotel = cookieService.getLastVisitedHotel();
-
-            if (lastVisitedHotel){
-
-                // try to expand the section containing the hotel. this needs to happen first, especially for top destinations
-                // because top dests aren't loaded in the DOM yet
-                if (expandLastVisitedHotelSection(lastVisitedHotel)){
-
-                    // we need a timeout here so that DOM content can load after expanding
-                    $timeout(function(){
-
-                        // try to find the hotel in the DOM
-                        var hotelElement = $document.find('#' + lastVisitedHotel.id);
-
-                        // if we find the hotel element, scroll to it
-                        if (hotelElement.length > 0){
-                            scrollService.scrollToElement(hotelElement, 10);
-                        }
-                        else {
-                            // we couldn't find the exact hotel, so scroll to the next most relevant section
-                            if (lastVisitedHotel.topDestination){
-                                // for top destination, just scroll to the top destinations section
-                                scrollService.scrollToRegion('TOPDEST');
-                            }
-                            else {
-                                /* for regular destinations, first try to scroll to the state. If we can't find that,
-                                 just scroll to the region */
-                                /*  COMMMENTING OUT AS WE NOW HIDE OTHER REGIONS & STATES AND SHOULD SCROLL TO "YOUR EBREAKS" BAR */
-                                var stateElement = $document.find('#STATE_' + lastVisitedHotel.state);
-                                if (stateElement.length > 0){
-                                    scrollService.scrollToElement(stateElement);
-                                }
-                                else {
-                                    scrollService.scrollToRegion(lastVisitedHotel.region);
-                                }
-
-                                // Scroll to the Your eBreaks bar
-                                scrollService.scrollToElement($document.find('.your-ebreaks-bar'));
-                            }
-                        }
-                    }, 1000);
-                }
-
-                //remove the cookie so that it only happens once
-                cookieService.removeLastVisitedHotel();
-            }
-        }
-
-        // expand the correct hotel section to allow scrolling to it. returns true if the valid section was found and expanded
-        function expandLastVisitedHotelSection(lastVisitedHotel){
-            if (lastVisitedHotel.topDestination){
-                // for top destination, expand the top destination group and open the correct section
-                // check to see if this is a valid top destination first
-                if ($scope.topDestinations.indexOf(lastVisitedHotel.topDestination) !== -1){
-                    $scope.regionAccordionGroups.TOPDEST.isOpen = true;
-                    selectTopDestination(lastVisitedHotel.topDestination);
-
-                    return true;
-                }
-            }
-            else {
-                // make sure this is a valid region before trying to expand
-                if ($scope.regionAccordionGroups.hasOwnProperty(lastVisitedHotel.region)){
-                    expandRegion(lastVisitedHotel.region);
-                    return true;
-                }
-            }
-
-            return false;
         }
 
         initialize();

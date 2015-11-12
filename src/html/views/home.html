@@ -123,8 +123,8 @@
             <!-- REGION BUTTON VIEW -->
             <!-- Region Buttons -->
             <ul class="small-block-grid-2 medium-block-grid-2 large-block-grid-3 text-center the-grid region-container" vertilize-container ng-show="isRegionViewActive(REGION_VIEWS.LIST)">
-                <li ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'" vertilize>
-                    <a class="large button region-list-button" href="" ng-click="stateButtonClick(region)"><p>{{region}}</p></a>
+                <li ng-repeat="regionGroup in regionGroups" vertilize>
+                    <a class="large button region-list-button" href="" ng-click="stateButtonClick(regionGroup.region)"><p>{{regionGroup.region}}</p></a>
                 </li>
             </ul>
 
@@ -213,9 +213,8 @@
                 <div ng-show="(selectedTopDestination)">
                     <!--div class="section-separator small"></div-->
 
-                    <ul class="hotel-grid" hotel-item-container is-open="regionAccordionGroups['TOPDEST'].isOpen">
-                        <li hotel-item hotel="break" top-destination="true"
-                            ng-repeat="break in breaks | filter:{MARKET_CITY: selectedTopDestination} | limitTo:20"></li>
+                    <ul class="hotel-grid" hotel-item-container>
+                        <li hotel-item hotel="break" top-destination="true" ng-repeat="break in selectedTopDestinationBreaks"></li>
                     </ul>
                 </div>
 
@@ -242,27 +241,27 @@
 
         <accordion class="region-group-accordion" close-others="true">
             <!-- REGION GROUPS -->
-            <accordion-group class="region-group" is-open="regionAccordionGroups[region].isOpen"
-                             ng-repeat="(region, regionGroup) in breaks | groupBy: 'REGION'">
+            <accordion-group class="region-group" is-open="regionAccordionGroups[regionGroup.region].isOpen"
+                             ng-repeat="regionGroup in regionGroups">
                 <!-- Region Group Header -->
                 <accordion-heading>
-                    <div accordion-header-content group="region" label="formatRegionName(region)" is-open="regionAccordionGroups[region].isOpen"></div>
+                    <div accordion-header-content group="regionGroup.region" label="formatRegionName(regionGroup.region)" is-open="regionAccordionGroups[regionGroup.region].isOpen"></div>
                 </accordion-heading>
 
                 <!-- Group by State -->
-                <div class="row ng-hide state-containers" ng-hide="regionAccordionGroups[state].isHidden" ng-repeat="(state, hotels) in regionGroup | groupBy: 'PROPERTY_STATE'">
+                <div class="row state-containers" ng-repeat="stateGroup in regionGroup.stateGroups">
 
                     <div class="full-column">
 
                         <!-- State Group Header -->
-                        <h4 id="STATE_{{state.replace(' ','_').replace(' ','_')}}">{{statesService.getStateName(state)}}</h4>
+                        <h4 id="STATE_{{stateGroup.state.replace(' ','_').replace(' ','_')}}">{{statesService.getStateName(stateGroup.state)}}</h4>
 
                         <!-- Hotel List -->
-                        <ul class="hotel-grid" hotel-item-container is-open="regionAccordionGroups[region].isOpen">
+                        <ul class="hotel-grid" hotel-item-container is-open="regionAccordionGroups[regionGroup.region].isOpen">
 
                             <!-- Hotel Items -->
                             <li hotel-item hotel="hotel" top-destination="false"
-                                ng-repeat="hotel in hotels | orderBy:'-TOP_DESTINATION'"></li>
+                                ng-repeat="hotel in stateGroup.breaks"></li>
 
                         </ul>
 
