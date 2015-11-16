@@ -7,7 +7,7 @@ angular.module('MarriottBreaks')
         '$rootScope',
         function ($document, $timeout, $rootScope) {
 
-            var STICKY_OFFSET = 95; // offset of element when in "sticky" mode - should match .sticky-header's CSS top property
+            var STICKY_OFFSET = 105; // offset of element when in "sticky" mode - should match .sticky-header's CSS top property
 
             function linkFunction(scope, element, attrs) {
                 // scroll offset when the input becomes sticky

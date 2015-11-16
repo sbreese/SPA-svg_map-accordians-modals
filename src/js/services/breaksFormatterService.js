@@ -27,7 +27,7 @@ angular.module('MarriottBreaks').factory('breaksFormatterService', [
                 addHotelToRegionGroup(breaks[i], regionGroups);
 
                 // if this is a top destination, add it to the appropriate top destination group
-                if (hotel.TOP_DESTINATION === 'TRUE'){
+                if (hotel.TOP_DESTINATIONS === 'TRUE' || hotel.TOP_DESTINATIONS === 'true'){
                     addHotelToTopDestinationGroup(hotel, topDestinationGroups);
                 }
             }

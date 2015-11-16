@@ -337,17 +337,14 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             $scope.breaksDataLoaded = true;
             $scope.disableSearch = false;
 
-            // Grab start & end dates from first eBreak - format: 20150430 20150503
-            var OfferStartDateString = String($scope.breaks[0].OFFER_START_DATE);
-            var OfferEndDateString = String($scope.breaks[0].OFFER_END_DATE);
+            // Grab start & end dates from first eBreak - format: 12-NOV-15
+            var OfferStartDate = new Date($scope.breaks[0].OFFER_START_DATE);
+            var OfferEndDate   = new Date(String($scope.breaks[0].OFFER_END_DATE));
 
-            var StartYear = OfferStartDateString.substring(0,4);
-            var EndYear = OfferEndDateString.substring(0,4);
-            var StartMonth = OfferStartDateString.substring(4,6);
-            var EndMonth = OfferEndDateString.substring(4,6);
-
-            var OfferStartDate = new Date(StartYear, StartMonth - 1, OfferStartDateString.substring(6,8));
-            var OfferEndDate   = new Date(EndYear, EndMonth - 1, OfferEndDateString.substring(6,8));
+            var StartYear = OfferStartDate.getFullYear();
+            var EndYear = OfferEndDate.getFullYear();
+            var StartMonth = OfferStartDate.getMonth();
+            var EndMonth = OfferEndDate.getMonth();
 
             var month = new Array();
             month[0] = "January";

@@ -397,8 +397,6 @@ angular.module('MarriottBreaks')
                         }
                     }
 
-                    updateViewBox();
-
                 }
             }
 
