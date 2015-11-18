@@ -98,7 +98,6 @@ angular.module('MarriottBreaks')
                 if (element.id) {
                     // IDs are in the "US-{state}" format ("US-MI"). If it follows this format, just return the state part
                     // Text elements are "TEXT-MI" format
-
                     var idSplit = element.id.split('-'); //element.id.split('-');
 
                     if (2 in idSplit) {
@@ -332,12 +331,6 @@ angular.module('MarriottBreaks')
                     }
                 }
 
-                //function isIE() { return ((navigator.appName == 'Microsoft Internet Explorer') || ((navigator.appName == 'Netscape') && (new RegExp("Trident/.*rv:([0-9]{1,}[\.0-9]{0,})").exec(navigator.userAgent) != null))); }
-                //var isIE10 = navigator.userAgent.indexOf("MSIE") != -1
-                //if (isIE()) {
-                    //MapHeight = 2000;
-                //}
-
                     $scope.mapRoot[0].setAttribute("viewBox", pushMapRight + " " + pushMapDown + " " + MapWidth + " " + MapHeight);
 
             };
@@ -347,28 +340,7 @@ angular.module('MarriottBreaks')
                 // there is no way to know whether the regions have loaded or the map has been built first.
                 // wait for both of them to be ready and then build the map data
                 if ($scope.regions && $scope.mapRoot) {
-                    /* UNCOMMENT TO DISPLAY eBREAK COUNT BY STATE ON MAP
 
-                    var stateData = breaksService.getStates($scope.regions);
-                    //var statePathElements = angular.element($scope.mapRoot[0]).find('.land');
-                    var statePathElements = angular.element($scope.mapRoot[0]).find('.US');
-
-                    // loop through each state path and add the breaks count
-                    var stateCount, statePathElement, stateName;
-                    for (var i = 0, l = statePathElements.length; i < l; i++) {
-                        statePathElement = statePathElements[i];
-                        stateName = $scope.getStateFromElement(statePathElement);
-
-                        if (stateName) {
-                            stateCount = stateData[stateName];
-
-                            if (stateCount) {
-                                // add the text element to the map
-                                addStateCountElement(statePathElement, stateCount, stateName);
-                            }
-                        }
-                    }
-                    */
                     updateViewBox();
 
                     // Steve's Build Region Map Data:
@@ -396,7 +368,6 @@ angular.module('MarriottBreaks')
                             }
                         }
                     }
-
                 }
             }
 
@@ -431,71 +402,7 @@ angular.module('MarriottBreaks')
                     // }
                     LabelElement.html(regionCount);
                 }
-/*
-                var CirlcX, CircleY;
 
-                switch(regionName) {
-                    case "CANADA":
-                        CirlcX = 1146;
-                        CircleY = 891;
-                        break;
-                    case "PACIFIC":
-                        CirlcX = 461;
-                        CircleY = 981;
-                        break;
-                    case "NORTH_CENTRAL":
-                        CirlcX = 941;
-                        CircleY = 1006;
-                        break;
-                    case "SOUTH_CENTRAL":
-                        CirlcX = 916;
-                        CircleY = 1251;
-                        break;
-                    case "MOUNTAIN":
-                        CirlcX = 636;
-                        CircleY = 1051;
-                        break;
-                    case "SOUTHEAST":
-                        CirlcX = 1196;
-                        CircleY = 1196;
-                        break;
-                    case "NEW_ENGLAND":
-                        CirlcX = 1286;
-                        CircleY = 961;
-                        break;
-                    case "CARIBBEAN_LATIN_AMERICA":
-                        CirlcX = 694;
-                        CircleY = 1438;
-                        break;
-                    default:
-                    //default code block
-                }
-
-                textElement.textContent = regionCount; // set the text value
-
-                // set count position to the middle of the path
-                textElement.setAttribute("transform", "translate(" + (CirlcX + 138 / 2 - (regionCount<10?18:35)) + " " + (CircleY + 138 / 2 + 12) + ")");
-                textElement.setAttribute("fill", "black");
-                textElement.setAttribute("font-size", "50");
-                textElement.setAttribute("font-family", "verdana,arial,sans-serif");
-                textElement.setAttribute("class", "land-text");
-                textElement.setAttribute("pointer-events", "none"); // ignore mouse events since state itself is clickable
-                textElement.setAttribute("id", "REGION_TEXT-" + regionName); // set ID as "REGION_TEXT-{REGION}"
-
-                var textElement2 = $window.document.createElementNS("http://www.w3.org/2000/svg", "text");
-                textElement2.textContent = "DEALS"; // set the text value
-
-                // set label position to the middle of the path
-                textElement2.setAttribute("transform", "translate(" + (CirlcX + 138 / 2 - 27) + " " + (CircleY + 138 / 2 + 38) + ")");
-                textElement2.setAttribute("fill", "black");
-                textElement2.setAttribute("font-size", "15");
-                textElement2.setAttribute("font-family", "verdana,arial,sans-serif");
-                textElement2.setAttribute("class", "land-text");
-                textElement2.setAttribute("pointer-events", "none"); // ignore mouse events since state itself is clickable
-                textElement2.setAttribute("id", "DEAL_TEXT-" + regionName); // set ID as "REGION_TEXT-{REGION}"
-
-                regionPathElement.parentNode.insertBefore(textElement2, regionPathElement.nextSibling).parentNode.insertBefore(textElement, regionPathElement.nextSibling);
-                */
             }
 
         }

@@ -41,7 +41,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         if ($scope.isMobile){
             //$scope.selectedRegionView = $scope.REGION_VIEWS.LIST;
-
             $scope.showRegionOptions = false;
             $scope.searchPlaceholder = "Find Deals";
 
@@ -145,46 +144,9 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                     'MID-ATLANTIC': {'states':{'VA':1,'WV':1,'MD':1,'DE':1,'PA':1,'NJ':1}},
                     'NEW ENGLAND': {'states':{'NY':1,'VT':1,'NH':1,'RI':1,'MA':1,'CT':1,'ME':1}}};
 
-                /*MIDWEST: Object
-                states: Object
-                IL: 10
-                IN: 5
-                MI: 2
-                OH: 8
-                SD: 5 $scope.regions
-                */
-
-
                 var region = breaksService.getRegionFromState(regionObject, regionOrStateSpaces);
                 $scope.open(region);
-                //if (region){
-                //    expandRegion(region);
-                //}
 
-                // Hide all states for this region
-                /* COMMENTED OUT - ALWAYS SHOW ALL STATES
-                 angular.forEach($scope.regions[region].states, function(value, key) {
-
-                 if ($scope.regionAccordionGroups.hasOwnProperty(key)) {
-                 $scope.regionAccordionGroups[key].isHidden = true;
-                 }
-                 else
-                 {
-                 $scope.regionAccordionGroups[key] = {isHidden: true};
-                 }
-                 });
-                 // Show this state
-                 if ($scope.regionAccordionGroups.hasOwnProperty(state)) {
-                 $scope.regionAccordionGroups[state].isHidden = false;
-                 }
-                 else
-                 {
-                 $scope.regionAccordionGroups[state] = {isHidden: false};
-                 }
-                 */
-                //$scope.selectedTopDestination = null;
-                //scrollService.scrollToState(regionOrStateSpaces);
-                //scrollService.scrollToElement($document.find('.your-ebreaks-bar'));
             }
         };
 
@@ -199,28 +161,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
                 if (region){
                     expandRegion(region);
                 }
-                
-                // Hide all states for this region
-                /* COMMENTED OUT - ALWAYS SHOW ALL STATES
-                angular.forEach($scope.regions[region].states, function(value, key) {                
-                    
-                    if ($scope.regionAccordionGroups.hasOwnProperty(key)) {
-                        $scope.regionAccordionGroups[key].isHidden = true;
-                    }
-                    else
-                    {
-                        $scope.regionAccordionGroups[key] = {isHidden: true};
-                    }
-                });
-                // Show this state
-                if ($scope.regionAccordionGroups.hasOwnProperty(state)) {
-                    $scope.regionAccordionGroups[state].isHidden = false;
-                }
-                else
-                {
-                    $scope.regionAccordionGroups[state] = {isHidden: false};
-                }
-                */
                 $scope.selectedTopDestination = null;
                 scrollService.scrollToState(regionOrStateSpaces);
                 //scrollService.scrollToElement($document.find('.your-ebreaks-bar'));
@@ -262,7 +202,7 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             if ($scope.isMobile) {
                 $scope.showRegionOptions = false;
 
-                // if we are changing from mobile to non-mobile, we need to move off of the map view
+                // When changing from mobile to non-mobile, we could switch from map to list view
                 //if ($scope.selectedRegionView === $scope.REGION_VIEWS.MAP){
                 //    $scope.selectedRegionView = $scope.REGION_VIEWS.LIST;
                 //}
