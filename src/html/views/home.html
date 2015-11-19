@@ -16,7 +16,7 @@
 </header>
 
 
-<div>
+<div class="mid-width-iphone5">
 
     <!-- Region/State Map -->
     <div id="background-video" class="mobile-background">
@@ -212,7 +212,7 @@
 
                 </div>
             </div>
-            <div class="your-ebreaks-bar show-for-medium-down"><!--ng-show="aRegionIsExpanded"-->
+            <div class="your-ebreaks-bar show-for-medium-only"><!--ng-show="aRegionIsExpanded"-->
                 <div class="ways-to-book-content">
 
                     <div class="ways-text">
@@ -220,6 +220,14 @@
                     </div>
                 </div>
             </div>
+        <div class="your-ebreaks-bar show-for-small-only"><!--ng-show="aRegionIsExpanded"-->
+            <div class="ways-to-book-content">
+
+                <div class="ways-text">
+                    <h2>eBreaks {{StartDateRangeShortMonth}}&ndash;{{EndDateRange}}</h2>
+                </div>
+            </div>
+        </div>
 
         <accordion class="region-group-accordion" close-others="true">
             <!-- REGION GROUPS -->

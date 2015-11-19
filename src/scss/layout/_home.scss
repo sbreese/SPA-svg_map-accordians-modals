@@ -1,6 +1,9 @@
 h1, h2, h3, h4, h5, h6 {
     color: #555555;
 }
+body {
+    min-width: 200px;
+}
 
 .ebreaks-head {
     font-family: Helvetica, sans-serif;
@@ -66,7 +69,13 @@ h1, h2, h3, h4, h5, h6 {
 .mobile-background {
     /*position:relative;*/
     background-image: url("../assets/images/eBreaks_Mobile_Background.png");
+    min-width: 200px;
 }
+
+.mid-width-iphone5 {
+min-width: 200px;
+}
+
 #darken-video {
     width: 100%;
     height: 100%;
@@ -165,9 +174,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 @media screen and (max-width: 400px) {
-    .accordion-header-content {
-        h3 {padding: 10px 3px 10px 45px !important;}
-    }
+
+    h3#REGION_CARIBBEAN_LATIN_AMERICA {padding: 10px 3px 10px 45px !important;}
+
     .hotel-grid > li {
         list-style: none;
         padding: 0 0.325rem 1.25rem;
@@ -1077,7 +1086,7 @@ button.large, .button.large {
         font-size: 1.2rem;
         margin-top: .5rem;
         img {
-            margin: .2rem .7rem .5rem 1.2rem;
+            margin: .2rem .7rem .5rem .5rem;
         }
     }
     a {display: inline-block;float: right;}
@@ -1195,9 +1204,9 @@ header, footer {
         vertical-align: baseline;
     }
     /* HTML5 display-role reset for older browsers */
-    article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    /*article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
         display: block;
-    }
+    }*/
     body {
         line-height: 1;
     }
@@ -1260,7 +1269,9 @@ header, footer {
     }
 }
 /* Footer treatment */
-footer {width: 100%;margin: 1rem auto 0 auto;text-align: center;
+footer {
+    box-sizing: border-box;
+    margin: 1rem auto 0 auto;text-align: center;
 
     background-color: #494949;
     filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FF777777', endColorstr='#FF494949');
@@ -1279,8 +1290,9 @@ footer {width: 100%;margin: 1rem auto 0 auto;text-align: center;
 .t-copyright p {font-size: 0.625em;line-height: 1em;margin: 0.675rem 0 0 0.675rem;color: #777;    color: #f4f4f4;}
 
 /* Header treatment */
-header {width:100%;}
-
+header {
+    box-sizing: border-box;
+}
 .t-header {height: 4.0625rem;background-color: #919191;background-image: -webkit-linear-gradient(#777,#494949);background-image: -moz-linear-gradient(#777,#494949);background-image: -o-linear-gradient(#777,#494949);background-image: linear-gradient(#777,#494949);color:#fff;}
 .t-header a:link, .t-header a:visited, .t-header a:active,.t-header a:hover {color:#fff;text-decoration: none;}
 .t-header a:hover {text-decoration: underline;}
@@ -1314,6 +1326,7 @@ header {width:100%;}
     background-image: url("../assets/images/Header_left_Small.png");
     height: 55px;
     width: 354px;
+    width: 100%;
     position: absolute;
     left: 0;
     top: 0;
