@@ -345,10 +345,19 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             $scope.EndDateRange = formattedEndDateRange;
             $scope.EndYear = endYear;
 
-            var oneDay = 24*60*60*1000; // hours*minutes*seconds*milliseconds
             var today = new Date();
 
-            $scope.offerDaysLeft = Math.round(Math.abs((today.getTime() - OfferEndDate.getTime())/(oneDay))) + 1;
+            var date1 = Date.UTC(OfferEndDate.getFullYear(), OfferEndDate.getMonth(), OfferEndDate.getDate());
+            var date2 = Date.UTC(today.getFullYear(), today.getMonth(), today.getDate());
+            var ms = Math.abs(date1-date2);
+            var UTCDaysReamining =  Math.floor(ms/1000/60/60/24);
+
+            $scope.offerDaysLeft = UTCDaysReamining;
+
+            if ($scope.offerDaysLeft > 9) {
+                $document.find('#offer-days').addClass('two-digit');
+            }
+
         }
 
         function getBreaksFail(response){
