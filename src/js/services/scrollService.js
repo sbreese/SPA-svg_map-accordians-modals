@@ -14,7 +14,6 @@ angular.module('MarriottBreaks').factory('scrollService', [
         }
 
         function hideKeyboard() {
-            document.activeElement.blur();
             var inputs = document.querySelectorAll('input');
             for (var i = 0; i < inputs.length; i++) {
                 inputs[i].blur();
@@ -48,7 +47,7 @@ angular.module('MarriottBreaks').factory('scrollService', [
             },
 
             scrollToState: function(state){
-                scrollToElementById('#STATE_' + state.replace(/ /g,"_"));
+                scrollToElementById('#STATE_' + state.replace(/ /g,"_").replace('.',''));
             }
 
         };
