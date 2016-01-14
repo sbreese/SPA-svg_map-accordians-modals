@@ -1,8 +1,8 @@
 'use strict';
 
 angular.module('MarriottBreaks').factory('backgroundVideoService', [
-    'mediaService','$document',
-    function(mediaService, $document){
+    'mediaService','$document','$window',
+    function(mediaService, $document, $window){
 
         var video = null;
         var videoPlayer = null;
@@ -36,31 +36,31 @@ angular.module('MarriottBreaks').factory('backgroundVideoService', [
 
             updateBackgroundVideoHeight: function(){
                 var newHeight;
-                if (window.innerWidth < 350) {
+                if ($window.innerWidth < 350) {
                     newHeight = 600;
-                } else if (window.innerWidth < 400) {
+                } else if ($window.innerWidth < 400) {
                     newHeight = 580;
-                } else if (window.innerWidth < 450) {
+                } else if ($window.innerWidth < 450) {
                     newHeight = 560;
-                } else if (window.innerWidth < 500){
+                } else if ($window.innerWidth < 500){
                     newHeight = 540;
-                } else if (window.innerWidth < 550){
+                } else if ($window.innerWidth < 550){
                     newHeight = 540;
-                } else if (window.innerWidth < 600) {
+                } else if ($window.innerWidth < 600) {
                     newHeight = 540;
-                } else if (window.innerWidth < 650) {
+                } else if ($window.innerWidth < 650) {
                     newHeight = 540;
-                } else if (window.innerWidth < 700) {
+                } else if ($window.innerWidth < 700) {
                     newHeight = 540;
-                } else if (window.innerWidth < 800) {
+                } else if ($window.innerWidth < 800) {
                     newHeight = 540;
-                } else if (window.innerWidth < 900) {
+                } else if ($window.innerWidth < 900) {
                     newHeight = 540;
-                } else if (window.innerWidth < 1000) {
+                } else if ($window.innerWidth < 1000) {
                     newHeight = 540;
-                } else if (window.innerWidth < 1100) {
+                } else if ($window.innerWidth < 1100) {
                     newHeight = 540;
-                } else if (window.innerWidth < 1200) {
+                } else if ($window.innerWidth < 1200) {
                     newHeight = 540;
                 } else { // > 1200
                     newHeight = 540;
