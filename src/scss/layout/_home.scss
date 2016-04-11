@@ -1025,12 +1025,12 @@ button.large, .button.large {
     border-collapse: separate;
 }
 
-.subscribe-bar.show-for-medium-up {
+.subscribe-bar.show-for-large-up {
     position: relative;
     z-index: 10;
     text-align: center;
     background-color: #a5ce4c;
-    height: 4rem;
+    height: 4.3rem;
 
     i {
         float: left;
@@ -1042,39 +1042,87 @@ button.large, .button.large {
         margin: 0 auto;
     }
     .never-miss {
-        margin-top: .5rem;
+        margin: .6rem .4rem 2rem .5rem;
         display: inline-block;
         line-height: 50px;
         font-family: 'Source Sans Pro', sans-serif;
         color: white;
-        font-size: 1.2rem;
+        letter-spacing: .3px;
+        font-size: 1.3rem;
+        font-weight: 400;
         img {
             margin: .2rem 1.5rem .5rem 0;
         }
     }
     .subscribe-button {
-        margin-left: 1.8rem;
         display: inline-block;
         line-height: 35px;
         padding: .5rem;
         span {
             font-family: 'Source Sans Pro', sans-serif;
             border-radius: 7px;
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: bold;
             text-decoration: none;
             background-color: #1ea9e2;
             color: white;
-            padding: 4px 9px 5px 9px;
+            padding: 4px 19px 5px 19px;
         }
     }
+}
+.subscribe-bar.show-for-medium-only {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    background-color: #a5ce4c;
+    height: 4.3rem;
+    padding-top: .6rem;
+    i {
+        float: left;
+        font-size: 2.2rem;
+        margin-right: .7rem;
+    }
+    .subscribe-content {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .never-miss {
+        margin: .6rem 0rem 1rem .5rem;
+        display: inline-block;
+        line-height: 50px;
+        font-family: 'Source Sans Pro', sans-serif;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: 400;
+        img {
+            margin: .2rem 1.5rem .5rem 0;
+        }
+    }
+    .subscribe-button {
+        display: inline-block;
+        line-height: 35px;
+        padding: .5rem;
+        span {
+            font-family: 'Source Sans Pro', sans-serif;
+            border-radius: 7px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            text-decoration: none;
+            background-color: #1ea9e2;
+            color: white;
+            padding: 4px 19px 5px 19px;
+        }
+    }
+}
+@media only screen and (max-width: 41.5em) {
+    .hide-narrow {display: none;}
 }
 .subscribe-bar.show-for-small-only {
     position: relative;
     z-index: 10;
     text-align: center;
     background-color: #a5ce4c;
-    height: 4rem;
+    height: 4.2rem;
     white-space: nowrap;
     i {
         float: left;
@@ -1085,28 +1133,30 @@ button.large, .button.large {
         white-space: nowrap;
         max-width: 25rem;
         margin: 0 auto;
-        max-height: 60px;
     }
     .never-miss {
-        white-space: nowrap;
-        display: inline-block;
-        float: left;
-        line-height: 50px;
+        padding: .6rem 0;
         font-family: 'Source Sans Pro', sans-serif;
+        font-weight: 400;
         color: white;
         font-size: 1.2rem;
-        margin-top: .5rem;
+        margin: 0 auto;
+        letter-spacing: .3px;
+        line-height: 26px;
         img {
             margin: .2rem .7rem .5rem 1rem;
         }
     }
-    a {display: inline-block;float: right;}
+    #Join_Now_Div {
+        text-align: center;
+        padding-top: 1rem;
+    }
+    a {text-align: center; display: block; margin:0 auto 0 auto;}
     .subscribe-button {
-        display: inline-block;
-        float: right;
+        display: inline;
         line-height: 35px;
-        padding: .5rem .5rem .5rem 0;
-        margin: .5rem 1.3rem 0 0;
+        padding: 0 .5rem .5rem 0;
+        margin: 0 auto;
         span {
             font-family: 'Source Sans Pro', sans-serif;
             border-radius: 7px;
@@ -1115,7 +1165,8 @@ button.large, .button.large {
             text-decoration: none;
             background-color: #1ea9e2;
             color: white;
-            padding: 4px 9px 5px 9px;
+            padding: 4px 19px 5px 19px;
+            margin: 0 auto;
         }
     }
 

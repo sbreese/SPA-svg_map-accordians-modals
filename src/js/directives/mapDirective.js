@@ -2,8 +2,8 @@
 
 angular.module('MarriottBreaks')
     .directive('svgmap', [
-        'backgroundVideoService',
-        function (backgroundVideoService) {
+        'backgroundVideoService','$rootScope',
+        function (backgroundVideoService, $rootScope) {
 
             function linkFunction(scope, element, attrs) {
                 // bind to the maps' load event. We need to wait for the svg to be fully loaded before we try
@@ -20,7 +20,10 @@ angular.module('MarriottBreaks')
 
                     // we need to wait until the map is loaded to load the video, otherwise the height will not be correct
                     // there may be a better way to do this, but I couldn't get it working without waiting for the map to load
-                    backgroundVideoService.loadVideo();
+                    if ($rootScope.browser.name == "Firefox" && $rootScope.browser.version < 32) {
+                    } else {
+                        backgroundVideoService.loadVideo();
+                    }
                 }
 
                 function stateRegionClickFunction($event) {
@@ -72,6 +75,8 @@ angular.module('MarriottBreaks')
                 }
                 else {
                     updateViewBox();
+                    //buildMapData();
+                    //location.reload();
                 }
             });
 
@@ -118,10 +123,22 @@ angular.module('MarriottBreaks')
                 var MapWidth;
                 var MapHeight;
                 var videoDiv = $document.find("#background-video");  // Default is min-height: 690px;
-                //alert("Window width: "+ window.innerWidth);
+                //console("Window width: "+ window.innerWidth);
                 if(navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
                     console.log("Set for FF");
-                    if ($window.innerWidth < 350) {
+                    if ($window.innerWidth < 250) {
+                        pushMapRight = 50;
+                        pushMapDown = -200;
+                        MapWidth = 590;
+                        MapHeight = 900;
+                        videoDiv.height(420);
+                    } else if ($window.innerWidth < 300) {
+                        pushMapRight = 50;
+                        pushMapDown = -80;
+                        MapWidth = 590;
+                        MapHeight = 900;
+                        videoDiv.height(420);
+                    } else if ($window.innerWidth < 350) {
                         pushMapRight = 50;
                         pushMapDown = -15;
                         MapWidth = 590;
@@ -342,7 +359,6 @@ angular.module('MarriottBreaks')
                 if ($scope.regions && $scope.mapRoot) {
 
                     updateViewBox();
-
                     // Steve's Build Region Map Data:
                     var regionData = $scope.regions;
                     var regionPathElements = angular.element($scope.mapRoot[0]).find('.region-circle');

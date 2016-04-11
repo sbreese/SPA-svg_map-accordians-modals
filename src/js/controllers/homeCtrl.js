@@ -58,13 +58,40 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             return match ? match[1] : false;
         };
 
+        function get_browser_info(){
+            var ua=navigator.userAgent,tem,M=ua.match(/(opera|chrome|safari|firefox|msie|trident(?=\/))\/?\s*(\d+)/i) || [];
+            if(/trident/i.test(M[1])){
+                tem=/\brv[ :]+(\d+)/g.exec(ua) || [];
+                return {name:'IE',version:(tem[1]||'')};
+            }
+            if(M[1]==='Chrome'){
+                tem=ua.match(/\bOPR\/(\d+)/)
+                if(tem!=null)   {return {name:'Opera', version:tem[1]};}
+            }
+            M=M[2]? [M[1], M[2]]: [navigator.appName, navigator.appVersion, '-?'];
+            if((tem=ua.match(/version\/(\d+)/i))!=null) {M.splice(1,1,tem[1]);}
+            return {
+                name: M[0],
+                version: M[1]
+            };
+        }
+
+        $rootScope.browser=get_browser_info();
+
+        //console.log("Browser Name: " + $rootScope.browser.name);
+        //console.log("Browser Version: " + $rootScope.browser.version); // = '40'
+
         //getAndroidVersion(); //"4.2.1"
         var AndroidVersion = parseInt(getAndroidVersion(), 10);
-        if (AndroidVersion && AndroidVersion < 5) {
+        if ((AndroidVersion && AndroidVersion < 5) || ($rootScope.browser.name == "Firefox" && $rootScope.browser.version < 32)) {
             $scope.selectedRegionView = $scope.REGION_VIEWS.LIST;
         } else{
             $scope.selectedRegionView = $scope.REGION_VIEWS.MAP;
         }
+        /*if ($rootScope.browser.name == "Firefox" && $rootScope.browser.version < 32) {
+            setTimeout(function(){  $scope.selectedRegionView = $scope.REGION_VIEWS.MAP; }, 300);
+        }*/
+
 
     $scope.ModalPackage = {};
     $scope.open = function (region) {
@@ -98,7 +125,6 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
 
         $scope.selectRegionView = function(viewType){
             if (viewType === 'LIST') {
-
                 backgroundVideoService.updateBackgroundVideoHeight();
             }
             $scope.selectedRegionView = viewType;
@@ -211,7 +237,11 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             }
             else {
                 $scope.showRegionOptions = true;
-                backgroundVideoService.showVideo();
+                if ($rootScope.browser.name == "Firefox" && $rootScope.browser.version < 32) {
+
+                } else {
+                    backgroundVideoService.showVideo();
+                }
             }
         }
 

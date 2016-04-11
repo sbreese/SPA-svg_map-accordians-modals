@@ -55,7 +55,7 @@
             <div class="full-column" ng-if="true" ng-show="isRegionViewActive(REGION_VIEWS.MAP)">
 
                 <!-- Map Directive -->
-                <div id="region-map" svgmap state-click-action="stateRegionButtonClick(state)" selected-region-view="selectedRegionView" regions="regions"></div>
+                <div id="region-map" svgmap state-click-action="stateRegionButtonClick(state)" selected-region-view="selectedRegionView" regions="regions" height="700"></div>
 
             </div>
 
@@ -115,30 +115,40 @@
 
     </div>
 
-    <div class="subscribe-bar show-for-medium-up">
+
+    <div class="subscribe-bar show-for-large-up">
         <div class="subscribe-content">
             <div class="never-miss">
-                <a href="https://www.marriott.com/rewards/myAccount/editEmailPreferences.mi"><img src="assets/images/envelope.png">Never Miss eBreaks.</a>
+                <a href="https://www.marriott.com/rewards/createAccount/createAccountPage1.mi?segmentId=elite.nonrewards">Get rewarded at 4,000+ Marriott hotels worldwide.</a>
             </div>
-            <a href="https://www.marriott.com/rewards/myAccount/editEmailPreferences.mi">
+            <a href="https://www.marriott.com/rewards/createAccount/createAccountPage1.mi?segmentId=elite.nonrewards">
                 <div class="subscribe-button">
-                    <span>Subscribe Today</span>
+                    <span>Join Now</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="subscribe-bar show-for-medium-only">
+        <div class="subscribe-content">
+            <a href="https://www.marriott.com/rewards/createAccount/createAccountPage1.mi?segmentId=elite.nonrewards">
+                <div class="subscribe-button">
+                    <span>Join Now</span>
                 </div>
             </a>
         </div>
     </div>
     <div class="subscribe-bar show-for-small-only">
         <div class="subscribe-content">
-            <div class="never-miss">
-                <a href="https://www.marriott.com/rewards/myAccount/editEmailPreferences.mi"><img src="assets/images/envelope.png">Get eBreaks</a>
+            <div id="Join_Now_Div">
+                <a href="https://www.marriott.com/rewards/createAccount/createAccountPage1.mi?segmentId=elite.nonrewards">
+                    <div class="subscribe-button">
+                        <span>Join Now</span>
+                    </div>
+                </a>
             </div>
-            <a href="https://www.marriott.com/rewards/myAccount/editEmailPreferences.mi">
-                <div class="subscribe-button">
-                    <span>Subscribe</span>
-                </div>
-            </a>
         </div>
     </div>
+
     <div class="ways-to-book-bar show-for-medium-up">
         <div class="ways-to-book-content">
             <div class="ways-content">
@@ -354,7 +364,7 @@
             </ul>
         </section>
         <section class="t-copyright l-padding-top-three-quarters clearfix">
-            <p class="t-uppercase-small " id="copyright">&copy; 1996 - 2015 <span itemprop="branchOf">Marriott International, Inc.</span> All rights reserved. Marriott proprietary information</p>
+            <p class="t-uppercase-small " id="copyright">&copy; 1996 - 2016 <span itemprop="branchOf">Marriott International, Inc.</span> All rights reserved. Marriott proprietary information</p>
         </section>
     </div>
 </footer>
