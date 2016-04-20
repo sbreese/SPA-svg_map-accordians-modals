@@ -1110,7 +1110,7 @@ button.large, .button.large {
             text-decoration: none;
             background-color: #1ea9e2;
             color: white;
-            padding: 4px 19px 5px 19px;
+            padding: 4px 29px 5px 29px;
         }
     }
 }
@@ -1165,13 +1165,19 @@ button.large, .button.large {
             text-decoration: none;
             background-color: #1ea9e2;
             color: white;
-            padding: 4px 19px 5px 19px;
+            padding: 4px 29px 5px 29px;
             margin: 0 auto;
         }
     }
 
 }
 
+#staywhite, #reallystaywhite {
+    color: #fff;
+}
+#staywhite a:hover, #staywhite a:visited, #staywhite a:active, #reallystaywhite a:hover, #reallystaywhite a:visited, #reallystaywhite a:active {
+    color: #fff;
+}
 
 .never-miss {
 

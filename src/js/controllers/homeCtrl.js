@@ -52,6 +52,8 @@ angular.module('MarriottBreaks').controller('homeCtrl', [
             $scope.searchPlaceholder = "Where do you want to go?";
         }
 
+        $scope.CurrentYear = new Date().getFullYear();
+
         function getAndroidVersion(ua) {
             ua = (ua || navigator.userAgent).toLowerCase();
             var match = ua.match(/android\s([0-9\.]*)/);
