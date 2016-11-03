@@ -3902,6 +3902,23 @@ function changeRegionColor(region, hoverColor) {
 
 			} // END is IE
 
-
+            document.getElementById('text-PACIFIC').setAttribute('font-size','1px');
+            document.getElementById('deals-PACIFIC').setAttribute('font-size', '1px');
+            document.getElementById('text-MOUNTAIN').setAttribute('font-size','1px');
+            document.getElementById('deals-MOUNTAIN').setAttribute('font-size', '1px');
+            document.getElementById('text-CARIBBEAN_LATIN_AMERICA').setAttribute('font-size','1px');
+            document.getElementById('deals-CARIBBEAN_LATIN_AMERICA').setAttribute('font-size', '1px');
+            document.getElementById('text-SOUTH_CENTRAL').setAttribute('font-size','1px');
+            document.getElementById('deals-SOUTH_CENTRAL').setAttribute('font-size', '1px');
+            document.getElementById('text-NORTH_CENTRAL').setAttribute('font-size','1px');
+            document.getElementById('deals-NORTH_CENTRAL').setAttribute('font-size', '1px');
+            document.getElementById('text-SOUTH_EAST').setAttribute('font-size','1px');
+            document.getElementById('deals-SOUTH_EAST').setAttribute('font-size', '1px');
+            document.getElementById('text-MID-ATLANTIC').setAttribute('font-size','1px');
+            document.getElementById('deals-MID-ATLANTIC').setAttribute('font-size', '1px');
+            document.getElementById('text-NEW_ENGLAND').setAttribute('font-size','1px');
+            document.getElementById('deals-NEW_ENGLAND').setAttribute('font-size', '1px');
+            document.getElementById('text-CANADA').setAttribute('font-size','1px');
+            document.getElementById('deals-CANADA').setAttribute('font-size', '1px');
   ]]></script>
 </svg>
