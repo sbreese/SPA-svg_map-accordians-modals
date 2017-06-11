@@ -1,6 +1,6 @@
-# Marriott Breaks
+# Hotel Deal SPA
 
-Project for Marriott Hotels - Allows the client to convert .csv files to JSON, which is then consumed by the Angular App and deals ("breaks") are shown to the users in a useful way.
+Project for a hotel client that allows a layperson to convert .csv files to JSON, which is then consumed by the Angular App and deals are shown to the users in a useful way.
 
 ### Setup
 ##### Prerequisites
